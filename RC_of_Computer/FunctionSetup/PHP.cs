@@ -8,6 +8,7 @@ namespace RC_of_Computer.FunctionSetup
     public partial class PHP : Form
     {
         private const string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
+        private const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
         [DllImport("shell32.dll", EntryPoint = "ExtractIconEx", CharSet = CharSet.Auto)]
         private static extern int ExtractIconEx([MarshalAs(UnmanagedType.LPTStr)] string file, int index, out IntPtr largeIconHandle, out IntPtr smallIconHandle, int icons);
@@ -22,8 +23,8 @@ namespace RC_of_Computer.FunctionSetup
             Bitmap DirIcon = GetIconFromEXEDLL(SHELL32DLL, 3, false);
             PHPRef.Image = DirIcon;
             DocumentRootRef.Image = DirIcon;
-            //RunPHPSetup.Image = SystemIcons.Shield.ToBitmap();
-            RunPHPSetup.Image = new Icon(SystemIcons.Shield, new Size(23, 23)).ToBitmap();
+            //RunPHPSetup.Image = new Icon(SystemIcons.Shield, new Size(23, 23)).ToBitmap();
+            RunPHPSetup.Image = GetIconFromEXEDLL(IMAGERESDLL, 73, false);
         }
 
         /*
