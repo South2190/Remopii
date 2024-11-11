@@ -32,14 +32,14 @@
             this.RunPHPSetup = new System.Windows.Forms.Button();
             this.UsePATHValue = new System.Windows.Forms.CheckBox();
             this.AdvancedSettings = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SettingsItem2 = new System.Windows.Forms.Label();
+            this.DocumentRootRef = new System.Windows.Forms.Button();
+            this.DocumentRootPath = new System.Windows.Forms.TextBox();
             this.SettingsItem3 = new System.Windows.Forms.Label();
             this.PHPRef = new System.Windows.Forms.Button();
             this.PHPPath = new System.Windows.Forms.TextBox();
             this.PHPStatus = new System.Windows.Forms.Label();
-            this.DocumentRootPath = new System.Windows.Forms.TextBox();
-            this.DocumentRootRef = new System.Windows.Forms.Button();
-            this.SettingsItem2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.AdvancedSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,44 @@
             this.AdvancedSettings.TabStop = false;
             this.AdvancedSettings.Text = "詳細設定 (PHPの自動セットアップを使用する場合は変更しないでください)";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "PHPのビルトインウェブサーバーを使用する",
+            "Nginx、Apacheなどを使用する"});
+            this.comboBox1.Location = new System.Drawing.Point(200, 21);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(367, 20);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // SettingsItem2
+            // 
+            this.SettingsItem2.AutoSize = true;
+            this.SettingsItem2.Location = new System.Drawing.Point(10, 54);
+            this.SettingsItem2.Name = "SettingsItem2";
+            this.SettingsItem2.Size = new System.Drawing.Size(114, 12);
+            this.SettingsItem2.TabIndex = 8;
+            this.SettingsItem2.Text = "PHP実行ファイルのパス";
+            // 
+            // DocumentRootRef
+            // 
+            this.DocumentRootRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DocumentRootRef.Location = new System.Drawing.Point(545, 100);
+            this.DocumentRootRef.Name = "DocumentRootRef";
+            this.DocumentRootRef.Size = new System.Drawing.Size(22, 22);
+            this.DocumentRootRef.TabIndex = 7;
+            this.DocumentRootRef.UseVisualStyleBackColor = true;
+            // 
+            // DocumentRootPath
+            // 
+            this.DocumentRootPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DocumentRootPath.Location = new System.Drawing.Point(200, 101);
+            this.DocumentRootPath.Name = "DocumentRootPath";
+            this.DocumentRootPath.Size = new System.Drawing.Size(340, 19);
+            this.DocumentRootPath.TabIndex = 6;
+            // 
             // SettingsItem3
             // 
             this.SettingsItem3.AutoSize = true;
@@ -127,44 +165,6 @@
             this.PHPStatus.Size = new System.Drawing.Size(165, 12);
             this.PHPStatus.TabIndex = 4;
             this.PHPStatus.Text = "PHPセットアップ済 / 未セットアップ";
-            // 
-            // DocumentRootPath
-            // 
-            this.DocumentRootPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DocumentRootPath.Location = new System.Drawing.Point(200, 101);
-            this.DocumentRootPath.Name = "DocumentRootPath";
-            this.DocumentRootPath.Size = new System.Drawing.Size(340, 19);
-            this.DocumentRootPath.TabIndex = 6;
-            // 
-            // DocumentRootRef
-            // 
-            this.DocumentRootRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DocumentRootRef.Location = new System.Drawing.Point(545, 100);
-            this.DocumentRootRef.Name = "DocumentRootRef";
-            this.DocumentRootRef.Size = new System.Drawing.Size(22, 22);
-            this.DocumentRootRef.TabIndex = 7;
-            this.DocumentRootRef.UseVisualStyleBackColor = true;
-            // 
-            // SettingsItem2
-            // 
-            this.SettingsItem2.AutoSize = true;
-            this.SettingsItem2.Location = new System.Drawing.Point(10, 54);
-            this.SettingsItem2.Name = "SettingsItem2";
-            this.SettingsItem2.Size = new System.Drawing.Size(114, 12);
-            this.SettingsItem2.TabIndex = 8;
-            this.SettingsItem2.Text = "PHP実行ファイルのパス";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "PHPのビルトインウェブサーバーを使用する",
-            "Nginx、Apacheなどを使用する"});
-            this.comboBox1.Location = new System.Drawing.Point(200, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(367, 20);
-            this.comboBox1.TabIndex = 9;
             // 
             // PHP
             // 
