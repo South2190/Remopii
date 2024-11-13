@@ -25,7 +25,6 @@ namespace RC_of_Computer
         private void back_button_Click(object sender, EventArgs e)
         {
             /*message_label.Visible = true;
-            keyconfig keyconfig = new keyconfig(); 
             message_label.Visible = true;*/
         }
     }

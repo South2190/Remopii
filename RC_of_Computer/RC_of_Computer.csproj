@@ -57,7 +57,6 @@
     <Compile Include="FunctionSetup\PHP.Designer.cs">
       <DependentUpon>PHP.cs</DependentUpon>
     </Compile>
-    <Compile Include="keyconfig.cs" />
     <Compile Include="keyconfigWindow.cs">
       <SubType>Form</SubType>
     </Compile>
