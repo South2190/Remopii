@@ -103,6 +103,7 @@
             this.keyconfig_button.TabIndex = 3;
             this.keyconfig_button.Text = "キーコンフィグ";
             this.keyconfig_button.UseVisualStyleBackColor = true;
+            this.keyconfig_button.Click += new System.EventHandler(this.keyconfig_button_Click);
             // 
             // MainWindow
             // 

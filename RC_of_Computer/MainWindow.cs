@@ -47,5 +47,11 @@ namespace RC_of_Computer
         {
 
         }
+
+        private void keyconfig_button_Click(object sender, EventArgs e)
+        {
+            var keyconfigWindow = new keyconfigWindow();
+            keyconfigWindow.Show();
+        }
     }
 }
