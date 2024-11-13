@@ -28,5 +28,24 @@ namespace RC_of_Computer
             var PHP = new PHP();
             PHP.Show();
         }
+
+        private void Server_button_Click(object sender, EventArgs e)
+        {
+            if (Server_button.Text != "サーバースタート")
+            {
+                Server_button.Text = "サーバースタート";
+            }
+            else
+            {
+                Server_button.Text = "サーバーストップ";
+            }
+
+
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
