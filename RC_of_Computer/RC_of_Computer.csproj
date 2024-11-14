@@ -58,6 +58,12 @@
     <Compile Include="FunctionSetup\PHP.Designer.cs">
       <DependentUpon>PHP.cs</DependentUpon>
     </Compile>
+    <Compile Include="FunctionSetup\PHPAutoSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionSetup\PHPAutoSetup.Designer.cs">
+      <DependentUpon>PHPAutoSetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="keyconfigWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FunctionSetup\PHP.resx">
       <DependentUpon>PHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionSetup\PHPAutoSetup.resx">
+      <DependentUpon>PHPAutoSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="keyconfigWindow.resx">
       <DependentUpon>keyconfigWindow.cs</DependentUpon>

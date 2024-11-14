@@ -198,15 +198,15 @@
             this.message_label.ForeColor = System.Drawing.Color.Red;
             this.message_label.Location = new System.Drawing.Point(148, 332);
             this.message_label.Name = "message_label";
-            this.message_label.Size = new System.Drawing.Size(185, 25);
+            this.message_label.Size = new System.Drawing.Size(149, 20);
             this.message_label.TabIndex = 5;
             this.message_label.Text = "キーを入力してください";
             this.message_label.Visible = false;
             // 
             // keyconfigWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(478, 741);
             this.Controls.Add(this.message_label);
             this.Controls.Add(this.arrow_buttonGroup);
