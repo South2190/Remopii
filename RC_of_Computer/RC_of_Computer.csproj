@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\GetIcon.cs" />
     <Compile Include="FunctionSetup\PHP.cs">
       <SubType>Form</SubType>
     </Compile>
