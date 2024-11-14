@@ -11,7 +11,8 @@
       }
 
       .btn1 {
-        margin-right: 3%; 
+        margin-right: 3%;
+        margin-bottom: 5.5%; 
         display: inline-block;
         width: 40%;
         padding: 13% 0;
@@ -29,6 +30,7 @@
       }
 
       .btn2 {
+        margin-bottom: 5.5%;
         display: inline-block;
         width: 40%;
         padding: 13% 0;
@@ -45,60 +47,10 @@
       color: #FFF;
       }
 
-      .btn3{
-        margin-top: 10%;
-        margin-right: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn3:active{
-      background: #7b867e;
-      color: #FFF;
-      }
-      .btn4{
-        margin-top: 10%;
-        margin-right: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn4:active{
-      background: #7b867e;
-      color: #FFF;
-      }
-      .btn5{
-        margin-top: 10%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn5:active{
-      background: #7b867e;
-      color: #FFF;
-      }
-
-      .btn6{
+      .subbtn{
         margin-top: 4.5%;
-        margin-right: 4.5%;
+        margin-right: 2.25%;
+        margin-left: 2.25%;
         display: inline-block;
         width: 24%;
         padding: 5% 0;
@@ -109,114 +61,33 @@
         border-radius: 7px;
         box-shadow: 2px 2px gray;
       }
-      .btn6:active{
+      .subbtn:active{
       background: #7b867e;
       color: #FFF;
       }
-      .btn7{
-        margin-top: 4.5%;
-        margin-right: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn7:active{
-      background: #7b867e;
-      color: #FFF;
-      }
-      .btn8{
-        margin-top: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn8:active{
-      background: #7b867e;
-      color: #FFF;
-
-      }.btn9{
-        margin-top: 4.5%;
-        margin-right: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn9:active{
-      background: #7b867e;
-      color: #FFF;
-      }
-      .btn10{
-        margin-top: 4.5%;
-        margin-right: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn10:active{
-      background: #7b867e;
-      color: #FFF;
-      }
-      .btn11{
-        margin-top: 4.5%;
-        display: inline-block;
-        width: 24%;
-        padding: 5% 0;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        background-color: #bfcec3;
-        border-radius: 7px;
-        box-shadow: 2px 2px gray;
-      }
-      .btn11:active{
-      background: #7b867e;
-      color: #FFF;
-      }
+      
     </style>
 
   </head>
 
 
   <div class="btn">
-  <a href="#" class="btn1">戻る</a>
-  <a href="#" class="btn2">進む</a>
-  
-  <a href="#" class="btn3">あ</a>
-  <a href="#" class="btn4">い</a>
-  <a href="#" class="btn5">う</a>
+    <form method="post"> 
+      <input type="submit" value="戻る" name="btn1" class="btn1"/>
+      <input type="submit" value="進む" name="btn2" class="btn2"/>
 
-  <a href="#" class="btn6">え</a>
-  <a href="#" class="btn7">お</a>
-  <a href="#" class="btn8">か</a>
+      <input type="submit" value="あ" name="btn3" class="subbtn"/>
+      <input type="submit" value="い" name="btn4" class="subbtn"/>
+      <input type="submit" value="う" name="btn5" class="subbtn"/>
 
-  <a href="#" class="btn9">き</a>
-  <a href="#" class="btn10">く</a>
-  <a href="#" class="btn11">け</a>
+      <input type="submit" value="え" name="btn6" class="subbtn"/>
+      <input type="submit" value="お" name="btn7" class="subbtn"/>
+      <input type="submit" value="か" name="btn8" class="subbtn"/>
 
+      <input type="submit" value="き" name="btn9" class="subbtn"/>
+      <input type="submit" value="く" name="btn10" class="subbtn"/>
+      <input type="submit" value="け" name="btn11" class="subbtn"/>
+
+    </form>
   </div>
-  
 </html>
