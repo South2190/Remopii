@@ -17,15 +17,72 @@ namespace RC_of_Computer
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void back_button_Click(object sender, EventArgs e)
         {
-            /*message_label.Visible = true;
-            message_label.Visible = true;*/
+            keyconfigSet();
         }
+
+        private void arrow_buttonGroup_Enter(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void ahead_button_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button1_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button2_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button3_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button4_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button5_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button6_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button7_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button8_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void sub_button9_Click(object sender, EventArgs e)
+        {
+            keyconfigSet();
+        }
+
+        private void keyconfigSet()
+        {
+            MessageBox.Show("キーを入力してください");
+
+        }
+
+        
     }
 }
