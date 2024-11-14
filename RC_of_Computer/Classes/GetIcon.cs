@@ -12,6 +12,13 @@ namespace RC_of_Computer.Classes
         [DllImport("User32.dll")]
         private static extern bool DestroyIcon(IntPtr hIcon);
 
+        /// <summary>
+        /// dllファイルからアイコンを抽出します
+        /// </summary>
+        /// <param name="path">DLLファイルのパス</param>
+        /// <param name="iconIndex">抽出したいアイコンのインデックス番号</param>
+        /// <param name="largeIcon">大きいサイズのアイコンを使用するか</param>
+        /// <returns>Bitmap形式のアイコン 取得に失敗した場合は(null)</returns>
         public static Bitmap GetBitmapFromEXEDLL(string path, int iconIndex, bool largeIcon)
         {
             try

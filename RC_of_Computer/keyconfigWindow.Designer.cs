@@ -201,8 +201,8 @@
             // 
             // keyconfigWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(478, 741);
             this.Controls.Add(this.arrow_buttonGroup);
             this.Controls.Add(this.sub_buttonGroup);
