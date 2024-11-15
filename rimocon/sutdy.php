@@ -73,21 +73,70 @@
 
   <div class="btn">
     <form method="post"> 
-      <input type="submit" value="戻る" name="btn1" class="btn1"/>
-      <input type="submit" value="進む" name="btn2" class="btn2"/>
+      <input type="submit" value="戻る" name="mainbtn1" class="btn1"/>
+      <input type="submit" value="進む" name="mainbtn2" class="btn2"/>
 
-      <input type="submit" value="あ" name="btn3" class="subbtn"/>
-      <input type="submit" value="い" name="btn4" class="subbtn"/>
-      <input type="submit" value="う" name="btn5" class="subbtn"/>
+      <input type="submit" value="あ" name="subbtn1" class="subbtn"/>
+      <input type="submit" value="い" name="subbtn2" class="subbtn"/>
+      <input type="submit" value="う" name="subbtn3" class="subbtn"/>
 
-      <input type="submit" value="え" name="btn6" class="subbtn"/>
-      <input type="submit" value="お" name="btn7" class="subbtn"/>
-      <input type="submit" value="か" name="btn8" class="subbtn"/>
+      <input type="submit" value="え" name="subbtn4" class="subbtn"/>
+      <input type="submit" value="お" name="subbtn5" class="subbtn"/>
+      <input type="submit" value="か" name="subbtn6" class="subbtn"/>
 
-      <input type="submit" value="き" name="btn9" class="subbtn"/>
-      <input type="submit" value="く" name="btn10" class="subbtn"/>
-      <input type="submit" value="け" name="btn11" class="subbtn"/>
+      <input type="submit" value="き" name="subbtn7" class="subbtn"/>
+      <input type="submit" value="く" name="subbtn8" class="subbtn"/>
+      <input type="submit" value="け" name="subbtn9" class="subbtn"/>
 
     </form>
+    <?php
+
+    if(array_key_exists('mainbtn1', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+    
+    if(array_key_exists('mainbtn2', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP'); 
+    }
+
+    if(array_key_exists('subbtn1', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn2', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn3', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn4', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn5', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn6', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn7', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn8', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    if(array_key_exists('subbtn9', $_POST)) { 
+      exec('schtasks /run /tn RunExeFromPHP');
+    }
+
+    ?>
   </div>
 </html>
+
+
