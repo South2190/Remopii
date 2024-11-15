@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\GetIcon.cs" />
+    <Compile Include="keyconfigWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="keyconfigWindow.Designer.cs">
+      <DependentUpon>keyconfigWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunctionSetup\PHP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +70,6 @@
     <Compile Include="FunctionSetup\PHPAutoSetup.Designer.cs">
       <DependentUpon>PHPAutoSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="keyconfigWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="keyconfigWindow.Designer.cs">
-      <DependentUpon>keyconfigWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,14 +78,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="keyconfigWindow.resx">
+      <DependentUpon>keyconfigWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FunctionSetup\PHP.resx">
       <DependentUpon>PHP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FunctionSetup\PHPAutoSetup.resx">
       <DependentUpon>PHPAutoSetup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="keyconfigWindow.resx">
-      <DependentUpon>keyconfigWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
