@@ -198,6 +198,7 @@
             this.subKeyChange1.TabIndex = 4;
             this.subKeyChange1.Text = "変更";
             this.subKeyChange1.UseVisualStyleBackColor = true;
+            this.subKeyChange1.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub2
             // 
@@ -281,6 +282,7 @@
             this.subKeyChange2.TabIndex = 4;
             this.subKeyChange2.Text = "変更";
             this.subKeyChange2.UseVisualStyleBackColor = true;
+            this.subKeyChange2.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub3
             // 
@@ -364,6 +366,7 @@
             this.subKeyChange3.TabIndex = 4;
             this.subKeyChange3.Text = "変更";
             this.subKeyChange3.UseVisualStyleBackColor = true;
+            this.subKeyChange3.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub4
             // 
@@ -437,6 +440,7 @@
             this.subKeyChange4.TabIndex = 4;
             this.subKeyChange4.Text = "変更";
             this.subKeyChange4.UseVisualStyleBackColor = true;
+            this.subKeyChange4.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // subHidden4
             // 
@@ -530,6 +534,7 @@
             this.subKeyChange5.TabIndex = 4;
             this.subKeyChange5.Text = "変更";
             this.subKeyChange5.UseVisualStyleBackColor = true;
+            this.subKeyChange5.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub6
             // 
@@ -613,6 +618,7 @@
             this.subKeyChange6.TabIndex = 4;
             this.subKeyChange6.Text = "変更";
             this.subKeyChange6.UseVisualStyleBackColor = true;
+            this.subKeyChange6.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub7
             // 
@@ -696,6 +702,7 @@
             this.subKeyChange7.TabIndex = 4;
             this.subKeyChange7.Text = "変更";
             this.subKeyChange7.UseVisualStyleBackColor = true;
+            this.subKeyChange7.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub8
             // 
@@ -779,6 +786,7 @@
             this.subKeyChange8.TabIndex = 4;
             this.subKeyChange8.Text = "変更";
             this.subKeyChange8.UseVisualStyleBackColor = true;
+            this.subKeyChange8.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // sub9
             // 
@@ -862,6 +870,7 @@
             this.subKeyChange9.TabIndex = 4;
             this.subKeyChange9.Text = "変更";
             this.subKeyChange9.UseVisualStyleBackColor = true;
+            this.subKeyChange9.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // main1
             // 
@@ -935,6 +944,7 @@
             this.mainKeyChange1.TabIndex = 4;
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
+            this.mainKeyChange1.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // main2
             // 
@@ -1008,6 +1018,7 @@
             this.mainKeyChange2.TabIndex = 4;
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
+            this.mainKeyChange2.Click += new System.EventHandler(this.keyChange_Click);
             // 
             // keyconfigWindow
             // 
