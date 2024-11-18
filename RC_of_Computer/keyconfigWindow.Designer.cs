@@ -141,7 +141,6 @@
             this.subHidden1.TabIndex = 6;
             this.subHidden1.Text = "サブボタン1";
             this.subHidden1.UseVisualStyleBackColor = true;
-            this.subHidden1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label1
             // 
