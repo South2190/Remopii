@@ -17,9 +17,17 @@ namespace RC_of_Computer
             InitializeComponent();
         }
 
-        private void keyconfigSet()
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
+
+        /*private void GroupBoxChange()
+        {
+            if ()
+            {
+
+            }
+        }*/
     }
 }

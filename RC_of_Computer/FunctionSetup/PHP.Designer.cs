@@ -40,6 +40,13 @@
             this.PHPRef = new System.Windows.Forms.Button();
             this.PHPPath = new System.Windows.Forms.TextBox();
             this.PHPStatus = new System.Windows.Forms.Label();
+            this.IPaddress = new System.Windows.Forms.TextBox();
+            this.PortNumber = new System.Windows.Forms.TextBox();
+            this.SettingsItem4 = new System.Windows.Forms.Label();
+            this.SettingsItem5 = new System.Windows.Forms.Label();
+            this.OK = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.Apply = new System.Windows.Forms.Button();
             this.AdvancedSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,18 +83,22 @@
             // 
             this.AdvancedSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.AdvancedSettings.Controls.Add(this.SettingsItem5);
+            this.AdvancedSettings.Controls.Add(this.SettingsItem4);
             this.AdvancedSettings.Controls.Add(this.comboBox1);
             this.AdvancedSettings.Controls.Add(this.SettingsItem2);
             this.AdvancedSettings.Controls.Add(this.DocumentRootRef);
             this.AdvancedSettings.Controls.Add(this.DocumentRootPath);
             this.AdvancedSettings.Controls.Add(this.SettingsItem3);
             this.AdvancedSettings.Controls.Add(this.PHPRef);
+            this.AdvancedSettings.Controls.Add(this.PortNumber);
+            this.AdvancedSettings.Controls.Add(this.IPaddress);
             this.AdvancedSettings.Controls.Add(this.PHPPath);
             this.AdvancedSettings.Controls.Add(this.SettingsItem1);
             this.AdvancedSettings.Controls.Add(this.UsePATHValue);
             this.AdvancedSettings.Location = new System.Drawing.Point(12, 65);
             this.AdvancedSettings.Name = "AdvancedSettings";
-            this.AdvancedSettings.Size = new System.Drawing.Size(580, 135);
+            this.AdvancedSettings.Size = new System.Drawing.Size(580, 193);
             this.AdvancedSettings.TabIndex = 3;
             this.AdvancedSettings.TabStop = false;
             this.AdvancedSettings.Text = "詳細設定 (PHPの自動セットアップを使用する場合は変更しないでください)";
@@ -166,11 +177,77 @@
             this.PHPStatus.TabIndex = 4;
             this.PHPStatus.Text = "PHPセットアップ済 / 未セットアップ";
             // 
+            // IPaddress
+            // 
+            this.IPaddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IPaddress.Location = new System.Drawing.Point(200, 132);
+            this.IPaddress.Name = "IPaddress";
+            this.IPaddress.Size = new System.Drawing.Size(180, 23);
+            this.IPaddress.TabIndex = 3;
+            // 
+            // PortNumber
+            // 
+            this.PortNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PortNumber.Location = new System.Drawing.Point(200, 161);
+            this.PortNumber.Name = "PortNumber";
+            this.PortNumber.Size = new System.Drawing.Size(180, 23);
+            this.PortNumber.TabIndex = 3;
+            // 
+            // SettingsItem4
+            // 
+            this.SettingsItem4.AutoSize = true;
+            this.SettingsItem4.Location = new System.Drawing.Point(13, 140);
+            this.SettingsItem4.Name = "SettingsItem4";
+            this.SettingsItem4.Size = new System.Drawing.Size(54, 15);
+            this.SettingsItem4.TabIndex = 10;
+            this.SettingsItem4.Text = "IPアドレス";
+            // 
+            // SettingsItem5
+            // 
+            this.SettingsItem5.AutoSize = true;
+            this.SettingsItem5.Location = new System.Drawing.Point(13, 169);
+            this.SettingsItem5.Name = "SettingsItem5";
+            this.SettingsItem5.Size = new System.Drawing.Size(59, 15);
+            this.SettingsItem5.TabIndex = 10;
+            this.SettingsItem5.Text = "ポート番号";
+            // 
+            // OK
+            // 
+            this.OK.Location = new System.Drawing.Point(341, 264);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(80, 30);
+            this.OK.TabIndex = 5;
+            this.OK.Text = "OK";
+            this.OK.UseVisualStyleBackColor = true;
+            // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(427, 264);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(80, 30);
+            this.Cancel.TabIndex = 5;
+            this.Cancel.Text = "キャンセル";
+            this.Cancel.UseVisualStyleBackColor = true;
+            // 
+            // Apply
+            // 
+            this.Apply.Location = new System.Drawing.Point(513, 264);
+            this.Apply.Name = "Apply";
+            this.Apply.Size = new System.Drawing.Size(80, 30);
+            this.Apply.TabIndex = 5;
+            this.Apply.Text = "適用";
+            this.Apply.UseVisualStyleBackColor = true;
+            // 
             // PHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(604, 361);
+            this.ClientSize = new System.Drawing.Size(604, 299);
+            this.Controls.Add(this.Apply);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.OK);
             this.Controls.Add(this.PHPStatus);
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.RunPHPSetup);
@@ -198,5 +275,12 @@
         private System.Windows.Forms.TextBox DocumentRootPath;
         private System.Windows.Forms.Label SettingsItem2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label SettingsItem5;
+        private System.Windows.Forms.Label SettingsItem4;
+        private System.Windows.Forms.TextBox PortNumber;
+        private System.Windows.Forms.TextBox IPaddress;
+        private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button Apply;
     }
 }
