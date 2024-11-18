@@ -80,48 +80,48 @@
   
       $arr = json_decode($json_data,true);
 
-      $value = $arr[0]['mainbtn1'][0]['value'];
-      echo '<input type="submit" value=' . $value . ' name="mainbtn1" class="mainbtn1"/>';
-      $value = $arr[1]['mainbtn2'][0]['value'];
-      echo '<input type="submit" value=' . $value . ' name="mainbtn2" class="mainbtn2"/>';
+      $value = $arr[0]['mainBtn1'][0]['Value'];
+      echo '<input type="submit" value=' . $value . ' name="mainBtn1" class="mainbtn1"/>';
+      $value = $arr[1]['mainBtn2'][0]['Value'];
+      echo '<input type="submit" value=' . $value . ' name="mainBtn2" class="mainbtn2"/>';
 
-      $value = $arr[2]['subbtn1'][0]['value'];
-      if($arr[2]['subbtn1'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn1" class="subbtn"/>';
+      $value = $arr[2]['subBtn1'][0]['Value'];
+      if($arr[2]['subBtn1'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn1" class="subbtn"/>';
       }
-      $value = $arr[3]['subbtn2'][0]['value'];
-      if($arr[3]['subbtn2'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn2" class="subbtn"/>';
+      $value = $arr[3]['subBtn2'][0]['Value'];
+      if($arr[3]['subBtn2'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn2" class="subbtn"/>';
       }
-      $value = $arr[4]['subbtn3'][0]['value'];
-      if($arr[4]['subbtn3'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn3" class="subbtn"/>';
-      }
-
-      $value = $arr[5]['subbtn4'][0]['value'];
-      if($arr[5]['subbtn4'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn4" class="subbtn"/>';
-      }
-      $value = $arr[6]['subbtn5'][0]['value'];
-      if($arr[6]['subbtn5'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn5" class="subbtn"/>';
-      }
-      $value = $arr[7]['subbtn6'][0]['value'];
-      if($arr[7]['subbtn6'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn6" class="subbtn"/>';
+      $value = $arr[4]['subBtn3'][0]['Value'];
+      if($arr[4]['subBtn3'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn3" class="subbtn"/>';
       }
 
-      $value = $arr[8]['subbtn7'][0]['value'];
-      if($arr[8]['subbtn7'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn7" class="subbtn"/>';
+      $value = $arr[5]['subBtn4'][0]['Value'];
+      if($arr[5]['subBtn4'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn4" class="subbtn"/>';
       }
-      $value = $arr[9]['subbtn8'][0]['value'];
-      if($arr[9]['subbtn8'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn8" class="subbtn"/>';
+      $value = $arr[6]['subBtn5'][0]['Value'];
+      if($arr[6]['subBtn5'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn5" class="subbtn"/>';
       }
-      $value = $arr[10]['subbtn9'][0]['value'];
-      if($arr[10]['subbtn9'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subbtn9" class="subbtn"/>';
+      $value = $arr[7]['subBtn6'][0]['Value'];
+      if($arr[7]['subBtn6'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn6" class="subbtn"/>';
+      }
+
+      $value = $arr[8]['subBtn7'][0]['Value'];
+      if($arr[8]['subBtn7'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn7" class="subbtn"/>';
+      }
+      $value = $arr[9]['subBtn8'][0]['Value'];
+      if($arr[9]['subBtn8'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn8" class="subbtn"/>';
+      }
+      $value = $arr[10]['subBtn9'][0]['Value'];
+      if($arr[10]['subBtn9'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subBtn9" class="subbtn"/>';
       }
       
       ?>
@@ -129,47 +129,47 @@
   </div>
 
   <?php
-  if(array_key_exists('mainbtn1', $_POST)) { 
+  if(array_key_exists('mainBtn1', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP'); 
   }
   
-  if(array_key_exists('mainbtn2', $_POST)) { 
+  if(array_key_exists('mainBtn2', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP'); 
   }
 
-  if(array_key_exists('subbtn1', $_POST)) { 
+  if(array_key_exists('subBtn1', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn2', $_POST)) { 
+  if(array_key_exists('subBtn2', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn3', $_POST)) { 
+  if(array_key_exists('subBtn3', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn4', $_POST)) { 
+  if(array_key_exists('subBtn4', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn5', $_POST)) { 
+  if(array_key_exists('subBtn5', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn6', $_POST)) { 
+  if(array_key_exists('subBtn6', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn7', $_POST)) { 
+  if(array_key_exists('subBtn7', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn8', $_POST)) { 
+  if(array_key_exists('subBtn8', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
-  if(array_key_exists('subbtn9', $_POST)) { 
+  if(array_key_exists('subBtn9', $_POST)) { 
     exec('schtasks /run /tn RunExeFromPHP');
   }
 
