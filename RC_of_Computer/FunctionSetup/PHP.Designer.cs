@@ -68,6 +68,7 @@
             this.RunPHPSetup.Text = "PHPの自動セットアップ";
             this.RunPHPSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RunPHPSetup.UseVisualStyleBackColor = true;
+            this.RunPHPSetup.Click += new System.EventHandler(this.RunPHPSetup_Click);
             // 
             // UsePATHValue
             // 

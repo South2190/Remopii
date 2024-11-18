@@ -32,10 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup />
   <PropertyGroup>
-    <ForceDesignerDPIUnaware>true</ForceDesignerDPIUnaware>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,6 +57,7 @@
     <Compile Include="keyconfigWindow.Designer.cs">
       <DependentUpon>keyconfigWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\HttpClientProgressExtensions.cs" />
     <Compile Include="FunctionSetup\PHP.cs">
       <SubType>Form</SubType>
     </Compile>
