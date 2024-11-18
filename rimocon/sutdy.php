@@ -10,7 +10,7 @@
         text-align: center;
       }
 
-      .btn1 {
+      .mainbtn1 {
         margin-right: 3%;
         margin-bottom: 5.5%; 
         display: inline-block;
@@ -24,12 +24,12 @@
         box-shadow: 2px 2px gray;
         
       }
-      .btn1:active{
+      .mainbtn1:active{
       background: #325f70;
       color: #FFF;
       }
 
-      .btn2 {
+      .mainbtn2 {
         margin-bottom: 5.5%;
         display: inline-block;
         width: 40%;
@@ -42,7 +42,7 @@
         box-shadow: 2px 2px gray;
         
       }
-      .btn2:active{
+      .mainbtn2:active{
       background: #335e3f;
       color: #FFF;
       }
@@ -69,74 +69,111 @@
     </style>
 
   </head>
-
-
+  
+  
   <div class="btn">
     <form method="post"> 
-      <input type="submit" value="戻る" name="mainbtn1" class="btn1"/>
-      <input type="submit" value="進む" name="mainbtn2" class="btn2"/>
+      <?php
+      $filename = "Button.json";
 
-      <input type="submit" value="あ" name="subbtn1" class="subbtn"/>
-      <input type="submit" value="い" name="subbtn2" class="subbtn"/>
-      <input type="submit" value="う" name="subbtn3" class="subbtn"/>
+      $json_data = file_get_contents($filename);
+  
+      $arr = json_decode($json_data,true);
 
-      <input type="submit" value="え" name="subbtn4" class="subbtn"/>
-      <input type="submit" value="お" name="subbtn5" class="subbtn"/>
-      <input type="submit" value="か" name="subbtn6" class="subbtn"/>
+      $value = $arr[0]['mainbtn1'][0]['value'];
+      echo '<input type="submit" value=' . $value . ' name="mainbtn1" class="mainbtn1"/>';
+      $value = $arr[1]['mainbtn2'][0]['value'];
+      echo '<input type="submit" value=' . $value . ' name="mainbtn2" class="mainbtn2"/>';
 
-      <input type="submit" value="き" name="subbtn7" class="subbtn"/>
-      <input type="submit" value="く" name="subbtn8" class="subbtn"/>
-      <input type="submit" value="け" name="subbtn9" class="subbtn"/>
+      $value = $arr[2]['subbtn1'][0]['value'];
+      if($arr[2]['subbtn1'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn1" class="subbtn"/>';
+      }
+      $value = $arr[3]['subbtn2'][0]['value'];
+      if($arr[3]['subbtn2'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn2" class="subbtn"/>';
+      }
+      $value = $arr[4]['subbtn3'][0]['value'];
+      if($arr[4]['subbtn3'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn3" class="subbtn"/>';
+      }
 
+      $value = $arr[5]['subbtn4'][0]['value'];
+      if($arr[5]['subbtn4'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn4" class="subbtn"/>';
+      }
+      $value = $arr[6]['subbtn5'][0]['value'];
+      if($arr[6]['subbtn5'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn5" class="subbtn"/>';
+      }
+      $value = $arr[7]['subbtn6'][0]['value'];
+      if($arr[7]['subbtn6'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn6" class="subbtn"/>';
+      }
+
+      $value = $arr[8]['subbtn7'][0]['value'];
+      if($arr[8]['subbtn7'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn7" class="subbtn"/>';
+      }
+      $value = $arr[9]['subbtn8'][0]['value'];
+      if($arr[9]['subbtn8'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn8" class="subbtn"/>';
+      }
+      $value = $arr[10]['subbtn9'][0]['value'];
+      if($arr[10]['subbtn9'][1]['Hidden'] == 1) { 
+      echo '<input type="submit" value=' . $value . ' name="subbtn9" class="subbtn"/>';
+      }
+      
+      ?>
     </form>
-    <?php
-
-    if(array_key_exists('mainbtn1', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-    
-    if(array_key_exists('mainbtn2', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP'); 
-    }
-
-    if(array_key_exists('subbtn1', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn2', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn3', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn4', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn5', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn6', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn7', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn8', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    if(array_key_exists('subbtn9', $_POST)) { 
-      exec('schtasks /run /tn RunExeFromPHP');
-    }
-
-    ?>
   </div>
+
+  <?php
+  if(array_key_exists('mainbtn1', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP'); 
+  }
+  
+  if(array_key_exists('mainbtn2', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP'); 
+  }
+
+  if(array_key_exists('subbtn1', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn2', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn3', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn4', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn5', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn6', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn7', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn8', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  if(array_key_exists('subbtn9', $_POST)) { 
+    exec('schtasks /run /tn RunExeFromPHP');
+  }
+
+  ?>
 </html>
 
 
