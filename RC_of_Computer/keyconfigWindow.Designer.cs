@@ -124,7 +124,7 @@
             this.sub1.Controls.Add(this.label2);
             this.sub1.Controls.Add(this.subKey1);
             this.sub1.Controls.Add(this.subKeyChange1);
-            this.sub1.Location = new System.Drawing.Point(18, 162);
+            this.sub1.Location = new System.Drawing.Point(14, 181);
             this.sub1.Margin = new System.Windows.Forms.Padding(2);
             this.sub1.Name = "sub1";
             this.sub1.Padding = new System.Windows.Forms.Padding(2);
@@ -179,11 +179,11 @@
             // 
             this.subKey1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey1.Enabled = false;
             this.subKey1.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey1.Location = new System.Drawing.Point(5, 79);
             this.subKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey1.Name = "subKey1";
+            this.subKey1.ReadOnly = true;
             this.subKey1.Size = new System.Drawing.Size(136, 23);
             this.subKey1.TabIndex = 2;
             // 
@@ -208,7 +208,7 @@
             this.sub2.Controls.Add(this.label4);
             this.sub2.Controls.Add(this.subKey2);
             this.sub2.Controls.Add(this.subKeyChange2);
-            this.sub2.Location = new System.Drawing.Point(190, 162);
+            this.sub2.Location = new System.Drawing.Point(185, 181);
             this.sub2.Margin = new System.Windows.Forms.Padding(2);
             this.sub2.Name = "sub2";
             this.sub2.Padding = new System.Windows.Forms.Padding(2);
@@ -263,11 +263,11 @@
             // 
             this.subKey2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey2.Enabled = false;
             this.subKey2.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey2.Location = new System.Drawing.Point(5, 79);
             this.subKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey2.Name = "subKey2";
+            this.subKey2.ReadOnly = true;
             this.subKey2.Size = new System.Drawing.Size(136, 23);
             this.subKey2.TabIndex = 2;
             // 
@@ -292,7 +292,7 @@
             this.sub3.Controls.Add(this.label6);
             this.sub3.Controls.Add(this.subKey3);
             this.sub3.Controls.Add(this.subKeyChange3);
-            this.sub3.Location = new System.Drawing.Point(360, 162);
+            this.sub3.Location = new System.Drawing.Point(358, 181);
             this.sub3.Margin = new System.Windows.Forms.Padding(2);
             this.sub3.Name = "sub3";
             this.sub3.Padding = new System.Windows.Forms.Padding(2);
@@ -347,11 +347,11 @@
             // 
             this.subKey3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey3.Enabled = false;
             this.subKey3.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey3.Location = new System.Drawing.Point(5, 79);
             this.subKey3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey3.Name = "subKey3";
+            this.subKey3.ReadOnly = true;
             this.subKey3.Size = new System.Drawing.Size(136, 23);
             this.subKey3.TabIndex = 2;
             // 
@@ -376,7 +376,7 @@
             this.sub4.Controls.Add(this.subKey4);
             this.sub4.Controls.Add(this.subKeyChange4);
             this.sub4.Controls.Add(this.subHidden4);
-            this.sub4.Location = new System.Drawing.Point(18, 333);
+            this.sub4.Location = new System.Drawing.Point(14, 352);
             this.sub4.Margin = new System.Windows.Forms.Padding(2);
             this.sub4.Name = "sub4";
             this.sub4.Padding = new System.Windows.Forms.Padding(2);
@@ -421,11 +421,11 @@
             // 
             this.subKey4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey4.Enabled = false;
             this.subKey4.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey4.Location = new System.Drawing.Point(5, 79);
             this.subKey4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey4.Name = "subKey4";
+            this.subKey4.ReadOnly = true;
             this.subKey4.Size = new System.Drawing.Size(136, 23);
             this.subKey4.TabIndex = 2;
             // 
@@ -460,7 +460,7 @@
             this.sub5.Controls.Add(this.subKey5);
             this.sub5.Controls.Add(this.subHidden5);
             this.sub5.Controls.Add(this.subKeyChange5);
-            this.sub5.Location = new System.Drawing.Point(187, 334);
+            this.sub5.Location = new System.Drawing.Point(185, 353);
             this.sub5.Margin = new System.Windows.Forms.Padding(2);
             this.sub5.Name = "sub5";
             this.sub5.Padding = new System.Windows.Forms.Padding(2);
@@ -505,11 +505,11 @@
             // 
             this.subKey5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey5.Enabled = false;
             this.subKey5.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey5.Location = new System.Drawing.Point(5, 79);
             this.subKey5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey5.Name = "subKey5";
+            this.subKey5.ReadOnly = true;
             this.subKey5.Size = new System.Drawing.Size(136, 23);
             this.subKey5.TabIndex = 2;
             // 
@@ -544,7 +544,7 @@
             this.sub6.Controls.Add(this.label12);
             this.sub6.Controls.Add(this.subKey6);
             this.sub6.Controls.Add(this.subKeyChange6);
-            this.sub6.Location = new System.Drawing.Point(360, 333);
+            this.sub6.Location = new System.Drawing.Point(358, 352);
             this.sub6.Margin = new System.Windows.Forms.Padding(2);
             this.sub6.Name = "sub6";
             this.sub6.Padding = new System.Windows.Forms.Padding(2);
@@ -599,11 +599,11 @@
             // 
             this.subKey6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey6.Enabled = false;
             this.subKey6.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey6.Location = new System.Drawing.Point(5, 79);
             this.subKey6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey6.Name = "subKey6";
+            this.subKey6.ReadOnly = true;
             this.subKey6.Size = new System.Drawing.Size(136, 23);
             this.subKey6.TabIndex = 2;
             // 
@@ -628,7 +628,7 @@
             this.sub7.Controls.Add(this.label14);
             this.sub7.Controls.Add(this.subKey7);
             this.sub7.Controls.Add(this.subKeyChange7);
-            this.sub7.Location = new System.Drawing.Point(18, 511);
+            this.sub7.Location = new System.Drawing.Point(14, 523);
             this.sub7.Margin = new System.Windows.Forms.Padding(2);
             this.sub7.Name = "sub7";
             this.sub7.Padding = new System.Windows.Forms.Padding(2);
@@ -683,11 +683,11 @@
             // 
             this.subKey7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey7.Enabled = false;
             this.subKey7.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey7.Location = new System.Drawing.Point(5, 79);
             this.subKey7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey7.Name = "subKey7";
+            this.subKey7.ReadOnly = true;
             this.subKey7.Size = new System.Drawing.Size(136, 23);
             this.subKey7.TabIndex = 2;
             // 
@@ -712,7 +712,7 @@
             this.sub8.Controls.Add(this.label16);
             this.sub8.Controls.Add(this.subKey8);
             this.sub8.Controls.Add(this.subKeyChange8);
-            this.sub8.Location = new System.Drawing.Point(187, 511);
+            this.sub8.Location = new System.Drawing.Point(185, 523);
             this.sub8.Margin = new System.Windows.Forms.Padding(2);
             this.sub8.Name = "sub8";
             this.sub8.Padding = new System.Windows.Forms.Padding(2);
@@ -767,11 +767,11 @@
             // 
             this.subKey8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey8.Enabled = false;
             this.subKey8.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey8.Location = new System.Drawing.Point(5, 79);
             this.subKey8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey8.Name = "subKey8";
+            this.subKey8.ReadOnly = true;
             this.subKey8.Size = new System.Drawing.Size(136, 23);
             this.subKey8.TabIndex = 2;
             // 
@@ -796,7 +796,7 @@
             this.sub9.Controls.Add(this.label18);
             this.sub9.Controls.Add(this.subKey9);
             this.sub9.Controls.Add(this.subKeyChange9);
-            this.sub9.Location = new System.Drawing.Point(360, 512);
+            this.sub9.Location = new System.Drawing.Point(358, 524);
             this.sub9.Margin = new System.Windows.Forms.Padding(2);
             this.sub9.Name = "sub9";
             this.sub9.Padding = new System.Windows.Forms.Padding(2);
@@ -851,11 +851,11 @@
             // 
             this.subKey9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subKey9.Enabled = false;
             this.subKey9.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey9.Location = new System.Drawing.Point(5, 79);
             this.subKey9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey9.Name = "subKey9";
+            this.subKey9.ReadOnly = true;
             this.subKey9.Size = new System.Drawing.Size(136, 23);
             this.subKey9.TabIndex = 2;
             // 
@@ -879,7 +879,7 @@
             this.main1.Controls.Add(this.label20);
             this.main1.Controls.Add(this.mainKey1);
             this.main1.Controls.Add(this.mainKeyChange1);
-            this.main1.Location = new System.Drawing.Point(115, 9);
+            this.main1.Location = new System.Drawing.Point(110, 11);
             this.main1.Margin = new System.Windows.Forms.Padding(2);
             this.main1.Name = "main1";
             this.main1.Padding = new System.Windows.Forms.Padding(2);
@@ -925,11 +925,11 @@
             // 
             this.mainKey1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainKey1.Enabled = false;
             this.mainKey1.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.mainKey1.Location = new System.Drawing.Point(5, 79);
             this.mainKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKey1.Name = "mainKey1";
+            this.mainKey1.ReadOnly = true;
             this.mainKey1.Size = new System.Drawing.Size(136, 23);
             this.mainKey1.TabIndex = 2;
             // 
@@ -953,7 +953,7 @@
             this.main2.Controls.Add(this.label22);
             this.main2.Controls.Add(this.mainKey2);
             this.main2.Controls.Add(this.mainKeyChange2);
-            this.main2.Location = new System.Drawing.Point(268, 9);
+            this.main2.Location = new System.Drawing.Point(263, 11);
             this.main2.Margin = new System.Windows.Forms.Padding(2);
             this.main2.Name = "main2";
             this.main2.Padding = new System.Windows.Forms.Padding(2);
@@ -999,11 +999,11 @@
             // 
             this.mainKey2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainKey2.Enabled = false;
             this.mainKey2.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.mainKey2.Location = new System.Drawing.Point(5, 79);
             this.mainKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKey2.Name = "mainKey2";
+            this.mainKey2.ReadOnly = true;
             this.mainKey2.Size = new System.Drawing.Size(136, 23);
             this.mainKey2.TabIndex = 2;
             // 
@@ -1024,7 +1024,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(519, 674);
+            this.ClientSize = new System.Drawing.Size(528, 689);
             this.Controls.Add(this.sub9);
             this.Controls.Add(this.sub6);
             this.Controls.Add(this.sub3);
