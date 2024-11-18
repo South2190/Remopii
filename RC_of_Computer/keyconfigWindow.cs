@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace RC_of_Computer
@@ -17,17 +11,10 @@ namespace RC_of_Computer
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void keyChange_Click(object sender, EventArgs e)
         {
-            
+            Button button = (Button)sender;
+            Debug.WriteLine(button.Name);
         }
-
-        /*private void GroupBoxChange()
-        {
-            if ()
-            {
-
-            }
-        }*/
     }
 }
