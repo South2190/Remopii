@@ -13,7 +13,6 @@ namespace RC_of_Computer.FunctionSetup
     public partial class PHPAutoSetup : Form
     {
         private static readonly string PHPDownloadUrl = "https://windows.php.net/downloads/releases/archives/php-8.3.9-Win32-vs16-x64.zip";
-        //private static readonly string PHPDownloadUrl = "https://httpstat.us/502";
         private static readonly string destinationFileName = "PHP.zip";
 
         private static readonly HttpClient httpClient = new();
