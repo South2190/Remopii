@@ -22,7 +22,6 @@ namespace seigyo
                 SendKeys.SendWait(args[0]);
                 Application.Exit();
             }
-            //Console.ReadLine();
         }
     }
 }
