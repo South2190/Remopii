@@ -65,6 +65,17 @@
       background: #7b867e;
       color: #FFF;
       }
+	  .disabledbtn{
+		margin-top: 4.5%;
+        margin-right: 2.25%;
+        margin-left: 2.25%;
+        display: inline-block;
+        width: 24%;
+        padding: 5% 0;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 7px;
+	    }
       
     </style>
 
@@ -77,53 +88,30 @@
       $filename = "Button.json";
 
       $json_data = file_get_contents($filename);
+      if ($json_data === false) {
+        echo "Internal Server Error";
+    }else{
   
       $arr = json_decode($json_data,true);
 
       $value = $arr[0]['mainBtn1'][0]['Value'];
-      echo '<input type="submit" value=' . $value . ' name="mainBtn1" class="mainbtn1"/>';
+      echo '<input type="submit" value=' . $value . ' name="mainBtn1"  class="mainbtn1"/>';
       $value = $arr[1]['mainBtn2'][0]['Value'];
       echo '<input type="submit" value=' . $value . ' name="mainBtn2" class="mainbtn2"/>';
 
-      $value = $arr[2]['subBtn1'][0]['Value'];
-      if($arr[2]['subBtn1'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn1" class="subbtn"/>';
-      }
-      $value = $arr[3]['subBtn2'][0]['Value'];
-      if($arr[3]['subBtn2'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn2" class="subbtn"/>';
-      }
-      $value = $arr[4]['subBtn3'][0]['Value'];
-      if($arr[4]['subBtn3'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn3" class="subbtn"/>';
-      }
-
-      $value = $arr[5]['subBtn4'][0]['Value'];
-      if($arr[5]['subBtn4'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn4" class="subbtn"/>';
-      }
-      $value = $arr[6]['subBtn5'][0]['Value'];
-      if($arr[6]['subBtn5'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn5" class="subbtn"/>';
-      }
-      $value = $arr[7]['subBtn6'][0]['Value'];
-      if($arr[7]['subBtn6'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn6" class="subbtn"/>';
-      }
-
-      $value = $arr[8]['subBtn7'][0]['Value'];
-      if($arr[8]['subBtn7'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn7" class="subbtn"/>';
-      }
-      $value = $arr[9]['subBtn8'][0]['Value'];
-      if($arr[9]['subBtn8'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn8" class="subbtn"/>';
-      }
-      $value = $arr[10]['subBtn9'][0]['Value'];
-      if($arr[10]['subBtn9'][1]['Hidden'] == 1) { 
-      echo '<input type="submit" value=' . $value . ' name="subBtn9" class="subbtn"/>';
-      }
-      
+      for($i = 1; $i <= 9; $i++){
+        if($arr[$i + 1]['subBtn' . $i . ''][1]['Hidden'] == 1) { 
+            $value = $arr[$i + 1]['subBtn' . $i . ''][0]['Value'];
+            $btnclass = "subbtn";
+            $btndisabled = "null";
+          }else{
+            $value = "無効";
+            $btnclass = "disabledbtn";
+            $btndisabled = "disabled";
+          }
+          echo '<input type="submit" value=' . $value . ' name="subBtn' . $i . '" ' . $btndisabled . '  class=' . $btnclass . ' />';
+        }
+	}
       ?>
     </form>
   </div>
