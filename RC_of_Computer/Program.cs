@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace RC_of_Computer
@@ -16,6 +17,8 @@ namespace RC_of_Computer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // カレントディレクトリをexeファイルの場所に変更
+            Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
             Application.Run(new MainWindow());
         }
     }

@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace RC_of_Computer
 {
-    public partial class keyconfigWindow : Form
+    public partial class KeyConfigWindow : Form
     {
-        public keyconfigWindow()
+        public KeyConfigWindow()
         {
             InitializeComponent();
         }
@@ -14,7 +14,7 @@ namespace RC_of_Computer
         /// <summary>
         /// すべての"変更"ボタンから呼び出されるイベント
         /// </summary>
-        private void keyChange_Click(object sender, EventArgs e)
+        private void KeyChange_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             Debug.WriteLine(button.Name);
