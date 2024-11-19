@@ -124,7 +124,7 @@
             this.sub1.Controls.Add(this.label2);
             this.sub1.Controls.Add(this.subKey1);
             this.sub1.Controls.Add(this.subKeyChange1);
-            this.sub1.Location = new System.Drawing.Point(14, 181);
+            this.sub1.Location = new System.Drawing.Point(18, 181);
             this.sub1.Margin = new System.Windows.Forms.Padding(2);
             this.sub1.Name = "sub1";
             this.sub1.Padding = new System.Windows.Forms.Padding(2);
@@ -209,7 +209,7 @@
             this.sub2.Controls.Add(this.label4);
             this.sub2.Controls.Add(this.subKey2);
             this.sub2.Controls.Add(this.subKeyChange2);
-            this.sub2.Location = new System.Drawing.Point(185, 181);
+            this.sub2.Location = new System.Drawing.Point(189, 181);
             this.sub2.Margin = new System.Windows.Forms.Padding(2);
             this.sub2.Name = "sub2";
             this.sub2.Padding = new System.Windows.Forms.Padding(2);
@@ -294,7 +294,7 @@
             this.sub3.Controls.Add(this.label6);
             this.sub3.Controls.Add(this.subKey3);
             this.sub3.Controls.Add(this.subKeyChange3);
-            this.sub3.Location = new System.Drawing.Point(358, 181);
+            this.sub3.Location = new System.Drawing.Point(362, 181);
             this.sub3.Margin = new System.Windows.Forms.Padding(2);
             this.sub3.Name = "sub3";
             this.sub3.Padding = new System.Windows.Forms.Padding(2);
@@ -379,7 +379,7 @@
             this.sub4.Controls.Add(this.subKey4);
             this.sub4.Controls.Add(this.subKeyChange4);
             this.sub4.Controls.Add(this.subHidden4);
-            this.sub4.Location = new System.Drawing.Point(14, 352);
+            this.sub4.Location = new System.Drawing.Point(18, 352);
             this.sub4.Margin = new System.Windows.Forms.Padding(2);
             this.sub4.Name = "sub4";
             this.sub4.Padding = new System.Windows.Forms.Padding(2);
@@ -464,7 +464,7 @@
             this.sub5.Controls.Add(this.subKey5);
             this.sub5.Controls.Add(this.subHidden5);
             this.sub5.Controls.Add(this.subKeyChange5);
-            this.sub5.Location = new System.Drawing.Point(185, 353);
+            this.sub5.Location = new System.Drawing.Point(189, 353);
             this.sub5.Margin = new System.Windows.Forms.Padding(2);
             this.sub5.Name = "sub5";
             this.sub5.Padding = new System.Windows.Forms.Padding(2);
@@ -549,7 +549,7 @@
             this.sub6.Controls.Add(this.label12);
             this.sub6.Controls.Add(this.subKey6);
             this.sub6.Controls.Add(this.subKeyChange6);
-            this.sub6.Location = new System.Drawing.Point(358, 352);
+            this.sub6.Location = new System.Drawing.Point(362, 352);
             this.sub6.Margin = new System.Windows.Forms.Padding(2);
             this.sub6.Name = "sub6";
             this.sub6.Padding = new System.Windows.Forms.Padding(2);
@@ -634,7 +634,7 @@
             this.sub7.Controls.Add(this.label14);
             this.sub7.Controls.Add(this.subKey7);
             this.sub7.Controls.Add(this.subKeyChange7);
-            this.sub7.Location = new System.Drawing.Point(14, 523);
+            this.sub7.Location = new System.Drawing.Point(18, 523);
             this.sub7.Margin = new System.Windows.Forms.Padding(2);
             this.sub7.Name = "sub7";
             this.sub7.Padding = new System.Windows.Forms.Padding(2);
@@ -719,7 +719,7 @@
             this.sub8.Controls.Add(this.label16);
             this.sub8.Controls.Add(this.subKey8);
             this.sub8.Controls.Add(this.subKeyChange8);
-            this.sub8.Location = new System.Drawing.Point(185, 523);
+            this.sub8.Location = new System.Drawing.Point(189, 523);
             this.sub8.Margin = new System.Windows.Forms.Padding(2);
             this.sub8.Name = "sub8";
             this.sub8.Padding = new System.Windows.Forms.Padding(2);
@@ -804,7 +804,7 @@
             this.sub9.Controls.Add(this.label18);
             this.sub9.Controls.Add(this.subKey9);
             this.sub9.Controls.Add(this.subKeyChange9);
-            this.sub9.Location = new System.Drawing.Point(358, 524);
+            this.sub9.Location = new System.Drawing.Point(362, 524);
             this.sub9.Margin = new System.Windows.Forms.Padding(2);
             this.sub9.Name = "sub9";
             this.sub9.Padding = new System.Windows.Forms.Padding(2);
@@ -1033,7 +1033,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(528, 689);
+            this.ClientSize = new System.Drawing.Size(528, 687);
             this.Controls.Add(this.sub9);
             this.Controls.Add(this.sub6);
             this.Controls.Add(this.sub3);
