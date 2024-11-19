@@ -23,24 +23,24 @@ namespace RC_of_Computer.FunctionSetup
             InitializeComponent();
         }
 
-        private void StartSetup_Click(object sender, EventArgs e)
+        private async void StartSetup_Click(object sender, EventArgs e)
         {
-            //SetupProgress.Value = 0;
-            //Description.Text = "PHPのセットアップ中です";
-            //SetupDetail.Text = "ダウンロードしています...";
+            SetupProgress.Value = 0;
+            Description.Text = "PHPのセットアップ中です";
+            SetupDetail.Text = "ダウンロードしています...";
 
-            //Progress<float> progress = new();
-            //progress.ProgressChanged += Progress_ProgressChanged;
+            Progress<float> progress = new();
+            progress.ProgressChanged += Progress_ProgressChanged;
 
-            //httpClient.DefaultRequestHeaders.Add("User-Agent", "C# App");
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "C# App");
 
             string currentDirectory = Directory.GetCurrentDirectory();
-            //string tempFile = Path.Combine(currentDirectory, destinationFileName);
+            string tempFile = Path.Combine(currentDirectory, destinationFileName);
 
-            //using (FileStream file = new(tempFile, FileMode.Create, FileAccess.Write, FileShare.None))
-            //    await httpClient.DownloadDataAsync(PHPDownloadUrl, file, progress);
+            using (FileStream file = new(tempFile, FileMode.Create, FileAccess.Write, FileShare.None))
+                await httpClient.DownloadDataAsync(PHPDownloadUrl, file, progress);
 
-            //httpClient.Dispose();
+            httpClient.Dispose();
 
             SetupDetail.Text = "展開しています...";
             SetupProgress.Value = 0;
@@ -74,10 +74,10 @@ namespace RC_of_Computer.FunctionSetup
                 }
             }
 
-            //if (File.Exists(tempFile))
-            //{
-            //    File.Delete(tempFile);
-            //}
+            if (File.Exists(tempFile))
+            {
+                File.Delete(tempFile);
+            }
 
             Description.Text = "PHPのセットアップが完了しました。";
             SetupDetail.Text = string.Empty;
