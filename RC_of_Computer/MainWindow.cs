@@ -31,14 +31,14 @@ namespace RC_of_Computer
 
         private void Server_button_Click(object sender, EventArgs e)
         {
-            if (Server_button.Text != "サーバースタート")
+            /*if (Server_button.Text != "サーバースタート")
             {
                 Server_button.Text = "サーバースタート";
             }
             else
             {
                 Server_button.Text = "サーバーストップ";
-            }
+            }*/
 
 
         }
@@ -50,8 +50,13 @@ namespace RC_of_Computer
 
         private void keyconfig_button_Click(object sender, EventArgs e)
         {
-            var keyconfigWindow = new keyconfigWindow();
+            var keyconfigWindow = new KeyConfigWindow();
             keyconfigWindow.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -78,6 +78,8 @@
             this.Controls.Add(this.Description);
             this.Controls.Add(this.StartSetup);
             this.Controls.Add(this.SetupProgress);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "PHPAutoSetup";
             this.Text = "PHPの自動セットアップ";
             this.ResumeLayout(false);

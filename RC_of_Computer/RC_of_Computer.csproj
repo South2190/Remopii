@@ -39,6 +39,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,11 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\GetIcon.cs" />
-    <Compile Include="keyconfigWindow.cs">
+    <Compile Include="KeyConfigWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="keyconfigWindow.Designer.cs">
-      <DependentUpon>keyconfigWindow.cs</DependentUpon>
+    <Compile Include="KeyConfigWindow.Designer.cs">
+      <DependentUpon>KeyConfigWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\HttpClientProgressExtensions.cs" />
     <Compile Include="FunctionSetup\PHP.cs">
@@ -78,8 +80,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="keyconfigWindow.resx">
-      <DependentUpon>keyconfigWindow.cs</DependentUpon>
+    <EmbeddedResource Include="KeyConfigWindow.resx">
+      <DependentUpon>KeyConfigWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FunctionSetup\PHP.resx">
       <DependentUpon>PHP.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace RC_of_Computer
 {
-    partial class keyconfigWindow
+    partial class KeyConfigWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -124,7 +124,7 @@
             this.sub1.Controls.Add(this.label2);
             this.sub1.Controls.Add(this.subKey1);
             this.sub1.Controls.Add(this.subKeyChange1);
-            this.sub1.Location = new System.Drawing.Point(14, 181);
+            this.sub1.Location = new System.Drawing.Point(18, 181);
             this.sub1.Margin = new System.Windows.Forms.Padding(2);
             this.sub1.Name = "sub1";
             this.sub1.Padding = new System.Windows.Forms.Padding(2);
@@ -141,6 +141,7 @@
             this.subHidden1.TabIndex = 6;
             this.subHidden1.Text = "サブボタン1";
             this.subHidden1.UseVisualStyleBackColor = true;
+            this.subHidden1.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label1
             // 
@@ -198,7 +199,7 @@
             this.subKeyChange1.TabIndex = 4;
             this.subKeyChange1.Text = "変更";
             this.subKeyChange1.UseVisualStyleBackColor = true;
-            this.subKeyChange1.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub2
             // 
@@ -208,7 +209,7 @@
             this.sub2.Controls.Add(this.label4);
             this.sub2.Controls.Add(this.subKey2);
             this.sub2.Controls.Add(this.subKeyChange2);
-            this.sub2.Location = new System.Drawing.Point(185, 181);
+            this.sub2.Location = new System.Drawing.Point(189, 181);
             this.sub2.Margin = new System.Windows.Forms.Padding(2);
             this.sub2.Name = "sub2";
             this.sub2.Padding = new System.Windows.Forms.Padding(2);
@@ -225,6 +226,7 @@
             this.subHidden2.TabIndex = 6;
             this.subHidden2.Text = "サブボタン2";
             this.subHidden2.UseVisualStyleBackColor = true;
+            this.subHidden2.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label3
             // 
@@ -282,7 +284,7 @@
             this.subKeyChange2.TabIndex = 4;
             this.subKeyChange2.Text = "変更";
             this.subKeyChange2.UseVisualStyleBackColor = true;
-            this.subKeyChange2.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub3
             // 
@@ -292,7 +294,7 @@
             this.sub3.Controls.Add(this.label6);
             this.sub3.Controls.Add(this.subKey3);
             this.sub3.Controls.Add(this.subKeyChange3);
-            this.sub3.Location = new System.Drawing.Point(358, 181);
+            this.sub3.Location = new System.Drawing.Point(362, 181);
             this.sub3.Margin = new System.Windows.Forms.Padding(2);
             this.sub3.Name = "sub3";
             this.sub3.Padding = new System.Windows.Forms.Padding(2);
@@ -331,6 +333,7 @@
             this.subHidden3.TabIndex = 6;
             this.subHidden3.Text = "サブボタン3";
             this.subHidden3.UseVisualStyleBackColor = true;
+            this.subHidden3.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label6
             // 
@@ -366,7 +369,7 @@
             this.subKeyChange3.TabIndex = 4;
             this.subKeyChange3.Text = "変更";
             this.subKeyChange3.UseVisualStyleBackColor = true;
-            this.subKeyChange3.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange3.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub4
             // 
@@ -376,7 +379,7 @@
             this.sub4.Controls.Add(this.subKey4);
             this.sub4.Controls.Add(this.subKeyChange4);
             this.sub4.Controls.Add(this.subHidden4);
-            this.sub4.Location = new System.Drawing.Point(14, 352);
+            this.sub4.Location = new System.Drawing.Point(18, 352);
             this.sub4.Margin = new System.Windows.Forms.Padding(2);
             this.sub4.Name = "sub4";
             this.sub4.Padding = new System.Windows.Forms.Padding(2);
@@ -440,7 +443,7 @@
             this.subKeyChange4.TabIndex = 4;
             this.subKeyChange4.Text = "変更";
             this.subKeyChange4.UseVisualStyleBackColor = true;
-            this.subKeyChange4.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange4.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // subHidden4
             // 
@@ -451,6 +454,7 @@
             this.subHidden4.TabIndex = 6;
             this.subHidden4.Text = "サブボタン4";
             this.subHidden4.UseVisualStyleBackColor = true;
+            this.subHidden4.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // sub5
             // 
@@ -460,7 +464,7 @@
             this.sub5.Controls.Add(this.subKey5);
             this.sub5.Controls.Add(this.subHidden5);
             this.sub5.Controls.Add(this.subKeyChange5);
-            this.sub5.Location = new System.Drawing.Point(185, 353);
+            this.sub5.Location = new System.Drawing.Point(189, 353);
             this.sub5.Margin = new System.Windows.Forms.Padding(2);
             this.sub5.Name = "sub5";
             this.sub5.Padding = new System.Windows.Forms.Padding(2);
@@ -522,6 +526,7 @@
             this.subHidden5.TabIndex = 6;
             this.subHidden5.Text = "サブボタン5";
             this.subHidden5.UseVisualStyleBackColor = true;
+            this.subHidden5.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // subKeyChange5
             // 
@@ -534,7 +539,7 @@
             this.subKeyChange5.TabIndex = 4;
             this.subKeyChange5.Text = "変更";
             this.subKeyChange5.UseVisualStyleBackColor = true;
-            this.subKeyChange5.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange5.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub6
             // 
@@ -544,7 +549,7 @@
             this.sub6.Controls.Add(this.label12);
             this.sub6.Controls.Add(this.subKey6);
             this.sub6.Controls.Add(this.subKeyChange6);
-            this.sub6.Location = new System.Drawing.Point(358, 352);
+            this.sub6.Location = new System.Drawing.Point(362, 352);
             this.sub6.Margin = new System.Windows.Forms.Padding(2);
             this.sub6.Name = "sub6";
             this.sub6.Padding = new System.Windows.Forms.Padding(2);
@@ -561,6 +566,7 @@
             this.subHidden6.TabIndex = 6;
             this.subHidden6.Text = "サブボタン6";
             this.subHidden6.UseVisualStyleBackColor = true;
+            this.subHidden6.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label11
             // 
@@ -618,7 +624,7 @@
             this.subKeyChange6.TabIndex = 4;
             this.subKeyChange6.Text = "変更";
             this.subKeyChange6.UseVisualStyleBackColor = true;
-            this.subKeyChange6.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange6.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub7
             // 
@@ -628,7 +634,7 @@
             this.sub7.Controls.Add(this.label14);
             this.sub7.Controls.Add(this.subKey7);
             this.sub7.Controls.Add(this.subKeyChange7);
-            this.sub7.Location = new System.Drawing.Point(14, 523);
+            this.sub7.Location = new System.Drawing.Point(18, 523);
             this.sub7.Margin = new System.Windows.Forms.Padding(2);
             this.sub7.Name = "sub7";
             this.sub7.Padding = new System.Windows.Forms.Padding(2);
@@ -667,6 +673,7 @@
             this.subHidden7.TabIndex = 6;
             this.subHidden7.Text = "サブボタン7";
             this.subHidden7.UseVisualStyleBackColor = true;
+            this.subHidden7.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label14
             // 
@@ -702,7 +709,7 @@
             this.subKeyChange7.TabIndex = 4;
             this.subKeyChange7.Text = "変更";
             this.subKeyChange7.UseVisualStyleBackColor = true;
-            this.subKeyChange7.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange7.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub8
             // 
@@ -712,7 +719,7 @@
             this.sub8.Controls.Add(this.label16);
             this.sub8.Controls.Add(this.subKey8);
             this.sub8.Controls.Add(this.subKeyChange8);
-            this.sub8.Location = new System.Drawing.Point(185, 523);
+            this.sub8.Location = new System.Drawing.Point(189, 523);
             this.sub8.Margin = new System.Windows.Forms.Padding(2);
             this.sub8.Name = "sub8";
             this.sub8.Padding = new System.Windows.Forms.Padding(2);
@@ -740,6 +747,7 @@
             this.subHidden8.TabIndex = 6;
             this.subHidden8.Text = "サブボタン8";
             this.subHidden8.UseVisualStyleBackColor = true;
+            this.subHidden8.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // subValue8
             // 
@@ -786,7 +794,7 @@
             this.subKeyChange8.TabIndex = 4;
             this.subKeyChange8.Text = "変更";
             this.subKeyChange8.UseVisualStyleBackColor = true;
-            this.subKeyChange8.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange8.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub9
             // 
@@ -796,7 +804,7 @@
             this.sub9.Controls.Add(this.label18);
             this.sub9.Controls.Add(this.subKey9);
             this.sub9.Controls.Add(this.subKeyChange9);
-            this.sub9.Location = new System.Drawing.Point(358, 524);
+            this.sub9.Location = new System.Drawing.Point(362, 524);
             this.sub9.Margin = new System.Windows.Forms.Padding(2);
             this.sub9.Name = "sub9";
             this.sub9.Padding = new System.Windows.Forms.Padding(2);
@@ -813,6 +821,7 @@
             this.subHidden9.TabIndex = 6;
             this.subHidden9.Text = "サブボタン9";
             this.subHidden9.UseVisualStyleBackColor = true;
+            this.subHidden9.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label17
             // 
@@ -870,7 +879,7 @@
             this.subKeyChange9.TabIndex = 4;
             this.subKeyChange9.Text = "変更";
             this.subKeyChange9.UseVisualStyleBackColor = true;
-            this.subKeyChange9.Click += new System.EventHandler(this.keyChange_Click);
+            this.subKeyChange9.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // main1
             // 
@@ -944,7 +953,7 @@
             this.mainKeyChange1.TabIndex = 4;
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
-            this.mainKeyChange1.Click += new System.EventHandler(this.keyChange_Click);
+            this.mainKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // main2
             // 
@@ -1018,13 +1027,13 @@
             this.mainKeyChange2.TabIndex = 4;
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
-            this.mainKeyChange2.Click += new System.EventHandler(this.keyChange_Click);
+            this.mainKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // keyconfigWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(528, 689);
+            this.ClientSize = new System.Drawing.Size(528, 687);
             this.Controls.Add(this.sub9);
             this.Controls.Add(this.sub6);
             this.Controls.Add(this.sub3);
@@ -1037,7 +1046,9 @@
             this.Controls.Add(this.main1);
             this.Controls.Add(this.sub1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximizeBox = false;
             this.Name = "keyconfigWindow";
             this.Text = "キーコンフィグ";
             this.sub1.ResumeLayout(false);
