@@ -94,23 +94,23 @@
   
       $arr = json_decode($json_data,true);
 
-      $value = $arr[0]['mainBtn1'][0]['Value'];
+      $value = $arr['mainBtn1']['Value'];
       echo '<input type="submit" value=' . $value . ' name="mainBtn1"  class="mainbtn1"/>';
-      $value = $arr[1]['mainBtn2'][0]['Value'];
+      $value = $arr['mainBtn2']['Value'];
       echo '<input type="submit" value=' . $value . ' name="mainBtn2" class="mainbtn2"/>';
 
       for($i = 1; $i <= 9; $i++){
-        if($arr[$i + 1]['subBtn' . $i . ''][1]['Hidden'] == 1) { 
-            $value = $arr[$i + 1]['subBtn' . $i . ''][0]['Value'];
+        if($arr['subBtn' . $i . '']['Hidden'] == 1) { 
+            $value = $arr['subBtn' . $i . '']['Value'];
             $btnclass = "subbtn";
             $btndisabled = "null";
-          }else{
+        }else{
             $value = "無効";
             $btnclass = "disabledbtn";
             $btndisabled = "disabled";
           }
           echo '<input type="submit" value=' . $value . ' name="subBtn' . $i . '" ' . $btndisabled . '  class=' . $btnclass . ' />';
-        }
+      }
 	}
       ?>
     </form>
@@ -163,5 +163,3 @@
 
   ?>
 </html>
-
-
