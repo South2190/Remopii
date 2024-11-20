@@ -53,7 +53,7 @@
             this.Server_button.Location = new System.Drawing.Point(8, 198);
             this.Server_button.Name = "Server_button";
             this.Server_button.Size = new System.Drawing.Size(297, 92);
-            this.Server_button.TabIndex = 1;
+            this.Server_button.TabIndex = 60;
             this.Server_button.Text = "サーバースタート";
             this.Server_button.UseVisualStyleBackColor = true;
             this.Server_button.Click += new System.EventHandler(this.Server_button_Click);
@@ -64,7 +64,7 @@
             this.PHP_button.Location = new System.Drawing.Point(6, 28);
             this.PHP_button.Name = "PHP_button";
             this.PHP_button.Size = new System.Drawing.Size(223, 44);
-            this.PHP_button.TabIndex = 0;
+            this.PHP_button.TabIndex = 50;
             this.PHP_button.Text = "PHPのセットアップ...";
             this.PHP_button.UseVisualStyleBackColor = true;
             this.PHP_button.Click += new System.EventHandler(this.PHP_button_Click);
@@ -75,7 +75,7 @@
             this.keyconfig_button.Location = new System.Drawing.Point(6, 78);
             this.keyconfig_button.Name = "keyconfig_button";
             this.keyconfig_button.Size = new System.Drawing.Size(283, 44);
-            this.keyconfig_button.TabIndex = 3;
+            this.keyconfig_button.TabIndex = 55;
             this.keyconfig_button.Text = "キーコンフィグ...";
             this.keyconfig_button.UseVisualStyleBackColor = true;
             this.keyconfig_button.Click += new System.EventHandler(this.keyconfig_button_Click);
@@ -115,7 +115,7 @@
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);
