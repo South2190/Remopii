@@ -15,14 +15,30 @@ namespace seigyo
             {
                 Console.WriteLine("引数が指定されていません");
                 Environment.ExitCode = 1;   //終了コードなど
-                Application.Exit();         //FormClosing, FormClosed なども発生する
             }
             else
             {
-                SendKeys.SendWait(args[0]);
-                Application.Exit();
+                switch (args[0])
+                {
+                    case "-k":
+                    case "--KeyPress":
+                        try
+                        {
+                            SendKeys.SendWait(args[1]);
+                        }
+                        catch
+                        {
+                            Console.WriteLine("エラーが発生しました");
+                            Environment.ExitCode = 1;   //終了コードなど
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("引数が指定されていません");
+                        Environment.ExitCode = 1;   //終了コードなど
+                        break;
+                }
             }
-            //Console.ReadLine();
+            Application.Exit();
         }
     }
 }
