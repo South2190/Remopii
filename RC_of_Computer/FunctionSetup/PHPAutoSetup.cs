@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
@@ -26,7 +25,7 @@ namespace RC_of_Computer.FunctionSetup
         {
             SetupProgress.Value = 0;
             Description.Text = "PHPのセットアップ中です";
-            SetupDetail.Text = "ダウンロードしています...";
+            SetupDetail.Text = "ダウンロードを開始中...";
 
             Progress<float> progress = new();
             progress.ProgressChanged += Progress_ProgressChanged;
@@ -85,31 +84,8 @@ namespace RC_of_Computer.FunctionSetup
         private void Progress_ProgressChanged(object sender, float progress)
         {
             // Do something with your progress
-            //Debug.WriteLine(progress);
             SetupProgress.Value = (int)progress;
             SetupDetail.Text = "ダウンロード中... " + (int)progress + "%";
         }
-
-        /*
-        private static void FolderContext(Action<string> f)
-        {
-            string path = string.Empty;
-            try
-            {
-                // 一時フォルダに作業用のサブフォルダを作成
-                path = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
-                Directory.CreateDirectory(path);
-
-                f(path);
-            }
-            finally
-            {
-                if (Directory.Exists(path))
-                {
-                    Directory.Delete(path, true);
-                }
-            }
-        }
-        */
     }
 }
