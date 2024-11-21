@@ -34,19 +34,19 @@
             this.AdvancedSettings = new System.Windows.Forms.GroupBox();
             this.SettingsItem5 = new System.Windows.Forms.Label();
             this.SettingsItem4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.WebServerSoftware = new System.Windows.Forms.ComboBox();
             this.SettingsItem2 = new System.Windows.Forms.Label();
             this.DocumentRootRef = new System.Windows.Forms.Button();
             this.DocumentRootPath = new System.Windows.Forms.TextBox();
             this.SettingsItem3 = new System.Windows.Forms.Label();
-            this.PHPRef = new System.Windows.Forms.Button();
+            this.PHPExeFileRef = new System.Windows.Forms.Button();
             this.PortNumber = new System.Windows.Forms.TextBox();
-            this.IPaddress = new System.Windows.Forms.TextBox();
-            this.PHPPath = new System.Windows.Forms.TextBox();
+            this.IPAddress = new System.Windows.Forms.TextBox();
+            this.PHPExeFilePath = new System.Windows.Forms.TextBox();
             this.PHPStatus = new System.Windows.Forms.Label();
-            this.OK = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.Apply = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.ApplyButton = new System.Windows.Forms.Button();
             this.AdvancedSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,15 +86,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AdvancedSettings.Controls.Add(this.SettingsItem5);
             this.AdvancedSettings.Controls.Add(this.SettingsItem4);
-            this.AdvancedSettings.Controls.Add(this.comboBox1);
+            this.AdvancedSettings.Controls.Add(this.WebServerSoftware);
             this.AdvancedSettings.Controls.Add(this.SettingsItem2);
             this.AdvancedSettings.Controls.Add(this.DocumentRootRef);
             this.AdvancedSettings.Controls.Add(this.DocumentRootPath);
             this.AdvancedSettings.Controls.Add(this.SettingsItem3);
-            this.AdvancedSettings.Controls.Add(this.PHPRef);
+            this.AdvancedSettings.Controls.Add(this.PHPExeFileRef);
             this.AdvancedSettings.Controls.Add(this.PortNumber);
-            this.AdvancedSettings.Controls.Add(this.IPaddress);
-            this.AdvancedSettings.Controls.Add(this.PHPPath);
+            this.AdvancedSettings.Controls.Add(this.IPAddress);
+            this.AdvancedSettings.Controls.Add(this.PHPExeFilePath);
             this.AdvancedSettings.Controls.Add(this.SettingsItem1);
             this.AdvancedSettings.Controls.Add(this.UsePATHValue);
             this.AdvancedSettings.Location = new System.Drawing.Point(12, 65);
@@ -122,16 +122,16 @@
             this.SettingsItem4.TabIndex = 0;
             this.SettingsItem4.Text = "IPアドレス";
             // 
-            // comboBox1
+            // WebServerSoftware
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.WebServerSoftware.FormattingEnabled = true;
+            this.WebServerSoftware.Items.AddRange(new object[] {
             "PHPのビルトインウェブサーバーを使用する",
             "Nginx、Apacheなどを使用する"});
-            this.comboBox1.Location = new System.Drawing.Point(200, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(367, 23);
-            this.comboBox1.TabIndex = 10;
+            this.WebServerSoftware.Location = new System.Drawing.Point(200, 21);
+            this.WebServerSoftware.Name = "WebServerSoftware";
+            this.WebServerSoftware.Size = new System.Drawing.Size(367, 23);
+            this.WebServerSoftware.TabIndex = 10;
             // 
             // SettingsItem2
             // 
@@ -150,6 +150,7 @@
             this.DocumentRootRef.Size = new System.Drawing.Size(29, 23);
             this.DocumentRootRef.TabIndex = 35;
             this.DocumentRootRef.UseVisualStyleBackColor = true;
+            this.DocumentRootRef.Click += new System.EventHandler(this.DocumentRootRef_Click);
             // 
             // DocumentRootPath
             // 
@@ -169,14 +170,15 @@
             this.SettingsItem3.TabIndex = 0;
             this.SettingsItem3.Text = "ドキュメントルート";
             // 
-            // PHPRef
+            // PHPExeFileRef
             // 
-            this.PHPRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PHPRef.Location = new System.Drawing.Point(538, 50);
-            this.PHPRef.Name = "PHPRef";
-            this.PHPRef.Size = new System.Drawing.Size(29, 23);
-            this.PHPRef.TabIndex = 20;
-            this.PHPRef.UseVisualStyleBackColor = true;
+            this.PHPExeFileRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PHPExeFileRef.Location = new System.Drawing.Point(538, 50);
+            this.PHPExeFileRef.Name = "PHPExeFileRef";
+            this.PHPExeFileRef.Size = new System.Drawing.Size(29, 23);
+            this.PHPExeFileRef.TabIndex = 20;
+            this.PHPExeFileRef.UseVisualStyleBackColor = true;
+            this.PHPExeFileRef.Click += new System.EventHandler(this.PHPExeFileRef_Click);
             // 
             // PortNumber
             // 
@@ -187,23 +189,23 @@
             this.PortNumber.Size = new System.Drawing.Size(180, 23);
             this.PortNumber.TabIndex = 45;
             // 
-            // IPaddress
+            // IPAddress
             // 
-            this.IPaddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.IPAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IPaddress.Location = new System.Drawing.Point(200, 132);
-            this.IPaddress.Name = "IPaddress";
-            this.IPaddress.Size = new System.Drawing.Size(180, 23);
-            this.IPaddress.TabIndex = 40;
+            this.IPAddress.Location = new System.Drawing.Point(200, 132);
+            this.IPAddress.Name = "IPAddress";
+            this.IPAddress.Size = new System.Drawing.Size(180, 23);
+            this.IPAddress.TabIndex = 40;
             // 
-            // PHPPath
+            // PHPExeFilePath
             // 
-            this.PHPPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PHPExeFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PHPPath.Location = new System.Drawing.Point(200, 51);
-            this.PHPPath.Name = "PHPPath";
-            this.PHPPath.Size = new System.Drawing.Size(332, 23);
-            this.PHPPath.TabIndex = 15;
+            this.PHPExeFilePath.Location = new System.Drawing.Point(200, 51);
+            this.PHPExeFilePath.Name = "PHPExeFilePath";
+            this.PHPExeFilePath.Size = new System.Drawing.Size(332, 23);
+            this.PHPExeFilePath.TabIndex = 15;
             // 
             // PHPStatus
             // 
@@ -214,41 +216,44 @@
             this.PHPStatus.TabIndex = 4;
             this.PHPStatus.Text = "PHPセットアップ済 / 未セットアップ";
             // 
-            // OK
+            // OkButton
             // 
-            this.OK.Location = new System.Drawing.Point(341, 264);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(80, 30);
-            this.OK.TabIndex = 50;
-            this.OK.Text = "OK";
-            this.OK.UseVisualStyleBackColor = true;
+            this.OkButton.Location = new System.Drawing.Point(341, 264);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(80, 30);
+            this.OkButton.TabIndex = 50;
+            this.OkButton.Text = "OK";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // Cancel
+            // CancelButton
             // 
-            this.Cancel.Location = new System.Drawing.Point(427, 264);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(80, 30);
-            this.Cancel.TabIndex = 55;
-            this.Cancel.Text = "キャンセル";
-            this.Cancel.UseVisualStyleBackColor = true;
+            this.CancelButton.Location = new System.Drawing.Point(427, 264);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(80, 30);
+            this.CancelButton.TabIndex = 55;
+            this.CancelButton.Text = "キャンセル";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // Apply
+            // ApplyButton
             // 
-            this.Apply.Location = new System.Drawing.Point(513, 264);
-            this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(80, 30);
-            this.Apply.TabIndex = 60;
-            this.Apply.Text = "適用";
-            this.Apply.UseVisualStyleBackColor = true;
+            this.ApplyButton.Location = new System.Drawing.Point(513, 264);
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.Size = new System.Drawing.Size(80, 30);
+            this.ApplyButton.TabIndex = 60;
+            this.ApplyButton.Text = "適用";
+            this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // PHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(604, 299);
-            this.Controls.Add(this.Apply);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.OK);
+            this.Controls.Add(this.ApplyButton);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.OkButton);
             this.Controls.Add(this.PHPStatus);
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.RunPHPSetup);
@@ -270,19 +275,19 @@
         private System.Windows.Forms.CheckBox UsePATHValue;
         private System.Windows.Forms.GroupBox AdvancedSettings;
         private System.Windows.Forms.Label PHPStatus;
-        private System.Windows.Forms.TextBox PHPPath;
-        private System.Windows.Forms.Button PHPRef;
+        private System.Windows.Forms.TextBox PHPExeFilePath;
+        private System.Windows.Forms.Button PHPExeFileRef;
         private System.Windows.Forms.Label SettingsItem3;
         private System.Windows.Forms.Button DocumentRootRef;
         private System.Windows.Forms.TextBox DocumentRootPath;
         private System.Windows.Forms.Label SettingsItem2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox WebServerSoftware;
         private System.Windows.Forms.Label SettingsItem5;
         private System.Windows.Forms.Label SettingsItem4;
         private System.Windows.Forms.TextBox PortNumber;
-        private System.Windows.Forms.TextBox IPaddress;
-        private System.Windows.Forms.Button OK;
-        private System.Windows.Forms.Button Cancel;
-        private System.Windows.Forms.Button Apply;
+        private System.Windows.Forms.TextBox IPAddress;
+        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button ApplyButton;
     }
 }

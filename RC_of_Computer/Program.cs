@@ -17,6 +17,15 @@ namespace RC_of_Computer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // プロパティのバージョン更新
+            if (!Properties.Settings.Default.IsUpgraded)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.IsUpgraded = true;
+                Properties.Settings.Default.Save();
+            }
+
             // カレントディレクトリをexeファイルの場所に変更
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
             Application.Run(new MainWindow());
