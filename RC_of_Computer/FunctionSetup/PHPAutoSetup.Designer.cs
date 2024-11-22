@@ -82,6 +82,7 @@
             this.MaximizeBox = false;
             this.Name = "PHPAutoSetup";
             this.Text = "PHPの自動セットアップ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PHPAutoSetup_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

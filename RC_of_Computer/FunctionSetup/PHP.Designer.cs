@@ -43,7 +43,7 @@
             this.PortNumber = new System.Windows.Forms.TextBox();
             this.IPAddress = new System.Windows.Forms.TextBox();
             this.PHPExeFilePath = new System.Windows.Forms.TextBox();
-            this.PHPStatus = new System.Windows.Forms.Label();
+            this.RunPHPSetupDescription = new System.Windows.Forms.Label();
             this.OkButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.ApplyButton = new System.Windows.Forms.Button();
@@ -118,9 +118,9 @@
             this.SettingsItem4.AutoSize = true;
             this.SettingsItem4.Location = new System.Drawing.Point(13, 140);
             this.SettingsItem4.Name = "SettingsItem4";
-            this.SettingsItem4.Size = new System.Drawing.Size(54, 15);
+            this.SettingsItem4.Size = new System.Drawing.Size(90, 15);
             this.SettingsItem4.TabIndex = 0;
-            this.SettingsItem4.Text = "IPアドレス";
+            this.SettingsItem4.Text = "接続元IPアドレス";
             // 
             // WebServerSoftware
             // 
@@ -207,14 +207,14 @@
             this.PHPExeFilePath.Size = new System.Drawing.Size(332, 23);
             this.PHPExeFilePath.TabIndex = 15;
             // 
-            // PHPStatus
+            // RunPHPSetupDescription
             // 
-            this.PHPStatus.AutoSize = true;
-            this.PHPStatus.Location = new System.Drawing.Point(12, 10);
-            this.PHPStatus.Name = "PHPStatus";
-            this.PHPStatus.Size = new System.Drawing.Size(167, 15);
-            this.PHPStatus.TabIndex = 4;
-            this.PHPStatus.Text = "PHPセットアップ済 / 未セットアップ";
+            this.RunPHPSetupDescription.AutoSize = true;
+            this.RunPHPSetupDescription.Location = new System.Drawing.Point(12, 10);
+            this.RunPHPSetupDescription.Name = "RunPHPSetupDescription";
+            this.RunPHPSetupDescription.Size = new System.Drawing.Size(211, 15);
+            this.RunPHPSetupDescription.TabIndex = 4;
+            this.RunPHPSetupDescription.Text = "必要なPHPの設定を全て自動で行います。";
             // 
             // OkButton
             // 
@@ -254,7 +254,7 @@
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
-            this.Controls.Add(this.PHPStatus);
+            this.Controls.Add(this.RunPHPSetupDescription);
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.RunPHPSetup);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -274,7 +274,7 @@
         private System.Windows.Forms.Button RunPHPSetup;
         private System.Windows.Forms.CheckBox UsePATHValue;
         private System.Windows.Forms.GroupBox AdvancedSettings;
-        private System.Windows.Forms.Label PHPStatus;
+        private System.Windows.Forms.Label RunPHPSetupDescription;
         private System.Windows.Forms.TextBox PHPExeFilePath;
         private System.Windows.Forms.Button PHPExeFileRef;
         private System.Windows.Forms.Label SettingsItem3;

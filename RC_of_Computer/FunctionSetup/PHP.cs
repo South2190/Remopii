@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using RC_of_Computer.Classes;
@@ -22,22 +22,23 @@ namespace RC_of_Computer.FunctionSetup
             LoadSettings();
         }
 
-        private void RunPHPSetup_Click(object sender, System.EventArgs e)
+        private void RunPHPSetup_Click(object sender, EventArgs e)
         {
             PHPAutoSetup setupWindow = new()
             {
                 Owner = this
             };
-            _ = setupWindow.ShowDialog();
-            
-            LoadSettings();
+            if (setupWindow.ShowDialog() == DialogResult.OK)
+            {
+                Close();
+            }
         }
 
         /// <summary>
         /// exeファイルを開くためのダイアログを表示します
         /// exeファイルのパスが"PHPExeFilePath"テキストボックスに格納されます
         /// </summary>
-        private void PHPExeFileRef_Click(object sender, System.EventArgs e)
+        private void PHPExeFileRef_Click(object sender, EventArgs e)
         {
             using OpenFileDialog openFileDialog = new()
             {
@@ -53,7 +54,7 @@ namespace RC_of_Computer.FunctionSetup
         /// ドキュメントルートのフォルダを開くためのダイアログを表示します
         /// ドキュメントルートのパスが"DocumentRootPath"テキストボックスに格納されます
         /// </summary>
-        private void DocumentRootRef_Click(object sender, System.EventArgs e)
+        private void DocumentRootRef_Click(object sender, EventArgs e)
         {
             using FolderBrowserDialog folderBrowserDialog = new();
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
@@ -62,17 +63,30 @@ namespace RC_of_Computer.FunctionSetup
             }
         }
 
-        private void CancelButton_Click(object sender, System.EventArgs e)
+        /// <summary>
+        /// 詳細設定の既定値をフォームに入力します
+        /// </summary>
+        private void DefaultValue_Click(object sender, EventArgs e)
+        {
+            WebServerSoftware.SelectedIndex = 0;
+            //PHPExeFilePath.Text = "";
+            UsePATHValue.Checked = false;
+            //DocumentRootPath.Text = "";
+            IPAddress.Text = "0.0.0.0";
+            PortNumber.Text = "8000";
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void ApplyButton_Click(object sender, System.EventArgs e)
+        private void ApplyButton_Click(object sender, EventArgs e)
         {
             SaveSettings();
         }
 
-        private void OkButton_Click(object sender, System.EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
             if (SaveSettings())
             {
@@ -104,9 +118,9 @@ namespace RC_of_Computer.FunctionSetup
         /// <returns>正しく保存できた場合(true)、保存できなかった場合(false)を返します</returns>
         private bool SaveSettings()
         {
-            if (!int.TryParse(PortNumber.Text, out var portNumber))
+            if (!int.TryParse(PortNumber.Text, out int portNumber))
             {
-                MessageBox.Show("値を正しく入力したか確認してください。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ポート番号の値を正しく入力したか確認してください。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

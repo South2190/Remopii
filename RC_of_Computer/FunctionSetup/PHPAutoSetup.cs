@@ -33,6 +33,7 @@ namespace RC_of_Computer.FunctionSetup
                     FileDLAndExt();
                     break;
                 case 1:
+                case 2:
                     Close();
                     break;
             }
@@ -44,11 +45,10 @@ namespace RC_of_Computer.FunctionSetup
             SetupProgress.Value = 0;
             Description.Text = "PHPのセットアップ中です...";
             SetupDetail.Text = "ダウンロードを開始中...";
-            StartSetup.Text = "セットアップを終了";
-            StartSetup.Enabled = false;
+            StartSetup.Text = "キャンセル";
 
             string currentDirectory = Directory.GetCurrentDirectory();
-            string tempFile = Path.Combine(currentDirectory, destinationFileName);
+            string TempFilePath = Path.Combine(currentDirectory, destinationFileName);
 
             Progress<float> progress = new();
             progress.ProgressChanged += Progress_ProgressChanged;
@@ -59,7 +59,7 @@ namespace RC_of_Computer.FunctionSetup
             HttpClient httpClient = new();
             httpClient.DefaultRequestHeaders.Add("User-Agent", "C# App");
 
-            using (FileStream file = new(tempFile, FileMode.Create, FileAccess.Write, FileShare.None))
+            using (FileStream file = new(TempFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
                 await httpClient.DownloadDataAsync(PHPDownloadUrl, file, progress, token);
 
             httpClient.Dispose();
@@ -95,9 +95,9 @@ namespace RC_of_Computer.FunctionSetup
                 }
             }
 
-            if (File.Exists(tempFile))
+            if (File.Exists(TempFilePath))
             {
-                File.Delete(tempFile);
+                File.Delete(TempFilePath);
             }
             
             string documentRoot = Path.Combine(currentDirectory, defaultDocumentRootName);
@@ -111,9 +111,10 @@ namespace RC_of_Computer.FunctionSetup
             Properties.Settings.Default.PortNumber = 8000;
             Properties.Settings.Default.Save();
 
+            PHPSetupStatus = 2;
             Description.Text = "PHPのセットアップが完了しました。";
             SetupDetail.Text = string.Empty;
-            StartSetup.Enabled = true;
+            StartSetup.Text = "セットアップを終了";
         }
 
         private void Progress_ProgressChanged(object sender, float progress)
@@ -121,6 +122,20 @@ namespace RC_of_Computer.FunctionSetup
             // Do something with your progress
             SetupProgress.Value = (int)progress;
             SetupDetail.Text = "ダウンロード中... " + (int)progress + "%";
+        }
+
+        private void PHPAutoSetup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            switch (PHPSetupStatus)
+            {
+                case 0:
+                case 1:
+                    DialogResult = DialogResult.Cancel;
+                    break;
+                case 2:
+                    DialogResult = DialogResult.OK;
+                    break;
+            }
         }
     }
 }
