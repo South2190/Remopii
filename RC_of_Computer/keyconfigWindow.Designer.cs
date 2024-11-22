@@ -127,7 +127,7 @@
             // Apply
             // 
             this.Apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Apply.Location = new System.Drawing.Point(438, 874);
+            this.Apply.Location = new System.Drawing.Point(438, 834);
             this.Apply.Name = "Apply";
             this.Apply.Size = new System.Drawing.Size(80, 30);
             this.Apply.TabIndex = 63;
@@ -137,7 +137,7 @@
             // Cancel
             // 
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel.Location = new System.Drawing.Point(352, 874);
+            this.Cancel.Location = new System.Drawing.Point(352, 834);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(80, 30);
             this.Cancel.TabIndex = 62;
@@ -147,7 +147,7 @@
             // OK
             // 
             this.OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OK.Location = new System.Drawing.Point(266, 874);
+            this.OK.Location = new System.Drawing.Point(266, 834);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(80, 30);
             this.OK.TabIndex = 61;
@@ -171,9 +171,9 @@
             this.panel1.Controls.Add(this.sub4);
             this.panel1.Controls.Add(this.main1);
             this.panel1.Controls.Add(this.sub1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(10, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 442);
+            this.panel1.Size = new System.Drawing.Size(520, 402);
             this.panel1.TabIndex = 64;
             // 
             // sub9
@@ -1083,7 +1083,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(450, 463);
+            this.button4.Location = new System.Drawing.Point(450, 423);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(80, 29);
             this.button4.TabIndex = 70;
@@ -1093,7 +1093,7 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(364, 463);
+            this.button5.Location = new System.Drawing.Point(364, 423);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(80, 29);
             this.button5.TabIndex = 69;
@@ -1103,7 +1103,7 @@
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(278, 463);
+            this.button6.Location = new System.Drawing.Point(278, 423);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(80, 29);
             this.button6.TabIndex = 68;
@@ -1114,7 +1114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(534, 501);
+            this.ClientSize = new System.Drawing.Size(534, 461);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -1124,8 +1124,6 @@
             this.Controls.Add(this.OK);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(550, 540);
             this.Name = "KeyConfigWindow";
             this.Text = "キーコンフィグ";
             this.panel1.ResumeLayout(false);
