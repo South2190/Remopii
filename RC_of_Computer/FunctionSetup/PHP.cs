@@ -11,10 +11,13 @@ namespace RC_of_Computer.FunctionSetup
         {
             InitializeComponent();
 
-            Bitmap DirIcon = GetIcon.GetBitmapFromEXEDLL(Program.SHELL32DLL, 3, false);
+            string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
+            string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
+
+            Bitmap DirIcon = GetIcon.GetBitmapFromEXEDLL(SHELL32DLL, 3, false);
             PHPExeFileRef.Image = DirIcon;
             DocumentRootRef.Image = DirIcon;
-            RunPHPSetup.Image = GetIcon.GetBitmapFromEXEDLL(Program.IMAGERESDLL, 73, false);
+            RunPHPSetup.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 73, false);
 
             LoadSettings();
         }
@@ -36,7 +39,7 @@ namespace RC_of_Computer.FunctionSetup
         /// </summary>
         private void PHPExeFileRef_Click(object sender, System.EventArgs e)
         {
-            OpenFileDialog openFileDialog = new()
+            using OpenFileDialog openFileDialog = new()
             {
                 Filter = "Exe files (*.exe)|*.exe|All files (*.*)|*.*"
             };
@@ -52,7 +55,7 @@ namespace RC_of_Computer.FunctionSetup
         /// </summary>
         private void DocumentRootRef_Click(object sender, System.EventArgs e)
         {
-            FolderBrowserDialog folderBrowserDialog = new();
+            using FolderBrowserDialog folderBrowserDialog = new();
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 DocumentRootPath.Text = folderBrowserDialog.SelectedPath;

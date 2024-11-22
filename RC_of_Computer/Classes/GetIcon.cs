@@ -4,12 +4,15 @@ using System.Runtime.InteropServices;
 
 namespace RC_of_Computer.Classes
 {
-    internal class GetIcon
+    public static class GetIcon
     {
+        //public static readonly string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
+        //public static readonly string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
+
         [DllImport("shell32.dll", EntryPoint = "ExtractIconEx", CharSet = CharSet.Auto)]
         private static extern int ExtractIconEx([MarshalAs(UnmanagedType.LPTStr)] string file, int index, out IntPtr largeIconHandle, out IntPtr smallIconHandle, int icons);
 
-        [DllImport("User32.dll")]
+        [DllImport("user32.dll")]
         private static extern bool DestroyIcon(IntPtr hIcon);
 
         /// <summary>
