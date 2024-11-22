@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.sub1 = new System.Windows.Forms.GroupBox();
             this.subHidden1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,6 +104,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.mainKey2 = new System.Windows.Forms.TextBox();
             this.mainKeyChange2 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.sub1.SuspendLayout();
             this.sub2.SuspendLayout();
             this.sub3.SuspendLayout();
@@ -1164,5 +1166,6 @@
         private System.Windows.Forms.CheckBox subHidden1;
         private System.Windows.Forms.CheckBox subHidden6;
         private System.Windows.Forms.CheckBox subHidden2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
