@@ -74,7 +74,7 @@
             this.keyconfig_button.Font = new System.Drawing.Font("Meiryo UI", 15F);
             this.keyconfig_button.Location = new System.Drawing.Point(6, 78);
             this.keyconfig_button.Name = "keyconfig_button";
-            this.keyconfig_button.Size = new System.Drawing.Size(283, 44);
+            this.keyconfig_button.Size = new System.Drawing.Size(223, 44);
             this.keyconfig_button.TabIndex = 55;
             this.keyconfig_button.Text = "キーコンフィグ...";
             this.keyconfig_button.UseVisualStyleBackColor = true;
