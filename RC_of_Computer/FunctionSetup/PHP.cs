@@ -11,8 +11,8 @@ namespace RC_of_Computer.FunctionSetup
         {
             InitializeComponent();
 
-            string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
-            string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
+            const string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
+            const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
             Bitmap DirIcon = GetIcon.GetBitmapFromEXEDLL(SHELL32DLL, 3, false);
             PHPExeFileRef.Image = DirIcon;

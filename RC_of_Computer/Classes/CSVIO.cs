@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace RC_of_Computer.Classes
 {
-    internal class CSVIO
+    public static class CSVIO
     {
         /// <summary>
         /// CSVファイルを読み込み、リストに格納します

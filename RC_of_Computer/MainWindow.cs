@@ -1,12 +1,8 @@
-﻿using RC_of_Computer.FunctionSetup;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using RC_of_Computer.Classes;
+using RC_of_Computer.FunctionSetup;
+using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace RC_of_Computer
@@ -16,47 +12,80 @@ namespace RC_of_Computer
         public MainWindow()
         {
             InitializeComponent();
+
+            const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
+            Bitmap test = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 229, true);
+            PHPStatus.Image = test;
+            KeyConfigStatus.Image = test;
+            Debug.WriteLine(test.PhysicalDimension.ToString());
         }
 
-        private void setup_Box_Enter(object sender, EventArgs e)
+        private void ShowPHP_Click(object sender, System.EventArgs e)
         {
-
-        }
-
-        private void PHP_button_Click(object sender, EventArgs e)
-        {
-            var PHP = new PHP();
-            PHP.Show();
-        }
-
-        private void Server_button_Click(object sender, EventArgs e)
-        {
-            /*if (Server_button.Text != "サーバースタート")
+            PHP php = new()
             {
-                Server_button.Text = "サーバースタート";
+                Owner = this
+            };
+            php.ShowDialog();
+        }
+
+        private void ShowKeyConfig_Click(object sender, System.EventArgs e)
+        {
+            KeyConfigWindow keyConfigWindow = new()
+            {
+                Owner = this
+            };
+            keyConfigWindow.ShowDialog();
+        }
+
+        private void ServerIO_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// PHPのインストール状況とドキュメントルートのファイルを確認します
+        /// </summary>
+        /// <returns>ドキュメントルートは正しく設定されているが、PHPを使用しない設定の場合(1)、すべて正しく設定されている場合(0)、それ以外(-1)</returns>
+        private static int CheckPHPStatus()
+        {
+            int statusNum = 0;
+
+            // PHPのインストール状況の確認
+            if (Properties.Settings.Default.WebServerSoftware != "PHP") { statusNum = 1; }
+            if (!File.Exists(Properties.Settings.Default.PHPExeFilePath)) { return -1; }
+            ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
+            {
+                Arguments = "--version"
+            };
+            try
+            {
+                using Process process = Process.Start(processStartInfo);
+                process.WaitForExit(1000);
+                if (process.ExitCode != 0) { return -1; }
             }
-            else
+            catch
             {
-                Server_button.Text = "サーバーストップ";
-            }*/
+                return -1;
+            }
 
-
+            // ドキュメントルートのファイルチェック
+            string indexPath = Path.Combine(Properties.Settings.Default.DocumentRoot, "index.php");
+            if (!File.Exists(indexPath)) { return -1; }
+            
+            return statusNum;
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
+        /// <summary>
+        /// キーコンフィグが正しく設定されているかを確認します
+        /// </summary>
+        /// <returns>正しく設定されている場合(0)、それ以外(-1)</returns>
+        private static int GetKeyConfigStatus()
         {
+            string csvPath = Path.Combine(Properties.Settings.Default.DocumentRoot, "ButtonProperty.csv");
+            if (!File.Exists(csvPath)) { return -1; }
 
-        }
-
-        private void keyconfig_button_Click(object sender, EventArgs e)
-        {
-            var keyconfigWindow = new KeyConfigWindow();
-            keyconfigWindow.Show();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            return 0;
         }
     }
 }
