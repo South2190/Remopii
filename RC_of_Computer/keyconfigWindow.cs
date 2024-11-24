@@ -7,16 +7,21 @@ namespace RC_of_Computer
     public partial class KeyConfigWindow : Form
     {
         private Button buttonCount = null;
-        private int duration = 10;
 
         public KeyConfigWindow()
         {
             InitializeComponent();
+
+            timer1 = new Timer();
+            timer1.Tick += new EventHandler(count_down);
+            timer1.Interval = 1000;
         }
 
         /// <summary>
         /// すべての"変更"ボタンから呼び出されるイベント
         /// </summary>
+        
+        private int duration = 10;
         private void KeyChange_Click(object sender, EventArgs e)
         {
             bool timerStartFlag = buttonCount != (Button)sender;
@@ -28,9 +33,9 @@ namespace RC_of_Computer
             if (timerStartFlag)
             {
                 buttonCount = (Button)sender;
-                keyScan.Start();
-                buttonCount.Text = "変更...10";
+                timer1.Start();
                 ChangeKeyText(buttonCount.Name, "+^({ESC})");
+                buttonCount.Text = "変更...10";
             }
         }
         /// <summary>
@@ -42,35 +47,6 @@ namespace RC_of_Computer
             Debug.WriteLine(checkBox.Name + ": " + checkBox.Checked);
         }
 
-        /// <summary>
-        /// タイマーのカウントを進行させ、0になったらストップします
-        /// </summary>
-        private void keyScan_Tick(object sender, EventArgs e)
-        {
-            duration--;
-            buttonCount.Text = $"変更...{duration}";
-            if (duration <= 0)
-            {
-                TimerStop();
-            }
-        }
-
-        /// <summary>
-        /// タイマーをストップし、ボタンを元の状態に戻します
-        /// </summary>
-        private void TimerStop()
-        {
-            keyScan.Stop();
-            duration = 10;
-            buttonCount.Text = "変更";
-            buttonCount = null;
-        }
-
-        /// <summary>
-        /// ボタンの名前に応じて最適なテキストボックスにテキストを代入します
-        /// </summary>
-        /// <param name="ButtonName">変更ボタンの(Name)</param>
-        /// <param name="Text">代入したいテキスト</param>
         private void ChangeKeyText(string ButtonName, string Text)
         {
             switch (ButtonName)
@@ -109,6 +85,27 @@ namespace RC_of_Computer
                     subKey9.Text = Text;
                     break;
             }
+        }
+        private void count_down(object sender, EventArgs e)
+        {
+            if (duration == 0)
+            {
+                TimerStop();
+            }
+            else if (duration > 0)
+            {
+                duration--;
+                Debug.WriteLine(duration);
+                buttonCount.Text = $"変更...{duration}";
+            }
+        }
+
+        private void TimerStop()
+        {
+            timer1.Stop();
+            buttonCount.Text = "変更";
+            buttonCount = null;
+            duration = 10;
         }
     }
 }
