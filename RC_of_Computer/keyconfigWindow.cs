@@ -7,7 +7,7 @@ namespace RC_of_Computer
     public partial class KeyConfigWindow : Form
     {
         private Button buttonCount = null;
-        private int duration = 10;
+        private int duration = 0;
 
         public KeyConfigWindow()
         {
@@ -28,6 +28,7 @@ namespace RC_of_Computer
             if (timerStartFlag)
             {
                 buttonCount = (Button)sender;
+                duration = 10;
                 keyScan.Start();
                 buttonCount.Text = "変更...10";
                 ChangeKeyText(buttonCount.Name, "+^({ESC})");
@@ -61,7 +62,7 @@ namespace RC_of_Computer
         private void TimerStop()
         {
             keyScan.Stop();
-            duration = 10;
+            duration = 0;
             buttonCount.Text = "変更";
             buttonCount = null;
         }
@@ -108,6 +109,29 @@ namespace RC_of_Computer
                 case "subKeyChange9":
                     subKey9.Text = Text;
                     break;
+            }
+        }
+
+        /// <summary>
+        /// キーの入力を検出します
+        /// </summary>
+        private void KeyChange_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (buttonCount != null)
+            {
+                Debug.WriteLine(e.KeyCode);
+                e.Handled = true;
+            }
+        }
+
+        /// <summary>
+        /// 特殊なキーの入力を無効化します
+        /// </summary>
+        private void KeyChange_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (buttonCount != null)
+            {
+                e.IsInputKey = true;
             }
         }
     }
