@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Apply = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
@@ -110,6 +111,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.keyScan = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.sub9.SuspendLayout();
             this.sub6.SuspendLayout();
@@ -259,6 +261,7 @@
             this.subKeyChange9.TabIndex = 130;
             this.subKeyChange9.Text = "変更";
             this.subKeyChange9.UseVisualStyleBackColor = true;
+            this.subKeyChange9.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub6
             // 
@@ -343,6 +346,7 @@
             this.subKeyChange6.TabIndex = 121;
             this.subKeyChange6.Text = "変更";
             this.subKeyChange6.UseVisualStyleBackColor = true;
+            this.subKeyChange6.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub3
             // 
@@ -427,6 +431,7 @@
             this.subKeyChange3.TabIndex = 112;
             this.subKeyChange3.Text = "変更";
             this.subKeyChange3.UseVisualStyleBackColor = true;
+            this.subKeyChange3.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub8
             // 
@@ -511,6 +516,7 @@
             this.subKeyChange8.TabIndex = 127;
             this.subKeyChange8.Text = "変更";
             this.subKeyChange8.UseVisualStyleBackColor = true;
+            this.subKeyChange8.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub5
             // 
@@ -595,6 +601,7 @@
             this.subKeyChange5.TabIndex = 118;
             this.subKeyChange5.Text = "変更";
             this.subKeyChange5.UseVisualStyleBackColor = true;
+            this.subKeyChange5.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // main2
             // 
@@ -669,6 +676,7 @@
             this.mainKeyChange2.TabIndex = 103;
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
+            this.mainKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub2
             // 
@@ -753,6 +761,7 @@
             this.subKeyChange2.TabIndex = 109;
             this.subKeyChange2.Text = "変更";
             this.subKeyChange2.UseVisualStyleBackColor = true;
+            this.subKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub7
             // 
@@ -837,6 +846,7 @@
             this.subKeyChange7.TabIndex = 124;
             this.subKeyChange7.Text = "変更";
             this.subKeyChange7.UseVisualStyleBackColor = true;
+            this.subKeyChange7.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub4
             // 
@@ -911,6 +921,7 @@
             this.subKeyChange4.TabIndex = 115;
             this.subKeyChange4.Text = "変更";
             this.subKeyChange4.UseVisualStyleBackColor = true;
+            this.subKeyChange4.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // subHidden4
             // 
@@ -995,6 +1006,7 @@
             this.mainKeyChange1.TabIndex = 101;
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
+            this.mainKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // sub1
             // 
@@ -1079,6 +1091,7 @@
             this.subKeyChange1.TabIndex = 106;
             this.subKeyChange1.Text = "変更";
             this.subKeyChange1.UseVisualStyleBackColor = true;
+            this.subKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
             // 
             // button4
             // 
@@ -1109,6 +1122,11 @@
             this.button6.TabIndex = 68;
             this.button6.Text = "OK";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // keyScan
+            // 
+            this.keyScan.Interval = 1000;
+            this.keyScan.Tick += new System.EventHandler(this.keyScan_Tick);
             // 
             // KeyConfigWindow
             // 
@@ -1236,5 +1254,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Timer keyScan;
     }
 }
