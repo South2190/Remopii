@@ -129,30 +129,30 @@
             // Apply
             // 
             this.Apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Apply.Location = new System.Drawing.Point(438, 812);
+            this.Apply.Location = new System.Drawing.Point(438, 814);
             this.Apply.Name = "Apply";
             this.Apply.Size = new System.Drawing.Size(80, 30);
-            this.Apply.TabIndex = 63;
+            this.Apply.TabIndex = 0;
             this.Apply.Text = "適用";
             this.Apply.UseVisualStyleBackColor = true;
             // 
             // Cancel
             // 
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel.Location = new System.Drawing.Point(352, 812);
+            this.Cancel.Location = new System.Drawing.Point(352, 814);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(80, 30);
-            this.Cancel.TabIndex = 62;
+            this.Cancel.TabIndex = 0;
             this.Cancel.Text = "キャンセル";
             this.Cancel.UseVisualStyleBackColor = true;
             // 
             // OK
             // 
             this.OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OK.Location = new System.Drawing.Point(266, 812);
+            this.OK.Location = new System.Drawing.Point(266, 814);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(80, 30);
-            this.OK.TabIndex = 61;
+            this.OK.TabIndex = 0;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
             // 
@@ -175,8 +175,8 @@
             this.panel1.Controls.Add(this.sub1);
             this.panel1.Location = new System.Drawing.Point(10, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 385);
-            this.panel1.TabIndex = 64;
+            this.panel1.Size = new System.Drawing.Size(520, 387);
+            this.panel1.TabIndex = 0;
             // 
             // sub9
             // 
@@ -191,7 +191,7 @@
             this.sub9.Name = "sub9";
             this.sub9.Padding = new System.Windows.Forms.Padding(2);
             this.sub9.Size = new System.Drawing.Size(150, 150);
-            this.sub9.TabIndex = 21;
+            this.sub9.TabIndex = 10;
             this.sub9.TabStop = false;
             // 
             // subHidden9
@@ -200,9 +200,10 @@
             this.subHidden9.Location = new System.Drawing.Point(8, -1);
             this.subHidden9.Name = "subHidden9";
             this.subHidden9.Size = new System.Drawing.Size(79, 19);
-            this.subHidden9.TabIndex = 128;
+            this.subHidden9.TabIndex = 0;
             this.subHidden9.Text = "サブボタン9";
             this.subHidden9.UseVisualStyleBackColor = true;
+            this.subHidden9.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label17
             // 
@@ -212,7 +213,7 @@
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(35, 15);
-            this.label17.TabIndex = 0;
+            this.label17.TabIndex = 1;
             this.label17.Text = "ラベル";
             // 
             // subValue9
@@ -224,7 +225,7 @@
             this.subValue9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue9.Name = "subValue9";
             this.subValue9.Size = new System.Drawing.Size(138, 23);
-            this.subValue9.TabIndex = 129;
+            this.subValue9.TabIndex = 2;
             // 
             // label18
             // 
@@ -234,7 +235,7 @@
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(27, 15);
-            this.label18.TabIndex = 0;
+            this.label18.TabIndex = 3;
             this.label18.Text = "キー";
             // 
             // subKey9
@@ -247,7 +248,7 @@
             this.subKey9.Name = "subKey9";
             this.subKey9.ReadOnly = true;
             this.subKey9.Size = new System.Drawing.Size(138, 23);
-            this.subKey9.TabIndex = 0;
+            this.subKey9.TabIndex = 4;
             this.subKey9.TabStop = false;
             // 
             // subKeyChange9
@@ -258,7 +259,7 @@
             this.subKeyChange9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange9.Name = "subKeyChange9";
             this.subKeyChange9.Size = new System.Drawing.Size(140, 32);
-            this.subKeyChange9.TabIndex = 130;
+            this.subKeyChange9.TabIndex = 5;
             this.subKeyChange9.Text = "変更";
             this.subKeyChange9.UseVisualStyleBackColor = true;
             this.subKeyChange9.Click += new System.EventHandler(this.KeyChange_Click);
@@ -276,7 +277,7 @@
             this.sub6.Name = "sub6";
             this.sub6.Padding = new System.Windows.Forms.Padding(2);
             this.sub6.Size = new System.Drawing.Size(150, 150);
-            this.sub6.TabIndex = 18;
+            this.sub6.TabIndex = 7;
             this.sub6.TabStop = false;
             // 
             // subHidden6
@@ -285,9 +286,10 @@
             this.subHidden6.Location = new System.Drawing.Point(8, 0);
             this.subHidden6.Name = "subHidden6";
             this.subHidden6.Size = new System.Drawing.Size(79, 19);
-            this.subHidden6.TabIndex = 119;
+            this.subHidden6.TabIndex = 0;
             this.subHidden6.Text = "サブボタン6";
             this.subHidden6.UseVisualStyleBackColor = true;
+            this.subHidden6.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label11
             // 
@@ -297,7 +299,7 @@
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 15);
-            this.label11.TabIndex = 0;
+            this.label11.TabIndex = 1;
             this.label11.Text = "ラベル";
             // 
             // subValue6
@@ -309,7 +311,7 @@
             this.subValue6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue6.Name = "subValue6";
             this.subValue6.Size = new System.Drawing.Size(140, 23);
-            this.subValue6.TabIndex = 120;
+            this.subValue6.TabIndex = 2;
             // 
             // label12
             // 
@@ -319,7 +321,7 @@
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(27, 15);
-            this.label12.TabIndex = 0;
+            this.label12.TabIndex = 3;
             this.label12.Text = "キー";
             // 
             // subKey6
@@ -332,7 +334,7 @@
             this.subKey6.Name = "subKey6";
             this.subKey6.ReadOnly = true;
             this.subKey6.Size = new System.Drawing.Size(141, 23);
-            this.subKey6.TabIndex = 0;
+            this.subKey6.TabIndex = 4;
             this.subKey6.TabStop = false;
             // 
             // subKeyChange6
@@ -343,7 +345,7 @@
             this.subKeyChange6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange6.Name = "subKeyChange6";
             this.subKeyChange6.Size = new System.Drawing.Size(141, 32);
-            this.subKeyChange6.TabIndex = 121;
+            this.subKeyChange6.TabIndex = 5;
             this.subKeyChange6.Text = "変更";
             this.subKeyChange6.UseVisualStyleBackColor = true;
             this.subKeyChange6.Click += new System.EventHandler(this.KeyChange_Click);
@@ -361,7 +363,7 @@
             this.sub3.Name = "sub3";
             this.sub3.Padding = new System.Windows.Forms.Padding(2);
             this.sub3.Size = new System.Drawing.Size(150, 150);
-            this.sub3.TabIndex = 15;
+            this.sub3.TabIndex = 4;
             this.sub3.TabStop = false;
             // 
             // label5
@@ -372,7 +374,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 15);
-            this.label5.TabIndex = 0;
+            this.label5.TabIndex = 1;
             this.label5.Text = "ラベル";
             // 
             // subValue3
@@ -384,7 +386,7 @@
             this.subValue3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue3.Name = "subValue3";
             this.subValue3.Size = new System.Drawing.Size(140, 23);
-            this.subValue3.TabIndex = 111;
+            this.subValue3.TabIndex = 2;
             // 
             // subHidden3
             // 
@@ -392,9 +394,10 @@
             this.subHidden3.Location = new System.Drawing.Point(8, 0);
             this.subHidden3.Name = "subHidden3";
             this.subHidden3.Size = new System.Drawing.Size(79, 19);
-            this.subHidden3.TabIndex = 110;
+            this.subHidden3.TabIndex = 0;
             this.subHidden3.Text = "サブボタン3";
             this.subHidden3.UseVisualStyleBackColor = true;
+            this.subHidden3.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label6
             // 
@@ -404,7 +407,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 15);
-            this.label6.TabIndex = 0;
+            this.label6.TabIndex = 3;
             this.label6.Text = "キー";
             // 
             // subKey3
@@ -417,7 +420,7 @@
             this.subKey3.Name = "subKey3";
             this.subKey3.ReadOnly = true;
             this.subKey3.Size = new System.Drawing.Size(140, 23);
-            this.subKey3.TabIndex = 0;
+            this.subKey3.TabIndex = 4;
             this.subKey3.TabStop = false;
             // 
             // subKeyChange3
@@ -428,7 +431,7 @@
             this.subKeyChange3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange3.Name = "subKeyChange3";
             this.subKeyChange3.Size = new System.Drawing.Size(140, 32);
-            this.subKeyChange3.TabIndex = 112;
+            this.subKeyChange3.TabIndex = 5;
             this.subKeyChange3.Text = "変更";
             this.subKeyChange3.UseVisualStyleBackColor = true;
             this.subKeyChange3.Click += new System.EventHandler(this.KeyChange_Click);
@@ -446,7 +449,7 @@
             this.sub8.Name = "sub8";
             this.sub8.Padding = new System.Windows.Forms.Padding(2);
             this.sub8.Size = new System.Drawing.Size(150, 150);
-            this.sub8.TabIndex = 20;
+            this.sub8.TabIndex = 9;
             this.sub8.TabStop = false;
             // 
             // label15
@@ -457,7 +460,7 @@
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(35, 15);
-            this.label15.TabIndex = 0;
+            this.label15.TabIndex = 1;
             this.label15.Text = "ラベル";
             // 
             // subHidden8
@@ -466,9 +469,10 @@
             this.subHidden8.Location = new System.Drawing.Point(8, 0);
             this.subHidden8.Name = "subHidden8";
             this.subHidden8.Size = new System.Drawing.Size(79, 19);
-            this.subHidden8.TabIndex = 125;
+            this.subHidden8.TabIndex = 0;
             this.subHidden8.Text = "サブボタン8";
             this.subHidden8.UseVisualStyleBackColor = true;
+            this.subHidden8.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // subValue8
             // 
@@ -479,7 +483,7 @@
             this.subValue8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue8.Name = "subValue8";
             this.subValue8.Size = new System.Drawing.Size(141, 23);
-            this.subValue8.TabIndex = 126;
+            this.subValue8.TabIndex = 2;
             // 
             // label16
             // 
@@ -489,7 +493,7 @@
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(27, 15);
-            this.label16.TabIndex = 0;
+            this.label16.TabIndex = 3;
             this.label16.Text = "キー";
             // 
             // subKey8
@@ -502,7 +506,7 @@
             this.subKey8.Name = "subKey8";
             this.subKey8.ReadOnly = true;
             this.subKey8.Size = new System.Drawing.Size(141, 23);
-            this.subKey8.TabIndex = 0;
+            this.subKey8.TabIndex = 4;
             this.subKey8.TabStop = false;
             // 
             // subKeyChange8
@@ -513,7 +517,7 @@
             this.subKeyChange8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange8.Name = "subKeyChange8";
             this.subKeyChange8.Size = new System.Drawing.Size(141, 32);
-            this.subKeyChange8.TabIndex = 127;
+            this.subKeyChange8.TabIndex = 5;
             this.subKeyChange8.Text = "変更";
             this.subKeyChange8.UseVisualStyleBackColor = true;
             this.subKeyChange8.Click += new System.EventHandler(this.KeyChange_Click);
@@ -531,7 +535,7 @@
             this.sub5.Name = "sub5";
             this.sub5.Padding = new System.Windows.Forms.Padding(2);
             this.sub5.Size = new System.Drawing.Size(150, 150);
-            this.sub5.TabIndex = 17;
+            this.sub5.TabIndex = 6;
             this.sub5.TabStop = false;
             // 
             // label9
@@ -542,7 +546,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 15);
-            this.label9.TabIndex = 0;
+            this.label9.TabIndex = 1;
             this.label9.Text = "ラベル";
             // 
             // subValue5
@@ -554,7 +558,7 @@
             this.subValue5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue5.Name = "subValue5";
             this.subValue5.Size = new System.Drawing.Size(140, 23);
-            this.subValue5.TabIndex = 117;
+            this.subValue5.TabIndex = 2;
             // 
             // label10
             // 
@@ -564,7 +568,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 15);
-            this.label10.TabIndex = 0;
+            this.label10.TabIndex = 3;
             this.label10.Text = "キー";
             // 
             // subKey5
@@ -577,7 +581,7 @@
             this.subKey5.Name = "subKey5";
             this.subKey5.ReadOnly = true;
             this.subKey5.Size = new System.Drawing.Size(141, 23);
-            this.subKey5.TabIndex = 0;
+            this.subKey5.TabIndex = 4;
             this.subKey5.TabStop = false;
             // 
             // subHidden5
@@ -586,9 +590,10 @@
             this.subHidden5.Location = new System.Drawing.Point(8, -1);
             this.subHidden5.Name = "subHidden5";
             this.subHidden5.Size = new System.Drawing.Size(79, 19);
-            this.subHidden5.TabIndex = 116;
+            this.subHidden5.TabIndex = 0;
             this.subHidden5.Text = "サブボタン5";
             this.subHidden5.UseVisualStyleBackColor = true;
+            this.subHidden5.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // subKeyChange5
             // 
@@ -598,7 +603,7 @@
             this.subKeyChange5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange5.Name = "subKeyChange5";
             this.subKeyChange5.Size = new System.Drawing.Size(141, 32);
-            this.subKeyChange5.TabIndex = 118;
+            this.subKeyChange5.TabIndex = 5;
             this.subKeyChange5.Text = "変更";
             this.subKeyChange5.UseVisualStyleBackColor = true;
             this.subKeyChange5.Click += new System.EventHandler(this.KeyChange_Click);
@@ -615,7 +620,7 @@
             this.main2.Name = "main2";
             this.main2.Padding = new System.Windows.Forms.Padding(2);
             this.main2.Size = new System.Drawing.Size(150, 150);
-            this.main2.TabIndex = 12;
+            this.main2.TabIndex = 1;
             this.main2.TabStop = false;
             this.main2.Text = "メインボタン2";
             // 
@@ -639,7 +644,7 @@
             this.mainValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue2.Name = "mainValue2";
             this.mainValue2.Size = new System.Drawing.Size(141, 23);
-            this.mainValue2.TabIndex = 102;
+            this.mainValue2.TabIndex = 1;
             // 
             // label22
             // 
@@ -649,7 +654,7 @@
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(27, 15);
-            this.label22.TabIndex = 0;
+            this.label22.TabIndex = 2;
             this.label22.Text = "キー";
             // 
             // mainKey2
@@ -662,7 +667,7 @@
             this.mainKey2.Name = "mainKey2";
             this.mainKey2.ReadOnly = true;
             this.mainKey2.Size = new System.Drawing.Size(141, 23);
-            this.mainKey2.TabIndex = 0;
+            this.mainKey2.TabIndex = 3;
             this.mainKey2.TabStop = false;
             // 
             // mainKeyChange2
@@ -673,7 +678,7 @@
             this.mainKeyChange2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKeyChange2.Name = "mainKeyChange2";
             this.mainKeyChange2.Size = new System.Drawing.Size(141, 32);
-            this.mainKeyChange2.TabIndex = 103;
+            this.mainKeyChange2.TabIndex = 4;
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
             this.mainKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
@@ -691,7 +696,7 @@
             this.sub2.Name = "sub2";
             this.sub2.Padding = new System.Windows.Forms.Padding(2);
             this.sub2.Size = new System.Drawing.Size(150, 150);
-            this.sub2.TabIndex = 14;
+            this.sub2.TabIndex = 3;
             this.sub2.TabStop = false;
             // 
             // subHidden2
@@ -700,9 +705,10 @@
             this.subHidden2.Location = new System.Drawing.Point(8, 0);
             this.subHidden2.Name = "subHidden2";
             this.subHidden2.Size = new System.Drawing.Size(79, 19);
-            this.subHidden2.TabIndex = 107;
+            this.subHidden2.TabIndex = 0;
             this.subHidden2.Text = "サブボタン2";
             this.subHidden2.UseVisualStyleBackColor = true;
+            this.subHidden2.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label3
             // 
@@ -712,7 +718,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 15);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 1;
             this.label3.Text = "ラベル";
             // 
             // subValue2
@@ -724,7 +730,7 @@
             this.subValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue2.Name = "subValue2";
             this.subValue2.Size = new System.Drawing.Size(140, 23);
-            this.subValue2.TabIndex = 108;
+            this.subValue2.TabIndex = 2;
             // 
             // label4
             // 
@@ -734,7 +740,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 15);
-            this.label4.TabIndex = 0;
+            this.label4.TabIndex = 3;
             this.label4.Text = "キー";
             // 
             // subKey2
@@ -747,7 +753,7 @@
             this.subKey2.Name = "subKey2";
             this.subKey2.ReadOnly = true;
             this.subKey2.Size = new System.Drawing.Size(140, 23);
-            this.subKey2.TabIndex = 0;
+            this.subKey2.TabIndex = 4;
             this.subKey2.TabStop = false;
             // 
             // subKeyChange2
@@ -758,7 +764,7 @@
             this.subKeyChange2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange2.Name = "subKeyChange2";
             this.subKeyChange2.Size = new System.Drawing.Size(140, 32);
-            this.subKeyChange2.TabIndex = 109;
+            this.subKeyChange2.TabIndex = 5;
             this.subKeyChange2.Text = "変更";
             this.subKeyChange2.UseVisualStyleBackColor = true;
             this.subKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
@@ -776,7 +782,7 @@
             this.sub7.Name = "sub7";
             this.sub7.Padding = new System.Windows.Forms.Padding(2);
             this.sub7.Size = new System.Drawing.Size(150, 150);
-            this.sub7.TabIndex = 19;
+            this.sub7.TabIndex = 8;
             this.sub7.TabStop = false;
             // 
             // label13
@@ -787,7 +793,7 @@
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(35, 15);
-            this.label13.TabIndex = 0;
+            this.label13.TabIndex = 1;
             this.label13.Text = "ラベル";
             // 
             // subValue7
@@ -799,7 +805,7 @@
             this.subValue7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue7.Name = "subValue7";
             this.subValue7.Size = new System.Drawing.Size(140, 23);
-            this.subValue7.TabIndex = 123;
+            this.subValue7.TabIndex = 2;
             // 
             // subHidden7
             // 
@@ -807,9 +813,10 @@
             this.subHidden7.Location = new System.Drawing.Point(8, 0);
             this.subHidden7.Name = "subHidden7";
             this.subHidden7.Size = new System.Drawing.Size(79, 19);
-            this.subHidden7.TabIndex = 122;
+            this.subHidden7.TabIndex = 0;
             this.subHidden7.Text = "サブボタン7";
             this.subHidden7.UseVisualStyleBackColor = true;
+            this.subHidden7.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label14
             // 
@@ -819,7 +826,7 @@
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(27, 15);
-            this.label14.TabIndex = 0;
+            this.label14.TabIndex = 3;
             this.label14.Text = "キー";
             // 
             // subKey7
@@ -832,7 +839,7 @@
             this.subKey7.Name = "subKey7";
             this.subKey7.ReadOnly = true;
             this.subKey7.Size = new System.Drawing.Size(140, 23);
-            this.subKey7.TabIndex = 0;
+            this.subKey7.TabIndex = 4;
             this.subKey7.TabStop = false;
             // 
             // subKeyChange7
@@ -843,7 +850,7 @@
             this.subKeyChange7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange7.Name = "subKeyChange7";
             this.subKeyChange7.Size = new System.Drawing.Size(140, 32);
-            this.subKeyChange7.TabIndex = 124;
+            this.subKeyChange7.TabIndex = 5;
             this.subKeyChange7.Text = "変更";
             this.subKeyChange7.UseVisualStyleBackColor = true;
             this.subKeyChange7.Click += new System.EventHandler(this.KeyChange_Click);
@@ -861,7 +868,7 @@
             this.sub4.Name = "sub4";
             this.sub4.Padding = new System.Windows.Forms.Padding(2);
             this.sub4.Size = new System.Drawing.Size(150, 150);
-            this.sub4.TabIndex = 16;
+            this.sub4.TabIndex = 5;
             this.sub4.TabStop = false;
             // 
             // label7
@@ -872,7 +879,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 15);
-            this.label7.TabIndex = 0;
+            this.label7.TabIndex = 1;
             this.label7.Text = "ラベル";
             // 
             // subValue4
@@ -884,7 +891,7 @@
             this.subValue4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue4.Name = "subValue4";
             this.subValue4.Size = new System.Drawing.Size(140, 23);
-            this.subValue4.TabIndex = 114;
+            this.subValue4.TabIndex = 2;
             // 
             // label8
             // 
@@ -894,7 +901,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 15);
-            this.label8.TabIndex = 0;
+            this.label8.TabIndex = 3;
             this.label8.Text = "キー";
             // 
             // subKey4
@@ -907,7 +914,7 @@
             this.subKey4.Name = "subKey4";
             this.subKey4.ReadOnly = true;
             this.subKey4.Size = new System.Drawing.Size(139, 23);
-            this.subKey4.TabIndex = 0;
+            this.subKey4.TabIndex = 4;
             this.subKey4.TabStop = false;
             // 
             // subKeyChange4
@@ -918,7 +925,7 @@
             this.subKeyChange4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange4.Name = "subKeyChange4";
             this.subKeyChange4.Size = new System.Drawing.Size(140, 32);
-            this.subKeyChange4.TabIndex = 115;
+            this.subKeyChange4.TabIndex = 5;
             this.subKeyChange4.Text = "変更";
             this.subKeyChange4.UseVisualStyleBackColor = true;
             this.subKeyChange4.Click += new System.EventHandler(this.KeyChange_Click);
@@ -929,9 +936,10 @@
             this.subHidden4.Location = new System.Drawing.Point(8, 0);
             this.subHidden4.Name = "subHidden4";
             this.subHidden4.Size = new System.Drawing.Size(79, 19);
-            this.subHidden4.TabIndex = 113;
+            this.subHidden4.TabIndex = 0;
             this.subHidden4.Text = "サブボタン4";
             this.subHidden4.UseVisualStyleBackColor = true;
+            this.subHidden4.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // main1
             // 
@@ -945,7 +953,7 @@
             this.main1.Name = "main1";
             this.main1.Padding = new System.Windows.Forms.Padding(2);
             this.main1.Size = new System.Drawing.Size(150, 150);
-            this.main1.TabIndex = 11;
+            this.main1.TabIndex = 0;
             this.main1.TabStop = false;
             this.main1.Text = "メインボタン1";
             // 
@@ -969,7 +977,7 @@
             this.mainValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue1.Name = "mainValue1";
             this.mainValue1.Size = new System.Drawing.Size(141, 23);
-            this.mainValue1.TabIndex = 100;
+            this.mainValue1.TabIndex = 1;
             // 
             // label20
             // 
@@ -979,7 +987,7 @@
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(27, 15);
-            this.label20.TabIndex = 0;
+            this.label20.TabIndex = 2;
             this.label20.Text = "キー";
             // 
             // mainKey1
@@ -992,7 +1000,7 @@
             this.mainKey1.Name = "mainKey1";
             this.mainKey1.ReadOnly = true;
             this.mainKey1.Size = new System.Drawing.Size(141, 23);
-            this.mainKey1.TabIndex = 0;
+            this.mainKey1.TabIndex = 3;
             this.mainKey1.TabStop = false;
             // 
             // mainKeyChange1
@@ -1003,7 +1011,7 @@
             this.mainKeyChange1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKeyChange1.Name = "mainKeyChange1";
             this.mainKeyChange1.Size = new System.Drawing.Size(141, 32);
-            this.mainKeyChange1.TabIndex = 101;
+            this.mainKeyChange1.TabIndex = 4;
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
             this.mainKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
@@ -1021,7 +1029,7 @@
             this.sub1.Name = "sub1";
             this.sub1.Padding = new System.Windows.Forms.Padding(2);
             this.sub1.Size = new System.Drawing.Size(150, 150);
-            this.sub1.TabIndex = 13;
+            this.sub1.TabIndex = 2;
             this.sub1.TabStop = false;
             // 
             // subHidden1
@@ -1030,9 +1038,10 @@
             this.subHidden1.Location = new System.Drawing.Point(8, 0);
             this.subHidden1.Name = "subHidden1";
             this.subHidden1.Size = new System.Drawing.Size(79, 19);
-            this.subHidden1.TabIndex = 104;
+            this.subHidden1.TabIndex = 0;
             this.subHidden1.Text = "サブボタン1";
             this.subHidden1.UseVisualStyleBackColor = true;
+            this.subHidden1.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label1
             // 
@@ -1042,7 +1051,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 15);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "ラベル";
             // 
             // subValue1
@@ -1054,7 +1063,7 @@
             this.subValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue1.Name = "subValue1";
             this.subValue1.Size = new System.Drawing.Size(140, 23);
-            this.subValue1.TabIndex = 105;
+            this.subValue1.TabIndex = 2;
             // 
             // label2
             // 
@@ -1064,7 +1073,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 15);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 3;
             this.label2.Text = "キー";
             // 
             // subKey1
@@ -1077,7 +1086,7 @@
             this.subKey1.Name = "subKey1";
             this.subKey1.ReadOnly = true;
             this.subKey1.Size = new System.Drawing.Size(140, 23);
-            this.subKey1.TabIndex = 0;
+            this.subKey1.TabIndex = 4;
             this.subKey1.TabStop = false;
             // 
             // subKeyChange1
@@ -1088,7 +1097,7 @@
             this.subKeyChange1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange1.Name = "subKeyChange1";
             this.subKeyChange1.Size = new System.Drawing.Size(140, 32);
-            this.subKeyChange1.TabIndex = 106;
+            this.subKeyChange1.TabIndex = 5;
             this.subKeyChange1.Text = "変更";
             this.subKeyChange1.UseVisualStyleBackColor = true;
             this.subKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
@@ -1096,30 +1105,30 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(437, 403);
+            this.button4.Location = new System.Drawing.Point(437, 405);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(80, 29);
-            this.button4.TabIndex = 70;
+            this.button4.TabIndex = 3;
             this.button4.Text = "適用";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(351, 403);
+            this.button5.Location = new System.Drawing.Point(351, 405);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(80, 29);
-            this.button5.TabIndex = 69;
+            this.button5.TabIndex = 2;
             this.button5.Text = "キャンセル";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(265, 403);
+            this.button6.Location = new System.Drawing.Point(265, 405);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(80, 29);
-            this.button6.TabIndex = 68;
+            this.button6.TabIndex = 1;
             this.button6.Text = "OK";
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -1132,7 +1141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(534, 439);
+            this.ClientSize = new System.Drawing.Size(534, 441);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
