@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace seigyo
@@ -14,7 +10,7 @@ namespace seigyo
             if (args.Length == 0)
             {
                 Console.WriteLine("引数が指定されていません");
-                Environment.ExitCode = 1;   //終了コードなど
+                Environment.ExitCode = -1;   //終了コード
             }
             else
             {
@@ -29,12 +25,12 @@ namespace seigyo
                         catch
                         {
                             Console.WriteLine("エラーが発生しました");
-                            Environment.ExitCode = 1;   //終了コードなど
+                            Environment.ExitCode = -2;   //終了コード
                         }
                         break;
                     default:
                         Console.WriteLine("引数が指定されていません");
-                        Environment.ExitCode = 1;   //終了コードなど
+                        Environment.ExitCode = -1;   //終了コード
                         break;
                 }
             }
