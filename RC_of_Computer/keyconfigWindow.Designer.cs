@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Apply = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.OK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sub9 = new System.Windows.Forms.GroupBox();
             this.subHidden9 = new System.Windows.Forms.CheckBox();
@@ -108,9 +105,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.subKey1 = new System.Windows.Forms.TextBox();
             this.subKeyChange1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Apply = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.OK = new System.Windows.Forms.Button();
             this.keyScan = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.sub9.SuspendLayout();
@@ -125,36 +122,6 @@
             this.main1.SuspendLayout();
             this.sub1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Apply
-            // 
-            this.Apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Apply.Location = new System.Drawing.Point(438, 814);
-            this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(80, 30);
-            this.Apply.TabIndex = 0;
-            this.Apply.Text = "適用";
-            this.Apply.UseVisualStyleBackColor = true;
-            // 
-            // Cancel
-            // 
-            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel.Location = new System.Drawing.Point(352, 814);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(80, 30);
-            this.Cancel.TabIndex = 0;
-            this.Cancel.Text = "キャンセル";
-            this.Cancel.UseVisualStyleBackColor = true;
-            // 
-            // OK
-            // 
-            this.OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OK.Location = new System.Drawing.Point(266, 814);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(80, 30);
-            this.OK.TabIndex = 0;
-            this.OK.Text = "OK";
-            this.OK.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -1124,35 +1091,35 @@
             this.subKeyChange1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
             this.subKeyChange1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
-            // button4
+            // Apply
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(437, 405);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 29);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "適用";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Apply.Location = new System.Drawing.Point(437, 405);
+            this.Apply.Name = "Apply";
+            this.Apply.Size = new System.Drawing.Size(80, 29);
+            this.Apply.TabIndex = 3;
+            this.Apply.Text = "適用";
+            this.Apply.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // Cancel
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(351, 405);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 29);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "キャンセル";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cancel.Location = new System.Drawing.Point(351, 405);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(80, 29);
+            this.Cancel.TabIndex = 2;
+            this.Cancel.Text = "キャンセル";
+            this.Cancel.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // OK
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(265, 405);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 29);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "OK";
-            this.button6.UseVisualStyleBackColor = true;
+            this.OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OK.Location = new System.Drawing.Point(265, 405);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(80, 29);
+            this.OK.TabIndex = 1;
+            this.OK.Text = "OK";
+            this.OK.UseVisualStyleBackColor = true;
             // 
             // keyScan
             // 
@@ -1164,13 +1131,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(534, 441);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Apply);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "KeyConfigWindow";
@@ -1203,9 +1167,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button Apply;
-        private System.Windows.Forms.Button Cancel;
-        private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox sub6;
         private System.Windows.Forms.CheckBox subHidden6;
@@ -1282,9 +1243,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox subKey7;
         private System.Windows.Forms.Button subKeyChange7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Apply;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Timer keyScan;
     }
 }
