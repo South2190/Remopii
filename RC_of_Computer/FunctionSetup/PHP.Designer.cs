@@ -124,6 +124,8 @@
             // 
             // WebServerSoftware
             // 
+            this.WebServerSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.WebServerSoftware.FormattingEnabled = true;
             this.WebServerSoftware.Items.AddRange(new object[] {
             "PHPのビルトインウェブサーバーを使用する",
@@ -182,8 +184,6 @@
             // 
             // PortNumber
             // 
-            this.PortNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.PortNumber.Location = new System.Drawing.Point(200, 161);
             this.PortNumber.Name = "PortNumber";
             this.PortNumber.Size = new System.Drawing.Size(180, 23);
@@ -191,8 +191,6 @@
             // 
             // IPAddress
             // 
-            this.IPAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.IPAddress.Location = new System.Drawing.Point(200, 132);
             this.IPAddress.Name = "IPAddress";
             this.IPAddress.Size = new System.Drawing.Size(180, 23);
@@ -218,6 +216,7 @@
             // 
             // OkButton
             // 
+            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OkButton.Location = new System.Drawing.Point(341, 264);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(80, 30);
@@ -228,6 +227,7 @@
             // 
             // CancelButton
             // 
+            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelButton.Location = new System.Drawing.Point(427, 264);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(80, 30);
@@ -238,6 +238,7 @@
             // 
             // ApplyButton
             // 
+            this.ApplyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ApplyButton.Location = new System.Drawing.Point(513, 264);
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.Size = new System.Drawing.Size(80, 30);
@@ -258,7 +259,7 @@
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.RunPHPSetup);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PHP";
             this.Text = "PHP設定";
             this.AdvancedSettings.ResumeLayout(false);

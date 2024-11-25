@@ -80,6 +80,7 @@
             this.Controls.Add(this.SetupProgress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PHPAutoSetup";
             this.Text = "PHPの自動セットアップ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PHPAutoSetup_FormClosing);
