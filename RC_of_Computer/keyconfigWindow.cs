@@ -179,14 +179,22 @@ namespace RC_of_Computer
                     return "{F15}";
                 case Keys.F16:
                     return "{F16}";
+                case Keys.Up:
+                    return "UP";
+                case Keys.Down:
+                    return "{DOWN}";
+                case Keys.Left:
+                    return "{LEFT}";
+                case Keys.Right:
+                    return "{RIGHT}";
                 case Keys.Back:
-                    return "{BS}";
+                    return "{BACKSPACE}";
                 case Keys.Cancel:
                     return "{BREAK}";
                 case Keys.CapsLock:
                     return "{CAPSLOCK}";
                 case Keys.Delete:
-                    return "{DEL}";
+                    return "{DELETE}";
                 case Keys.End:
                     return "{END}";
                 case Keys.Enter:
@@ -196,7 +204,7 @@ namespace RC_of_Computer
                 case Keys.Home:
                     return "{HOME}";
                 case Keys.Insert:
-                    return "{INS}";
+                    return "{INSERT}";
                 case Keys.NumLock:
                     return "{NUMLOCK}";
                 case Keys.PageDown:
@@ -204,6 +212,7 @@ namespace RC_of_Computer
                 case Keys.PageUp:
                     return "{PGUP}";
                 case Keys.PrintScreen:
+                    // 検出不可
                     return "{PRTSC}";
                 case Keys.Tab:
                     return "{TAB}";
