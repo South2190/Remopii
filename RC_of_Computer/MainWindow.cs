@@ -42,10 +42,15 @@ namespace RC_of_Computer
 
         private void ServerIO_Click(object sender, System.EventArgs e)
         {
-            string hostname = Dns.GetHostName();
+            ShowQRCode showQRCode = new()
+            {
+                Owner = this
+            };
+            showQRCode.ShowDialog();
+            /*string hostname = Dns.GetHostName();
             IPAddress[] adrList = Dns.GetHostAddresses(hostname);
             string url = (Properties.Settings.Default.PortNumber == 80) ? $"http://{adrList[1].ToString()}" : $"http://{adrList[1].ToString()}:{Properties.Settings.Default.PortNumber.ToString()}";
-            MessageBox.Show(url);
+            MessageBox.Show(url);*/
         }
 
         /// <summary>
