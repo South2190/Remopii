@@ -1137,6 +1137,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MinimizeBox = false;
             this.Name = "KeyConfigWindow";
             this.Text = "キーコンフィグ";
             this.panel1.ResumeLayout(false);
