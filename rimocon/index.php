@@ -1,4 +1,5 @@
 <?php
+        //ボタン押したときの処理
         if(array_key_exists('mainBtn1', $_POST)) { 
           exec('schtasks /run /tn RC_of_Computer\MainButton1');
           header("Location:{$_SERVER['PHP_SELF']}");
@@ -73,6 +74,7 @@
     <title>リモコン</title>
 
     <style>
+      /*ボタンのサイズ等の設定*/
       body{
         max-width: 480px;
         margin: auto;
@@ -83,12 +85,10 @@
       }
 
       .mainbtn1 {
-        margin-right: 3%;
-        margin-top: 3.5%;
-        margin-bottom: 5.5%; 
+        margin: 2.5%;
         display: inline-block;
-        width: 46%;
-        height: 200px;
+        width: 45%;
+        aspect-ratio: 1;
         text-decoration: none;
         text-align: center;
         font-size: 400%;
@@ -103,11 +103,10 @@
       }
 
       .mainbtn2 {
-        margin-top: 3.5%;
-        margin-bottom: 5.5%;
+        margin: 2.5%;
         display: inline-block;
-        width: 46%;
-        height: 200px;
+        width: 45%;
+        aspect-ratio: 1;
         text-decoration: none;
         text-align: center;
         font-size: 400%;
@@ -123,12 +122,10 @@
       }
 
       .subbtn{
-        margin-top: 4.5%;
-        margin-right: 2.25%;
-        margin-left: 2.25%;
+        margin: 2.25%;
         display: inline-block;
         width: 28.5%;
-        height: 120px;
+        aspect-ratio: 1;
         text-decoration: none;
         text-align: center;
         font-size: 200%;
@@ -142,12 +139,10 @@
       color: #FFF;
       }
 	   .disabledbtn{
-		    margin-top: 4.5%;
-        margin-right: 2.25%;
-        margin-left: 2.25%;
+        margin: 2.25%;
         display: inline-block;
         width: 28.5%;
-        height: 120px;
+        aspect-ratio: 1;
         text-decoration: none;
         text-align: center;
         font-size: 200%;
@@ -166,15 +161,15 @@
 
         for($i = 1; $i <= 11; $i++){
           $data = fgetcsv($fp);
-          //メインボタン
+          //メインボタンの表示
           if($i<=2){
             echo '<input type="submit" value="' . $data[0] . '" name="mainBtn' . $i . '"  class="mainbtn' . $i . '"/>';
           }
-          //サブボタン（有効）
+          //サブボタン（有効）の表示
           elseif($data[1] == 1){
             echo '<input type="submit" value=' . $data[0] . ' name="subBtn' . $i-2 . '" class="subbtn" />';
           }
-          //サブボタン（無効）
+          //サブボタン（無効）の表示
           else{
             echo '<input type="submit" value="無効" name="subBtn' . $i-2 . '" disabled class="disabledbtn" />';
           }
