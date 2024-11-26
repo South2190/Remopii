@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\index.php" />
     <None Include="Resources\SmallIcon.png" />
     <None Include="Resources\LargeIcon.png" />
   </ItemGroup>
