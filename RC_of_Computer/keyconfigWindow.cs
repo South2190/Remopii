@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net;
 using System.Windows.Forms;
 
 namespace RC_of_Computer
@@ -31,7 +32,7 @@ namespace RC_of_Computer
                 duration = 10;
                 keyScan.Start();
                 buttonCount.Text = "変更...10";
-                ChangeKeyText(buttonCount.Name, "+^({ESC})");
+                ChangeKeyText(buttonCount.Name, "");
             }
         }
         /// <summary>
@@ -120,6 +121,7 @@ namespace RC_of_Computer
             if (buttonCount != null)
             {
                 Debug.WriteLine(e.KeyCode);
+                ChangeKeyText(buttonCount.Name, ConvertToSendkeys(e.KeyCode));
                 e.Handled = true;
             }
         }
@@ -132,6 +134,81 @@ namespace RC_of_Computer
             if (buttonCount != null)
             {
                 e.IsInputKey = true;
+            }
+        }
+
+        private string ConvertToSendkeys(Keys key)
+        {
+            switch (key)
+            {
+                case Keys.ShiftKey:
+                    return "+";
+                case Keys.ControlKey:
+                    return "^";
+                case Keys.Menu:
+                    return "%";
+                case Keys.F1:
+                    return "{F1}";
+                case Keys.F2:
+                    return "{F2}";
+                case Keys.F3:
+                    return "{F3}";
+                case Keys.F4:
+                    return "{F4}";
+                case Keys.F5:
+                    return "{F5}";
+                case Keys.F6:
+                    return "{F6}";
+                case Keys.F7:
+                    return "{F7}";
+                case Keys.F8:
+                    return "{F8}";
+                case Keys.F9:
+                    return "{F9}";
+                case Keys.F10:
+                    return "{F10}";
+                case Keys.F11:
+                    return "{F11}";
+                case Keys.F12:
+                    return "{F12}";
+                case Keys.F13:
+                    return "{F13}";
+                case Keys.F14:
+                    return "{F14}";
+                case Keys.F15:
+                    return "{F15}";
+                case Keys.F16:
+                    return "{F16}";
+                case Keys.Back:
+                    return "{BS}";
+                case Keys.Cancel:
+                    return "{BREAK}";
+                case Keys.CapsLock:
+                    return "{CAPSLOCK}";
+                case Keys.Delete:
+                    return "{DEL}";
+                case Keys.End:
+                    return "{END}";
+                case Keys.Enter:
+                    return "{ENTER}";
+                case Keys.Escape:
+                    return "{ESC}";
+                case Keys.Home:
+                    return "{HOME}";
+                case Keys.Insert:
+                    return "{INS}";
+                case Keys.NumLock:
+                    return "{NUMLOCK}";
+                case Keys.PageDown:
+                    return "{PGDN}";
+                case Keys.PageUp:
+                    return "{PGUP}";
+                case Keys.PrintScreen:
+                    return "{PRTSC}";
+                case Keys.Tab:
+                    return "{TAB}";
+                default:
+                    return key.ToString();
             }
         }
     }
