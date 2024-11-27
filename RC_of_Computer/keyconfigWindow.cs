@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Windows.Forms;
@@ -9,6 +10,9 @@ namespace RC_of_Computer
     {
         private Button buttonCount = null;
         private int duration = 0;
+        private List<string> keys;
+        private int keycount = 0;
+        private string key;
 
         public KeyConfigWindow()
         {
@@ -21,6 +25,9 @@ namespace RC_of_Computer
         private void KeyChange_Click(object sender, EventArgs e)
         {
             bool timerStartFlag = buttonCount != (Button)sender;
+            keycount = 0;
+            key = null;
+            keys = new();
 
             if (null != buttonCount)
             {
@@ -120,8 +127,44 @@ namespace RC_of_Computer
         {
             if (buttonCount != null)
             {
-                Debug.WriteLine(e.KeyCode);
-                ChangeKeyText(buttonCount.Name, ConvertToSendkeys(e.KeyCode));
+                string keycode = ConvertToSendkeys(e.KeyCode);
+                if (keys.Contains(keycode + "("))
+                {
+                    ChangeKeyText(buttonCount.Name, "同じやつ");
+                    TimerStop();
+                }
+                else
+                {
+                    keys.Add(keycode);
+                    if (keys[keycount] == "+" || keys[keycount] == "^" || keys[keycount] == "%")
+                    {
+                        keys[keycount] += "(";
+                        key += keys[keycount];
+                        keycount += 1;
+                        ChangeKeyText(buttonCount.Name, key);
+
+                    }
+                    else
+                    {
+                        if (keycount > 0)
+                        {
+                            key += keys[keycount];
+                            for (int i = 1; i <= keycount; i++)
+                            {
+                                key += ")";
+                            }
+                            ChangeKeyText(buttonCount.Name, key);
+                            TimerStop();
+                        }
+                        else
+                        {
+                            ChangeKeyText(buttonCount.Name, keys[0]);
+                            TimerStop();
+                        }
+                    }
+                }
+                //Debug.WriteLine(e.KeyCode);
+                //e.Control, e.Shift, e.Alt
                 e.Handled = true;
             }
         }
