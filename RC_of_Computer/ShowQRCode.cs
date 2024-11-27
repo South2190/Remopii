@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
 using ZXing.QrCode;
@@ -20,19 +15,30 @@ namespace RC_of_Computer
         {
             InitializeComponent();
 
+            // URLの生成
             string hostname = Dns.GetHostName();
             IPAddress[] adrList = Dns.GetHostAddresses(hostname);
             string GenURL = (Properties.Settings.Default.PortNumber == 80) ? $"http://{adrList[1].ToString()}" : $"http://{adrList[1].ToString()}:{Properties.Settings.Default.PortNumber.ToString()}";
-            Bitmap GenQRCode = GenerateQRcode(GenURL);
+
             URLTextBox.Text = GenURL;
-            QRPictureBox.Image = GenQRCode;
+            QRPictureBox.Image = GenerateQRcode(GenURL);
         }
 
-        private Bitmap GenerateQRcode(string URL)
+        private void OKButton_Click(object sender, EventArgs e)
         {
-            var writer = new BarcodeWriter
+            Close();
+        }
+
+        /// <summary>
+        /// QRコードを生成します
+        /// </summary>
+        /// <param name="URL">URL</param>
+        /// <returns>Bitmap形式のQRコード</returns>
+        private static Bitmap GenerateQRcode(string URL)
+        {
+            BarcodeWriter writer = new()
             {
-                Format = ZXing.BarcodeFormat.QR_CODE,
+                Format = BarcodeFormat.QR_CODE,
                 Options = new QrCodeEncodingOptions
                 {
                     Height = 200,
@@ -42,11 +48,6 @@ namespace RC_of_Computer
             };
 
             return writer.Write(URL);
-        }
-
-        private void OKButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
     

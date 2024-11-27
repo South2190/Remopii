@@ -180,6 +180,11 @@ namespace RC_of_Computer
             }
         }
 
+        /// <summary>
+        /// Keys型をSendKeys形式に変換します
+        /// </summary>
+        /// <param name="key">変換前のKeys型</param>
+        /// <returns>変換結果</returns>
         private string ConvertToSendkeys(Keys key)
         {
             switch (key)
