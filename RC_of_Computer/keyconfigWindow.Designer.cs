@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyConfigWindow));
             this.panel1 = new System.Windows.Forms.Panel();
             this.sub9 = new System.Windows.Forms.GroupBox();
             this.subHidden9 = new System.Windows.Forms.CheckBox();
@@ -1136,6 +1137,7 @@
             this.Controls.Add(this.OK);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MinimizeBox = false;
             this.Name = "KeyConfigWindow";

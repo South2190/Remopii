@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PHP));
             this.SettingsItem1 = new System.Windows.Forms.Label();
             this.RunPHPSetup = new System.Windows.Forms.Button();
             this.UsePATHValue = new System.Windows.Forms.CheckBox();
@@ -259,6 +260,7 @@
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.RunPHPSetup);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "PHP";
             this.Text = "PHP設定";

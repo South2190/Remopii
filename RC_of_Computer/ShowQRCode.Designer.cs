@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowQRCode));
             this.QRPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.OKButton = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.QRPictureBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShowQRCode";
             this.Text = "ShowQRCode";
             ((System.ComponentModel.ISupportInitialize)(this.QRPictureBox)).EndInit();

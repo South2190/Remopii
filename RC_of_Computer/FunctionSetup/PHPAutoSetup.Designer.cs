@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PHPAutoSetup));
             this.SetupProgress = new System.Windows.Forms.ProgressBar();
             this.StartSetup = new System.Windows.Forms.Button();
             this.Description = new System.Windows.Forms.Label();
@@ -79,6 +80,7 @@
             this.Controls.Add(this.StartSetup);
             this.Controls.Add(this.SetupProgress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PHPAutoSetup";
