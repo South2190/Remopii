@@ -3,8 +3,8 @@ using RC_of_Computer.FunctionSetup;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Management;
 using System.Windows.Forms;
-using System.Net;
 using System;
 
 namespace RC_of_Computer
@@ -20,9 +20,18 @@ namespace RC_of_Computer
             PHPStatus.Image = test;
             KeyConfigStatus.Image = test;
             Debug.WriteLine(test.PhysicalDimension.ToString());
+            ManagementClass mc = new("Win32_OperatingSystem");
+            ManagementObjectCollection moc = mc.GetInstances();
+            foreach (ManagementObject m in moc)
+            {
+                Debug.WriteLine($"Name:{m["Name"]}");
+                Debug.WriteLine($"Version:{m["Version"]}");
+                Debug.WriteLine($"BuildNumber:{m["BuildNumber"]}");
+                //MessageBox.Show($"Name:{m["Name"]}\nVersion:{m["Version"]}\nBuildNumber:{m["BuildNumber"]}", "WMIからのバージョン情報取得テスト");
+            }
         }
 
-        private void ShowPHP_Click(object sender, System.EventArgs e)
+        private void ShowPHP_Click(object sender, EventArgs e)
         {
             PHP php = new()
             {
@@ -31,7 +40,7 @@ namespace RC_of_Computer
             php.ShowDialog();
         }
 
-        private void ShowKeyConfig_Click(object sender, System.EventArgs e)
+        private void ShowKeyConfig_Click(object sender, EventArgs e)
         {
             KeyConfigWindow keyConfigWindow = new()
             {
@@ -40,17 +49,13 @@ namespace RC_of_Computer
             keyConfigWindow.ShowDialog();
         }
 
-        private void ServerIO_Click(object sender, System.EventArgs e)
+        private void ServerIO_Click(object sender, EventArgs e)
         {
             ShowQRCode showQRCode = new()
             {
                 Owner = this
             };
             showQRCode.ShowDialog();
-            /*string hostname = Dns.GetHostName();
-            IPAddress[] adrList = Dns.GetHostAddresses(hostname);
-            string url = (Properties.Settings.Default.PortNumber == 80) ? $"http://{adrList[1].ToString()}" : $"http://{adrList[1].ToString()}:{Properties.Settings.Default.PortNumber.ToString()}";
-            MessageBox.Show(url);*/
         }
 
         /// <summary>
@@ -61,22 +66,28 @@ namespace RC_of_Computer
         {
             int statusNum = 0;
 
-            // PHPのインストール状況の確認
-            if (Properties.Settings.Default.WebServerSoftware != "PHP") { statusNum = 1; }
-            if (!File.Exists(Properties.Settings.Default.PHPExeFilePath)) { return -1; }
-            ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
+            // PHPを使用する設定の場合はPHPの実行ファイルを確認する
+            if (Properties.Settings.Default.WebServerSoftware == "PHP")
             {
-                Arguments = "--version"
-            };
-            try
-            {
-                using Process process = Process.Start(processStartInfo);
-                process.WaitForExit(1000);
-                if (process.ExitCode != 0) { return -1; }
+                if (!File.Exists(Properties.Settings.Default.PHPExeFilePath)) { return -1; }
+                ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
+                {
+                    Arguments = "--version"
+                };
+                try
+                {
+                    using Process process = Process.Start(processStartInfo);
+                    process.WaitForExit(1000);
+                    if (process.ExitCode != 0) { return -1; }
+                }
+                catch
+                {
+                    return -1;
+                }
             }
-            catch
+            else
             {
-                return -1;
+                statusNum = 1;
             }
 
             // ドキュメントルートのファイルチェック
