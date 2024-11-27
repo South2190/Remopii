@@ -11,24 +11,43 @@ namespace RC_of_Computer
 {
     public partial class MainWindow : Form
     {
+        private const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
+
+        private readonly int ICON_OK;
+        private readonly int ICON_WARNING;
+        private readonly int ICON_ERROR;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
-            Bitmap test = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 229, true);
-            PHPStatus.Image = test;
-            KeyConfigStatus.Image = test;
-            Debug.WriteLine(test.PhysicalDimension.ToString());
+            // Windows10、Windows11のどちらかを判定し、OSに合うインデックス番号を参照する
             ManagementClass mc = new("Win32_OperatingSystem");
             ManagementObjectCollection moc = mc.GetInstances();
-            foreach (ManagementObject m in moc)
+            foreach (ManagementObject managementObject in moc)
             {
-                Debug.WriteLine($"Name:{m["Name"]}");
-                Debug.WriteLine($"Version:{m["Version"]}");
-                Debug.WriteLine($"BuildNumber:{m["BuildNumber"]}");
-                //MessageBox.Show($"Name:{m["Name"]}\nVersion:{m["Version"]}\nBuildNumber:{m["BuildNumber"]}", "WMIからのバージョン情報取得テスト");
+                if (managementObject["Version"].ToString().Substring(0, 2) == "10")
+                {
+                    if (int.Parse(managementObject["BuildNumber"].ToString()) >= 22000)
+                    {
+                        ICON_OK = 233;
+                        ICON_WARNING = 231;
+                        ICON_ERROR = 230;
+                    }
+                    else
+                    {
+                        ICON_OK = 232;
+                        ICON_WARNING = 230;
+                        ICON_ERROR = 229;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("このOSはサポートされていないため、アプリケーションが正しく動作しない可能性があります。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
+
+            CheckStatus();
         }
 
         private void ShowPHP_Click(object sender, EventArgs e)
@@ -38,6 +57,7 @@ namespace RC_of_Computer
                 Owner = this
             };
             php.ShowDialog();
+            CheckStatus();
         }
 
         private void ShowKeyConfig_Click(object sender, EventArgs e)
@@ -47,6 +67,7 @@ namespace RC_of_Computer
                 Owner = this
             };
             keyConfigWindow.ShowDialog();
+            CheckStatus();
         }
 
         private void ServerIO_Click(object sender, EventArgs e)
@@ -56,6 +77,28 @@ namespace RC_of_Computer
                 Owner = this
             };
             showQRCode.ShowDialog();
+        }
+
+        /// <summary>
+        /// ステータスを確認する関数を呼び出し、結果に応じてボタンの横にアイコンを表示します
+        /// </summary>
+        private void CheckStatus()
+        {
+            int PHPStatusIcon = CheckPHPStatus() switch
+            {
+                0 => ICON_OK,
+                1 => ICON_WARNING,
+                -1 => ICON_ERROR,
+                _ => ICON_ERROR
+            };
+            int KeyConfigStatusIcon = CheckKeyConfigStatus() switch
+            {
+                0 => ICON_OK,
+                -1 => ICON_ERROR,
+                _ => ICON_ERROR
+            };
+            PHPStatus.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, PHPStatusIcon, true);
+            KeyConfigStatus.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, KeyConfigStatusIcon, true);
         }
 
         /// <summary>
@@ -101,7 +144,7 @@ namespace RC_of_Computer
         /// キーコンフィグが正しく設定されているかを確認します
         /// </summary>
         /// <returns>正しく設定されている場合(0)、それ以外(-1)</returns>
-        private static int GetKeyConfigStatus()
+        private static int CheckKeyConfigStatus()
         {
             string csvPath = Path.Combine(Properties.Settings.Default.DocumentRoot, "ButtonProperty.csv");
             if (!File.Exists(csvPath)) { return -1; }
