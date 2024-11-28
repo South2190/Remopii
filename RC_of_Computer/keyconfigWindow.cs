@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Windows.Forms;
+
+using RC_of_Computer.Classes;
 
 namespace RC_of_Computer
 {
@@ -9,10 +12,14 @@ namespace RC_of_Computer
     {
         private Button buttonCount = null;
         private int duration = 0;
+        private List<string[]> buttonCSV = new();
 
         public KeyConfigWindow()
         {
             InitializeComponent();
+            CSVIO.LoadCSV("Button.csv", ref buttonCSV);
+            Debug.WriteLine(buttonCSV[2][0]);
+            CSVIO.WriteListCSV("Button2.csv", buttonCSV);
         }
 
         /// <summary>
@@ -41,6 +48,12 @@ namespace RC_of_Computer
         private void Hidden_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
+            /*string s = checkBox.Name;
+            string s3 = s.Substring(9);
+            CSVIO.LoadCSV("Button.csv", ref buttonCSV);
+            buttonCSV[int.Parse(s3) + 1][1] = (buttonCSV[int.Parse(s3) + 1][1] == "1") ? "0" : "1"; 
+            Debug.WriteLine(buttonCSV[int.Parse(s3) + 1][0] + buttonCSV[int.Parse(s3) + 1][1]);*/
+            //Debug.WriteLine(s3);
             Debug.WriteLine(checkBox.Name + ": " + checkBox.Checked);
         }
 
@@ -219,6 +232,43 @@ namespace RC_of_Computer
                 default:
                     return key.ToString();
             }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void OK_Click(object sender, EventArgs e)
+        {
+
+            Close();
+        }
+
+        private void Apply_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveSettingsToCSV()
+        {
+            // panel内のグループボックス全取得
+            foreach (Control groupbox in panelRemocon.Controls)
+            {
+                // グループボックス内のコントロール全取得
+                foreach (Control control in groupbox.Controls)
+                {
+                    // コントロールのタイプがチェックボックスだった場合のみ処理実行
+                    if (control.GetType().Equals(typeof(CheckBox)))
+                    {
+                        // ここでの"control"変数にはチェックボックスが格納されている。値の読み出し、書き換えは"control.(目的のプロパティ)"の形式で行う。
+                        Debug.WriteLine(control.Name);
+                    }
+                    // ここで同じようにif文を作成し、タイプがテキストボックスかどうか、およびラベルを格納したテキストボックスかどうかをテキストボックスの名前から判断する。
+                    // テキストボックスの名前から判断する際のヒント：正規表現
+                }
+            }
+
         }
     }
 }
