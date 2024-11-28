@@ -21,8 +21,8 @@ namespace RC_of_Computer
         {
             InitializeComponent();
             CSVIO.LoadCSV("Button.csv", ref buttonCSV);
-            Debug.WriteLine(buttonCSV[2][0]);
-            CSVIO.WriteListCSV("Button2.csv", buttonCSV);
+            //Debug.WriteLine(buttonCSV[2][0]);
+            //CSVIO.WriteListCSV("Button2.csv", buttonCSV);
         }
 
         /// <summary>
