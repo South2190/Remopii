@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyConfigWindow));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelRemocon = new System.Windows.Forms.Panel();
             this.sub9 = new System.Windows.Forms.GroupBox();
             this.subHidden9 = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
             this.keyScan = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
+            this.panelRemocon.SuspendLayout();
             this.sub9.SuspendLayout();
             this.sub6.SuspendLayout();
             this.sub3.SuspendLayout();
@@ -124,27 +124,27 @@
             this.sub1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelRemocon
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelRemocon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.sub9);
-            this.panel1.Controls.Add(this.sub6);
-            this.panel1.Controls.Add(this.sub3);
-            this.panel1.Controls.Add(this.sub8);
-            this.panel1.Controls.Add(this.sub5);
-            this.panel1.Controls.Add(this.main2);
-            this.panel1.Controls.Add(this.sub2);
-            this.panel1.Controls.Add(this.sub7);
-            this.panel1.Controls.Add(this.sub4);
-            this.panel1.Controls.Add(this.main1);
-            this.panel1.Controls.Add(this.sub1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 395);
-            this.panel1.TabIndex = 0;
+            this.panelRemocon.AutoScroll = true;
+            this.panelRemocon.Controls.Add(this.sub9);
+            this.panelRemocon.Controls.Add(this.sub6);
+            this.panelRemocon.Controls.Add(this.sub3);
+            this.panelRemocon.Controls.Add(this.sub8);
+            this.panelRemocon.Controls.Add(this.sub5);
+            this.panelRemocon.Controls.Add(this.main2);
+            this.panelRemocon.Controls.Add(this.sub2);
+            this.panelRemocon.Controls.Add(this.sub7);
+            this.panelRemocon.Controls.Add(this.sub4);
+            this.panelRemocon.Controls.Add(this.main1);
+            this.panelRemocon.Controls.Add(this.sub1);
+            this.panelRemocon.Location = new System.Drawing.Point(0, 0);
+            this.panelRemocon.Name = "panelRemocon";
+            this.panelRemocon.Size = new System.Drawing.Size(532, 395);
+            this.panelRemocon.TabIndex = 0;
             // 
             // sub9
             // 
@@ -1101,6 +1101,7 @@
             this.Apply.TabIndex = 3;
             this.Apply.Text = "適用";
             this.Apply.UseVisualStyleBackColor = true;
+            this.Apply.Click += new System.EventHandler(this.Apply_Click);
             // 
             // Cancel
             // 
@@ -1111,6 +1112,7 @@
             this.Cancel.TabIndex = 2;
             this.Cancel.Text = "キャンセル";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // OK
             // 
@@ -1121,6 +1123,7 @@
             this.OK.TabIndex = 1;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // keyScan
             // 
@@ -1135,14 +1138,14 @@
             this.Controls.Add(this.Apply);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelRemocon);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MinimizeBox = false;
             this.Name = "KeyConfigWindow";
             this.Text = "キーコンフィグ";
-            this.panel1.ResumeLayout(false);
+            this.panelRemocon.ResumeLayout(false);
             this.sub9.ResumeLayout(false);
             this.sub9.PerformLayout();
             this.sub6.ResumeLayout(false);
@@ -1170,7 +1173,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelRemocon;
         private System.Windows.Forms.GroupBox sub6;
         private System.Windows.Forms.CheckBox subHidden6;
         private System.Windows.Forms.Label label11;
