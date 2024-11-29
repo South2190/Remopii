@@ -85,6 +85,20 @@ namespace RC_of_Computer
 
         private void ServerIO_Click(object sender, EventArgs e)
         {
+            Process[] p = Process.GetProcessesByName("PHP.exe");
+            // PHP.exeが動いていない場合起動
+            if (p.Length <= 0)
+            {
+                ProcessStartInfo pInfo = new(Properties.Settings.Default.PHPExeFilePath)
+                {
+                    Arguments = $"-S {Properties.Settings.Default.IPAddress}:{Properties.Settings.Default.PortNumber} -t {Properties.Settings.Default.DocumentRoot}",
+                    UseShellExecute = false
+                };
+                using (Process pRun = Process.Start(pInfo))
+                {
+                    Debug.WriteLine(pRun.ExitCode);
+                }
+            }
             ShowQRCode showQRCode = new()
             {
                 Owner = this
@@ -139,7 +153,7 @@ namespace RC_of_Computer
                 ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
                 {
                     Arguments = "--version",
-                    WindowStyle = ProcessWindowStyle.Hidden
+                    UseShellExecute = false
                 };
                 try
                 {
