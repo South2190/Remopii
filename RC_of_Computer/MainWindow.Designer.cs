@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ServerIO = new System.Windows.Forms.Button();
             this.ShowPHP = new System.Windows.Forms.Button();
             this.ShowKeyConfig = new System.Windows.Forms.Button();
@@ -37,25 +36,16 @@
             this.SetupGroup = new System.Windows.Forms.GroupBox();
             this.KeyConfigStatus = new System.Windows.Forms.PictureBox();
             this.PHPStatus = new System.Windows.Forms.PictureBox();
+            this.VersionInfoLink = new System.Windows.Forms.LinkLabel();
             this.SetupGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KeyConfigStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHPStatus)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(314, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // ServerIO
             // 
             this.ServerIO.Font = new System.Drawing.Font("Meiryo UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ServerIO.Location = new System.Drawing.Point(8, 198);
+            this.ServerIO.Location = new System.Drawing.Point(8, 170);
             this.ServerIO.Name = "ServerIO";
             this.ServerIO.Size = new System.Drawing.Size(297, 92);
             this.ServerIO.TabIndex = 60;
@@ -89,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.label3.Location = new System.Drawing.Point(12, 168);
+            this.label3.Location = new System.Drawing.Point(12, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 4;
@@ -102,7 +92,7 @@
             this.SetupGroup.Controls.Add(this.ShowPHP);
             this.SetupGroup.Controls.Add(this.ShowKeyConfig);
             this.SetupGroup.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.SetupGroup.Location = new System.Drawing.Point(10, 27);
+            this.SetupGroup.Location = new System.Drawing.Point(8, 12);
             this.SetupGroup.Name = "SetupGroup";
             this.SetupGroup.Size = new System.Drawing.Size(297, 132);
             this.SetupGroup.TabIndex = 5;
@@ -125,19 +115,30 @@
             this.PHPStatus.TabIndex = 56;
             this.PHPStatus.TabStop = false;
             // 
+            // VersionInfoLink
+            // 
+            this.VersionInfoLink.AutoSize = true;
+            this.VersionInfoLink.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.VersionInfoLink.Location = new System.Drawing.Point(207, 272);
+            this.VersionInfoLink.Name = "VersionInfoLink";
+            this.VersionInfoLink.Size = new System.Drawing.Size(98, 20);
+            this.VersionInfoLink.TabIndex = 61;
+            this.VersionInfoLink.TabStop = true;
+            this.VersionInfoLink.Text = "VersionInfo";
+            this.VersionInfoLink.Click += new System.EventHandler(this.ShowVersionInfo_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(314, 301);
+            this.Controls.Add(this.VersionInfoLink);
             this.Controls.Add(this.SetupGroup);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ServerIO);
-            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
@@ -150,8 +151,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button ServerIO;
         private System.Windows.Forms.Button ShowPHP;
         private System.Windows.Forms.Button ShowKeyConfig;
@@ -159,6 +158,7 @@
         private System.Windows.Forms.GroupBox SetupGroup;
         private System.Windows.Forms.PictureBox KeyConfigStatus;
         private System.Windows.Forms.PictureBox PHPStatus;
+        private System.Windows.Forms.LinkLabel VersionInfoLink;
     }
 }
 

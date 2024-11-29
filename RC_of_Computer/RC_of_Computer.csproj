@@ -97,6 +97,12 @@
     <Compile Include="ShowQRCode.Designer.cs">
       <DependentUpon>ShowQRCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="VersionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VersionInfo.Designer.cs">
+      <DependentUpon>VersionInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="KeyConfigWindow.resx">
       <DependentUpon>KeyConfigWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="ShowQRCode.resx">
       <DependentUpon>ShowQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VersionInfo.resx">
+      <DependentUpon>VersionInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
