@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Net.Sockets;
@@ -23,14 +21,17 @@ namespace RC_of_Computer
             IPHostEntry host = Dns.GetHostEntry(hostName);
             foreach (IPAddress address in host.AddressList)
             {
+                // IPv4アドレスのみ抽出
                 if (address.AddressFamily == AddressFamily.InterNetwork) { ipAddresses.Add(address.ToString()); }
             }
             if (ipAddresses.Count >= 2)
             {
-                MessageBox.Show("有効なIPアドレスが複数検出されました。IPアドレスが正しく表示されていない可能性があります。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("有効なIPアドレスが複数検出されました。URLが正しく表示されない可能性があります。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            // URLを生成
             string GenURL = $"http://{ipAddresses[0]}";
             if (Properties.Settings.Default.PortNumber != 80) { GenURL += $":{Properties.Settings.Default.PortNumber}"; }
+
             URLTextBox.Text = GenURL;
             QRPictureBox.Image = GenerateQRcode(GenURL);
         }
