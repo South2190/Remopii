@@ -48,7 +48,6 @@
             this.OkButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.ApplyButton = new System.Windows.Forms.Button();
-            this.既定値 = new System.Windows.Forms.Button();
             this.AdvancedSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +85,6 @@
             // 
             this.AdvancedSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdvancedSettings.Controls.Add(this.既定値);
             this.AdvancedSettings.Controls.Add(this.SettingsItem5);
             this.AdvancedSettings.Controls.Add(this.SettingsItem4);
             this.AdvancedSettings.Controls.Add(this.WebServerSoftware);
@@ -102,7 +100,7 @@
             this.AdvancedSettings.Controls.Add(this.UsePATHValue);
             this.AdvancedSettings.Location = new System.Drawing.Point(12, 65);
             this.AdvancedSettings.Name = "AdvancedSettings";
-            this.AdvancedSettings.Size = new System.Drawing.Size(580, 231);
+            this.AdvancedSettings.Size = new System.Drawing.Size(580, 193);
             this.AdvancedSettings.TabIndex = 2;
             this.AdvancedSettings.TabStop = false;
             this.AdvancedSettings.Text = "詳細設定 (PHPの自動セットアップを使用する場合は変更しないでください)";
@@ -220,10 +218,10 @@
             // OkButton
             // 
             this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OkButton.Location = new System.Drawing.Point(341, 302);
+            this.OkButton.Location = new System.Drawing.Point(341, 264);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(80, 30);
-            this.OkButton.TabIndex = 55;
+            this.OkButton.TabIndex = 50;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -231,10 +229,10 @@
             // CancelButton
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.Location = new System.Drawing.Point(427, 302);
+            this.CancelButton.Location = new System.Drawing.Point(427, 264);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(80, 30);
-            this.CancelButton.TabIndex = 60;
+            this.CancelButton.TabIndex = 55;
             this.CancelButton.Text = "キャンセル";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -242,30 +240,19 @@
             // ApplyButton
             // 
             this.ApplyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyButton.Location = new System.Drawing.Point(513, 302);
+            this.ApplyButton.Location = new System.Drawing.Point(513, 264);
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.Size = new System.Drawing.Size(80, 30);
-            this.ApplyButton.TabIndex = 65;
+            this.ApplyButton.TabIndex = 60;
             this.ApplyButton.Text = "適用";
             this.ApplyButton.UseVisualStyleBackColor = true;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
-            // 
-            // 既定値
-            // 
-            this.既定値.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.既定値.Location = new System.Drawing.Point(494, 195);
-            this.既定値.Name = "既定値";
-            this.既定値.Size = new System.Drawing.Size(80, 30);
-            this.既定値.TabIndex = 50;
-            this.既定値.Text = "既定値";
-            this.既定値.UseVisualStyleBackColor = true;
-            this.既定値.Click += new System.EventHandler(this.DefaultValue_Click);
             // 
             // PHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(604, 337);
+            this.ClientSize = new System.Drawing.Size(604, 299);
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
@@ -305,6 +292,5 @@
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button ApplyButton;
-        private System.Windows.Forms.Button 既定値;
     }
 }

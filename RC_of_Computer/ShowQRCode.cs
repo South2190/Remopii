@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Net;
-using System.Net.Sockets;
 using System.Windows.Forms;
 using ZXing;
 using ZXing.QrCode;
@@ -16,21 +16,9 @@ namespace RC_of_Computer
             InitializeComponent();
 
             // URLの生成
-            List<string> ipAddresses = new();
-            string hostName = Dns.GetHostName();
-            IPHostEntry host = Dns.GetHostEntry(hostName);
-            foreach (IPAddress address in host.AddressList)
-            {
-                // IPv4アドレスのみ抽出
-                if (address.AddressFamily == AddressFamily.InterNetwork) { ipAddresses.Add(address.ToString()); }
-            }
-            if (ipAddresses.Count >= 2)
-            {
-                MessageBox.Show("有効なIPアドレスが複数検出されました。URLが正しく表示されない可能性があります。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            // URLを生成
-            string GenURL = $"http://{ipAddresses[0]}";
-            if (Properties.Settings.Default.PortNumber != 80) { GenURL += $":{Properties.Settings.Default.PortNumber}"; }
+            string hostname = Dns.GetHostName();
+            IPAddress[] adrList = Dns.GetHostAddresses(hostname);
+            string GenURL = (Properties.Settings.Default.PortNumber == 80) ? $"http://{adrList[1].ToString()}" : $"http://{adrList[1].ToString()}:{Properties.Settings.Default.PortNumber.ToString()}";
 
             URLTextBox.Text = GenURL;
             QRPictureBox.Image = GenerateQRcode(GenURL);
