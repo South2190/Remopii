@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VersionInfo));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OkButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
@@ -41,17 +42,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RC_of_Computer.Properties.Resources.LargeIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 258);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(417, 231);
+            this.OkButton.Location = new System.Drawing.Point(477, 222);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(80, 30);
+            this.OkButton.Size = new System.Drawing.Size(93, 38);
             this.OkButton.TabIndex = 1;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
@@ -60,59 +63,64 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.title.Location = new System.Drawing.Point(265, 18);
+            this.title.Font = new System.Drawing.Font("Meiryo UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.title.Location = new System.Drawing.Point(309, 4);
+            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(189, 27);
+            this.title.Size = new System.Drawing.Size(192, 35);
             this.title.TabIndex = 2;
             this.title.Text = "リモコンプログラム";
             // 
             // Version
             // 
             this.Version.AutoSize = true;
-            this.Version.Font = new System.Drawing.Font("MS UI Gothic", 10F);
-            this.Version.Location = new System.Drawing.Point(267, 72);
+            this.Version.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Version.Location = new System.Drawing.Point(313, 67);
+            this.Version.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(62, 14);
+            this.Version.Size = new System.Drawing.Size(71, 17);
             this.Version.TabIndex = 3;
             this.Version.Text = "Version ：";
             // 
             // Developer
             // 
             this.Developer.AutoSize = true;
-            this.Developer.Font = new System.Drawing.Font("MS UI Gothic", 10F);
-            this.Developer.Location = new System.Drawing.Point(268, 122);
+            this.Developer.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Developer.Location = new System.Drawing.Point(320, 101);
+            this.Developer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Developer.Name = "Developer";
-            this.Developer.Size = new System.Drawing.Size(60, 14);
+            this.Developer.Size = new System.Drawing.Size(64, 17);
             this.Developer.TabIndex = 4;
             this.Developer.Text = "開発者 ：";
             // 
             // VersionInformation
             // 
             this.VersionInformation.AutoSize = true;
-            this.VersionInformation.Font = new System.Drawing.Font("MS UI Gothic", 10F);
-            this.VersionInformation.Location = new System.Drawing.Point(335, 72);
+            this.VersionInformation.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VersionInformation.Location = new System.Drawing.Point(392, 67);
+            this.VersionInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VersionInformation.Name = "VersionInformation";
-            this.VersionInformation.Size = new System.Drawing.Size(38, 14);
+            this.VersionInformation.Size = new System.Drawing.Size(46, 17);
             this.VersionInformation.TabIndex = 5;
             this.VersionInformation.Text = " 1.0.0";
             // 
             // Names
             // 
             this.Names.AutoSize = true;
-            this.Names.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.Names.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Names.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Names.Location = new System.Drawing.Point(336, 122);
+            this.Names.Location = new System.Drawing.Point(392, 101);
+            this.Names.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Names.Name = "Names";
-            this.Names.Size = new System.Drawing.Size(81, 84);
+            this.Names.Size = new System.Drawing.Size(77, 102);
             this.Names.TabIndex = 6;
-            this.Names.Text = "鶴見 和也\r\n石崎 海翔\r\n南 慧\r\n中谷 樹音\r\n河上 翼\r\n大津留 泰治";
+            this.Names.Text = "石崎 海翔\r\n大津留 泰治\r\n河上 翼\r\n鶴見 和也\r\n中谷 樹音\r\n南 慧";
             // 
             // VersionInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 264);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(583, 261);
             this.Controls.Add(this.Names);
             this.Controls.Add(this.VersionInformation);
             this.Controls.Add(this.Developer);
@@ -120,6 +128,9 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VersionInfo";

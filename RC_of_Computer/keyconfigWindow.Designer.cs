@@ -171,7 +171,6 @@
             this.subHidden9.TabIndex = 0;
             this.subHidden9.Text = "サブボタン9";
             this.subHidden9.UseVisualStyleBackColor = true;
-            this.subHidden9.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label17
             // 
@@ -259,7 +258,6 @@
             this.subHidden6.TabIndex = 0;
             this.subHidden6.Text = "サブボタン6";
             this.subHidden6.UseVisualStyleBackColor = true;
-            this.subHidden6.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label11
             // 
@@ -369,7 +367,6 @@
             this.subHidden3.TabIndex = 0;
             this.subHidden3.Text = "サブボタン3";
             this.subHidden3.UseVisualStyleBackColor = true;
-            this.subHidden3.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label6
             // 
@@ -446,7 +443,6 @@
             this.subHidden8.TabIndex = 0;
             this.subHidden8.Text = "サブボタン8";
             this.subHidden8.UseVisualStyleBackColor = true;
-            this.subHidden8.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // subValue8
             // 
@@ -569,7 +565,6 @@
             this.subHidden5.TabIndex = 0;
             this.subHidden5.Text = "サブボタン5";
             this.subHidden5.UseVisualStyleBackColor = true;
-            this.subHidden5.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // subKeyChange5
             // 
@@ -688,7 +683,6 @@
             this.subHidden2.TabIndex = 0;
             this.subHidden2.Text = "サブボタン2";
             this.subHidden2.UseVisualStyleBackColor = true;
-            this.subHidden2.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label3
             // 
@@ -798,7 +792,6 @@
             this.subHidden7.TabIndex = 0;
             this.subHidden7.Text = "サブボタン7";
             this.subHidden7.UseVisualStyleBackColor = true;
-            this.subHidden7.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label14
             // 
@@ -925,7 +918,6 @@
             this.subHidden4.TabIndex = 0;
             this.subHidden4.Text = "サブボタン4";
             this.subHidden4.UseVisualStyleBackColor = true;
-            this.subHidden4.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // main1
             // 
@@ -1029,7 +1021,6 @@
             this.subHidden1.TabIndex = 0;
             this.subHidden1.Text = "サブボタン1";
             this.subHidden1.UseVisualStyleBackColor = true;
-            this.subHidden1.CheckedChanged += new System.EventHandler(this.Hidden_CheckedChanged);
             // 
             // label1
             // 

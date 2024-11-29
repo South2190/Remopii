@@ -38,26 +38,29 @@
             // 
             // QRPictureBox
             // 
-            this.QRPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.QRPictureBox.Location = new System.Drawing.Point(14, 15);
+            this.QRPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.QRPictureBox.Name = "QRPictureBox";
-            this.QRPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.QRPictureBox.Size = new System.Drawing.Size(233, 250);
             this.QRPictureBox.TabIndex = 0;
             this.QRPictureBox.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 22);
+            this.label1.Location = new System.Drawing.Point(254, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(412, 12);
+            this.label1.Size = new System.Drawing.Size(415, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "QRコードを読み取るか、ブラウザのアドレスバーに次のURLを入力してアクセスしてください";
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(555, 189);
+            this.OKButton.Location = new System.Drawing.Point(648, 236);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(75, 23);
+            this.OKButton.Size = new System.Drawing.Size(88, 29);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -65,23 +68,29 @@
             // 
             // URLTextBox
             // 
-            this.URLTextBox.Location = new System.Drawing.Point(220, 37);
+            this.URLTextBox.Location = new System.Drawing.Point(257, 46);
+            this.URLTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.URLTextBox.Name = "URLTextBox";
             this.URLTextBox.ReadOnly = true;
-            this.URLTextBox.Size = new System.Drawing.Size(192, 19);
+            this.URLTextBox.Size = new System.Drawing.Size(223, 23);
             this.URLTextBox.TabIndex = 4;
             this.URLTextBox.Text = "http://x.x.x.x:8000";
             // 
             // ShowQRCode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 218);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(741, 272);
             this.Controls.Add(this.URLTextBox);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.QRPictureBox);
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ShowQRCode";
             this.Text = "ShowQRCode";
             ((System.ComponentModel.ISupportInitialize)(this.QRPictureBox)).EndInit();

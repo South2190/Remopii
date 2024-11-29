@@ -48,20 +48,6 @@ namespace RC_of_Computer
                 ChangeKeyText(buttonCount.Name, "");
             }
         }
-        /// <summary>
-        /// すべての"Hidden"チェックボックスのチェック状態が変わった際に呼び出されるイベント
-        /// </summary>
-        private void Hidden_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = (CheckBox)sender;
-            /*string s = checkBox.Name;
-            string s3 = s.Substring(9);
-            CSVIO.LoadCSV("Button.csv", ref buttonCSV);
-            buttonCSV[int.Parse(s3) + 1][1] = (buttonCSV[int.Parse(s3) + 1][1] == "1") ? "0" : "1"; 
-            Debug.WriteLine(buttonCSV[int.Parse(s3) + 1][0] + buttonCSV[int.Parse(s3) + 1][1]);*/
-            //Debug.WriteLine(s3);
-            Debug.WriteLine(checkBox.Name + ": " + checkBox.Checked);
-        }
 
         /// <summary>
         /// タイマーのカウントを進行させ、0になったらストップします
