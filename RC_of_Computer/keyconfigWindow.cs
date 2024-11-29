@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using RC_of_Computer.Classes;
@@ -21,8 +23,6 @@ namespace RC_of_Computer
         {
             InitializeComponent();
             CSVIO.LoadCSV("Button.csv", ref buttonCSV);
-            //Debug.WriteLine(buttonCSV[2][0]);
-            //CSVIO.WriteListCSV("Button2.csv", buttonCSV);
         }
 
         /// <summary>
@@ -322,13 +322,13 @@ namespace RC_of_Computer
 
         private void OK_Click(object sender, EventArgs e)
         {
-
+            SaveSettingsToCSV();
             Close();
         }
 
         private void Apply_Click(object sender, EventArgs e)
         {
-
+            SaveSettingsToCSV();
         }
 
         private void SaveSettingsToCSV()
@@ -336,19 +336,37 @@ namespace RC_of_Computer
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
             {
-                // グループボックス内のコントロール全取得
-                foreach (Control control in groupbox.Controls)
+                // グループボックス内のチェックボックス全取得
+                foreach (CheckBox control in groupbox.Controls.OfType<CheckBox>())
                 {
-                    // コントロールのタイプがチェックボックスだった場合のみ処理実行
-                    if (control.GetType().Equals(typeof(CheckBox)))
+                    buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1] = control.Checked.ToString();
+                }
+                // グループボックス内のテキストボックス全取得
+                foreach (TextBox control in groupbox.Controls.OfType<TextBox>())
+                {
+                    if (Regex.IsMatch(control.Name, @"^mainValue"))
                     {
-                        // ここでの"control"変数にはチェックボックスが格納されている。値の読み出し、書き換えは"control.(目的のプロパティ)"の形式で行う。
-                        Debug.WriteLine(control.Name);
+                        buttonCSV[int.Parse(control.Name.Substring(9)) - 1][0] = control.Text;
+                        Debug.WriteLine($"{control.Name}: {control.Text}");
                     }
-                    // ここで同じようにif文を作成し、タイプがテキストボックスかどうか、およびラベルを格納したテキストボックスかどうかをテキストボックスの名前から判断する。
-                    // テキストボックスの名前から判断する際のヒント：正規表現
+                    else if (Regex.IsMatch(control.Name, @"^subValue"))
+                    {
+                        buttonCSV[int.Parse(control.Name.Substring(8)) + 1][0] = control.Text;
+                        Debug.WriteLine($"{control.Name}: {control.Text}");
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^mainKey"))
+                    {
+                        buttonCSV[int.Parse(control.Name.Substring(7)) - 1][2] = control.Text;
+                        Debug.WriteLine($"{control.Name}: {control.Text}");
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^subKey"))
+                    {
+                        buttonCSV[int.Parse(control.Name.Substring(6)) + 1][2] = control.Text;
+                        Debug.WriteLine($"{control.Name}: {control.Text}");
+                    }
                 }
             }
+            CSVIO.WriteListCSV("Button.csv", buttonCSV);
         }
     }
 }
