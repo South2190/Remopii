@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using RC_of_Computer.Classes;
+using ZXing;
 
 namespace RC_of_Computer.FunctionSetup
 {
@@ -30,6 +33,7 @@ namespace RC_of_Computer.FunctionSetup
             };
             if (setupWindow.ShowDialog() == DialogResult.OK)
             {
+                ExtPHPFile(true);
                 Close();
             }
         }
@@ -83,14 +87,46 @@ namespace RC_of_Computer.FunctionSetup
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
-            SaveSettings();
+            if (SaveSettings())
+            {
+                ExtPHPFile();
+            }
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
             if (SaveSettings())
             {
+                ExtPHPFile();
                 Close();
+            }
+        }
+
+        /// <summary>
+        /// 必要なPHPファイルをドキュメントルートに展開します
+        /// </summary>
+        /// <param name="Answer">(true)の場合確認ダイアログを表示せずファイルを展開します</param>
+        private static void ExtPHPFile(bool Answer = false)
+        {
+            if (Properties.Settings.Default.DocumentRoot == string.Empty) { return; }
+            string phpFileName = "index.php";
+            string path = Path.Combine(Properties.Settings.Default.DocumentRoot, phpFileName);
+            if (File.Exists(path)) { return; }
+            if (Answer == false)
+            {
+                DialogResult result = MessageBox.Show("設定したドキュメントルートに必要なファイルを展開しますか?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Stream stream = assembly.GetManifestResourceStream("RC_of_Computer.Resources.index.php");
+            StreamReader streamReader = new(stream);
+            string pf = streamReader.ReadToEnd();
+            using (StreamWriter writer = new(path))
+            {
+                writer.WriteLine(pf);
             }
         }
 
