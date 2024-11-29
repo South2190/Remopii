@@ -118,13 +118,13 @@
             // VersionInfoLink
             // 
             this.VersionInfoLink.AutoSize = true;
-            this.VersionInfoLink.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.VersionInfoLink.Location = new System.Drawing.Point(207, 272);
+            this.VersionInfoLink.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VersionInfoLink.Location = new System.Drawing.Point(213, 272);
             this.VersionInfoLink.Name = "VersionInfoLink";
-            this.VersionInfoLink.Size = new System.Drawing.Size(98, 20);
+            this.VersionInfoLink.Size = new System.Drawing.Size(84, 17);
             this.VersionInfoLink.TabIndex = 61;
             this.VersionInfoLink.TabStop = true;
-            this.VersionInfoLink.Text = "VersionInfo";
+            this.VersionInfoLink.Text = "バージョン情報";
             this.VersionInfoLink.Click += new System.EventHandler(this.ShowVersionInfo_Click);
             // 
             // MainWindow
