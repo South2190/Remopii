@@ -115,7 +115,8 @@ namespace RC_of_Computer
                 if (!File.Exists(Properties.Settings.Default.PHPExeFilePath)) { return -1; }
                 ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
                 {
-                    Arguments = "--version"
+                    Arguments = "--version",
+                    WindowStyle = ProcessWindowStyle.Hidden
                 };
                 try
                 {
@@ -150,6 +151,16 @@ namespace RC_of_Computer
             if (!File.Exists(csvPath)) { return -1; }
 
             return 0;
+        }
+
+        private void ShowVersionInfo_Click(object sender, EventArgs e)
+        {
+            VersionInfo versionInfo = new()
+            {
+                Owner = this
+            };
+            versionInfo.ShowDialog();
+            CheckStatus();
         }
     }
 }
