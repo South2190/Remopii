@@ -85,25 +85,31 @@ namespace RC_of_Computer
 
         private void ServerIO_Click(object sender, EventArgs e)
         {
-            Process[] p = Process.GetProcessesByName("PHP.exe");
+            Process[] p = Process.GetProcessesByName("php");
             // PHP.exeが動いていない場合起動
             if (p.Length <= 0)
             {
                 ProcessStartInfo pInfo = new(Properties.Settings.Default.PHPExeFilePath)
                 {
                     Arguments = $"-S {Properties.Settings.Default.IPAddress}:{Properties.Settings.Default.PortNumber} -t {Properties.Settings.Default.DocumentRoot}",
-                    UseShellExecute = false
+                    UseShellExecute = false,
+                    //CreateNoWindow = true
                 };
-                using (Process pRun = Process.Start(pInfo))
+                Process pRun = Process.Start(pInfo);
+                ShowQRCode showQRCode = new()
                 {
-                    Debug.WriteLine(pRun.ExitCode);
+                    Owner = this
+                };
+                showQRCode.ShowDialog();
+            }
+            // PHP.exeが動いている場合終了
+            else
+            {
+                foreach (Process pKill in p)
+                {
+                    pKill.Kill();
                 }
             }
-            ShowQRCode showQRCode = new()
-            {
-                Owner = this
-            };
-            showQRCode.ShowDialog();
         }
 
         /// <summary>
@@ -153,7 +159,8 @@ namespace RC_of_Computer
                 ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
                 {
                     Arguments = "--version",
-                    UseShellExecute = false
+                    UseShellExecute = false,
+                    CreateNoWindow = true
                 };
                 try
                 {
