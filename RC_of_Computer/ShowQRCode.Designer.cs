@@ -39,7 +39,7 @@
             // QRPictureBox
             // 
             this.QRPictureBox.Location = new System.Drawing.Point(14, 15);
-            this.QRPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QRPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.QRPictureBox.Name = "QRPictureBox";
             this.QRPictureBox.Size = new System.Drawing.Size(233, 250);
             this.QRPictureBox.TabIndex = 0;
@@ -57,8 +57,9 @@
             // 
             // OKButton
             // 
+            this.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.OKButton.Location = new System.Drawing.Point(648, 236);
-            this.OKButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(88, 29);
             this.OKButton.TabIndex = 3;
@@ -69,7 +70,7 @@
             // URLTextBox
             // 
             this.URLTextBox.Location = new System.Drawing.Point(257, 46);
-            this.URLTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.URLTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.URLTextBox.Name = "URLTextBox";
             this.URLTextBox.ReadOnly = true;
             this.URLTextBox.Size = new System.Drawing.Size(223, 23);
@@ -78,8 +79,10 @@
             // 
             // ShowQRCode
             // 
+            this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.CancelButton = this.OKButton;
             this.ClientSize = new System.Drawing.Size(741, 272);
             this.Controls.Add(this.URLTextBox);
             this.Controls.Add(this.OKButton);
@@ -88,7 +91,7 @@
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ShowQRCode";

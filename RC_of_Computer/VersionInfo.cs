@@ -9,7 +9,8 @@ namespace RC_of_Computer
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void buttonOk_Click(object sender, EventArgs e)
         {
             Close();
         }

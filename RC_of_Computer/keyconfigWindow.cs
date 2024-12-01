@@ -301,11 +301,6 @@ namespace RC_of_Computer
             }
         }
 
-        private void Cancel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void OK_Click(object sender, EventArgs e)
         {
             SaveSettingsToCSV();

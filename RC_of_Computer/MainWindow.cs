@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Management;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 using RC_of_Computer.Classes;
@@ -16,9 +17,19 @@ namespace RC_of_Computer
         private readonly Bitmap IconWarning;
         private readonly Bitmap IconError;
 
+        private string phpPath;
+
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
+
         public MainWindow()
         {
             InitializeComponent();
+
+            processMonitoring_Tick();
+            // php.exeが動いているかを毎秒確認し、ボタンを切り替える
+            processMonitoring.Tick += (s, e) => processMonitoring_Tick();
+            processMonitoring.Start();
 
             // Windows10、Windows11のどちらかを判定し、OSに合ったインデックス番号を格納する
             const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
@@ -63,6 +74,24 @@ namespace RC_of_Computer
             CheckStatus();
         }
 
+        /// <summary>
+        /// php.exeの動作状況に応じてスタート/ストップボタンの表示を切り替えます
+        /// </summary>
+        private void processMonitoring_Tick()
+        {
+            Process[] p = Process.GetProcessesByName("php");
+            // php.exeが動いていない場合
+            if (p.Length <= 0)
+            {
+                ServerIO.Text = "スタート";
+            }
+            // php.exeが動いている場合
+            else
+            {
+                ServerIO.Text = "ストップ";
+            }
+        }
+
         private void ShowPHP_Click(object sender, EventArgs e)
         {
             PHP php = new()
@@ -83,17 +112,25 @@ namespace RC_of_Computer
             CheckStatus();
         }
 
+        private void ShowVersionInfo_Click(object sender, EventArgs e)
+        {
+            VersionInfo versionInfo = new()
+            {
+                Owner = this
+            };
+            versionInfo.ShowDialog();
+        }
+
         private void ServerIO_Click(object sender, EventArgs e)
         {
             Process[] p = Process.GetProcessesByName("php");
-            // PHP.exeが動いていない場合起動
+            // php.exeが動いていない場合起動
             if (p.Length <= 0)
             {
-                ProcessStartInfo pInfo = new(Properties.Settings.Default.PHPExeFilePath)
+                ProcessStartInfo pInfo = new(phpPath)
                 {
                     Arguments = $"-S {Properties.Settings.Default.IPAddress}:{Properties.Settings.Default.PortNumber} -t {Properties.Settings.Default.DocumentRoot}",
-                    UseShellExecute = false,
-                    //CreateNoWindow = true
+                    WindowStyle = ProcessWindowStyle.Minimized
                 };
                 Process pRun = Process.Start(pInfo);
                 ShowQRCode showQRCode = new()
@@ -102,12 +139,14 @@ namespace RC_of_Computer
                 };
                 showQRCode.ShowDialog();
             }
-            // PHP.exeが動いている場合終了
+            // php.exeが動いている場合終了
             else
             {
                 foreach (Process pKill in p)
                 {
-                    pKill.Kill();
+                    // php.exeをアクティブにし、Ctrl+Cを送信
+                    SetForegroundWindow(pKill.MainWindowHandle);
+                    SendKeys.SendWait("^(C)");
                 }
             }
         }
@@ -148,7 +187,7 @@ namespace RC_of_Computer
         /// PHPのインストール状況とドキュメントルートのファイルを確認します
         /// </summary>
         /// <returns>ドキュメントルートは正しく設定されているが、PHPを使用しない設定の場合(1)、すべて正しく設定されている場合(0)、それ以外(-1)</returns>
-        private static int CheckPHPStatus()
+        private int CheckPHPStatus()
         {
             int statusNum = 0;
 
@@ -156,7 +195,8 @@ namespace RC_of_Computer
             if (Properties.Settings.Default.WebServerSoftware == "PHP")
             {
                 if (!File.Exists(Properties.Settings.Default.PHPExeFilePath)) { return -1; }
-                ProcessStartInfo processStartInfo = new(Properties.Settings.Default.PHPExeFilePath)
+                phpPath = Properties.Settings.Default.UsePATHValue ? "php" : Properties.Settings.Default.PHPExeFilePath;
+                ProcessStartInfo processStartInfo = new(phpPath)
                 {
                     Arguments = "--version",
                     UseShellExecute = false,
@@ -179,7 +219,7 @@ namespace RC_of_Computer
             }
 
             // ドキュメントルートのファイルチェック
-            string indexPath = Path.Combine(Properties.Settings.Default.DocumentRoot, "index.php");
+            string indexPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.phpFileName);
             if (!File.Exists(indexPath)) { return -1; }
             
             return statusNum;
@@ -191,20 +231,10 @@ namespace RC_of_Computer
         /// <returns>正しく設定されている場合(0)、それ以外(-1)</returns>
         private static int CheckKeyConfigStatus()
         {
-            string csvPath = Path.Combine(Properties.Settings.Default.DocumentRoot, "ButtonProperty.csv");
+            string csvPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
             if (!File.Exists(csvPath)) { return -1; }
 
             return 0;
-        }
-
-        private void ShowVersionInfo_Click(object sender, EventArgs e)
-        {
-            VersionInfo versionInfo = new()
-            {
-                Owner = this
-            };
-            versionInfo.ShowDialog();
-            CheckStatus();
         }
     }
 }

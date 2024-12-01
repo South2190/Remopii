@@ -74,16 +74,14 @@ namespace RC_of_Computer.FunctionSetup
             {
                 foreach (ZipArchiveEntry entry in zip.Entries)
                 {
-                    // 以下の行を修正
                     string destPath = Path.GetFullPath(Path.Combine(extDir, entry.FullName));
-                    // 以下の4行を追加
+                    // Zip Slip対策、悪意のあるZipファイルを展開しようとしたとき処理を中断する
                     if (!destPath.StartsWith(currentDirectory))
                     {
-                        //throw new Exception("Malicious entry has detected.");
                         MessageBox.Show("ファイル整合性エラーが発生しました。セットアップを中止します。\n対象ファイル: " + destPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
+                    // ファイルの展開処理
                     if (Regex.IsMatch(destPath, @"\\$"))
                     {
                         Directory.CreateDirectory(destPath);

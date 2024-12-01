@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(429, 131);
+            this.ClientSize = new System.Drawing.Size(429, 126);
             this.Controls.Add(this.SetupDetail);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.StartSetup);

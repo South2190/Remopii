@@ -6,6 +6,9 @@ namespace RC_of_Computer
 {
     internal static class Program
     {
+        public static readonly string phpFileName = "index.php";
+        public static readonly string csvFileName = "button.csv";
+
         /// <summary>
         /// アプリケーションのメイン エントリ ポイントです。
         /// </summary>

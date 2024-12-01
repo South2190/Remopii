@@ -4,7 +4,6 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using RC_of_Computer.Classes;
-using ZXing;
 
 namespace RC_of_Computer.FunctionSetup
 {
@@ -80,12 +79,7 @@ namespace RC_of_Computer.FunctionSetup
             PortNumber.Text = "8000";
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void ApplyButton_Click(object sender, EventArgs e)
+        private void buttonApply_Click(object sender, EventArgs e)
         {
             if (SaveSettings())
             {
@@ -93,7 +87,7 @@ namespace RC_of_Computer.FunctionSetup
             }
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private void buttonOk_Click(object sender, EventArgs e)
         {
             if (SaveSettings())
             {
@@ -108,9 +102,8 @@ namespace RC_of_Computer.FunctionSetup
         /// <param name="Answer">(true)の場合確認ダイアログを表示せずファイルを展開します</param>
         private static void ExtPHPFile(bool Answer = false)
         {
-            if (Properties.Settings.Default.DocumentRoot == string.Empty) { return; }
-            string phpFileName = "index.php";
-            string path = Path.Combine(Properties.Settings.Default.DocumentRoot, phpFileName);
+            if (!Directory.Exists(Properties.Settings.Default.DocumentRoot)) { return; }
+            string path = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.phpFileName);
             if (File.Exists(path)) { return; }
             if (Answer == false)
             {

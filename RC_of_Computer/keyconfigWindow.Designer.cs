@@ -106,9 +106,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.subKey1 = new System.Windows.Forms.TextBox();
             this.subKeyChange1 = new System.Windows.Forms.Button();
-            this.Apply = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.OK = new System.Windows.Forms.Button();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
             this.keyScan = new System.Windows.Forms.Timer(this.components);
             this.panelRemocon.SuspendLayout();
             this.sub9.SuspendLayout();
@@ -1083,38 +1083,38 @@
             this.subKeyChange1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
             this.subKeyChange1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
-            // Apply
+            // buttonApply
             // 
-            this.Apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Apply.Location = new System.Drawing.Point(437, 405);
-            this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(80, 29);
-            this.Apply.TabIndex = 3;
-            this.Apply.Text = "適用";
-            this.Apply.UseVisualStyleBackColor = true;
-            this.Apply.Click += new System.EventHandler(this.Apply_Click);
+            this.buttonApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonApply.Location = new System.Drawing.Point(442, 405);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(80, 25);
+            this.buttonApply.TabIndex = 3;
+            this.buttonApply.Text = "適用";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.Apply_Click);
             // 
-            // Cancel
+            // buttonCancel
             // 
-            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel.Location = new System.Drawing.Point(351, 405);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(80, 29);
-            this.Cancel.TabIndex = 2;
-            this.Cancel.Text = "キャンセル";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(357, 405);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(80, 25);
+            this.buttonCancel.TabIndex = 2;
+            this.buttonCancel.Text = "キャンセル";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // OK
+            // buttonOk
             // 
-            this.OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OK.Location = new System.Drawing.Point(265, 405);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(80, 29);
-            this.OK.TabIndex = 1;
-            this.OK.Text = "OK";
-            this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.OK_Click);
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.Location = new System.Drawing.Point(272, 405);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(80, 25);
+            this.buttonOk.TabIndex = 1;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.OK_Click);
             // 
             // keyScan
             // 
@@ -1125,10 +1125,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(534, 441);
-            this.Controls.Add(this.Apply);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.OK);
+            this.Controls.Add(this.buttonApply);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.panelRemocon);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1240,9 +1241,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox subKey7;
         private System.Windows.Forms.Button subKeyChange7;
-        private System.Windows.Forms.Button Apply;
-        private System.Windows.Forms.Button Cancel;
-        private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.Button buttonApply;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Timer keyScan;
     }
 }

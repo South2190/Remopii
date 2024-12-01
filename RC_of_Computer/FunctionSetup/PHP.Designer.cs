@@ -33,6 +33,7 @@
             this.RunPHPSetup = new System.Windows.Forms.Button();
             this.UsePATHValue = new System.Windows.Forms.CheckBox();
             this.AdvancedSettings = new System.Windows.Forms.GroupBox();
+            this.defaultValue = new System.Windows.Forms.Button();
             this.SettingsItem5 = new System.Windows.Forms.Label();
             this.SettingsItem4 = new System.Windows.Forms.Label();
             this.WebServerSoftware = new System.Windows.Forms.ComboBox();
@@ -45,10 +46,9 @@
             this.IPAddress = new System.Windows.Forms.TextBox();
             this.PHPExeFilePath = new System.Windows.Forms.TextBox();
             this.RunPHPSetupDescription = new System.Windows.Forms.Label();
-            this.OkButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.ApplyButton = new System.Windows.Forms.Button();
-            this.既定値 = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonApply = new System.Windows.Forms.Button();
             this.AdvancedSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,9 +84,9 @@
             // 
             // AdvancedSettings
             // 
-            this.AdvancedSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.AdvancedSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdvancedSettings.Controls.Add(this.既定値);
+            this.AdvancedSettings.Controls.Add(this.defaultValue);
             this.AdvancedSettings.Controls.Add(this.SettingsItem5);
             this.AdvancedSettings.Controls.Add(this.SettingsItem4);
             this.AdvancedSettings.Controls.Add(this.WebServerSoftware);
@@ -102,15 +102,26 @@
             this.AdvancedSettings.Controls.Add(this.UsePATHValue);
             this.AdvancedSettings.Location = new System.Drawing.Point(12, 65);
             this.AdvancedSettings.Name = "AdvancedSettings";
-            this.AdvancedSettings.Size = new System.Drawing.Size(580, 231);
+            this.AdvancedSettings.Size = new System.Drawing.Size(580, 230);
             this.AdvancedSettings.TabIndex = 2;
             this.AdvancedSettings.TabStop = false;
             this.AdvancedSettings.Text = "詳細設定 (PHPの自動セットアップを使用する場合は変更しないでください)";
             // 
+            // defaultValue
+            // 
+            this.defaultValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.defaultValue.Location = new System.Drawing.Point(490, 195);
+            this.defaultValue.Name = "defaultValue";
+            this.defaultValue.Size = new System.Drawing.Size(80, 25);
+            this.defaultValue.TabIndex = 50;
+            this.defaultValue.Text = "既定値";
+            this.defaultValue.UseVisualStyleBackColor = true;
+            this.defaultValue.Click += new System.EventHandler(this.DefaultValue_Click);
+            // 
             // SettingsItem5
             // 
             this.SettingsItem5.AutoSize = true;
-            this.SettingsItem5.Location = new System.Drawing.Point(13, 169);
+            this.SettingsItem5.Location = new System.Drawing.Point(10, 164);
             this.SettingsItem5.Name = "SettingsItem5";
             this.SettingsItem5.Size = new System.Drawing.Size(59, 15);
             this.SettingsItem5.TabIndex = 0;
@@ -119,7 +130,7 @@
             // SettingsItem4
             // 
             this.SettingsItem4.AutoSize = true;
-            this.SettingsItem4.Location = new System.Drawing.Point(13, 140);
+            this.SettingsItem4.Location = new System.Drawing.Point(10, 134);
             this.SettingsItem4.Name = "SettingsItem4";
             this.SettingsItem4.Size = new System.Drawing.Size(90, 15);
             this.SettingsItem4.TabIndex = 0;
@@ -127,7 +138,7 @@
             // 
             // WebServerSoftware
             // 
-            this.WebServerSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.WebServerSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WebServerSoftware.FormattingEnabled = true;
             this.WebServerSoftware.Items.AddRange(new object[] {
@@ -150,20 +161,20 @@
             // DocumentRootRef
             // 
             this.DocumentRootRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DocumentRootRef.Location = new System.Drawing.Point(538, 100);
+            this.DocumentRootRef.Location = new System.Drawing.Point(542, 100);
             this.DocumentRootRef.Name = "DocumentRootRef";
-            this.DocumentRootRef.Size = new System.Drawing.Size(29, 23);
+            this.DocumentRootRef.Size = new System.Drawing.Size(25, 25);
             this.DocumentRootRef.TabIndex = 35;
             this.DocumentRootRef.UseVisualStyleBackColor = true;
             this.DocumentRootRef.Click += new System.EventHandler(this.DocumentRootRef_Click);
             // 
             // DocumentRootPath
             // 
-            this.DocumentRootPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.DocumentRootPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DocumentRootPath.Location = new System.Drawing.Point(200, 101);
             this.DocumentRootPath.Name = "DocumentRootPath";
-            this.DocumentRootPath.Size = new System.Drawing.Size(332, 23);
+            this.DocumentRootPath.Size = new System.Drawing.Size(335, 23);
             this.DocumentRootPath.TabIndex = 30;
             // 
             // SettingsItem3
@@ -178,9 +189,9 @@
             // PHPExeFileRef
             // 
             this.PHPExeFileRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PHPExeFileRef.Location = new System.Drawing.Point(538, 50);
+            this.PHPExeFileRef.Location = new System.Drawing.Point(542, 50);
             this.PHPExeFileRef.Name = "PHPExeFileRef";
-            this.PHPExeFileRef.Size = new System.Drawing.Size(29, 23);
+            this.PHPExeFileRef.Size = new System.Drawing.Size(25, 25);
             this.PHPExeFileRef.TabIndex = 20;
             this.PHPExeFileRef.UseVisualStyleBackColor = true;
             this.PHPExeFileRef.Click += new System.EventHandler(this.PHPExeFileRef_Click);
@@ -189,23 +200,23 @@
             // 
             this.PortNumber.Location = new System.Drawing.Point(200, 161);
             this.PortNumber.Name = "PortNumber";
-            this.PortNumber.Size = new System.Drawing.Size(180, 23);
+            this.PortNumber.Size = new System.Drawing.Size(150, 23);
             this.PortNumber.TabIndex = 45;
             // 
             // IPAddress
             // 
-            this.IPAddress.Location = new System.Drawing.Point(200, 132);
+            this.IPAddress.Location = new System.Drawing.Point(200, 131);
             this.IPAddress.Name = "IPAddress";
-            this.IPAddress.Size = new System.Drawing.Size(180, 23);
+            this.IPAddress.Size = new System.Drawing.Size(150, 23);
             this.IPAddress.TabIndex = 40;
             // 
             // PHPExeFilePath
             // 
-            this.PHPExeFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.PHPExeFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PHPExeFilePath.Location = new System.Drawing.Point(200, 51);
             this.PHPExeFilePath.Name = "PHPExeFilePath";
-            this.PHPExeFilePath.Size = new System.Drawing.Size(332, 23);
+            this.PHPExeFilePath.Size = new System.Drawing.Size(335, 23);
             this.PHPExeFilePath.TabIndex = 15;
             // 
             // RunPHPSetupDescription
@@ -217,66 +228,57 @@
             this.RunPHPSetupDescription.TabIndex = 4;
             this.RunPHPSetupDescription.Text = "必要なPHPの設定を全て自動で行います。";
             // 
-            // OkButton
+            // buttonOk
             // 
-            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OkButton.Location = new System.Drawing.Point(341, 302);
-            this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(80, 30);
-            this.OkButton.TabIndex = 55;
-            this.OkButton.Text = "OK";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.Location = new System.Drawing.Point(340, 302);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(80, 25);
+            this.buttonOk.TabIndex = 55;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
-            // CancelButton
+            // buttonCancel
             // 
-            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.Location = new System.Drawing.Point(427, 302);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(80, 30);
-            this.CancelButton.TabIndex = 60;
-            this.CancelButton.Text = "キャンセル";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(425, 302);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(80, 25);
+            this.buttonCancel.TabIndex = 60;
+            this.buttonCancel.Text = "キャンセル";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // ApplyButton
+            // buttonApply
             // 
-            this.ApplyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyButton.Location = new System.Drawing.Point(513, 302);
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.Size = new System.Drawing.Size(80, 30);
-            this.ApplyButton.TabIndex = 65;
-            this.ApplyButton.Text = "適用";
-            this.ApplyButton.UseVisualStyleBackColor = true;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
-            // 
-            // 既定値
-            // 
-            this.既定値.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.既定値.Location = new System.Drawing.Point(494, 195);
-            this.既定値.Name = "既定値";
-            this.既定値.Size = new System.Drawing.Size(80, 30);
-            this.既定値.TabIndex = 50;
-            this.既定値.Text = "既定値";
-            this.既定値.UseVisualStyleBackColor = true;
-            this.既定値.Click += new System.EventHandler(this.DefaultValue_Click);
+            this.buttonApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonApply.Location = new System.Drawing.Point(510, 302);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(80, 25);
+            this.buttonApply.TabIndex = 65;
+            this.buttonApply.Text = "適用";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
             // PHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(604, 337);
-            this.Controls.Add(this.ApplyButton);
-            this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.buttonApply);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.RunPHPSetupDescription);
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.RunPHPSetup);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 376);
             this.Name = "PHP";
-            this.Text = "PHP設定";
+            this.Text = "PHPの設定";
             this.AdvancedSettings.ResumeLayout(false);
             this.AdvancedSettings.PerformLayout();
             this.ResumeLayout(false);
@@ -302,9 +304,9 @@
         private System.Windows.Forms.Label SettingsItem4;
         private System.Windows.Forms.TextBox PortNumber;
         private System.Windows.Forms.TextBox IPAddress;
-        private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button ApplyButton;
-        private System.Windows.Forms.Button 既定値;
+        private System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonApply;
+        private System.Windows.Forms.Button defaultValue;
     }
 }
