@@ -14,5 +14,13 @@ namespace RC_of_Computer
         {
             Close();
         }
+
+        private void Github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //リンク先に移動したことにする
+            Github.LinkVisited = true;
+            //ブラウザで開く
+            System.Diagnostics.Process.Start("https://github.com/South2190/RemoteControlofComputer");
+        }
     }
 }

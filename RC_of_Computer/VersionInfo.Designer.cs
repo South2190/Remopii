@@ -36,6 +36,7 @@
             this.Developer = new System.Windows.Forms.Label();
             this.VersionInformation = new System.Windows.Forms.Label();
             this.Names = new System.Windows.Forms.Label();
+            this.Github = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,11 +117,23 @@
             this.Names.TabIndex = 6;
             this.Names.Text = "石崎 海翔\r\n大津留 泰治\r\n河上 翼\r\n鶴見 和也\r\n中谷 樹音\r\n南 慧";
             // 
+            // Github
+            // 
+            this.Github.AutoSize = true;
+            this.Github.Location = new System.Drawing.Point(392, 230);
+            this.Github.Name = "Github";
+            this.Github.Size = new System.Drawing.Size(47, 15);
+            this.Github.TabIndex = 7;
+            this.Github.TabStop = true;
+            this.Github.Text = "GitHub";
+            this.Github.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Github_LinkClicked);
+            // 
             // VersionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(583, 261);
+            this.Controls.Add(this.Github);
             this.Controls.Add(this.Names);
             this.Controls.Add(this.VersionInformation);
             this.Controls.Add(this.Developer);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Label Developer;
         private System.Windows.Forms.Label VersionInformation;
         private System.Windows.Forms.Label Names;
+        private System.Windows.Forms.LinkLabel Github;
     }
 }
