@@ -336,6 +336,11 @@ namespace RC_of_Computer
 
         private void SaveSettingsToCSV()
         {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string seigyoExeFilePath = Path.Combine(currentDirectory, "seigyo.exe");
+
+            List<ProcessStartInfo> pInfo = new();
+
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
             {
@@ -358,14 +363,43 @@ namespace RC_of_Computer
                     else if (Regex.IsMatch(control.Name, @"^mainKey"))
                     {
                         buttonCSV[int.Parse(control.Name.Substring(7)) - 1][2] = control.Text;
+                        if (control.Text != string.Empty)
+                        {
+                            pInfo.Add(new ProcessStartInfo("schtasks")
+                            {
+                                Arguments = @"/create /tn ""RC_of_Computer\MainButton" + int.Parse(control.Name.Substring(7)) + @""" /tr ""'" + seigyoExeFilePath + @"' -k " + control.Text + @""" /sc once /sd 1999/01/01 /st 10:00 /f",
+                                UseShellExecute = false,
+                                CreateNoWindow = true
+                            });
+                        }
                     }
                     else if (Regex.IsMatch(control.Name, @"^subKey"))
                     {
                         buttonCSV[int.Parse(control.Name.Substring(6)) + 1][2] = control.Text;
+                        if (control.Text != string.Empty)
+                        {
+                            pInfo.Add(new ProcessStartInfo("schtasks")
+                            {
+                                Arguments = @"/create /tn ""RC_of_Computer\SubButton" + int.Parse(control.Name.Substring(6)) + @""" /tr ""'" + seigyoExeFilePath + @"' -k " + control.Text + @""" /sc once /sd 1999/01/01 /st 10:00 /f",
+                                UseShellExecute = false,
+                                CreateNoWindow = true
+                            });
+                        }
                     }
                 }
             }
             CSVIO.WriteListCSV(csvFileFullPath, buttonCSV);
+            bool exitCode = true;
+            foreach (ProcessStartInfo pInfoItem in pInfo)
+            {
+                using Process p = Process.Start(pInfoItem);
+                p.WaitForExit(1000);
+                if (p.ExitCode != 0) { exitCode = false; }
+            }
+            if (!exitCode)
+            {
+                MessageBox.Show("タスクスケジューラへの登録に失敗しました", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void LoadSettingsFromCSV()
