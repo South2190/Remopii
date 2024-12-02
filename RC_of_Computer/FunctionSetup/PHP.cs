@@ -168,5 +168,19 @@ namespace RC_of_Computer.FunctionSetup
             Properties.Settings.Default.Save();
             return true;
         }
+
+        private void UsePATHValue_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UsePATHValue.Checked == true) 
+            {
+                PHPExeFilePath.Enabled = false;
+                PHPExeFileRef.Enabled = false;
+            }
+            else
+            {
+                PHPExeFilePath.Enabled = true;
+                PHPExeFileRef.Enabled = true;
+            }
+        }
     }
 }
