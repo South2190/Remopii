@@ -410,7 +410,6 @@ namespace RC_of_Computer
                 // グループボックス内のチェックボックス全取得
                 foreach (CheckBox control in groupbox.Controls.OfType<CheckBox>())
                 {
-                    buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1] = control.Checked.ToString();
                     control.Checked = Convert.ToBoolean(buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1]);
                 }
                 // グループボックス内のテキストボックス全取得
