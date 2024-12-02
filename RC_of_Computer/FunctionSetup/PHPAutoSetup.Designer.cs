@@ -57,7 +57,7 @@
             this.Description.AutoSize = true;
             this.Description.Location = new System.Drawing.Point(20, 15);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(301, 12);
+            this.Description.Size = new System.Drawing.Size(307, 15);
             this.Description.TabIndex = 2;
             this.Description.Text = "\"セットアップを開始\"を押すとPHPのセットアップが開始されます。";
             // 
@@ -66,7 +66,7 @@
             this.SetupDetail.AutoSize = true;
             this.SetupDetail.Location = new System.Drawing.Point(20, 45);
             this.SetupDetail.Name = "SetupDetail";
-            this.SetupDetail.Size = new System.Drawing.Size(64, 12);
+            this.SetupDetail.Size = new System.Drawing.Size(67, 15);
             this.SetupDetail.TabIndex = 3;
             this.SetupDetail.Text = "SetupDetail";
             // 
@@ -79,6 +79,7 @@
             this.Controls.Add(this.Description);
             this.Controls.Add(this.StartSetup);
             this.Controls.Add(this.SetupProgress);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

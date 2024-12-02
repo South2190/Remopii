@@ -24,15 +24,15 @@ namespace RC_of_Computer
         {
             new string[4] { "", "", "", "\0" },
             new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" }
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" },
+            new string[4] { "", "False", "", "\0" }
         };
 
         private static readonly string csvFileFullPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
