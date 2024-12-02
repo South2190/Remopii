@@ -164,7 +164,7 @@
                             echo '<input type="submit" value="' . $data[0] . '" name="mainBtn' . $i . '"  class="mainbtn' . $i . '"/>';
                         }
                         //サブボタン（有効）の表示
-                        elseif($data[1] == 1){
+                        elseif($data[1] == "True"){
                             echo '<input type="submit" value=' . $data[0] . ' name="subBtn' . $i-2 . '" class="subbtn" />';
                         }
                         //サブボタン（無効）の表示
