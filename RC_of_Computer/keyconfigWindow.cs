@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -17,12 +18,29 @@ namespace RC_of_Computer
         private List<string> keys;
         private int keycount = 0;
         private string key;
-        private List<string[]> buttonCSV = new();
+        private List<string[]> buttonCSV = new()
+        {
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" },
+            new string[4] { "", "", "", "\0" }
+        };
 
         public KeyConfigWindow()
         {
             InitializeComponent();
-            CSVIO.LoadCSV("Button.csv", ref buttonCSV);
+            if (File.Exists("Button.csv"))
+            {
+                CSVIO.LoadCSV("Button.csv", out buttonCSV);
+            }
+            LoadSettingsFromCSV();
         }
 
         /// <summary>
@@ -328,26 +346,56 @@ namespace RC_of_Computer
                     if (Regex.IsMatch(control.Name, @"^mainValue"))
                     {
                         buttonCSV[int.Parse(control.Name.Substring(9)) - 1][0] = control.Text;
-                        Debug.WriteLine($"{control.Name}: {control.Text}");
                     }
                     else if (Regex.IsMatch(control.Name, @"^subValue"))
                     {
                         buttonCSV[int.Parse(control.Name.Substring(8)) + 1][0] = control.Text;
-                        Debug.WriteLine($"{control.Name}: {control.Text}");
                     }
                     else if (Regex.IsMatch(control.Name, @"^mainKey"))
                     {
                         buttonCSV[int.Parse(control.Name.Substring(7)) - 1][2] = control.Text;
-                        Debug.WriteLine($"{control.Name}: {control.Text}");
                     }
                     else if (Regex.IsMatch(control.Name, @"^subKey"))
                     {
                         buttonCSV[int.Parse(control.Name.Substring(6)) + 1][2] = control.Text;
-                        Debug.WriteLine($"{control.Name}: {control.Text}");
                     }
                 }
             }
             CSVIO.WriteListCSV("Button.csv", buttonCSV);
+        }
+
+        private void LoadSettingsFromCSV()
+        {
+            // panel内のグループボックス全取得
+            foreach (Control groupbox in panelRemocon.Controls)
+            {
+                // グループボックス内のチェックボックス全取得
+                foreach (CheckBox control in groupbox.Controls.OfType<CheckBox>())
+                {
+                    buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1] = control.Checked.ToString();
+                    control.Checked = Convert.ToBoolean(buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1]);
+                }
+                // グループボックス内のテキストボックス全取得
+                foreach (TextBox control in groupbox.Controls.OfType<TextBox>())
+                {
+                    if (Regex.IsMatch(control.Name, @"^mainValue"))
+                    {
+                        control.Text = buttonCSV[int.Parse(control.Name.Substring(9)) - 1][0];
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^subValue"))
+                    {
+                        control.Text = buttonCSV[int.Parse(control.Name.Substring(8)) + 1][0];
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^mainKey"))
+                    {
+                        control.Text = buttonCSV[int.Parse(control.Name.Substring(7)) - 1][2];
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^subKey"))
+                    {
+                        control.Text = buttonCSV[int.Parse(control.Name.Substring(6)) + 1][2];
+                    }
+                }
+            }
         }
     }
 }
