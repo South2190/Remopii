@@ -14,8 +14,9 @@ namespace RC_of_Computer.Classes
         /// <param name="CSVFilePath">CSVファイルのパス</param>
         /// <param name="CSVList">格納するリスト</param>
         /// <returns>正常に読み込めた場合はリストの行数、CSVファイルが存在しない場合は(-1)</returns>
-        public static int LoadCSV(string CSVFilePath, ref List<string[]> CSVList)
+        public static int LoadCSV(string CSVFilePath, out List<string[]> CSVList)
         {
+            CSVList = new();
             if (!File.Exists(CSVFilePath)) { return -1; }
 
             StreamReader sr = new(CSVFilePath);
@@ -43,7 +44,7 @@ namespace RC_of_Computer.Classes
         /// <param name="CSVFilePath">CSVファイルのパス</param>
         /// <param name="list">CSVに書き込みたいリスト</param>
         /// <param name="comment">(任意)CSVファイルの一行目に書き込みたいコメント</param>
-        public static void WriteListCSV(string CSVFilePath, List<string[]> list, string? comment = null)
+        public static void WriteListCSV(string CSVFilePath, in List<string[]> list, string? comment = null)
         {
             StreamWriter sw = new(CSVFilePath, false, Encoding.UTF8);
             if (comment != null) { sw.WriteLine('#' + comment); }
