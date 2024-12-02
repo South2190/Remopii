@@ -37,8 +37,8 @@ namespace RC_of_Computer.Classes
             }
             catch (HttpRequestException ex)
             {
-                //throw ex;
                 MessageBox.Show(ex.Message + "\n\n" + ex.InnerException, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             float GetProgressPercentage(float totalBytes, float currentBytes) => (totalBytes / currentBytes) * 100f;
