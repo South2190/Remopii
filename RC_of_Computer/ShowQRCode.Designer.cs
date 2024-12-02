@@ -38,17 +38,17 @@
             // 
             // QRPictureBox
             // 
-            this.QRPictureBox.Location = new System.Drawing.Point(14, 15);
+            this.QRPictureBox.Location = new System.Drawing.Point(15, 15);
             this.QRPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.QRPictureBox.Name = "QRPictureBox";
-            this.QRPictureBox.Size = new System.Drawing.Size(233, 250);
+            this.QRPictureBox.Size = new System.Drawing.Size(200, 200);
             this.QRPictureBox.TabIndex = 0;
             this.QRPictureBox.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(254, 28);
+            this.label1.Location = new System.Drawing.Point(230, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(415, 15);
@@ -58,10 +58,10 @@
             // OKButton
             // 
             this.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.OKButton.Location = new System.Drawing.Point(648, 236);
+            this.OKButton.Location = new System.Drawing.Point(565, 195);
             this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(88, 29);
+            this.OKButton.Size = new System.Drawing.Size(88, 25);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // 
             // URLTextBox
             // 
-            this.URLTextBox.Location = new System.Drawing.Point(257, 46);
+            this.URLTextBox.Location = new System.Drawing.Point(235, 45);
             this.URLTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.URLTextBox.Name = "URLTextBox";
             this.URLTextBox.ReadOnly = true;
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.OKButton;
-            this.ClientSize = new System.Drawing.Size(741, 272);
+            this.ClientSize = new System.Drawing.Size(664, 231);
             this.Controls.Add(this.URLTextBox);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.label1);

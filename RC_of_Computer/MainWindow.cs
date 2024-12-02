@@ -172,15 +172,15 @@ namespace RC_of_Computer
                 -1 => IconError,
                 _ => IconError
             };
-            // ステータスが両方ともOKでない場合はボタンを無効化
-            //if (PHPStatusResult != 0 || KeyConfigStatusResult != 0)
-            //{
-            //    ServerIO.Enabled = false;
-            //}
-            //else
-            //{
-            //    ServerIO.Enabled = true;
-            //}
+            //ステータスが両方ともOKでない場合はボタンを無効化
+            if (PHPStatusResult != 0 || KeyConfigStatusResult != 0)
+            {
+                ServerIO.Enabled = false;
+            }
+            else
+            {
+                ServerIO.Enabled = true;
+            }
         }
 
         /// <summary>
@@ -229,8 +229,16 @@ namespace RC_of_Computer
         /// キーコンフィグが正しく設定されているかを確認します
         /// </summary>
         /// <returns>正しく設定されている場合(0)、それ以外(-1)</returns>
-        private static int CheckKeyConfigStatus()
+        private int CheckKeyConfigStatus()
         {
+            if (Directory.Exists(Properties.Settings.Default.DocumentRoot))
+            {
+                ShowKeyConfig.Enabled = true;
+            }
+            else
+            {
+                ShowKeyConfig.Enabled = false;
+            }
             string csvPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
             if (!File.Exists(csvPath)) { return -1; }
 

@@ -15,9 +15,11 @@ namespace RC_of_Computer
     {
         private Button buttonCount = null;
         private int duration = 0;
+
         private List<string> keys;
         private int keycount = 0;
         private string key;
+
         private List<string[]> buttonCSV = new()
         {
             new string[4] { "", "", "", "\0" },
@@ -33,12 +35,14 @@ namespace RC_of_Computer
             new string[4] { "", "", "", "\0" }
         };
 
+        private static readonly string csvFileFullPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
+
         public KeyConfigWindow()
         {
             InitializeComponent();
-            if (File.Exists("Button.csv"))
+            if (File.Exists(csvFileFullPath))
             {
-                CSVIO.LoadCSV("Button.csv", out buttonCSV);
+                CSVIO.LoadCSV(csvFileFullPath, out buttonCSV);
             }
             LoadSettingsFromCSV();
         }
@@ -63,7 +67,7 @@ namespace RC_of_Computer
                 duration = 10;
                 keyScan.Start();
                 buttonCount.Text = "変更...10";
-                ChangeKeyText(buttonCount.Name, "");
+                ChangeKeyText(buttonCount.Name, string.Empty);
             }
         }
 
@@ -361,7 +365,7 @@ namespace RC_of_Computer
                     }
                 }
             }
-            CSVIO.WriteListCSV("Button.csv", buttonCSV);
+            CSVIO.WriteListCSV(csvFileFullPath, buttonCSV);
         }
 
         private void LoadSettingsFromCSV()
