@@ -81,6 +81,7 @@
             this.UsePATHValue.TabIndex = 25;
             this.UsePATHValue.Text = "環境変数の値を使用する";
             this.UsePATHValue.UseVisualStyleBackColor = true;
+            this.UsePATHValue.CheckedChanged += new System.EventHandler(this.UsePATHValue_CheckedChanged);
             // 
             // AdvancedSettings
             // 
