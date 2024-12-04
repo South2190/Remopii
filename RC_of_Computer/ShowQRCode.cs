@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Windows.Forms;
 using ZXing;
@@ -12,29 +14,14 @@ namespace RC_of_Computer
 {
     public partial class ShowQRCode : Form
     {
+        private List<NetworkInterface> networkInterfaces;
+        private List<string> ipAddresses;
+        private List<Bitmap> GenQRCodes;
+
         public ShowQRCode()
         {
             InitializeComponent();
-
-            // URLの生成
-            List<string> ipAddresses = new();
-            string hostName = Dns.GetHostName();
-            IPHostEntry host = Dns.GetHostEntry(hostName);
-            foreach (IPAddress address in host.AddressList)
-            {
-                // IPv4アドレスのみ抽出
-                if (address.AddressFamily == AddressFamily.InterNetwork) { ipAddresses.Add(address.ToString()); }
-            }
-            if (ipAddresses.Count >= 2)
-            {
-                MessageBox.Show("有効なIPアドレスが複数検出されました。URLが正しく表示されない可能性があります。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            // URLを生成
-            string GenURL = $"http://{ipAddresses[0]}";
-            if (Properties.Settings.Default.PortNumber != 80) { GenURL += $":{Properties.Settings.Default.PortNumber}"; }
-
-            URLTextBox.Text = GenURL;
-            QRPictureBox.Image = GenerateQRcode(GenURL);
+            GetNetworkIF();
         }
 
         private void OKButton_Click(object sender, EventArgs e)
@@ -62,6 +49,48 @@ namespace RC_of_Computer
 
             return writer.Write(URL);
         }
+
+        /// <summary>
+        /// 現在稼働中のネットワークI/Fを取得します
+        /// </summary>
+        private void GetNetworkIF()
+        {
+            //networkIFComboBox.Items.Clear();
+            networkInterfaces = new();
+            ipAddresses = new();
+            GenQRCodes = new();
+            foreach (var ni in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (ni.OperationalStatus == OperationalStatus.Up && ni.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                {
+                    networkInterfaces.Add(ni);
+                    //networkIFComboBox.Items.Add(ni.Name);
+
+                    // URLの生成
+                    string GenURL = "http://";
+                    IPInterfaceProperties ipips = ni.GetIPProperties();
+                    if (ipips != null)
+                    {
+                        foreach (UnicastIPAddressInformation i in ipips.UnicastAddresses)
+                        {
+                            if (i.Address.AddressFamily == AddressFamily.InterNetwork)
+                            {
+                                GenURL += i.Address;
+                            }
+                        }
+                    }
+                    if (Properties.Settings.Default.PortNumber != 80) { GenURL += $":{Properties.Settings.Default.PortNumber}"; }
+
+                    ipAddresses.Add(GenURL);
+                    GenQRCodes.Add(GenerateQRcode(GenURL));
+                }
+            }
+        }
+
+        private void networkIFComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //QRPictureBox.Image = GenQRCodes[networkIFComboBox.SelectedItem];
+            //URLTextBox.Text = ipAddresses[networkIFComboBox.SelectedItem];
+        }
     }
-    
 }
