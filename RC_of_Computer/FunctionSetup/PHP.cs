@@ -14,12 +14,12 @@ namespace RC_of_Computer.FunctionSetup
             InitializeComponent();
 
             const string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
-            const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
+            //const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
             Bitmap DirIcon = GetIcon.GetBitmapFromEXEDLL(SHELL32DLL, 3, false);
             PHPExeFileRef.Image = DirIcon;
             DocumentRootRef.Image = DirIcon;
-            RunPHPSetup.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 73, false);
+            //RunPHPSetup.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 73, false);
 
             LoadSettings();
         }
@@ -117,9 +117,14 @@ namespace RC_of_Computer.FunctionSetup
             Stream stream = assembly.GetManifestResourceStream("RC_of_Computer.Resources.index.php");
             StreamReader streamReader = new(stream);
             string pf = streamReader.ReadToEnd();
-            using (StreamWriter writer = new(path))
+            try
             {
-                writer.WriteLine(pf);
+                using StreamWriter writer = new(path);
+                writer.WriteLine(pf); 
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("必要なファイルの展開に失敗しました。\n展開先ディレクトリへのアクセス権限がありません。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
