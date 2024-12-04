@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
@@ -14,8 +15,8 @@ namespace RC_of_Computer.FunctionSetup
     {
         private static readonly string PHPDownloadUrl = "https://windows.php.net/downloads/releases/archives/php-8.3.9-Win32-vs16-x64.zip";
         private static readonly string destinationFileName = "PHP.zip";
-        private static readonly string destinationDirName = @"php\";
-        private static readonly string defaultDocumentRootName = @"document\";
+        private static readonly string destinationDirName = "php";
+        private static readonly string defaultDocumentRootName = "document";
 
         private int PHPSetupStatus = 0;
 
@@ -31,6 +32,7 @@ namespace RC_of_Computer.FunctionSetup
             {
                 case 0:
                     FileDLAndExt();
+                    //if (PHPSetupStatus != 2) { Close(); }
                     break;
                 case 1:
                 case 2:
@@ -47,8 +49,8 @@ namespace RC_of_Computer.FunctionSetup
             SetupDetail.Text = "ダウンロードを開始中...";
             StartSetup.Text = "キャンセル";
 
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string TempFilePath = Path.Combine(currentDirectory, destinationFileName);
+            string localAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RC_of_Computer");
+            string TempFilePath = Path.Combine(localAppDataPath, destinationFileName);
 
             Progress<float> progress = new();
             progress.ProgressChanged += Progress_ProgressChanged;
@@ -59,24 +61,32 @@ namespace RC_of_Computer.FunctionSetup
             HttpClient httpClient = new();
             httpClient.DefaultRequestHeaders.Add("User-Agent", "C# App");
 
-            using (FileStream file = new(TempFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
+            try
+            {
+                using FileStream file = new(TempFilePath, FileMode.Create, FileAccess.Write, FileShare.None);
                 await httpClient.DownloadDataAsync(PHPDownloadUrl, file, progress, token);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("インストール先ディレクトリへのアクセス権限がありません。セットアップを中止します。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             httpClient.Dispose();
 
             SetupProgress.Value = 0;
             SetupDetail.Text = "展開しています...";
 
-            Directory.CreateDirectory(destinationDirName);
-            string extDir = Path.Combine(currentDirectory, destinationDirName);
+            string extDir = Path.Combine(localAppDataPath, destinationDirName);
+            Directory.CreateDirectory(extDir);
 
-            using (var zip = ZipFile.OpenRead(destinationFileName))
+            using (var zip = ZipFile.OpenRead(TempFilePath))
             {
                 foreach (ZipArchiveEntry entry in zip.Entries)
                 {
                     string destPath = Path.GetFullPath(Path.Combine(extDir, entry.FullName));
                     // Zip Slip対策、悪意のあるZipファイルを展開しようとしたとき処理を中断する
-                    if (!destPath.StartsWith(currentDirectory))
+                    if (!destPath.StartsWith(extDir))
                     {
                         MessageBox.Show("ファイル整合性エラーが発生しました。セットアップを中止します。\n対象ファイル: " + destPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -98,7 +108,7 @@ namespace RC_of_Computer.FunctionSetup
                 File.Delete(TempFilePath);
             }
             
-            string documentRoot = Path.Combine(currentDirectory, defaultDocumentRootName);
+            string documentRoot = Path.Combine(localAppDataPath, defaultDocumentRootName);
             Directory.CreateDirectory(documentRoot);
 
             Properties.Settings.Default.WebServerSoftware = "PHP";
