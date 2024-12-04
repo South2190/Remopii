@@ -22,6 +22,7 @@ namespace RC_of_Computer
         {
             InitializeComponent();
             GetNetworkIF();
+            networkIFComboBox.SelectedIndex = 0;
         }
 
         private void OKButton_Click(object sender, EventArgs e)
@@ -55,7 +56,7 @@ namespace RC_of_Computer
         /// </summary>
         private void GetNetworkIF()
         {
-            //networkIFComboBox.Items.Clear();
+            networkIFComboBox.Items.Clear();
             networkInterfaces = new();
             ipAddresses = new();
             GenQRCodes = new();
@@ -64,7 +65,7 @@ namespace RC_of_Computer
                 if (ni.OperationalStatus == OperationalStatus.Up && ni.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                 {
                     networkInterfaces.Add(ni);
-                    //networkIFComboBox.Items.Add(ni.Name);
+                    networkIFComboBox.Items.Add(ni.Name);
 
                     // URLの生成
                     string GenURL = "http://";
@@ -89,8 +90,9 @@ namespace RC_of_Computer
 
         private void networkIFComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //QRPictureBox.Image = GenQRCodes[networkIFComboBox.SelectedItem];
-            //URLTextBox.Text = ipAddresses[networkIFComboBox.SelectedItem];
+            QRPictureBox.Image = GenQRCodes[networkIFComboBox.SelectedIndex];
+            URLTextBox.Text = ipAddresses[networkIFComboBox.SelectedIndex];
+            networkIFDescription.Text = networkInterfaces[networkIFComboBox.SelectedIndex].Description;
         }
     }
 }
