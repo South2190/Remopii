@@ -92,6 +92,7 @@ namespace RC_of_Computer
         {
             QRPictureBox.Image = GenQRCodes[networkIFComboBox.SelectedIndex];
             URLTextBox.Text = ipAddresses[networkIFComboBox.SelectedIndex];
+            networkIFDescription.Text = networkInterfaces[networkIFComboBox.SelectedIndex].Description;
         }
     }
 }
