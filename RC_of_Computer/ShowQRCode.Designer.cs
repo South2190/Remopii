@@ -29,21 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowQRCode));
-            this.QRPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.OKButton = new System.Windows.Forms.Button();
             this.URLTextBox = new System.Windows.Forms.TextBox();
+            this.QRPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.QRPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // QRPictureBox
-            // 
-            this.QRPictureBox.Location = new System.Drawing.Point(15, 15);
-            this.QRPictureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.QRPictureBox.Name = "QRPictureBox";
-            this.QRPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.QRPictureBox.TabIndex = 0;
-            this.QRPictureBox.TabStop = false;
             // 
             // label1
             // 
@@ -76,6 +67,16 @@
             this.URLTextBox.Size = new System.Drawing.Size(223, 23);
             this.URLTextBox.TabIndex = 4;
             this.URLTextBox.Text = "http://x.x.x.x:8000";
+            // 
+            // QRPictureBox
+            // 
+            this.QRPictureBox.Location = new System.Drawing.Point(15, 15);
+            this.QRPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.QRPictureBox.Name = "QRPictureBox";
+            this.QRPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.QRPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.QRPictureBox.TabIndex = 0;
+            this.QRPictureBox.TabStop = false;
             // 
             // ShowQRCode
             // 
