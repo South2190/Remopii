@@ -114,9 +114,9 @@
             this.networkIFDescription.AutoSize = true;
             this.networkIFDescription.Location = new System.Drawing.Point(48, 34);
             this.networkIFDescription.Name = "networkIFDescription";
-            this.networkIFDescription.Size = new System.Drawing.Size(41, 15);
+            this.networkIFDescription.Size = new System.Drawing.Size(93, 15);
             this.networkIFDescription.TabIndex = 8;
-            this.networkIFDescription.Text = "label4";
+            this.networkIFDescription.Text = "ネットワークの説明";
             // 
             // ShowQRCode
             // 
