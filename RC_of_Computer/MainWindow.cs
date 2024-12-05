@@ -31,6 +31,8 @@ namespace RC_of_Computer
             processMonitoring.Tick += (s, e) => processMonitoring_Tick();
             processMonitoring.Start();
 
+            this.ContextMenuStrip = this.contextMenuStrip1;
+
             // Windows10、Windows11のどちらかを判定し、OSに合ったインデックス番号を格納する
             const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
@@ -84,11 +86,13 @@ namespace RC_of_Computer
             if (p.Length <= 0)
             {
                 ServerIO.Text = "スタート";
+                ShowQRWindow.Enabled = false;
             }
             // php.exeが動いている場合
             else
             {
                 ServerIO.Text = "ストップ";
+                ShowQRWindow.Enabled = true;
             }
         }
 
@@ -243,6 +247,15 @@ namespace RC_of_Computer
             if (!File.Exists(csvPath)) { return -1; }
 
             return 0;
+        }
+
+        private void ShowQRWindow_Click(object sender, EventArgs e)
+        {
+            ShowQRCode showQRCode = new()
+            {
+                Owner = this
+            };
+            showQRCode.ShowDialog();
         }
     }
 }

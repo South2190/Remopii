@@ -40,9 +40,12 @@
             this.VersionInfoLink = new System.Windows.Forms.LinkLabel();
             this.processMonitoring = new System.Windows.Forms.Timer(this.components);
             this.AppName = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ShowQRWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.SetupGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KeyConfigStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHPStatus)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ServerIO
@@ -146,6 +149,20 @@
             this.AppName.TabIndex = 62;
             this.AppName.Text = "Version 1.0.0";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ShowQRWindow});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 48);
+            // 
+            // ShowQRWindow
+            // 
+            this.ShowQRWindow.Name = "ShowQRWindow";
+            this.ShowQRWindow.Size = new System.Drawing.Size(184, 22);
+            this.ShowQRWindow.Text = "リモコンのURLを再表示";
+            this.ShowQRWindow.Click += new System.EventHandler(this.ShowQRWindow_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -165,6 +182,7 @@
             this.SetupGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KeyConfigStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHPStatus)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +199,7 @@
         private System.Windows.Forms.LinkLabel VersionInfoLink;
         private System.Windows.Forms.Timer processMonitoring;
         private System.Windows.Forms.Label AppName;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ShowQRWindow;
     }
 }
