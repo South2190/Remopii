@@ -8,35 +8,27 @@ namespace RC_of_Computer.Classes
     public static class CSVIO
     {
         /// <summary>
-        /// CSVファイルを読み込み、リストに格納します
-        /// リスト各行の一番最後の要素に"\0"を格納します
+        /// CSVファイルを読み込み、リストを初期化した上で格納します
+        /// ファイルが存在しない場合はリストの書き換えを行いません
         /// </summary>
         /// <param name="CSVFilePath">CSVファイルのパス</param>
-        /// <param name="CSVList">格納するリスト</param>
-        /// <returns>正常に読み込めた場合はリストの行数、CSVファイルが存在しない場合は(-1)</returns>
-        public static int LoadCSV(string CSVFilePath, out List<string[]> CSVList)
+        /// <param name="list">格納先のリスト</param>
+        public static void LoadCSV(string CSVFilePath, ref List<string[]> list)
         {
-            CSVList = new();
-            if (!File.Exists(CSVFilePath)) { return -1; }
+            if (!File.Exists(CSVFilePath)) { return; }
 
-            StreamReader sr = new(CSVFilePath);
-            int i = 0;
-            string? line;
+            list = new();
+            string line;
+            using StreamReader sr = new(CSVFilePath);
             while ((line = sr.ReadLine()) != null)
             {
                 // コメントアウトの行と空行を無視する
-                if (line[0] == '#' || line == "") { continue; }
-
-                string[] work = line.Split(',');
-                Array.Resize(ref work, work.Length + 1);
-                work[work.Length - 1] = "\0";
-
-                CSVList.Add(work);
-                i++;
+                if (line[0] == '#' || line == string.Empty) { continue; }
+                string[] s = line.Split(',');
+                list.Add(s);
             }
-            sr.Close();
-            return i;
         }
+
         /// <summary>
         /// リストをCSVファイルに上書きします
         /// 指定されたCSVファイルの元の内容は消失します
@@ -44,22 +36,20 @@ namespace RC_of_Computer.Classes
         /// <param name="CSVFilePath">CSVファイルのパス</param>
         /// <param name="list">CSVに書き込みたいリスト</param>
         /// <param name="comment">(任意)CSVファイルの一行目に書き込みたいコメント</param>
-        public static void WriteListCSV(string CSVFilePath, in List<string[]> list, string? comment = null)
+        public static void WriteCSV(string CSVFilePath, in List<string[]> list, string comment = null)
         {
-            StreamWriter sw = new(CSVFilePath, false, Encoding.UTF8);
+            using StreamWriter sw = new(CSVFilePath, false, Encoding.UTF8);
             if (comment != null) { sw.WriteLine('#' + comment); }
             foreach (string[] line in list)
             {
-                string Raw = "";
-                int i;
-                for (i = 0; line[i + 1] != "\0"; i++)
+                string Raw = string.Empty;
+                foreach (string item in line)
                 {
-                    Raw += line[i] + ',';
+                    Raw += item + ',';
                 }
-                Raw += line[i];
-                sw.WriteLine(Raw);
+                // 行末のカンマを削除して書き込み
+                sw.WriteLine(Raw.Remove(Raw.Length - 1));
             }
-            sw.Close();
         }
     }
 }
