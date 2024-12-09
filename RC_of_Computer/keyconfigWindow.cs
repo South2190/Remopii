@@ -23,17 +23,17 @@ namespace RC_of_Computer
 
         private List<string[]> buttonCSV = new()
         {
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" },
-            new string[4] { "", "False", "", "\0" }
+            new string[3] { "", "", "" },
+            new string[3] { "", "", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" },
+            new string[3] { "", "False", "" }
         };
 
         private static readonly string csvFileFullPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
@@ -41,10 +41,7 @@ namespace RC_of_Computer
         public KeyConfigWindow()
         {
             InitializeComponent();
-            if (File.Exists(csvFileFullPath))
-            {
-                CSVIO.LoadCSV(csvFileFullPath, out buttonCSV);
-            }
+            CSVIO.LoadCSV(csvFileFullPath, ref buttonCSV);
             LoadSettingsFromCSV();
         }
 
@@ -396,7 +393,7 @@ namespace RC_of_Computer
                     }
                 }
             }
-            CSVIO.WriteListCSV(csvFileFullPath, buttonCSV);
+            CSVIO.WriteCSV(csvFileFullPath, buttonCSV);
             foreach (string i in xmlFilesPath)
             {
                 pInfo.Add(new ProcessStartInfo("schtasks")

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace RC_of_Computer
@@ -8,6 +9,7 @@ namespace RC_of_Computer
         public VersionInfo()
         {
             InitializeComponent();
+            VersionInformation.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
