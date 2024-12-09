@@ -34,8 +34,6 @@ namespace RC_of_Computer
             processMonitoring.Tick += (s, e) => processMonitoring_Tick();
             processMonitoring.Start();
 
-            this.ContextMenuStrip = this.contextMenuStrip1;
-
             // Windows10、Windows11のどちらかを判定し、OSに合ったインデックス番号を格納する
             const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
@@ -139,7 +137,7 @@ namespace RC_of_Computer
                     Arguments = $"-S {Properties.Settings.Default.IPAddress}:{Properties.Settings.Default.PortNumber} -t {Properties.Settings.Default.DocumentRoot}",
                     WindowStyle = ProcessWindowStyle.Minimized
                 };
-                Process pRun = Process.Start(pInfo);
+                Process.Start(pInfo);
                 ShowQRCode showQRCode = new()
                 {
                     Owner = this
@@ -180,14 +178,7 @@ namespace RC_of_Computer
                 _ => IconError
             };
             //ステータスが両方ともOKでない場合はボタンを無効化
-            if (PHPStatusResult != 0 || KeyConfigStatusResult != 0)
-            {
-                ServerIO.Enabled = false;
-            }
-            else
-            {
-                ServerIO.Enabled = true;
-            }
+            ServerIO.Enabled = PHPStatusResult == 0 && KeyConfigStatusResult == 0;
         }
 
         /// <summary>
@@ -201,7 +192,6 @@ namespace RC_of_Computer
             // PHPを使用する設定の場合はPHPの実行ファイルを確認する
             if (Properties.Settings.Default.WebServerSoftware == "PHP")
             {
-                if (!File.Exists(Properties.Settings.Default.PHPExeFilePath)) { return -1; }
                 phpPath = Properties.Settings.Default.UsePATHValue ? "php" : Properties.Settings.Default.PHPExeFilePath;
                 ProcessStartInfo processStartInfo = new(phpPath)
                 {
@@ -238,14 +228,7 @@ namespace RC_of_Computer
         /// <returns>正しく設定されている場合(0)、それ以外(-1)</returns>
         private int CheckKeyConfigStatus()
         {
-            if (Directory.Exists(Properties.Settings.Default.DocumentRoot))
-            {
-                ShowKeyConfig.Enabled = true;
-            }
-            else
-            {
-                ShowKeyConfig.Enabled = false;
-            }
+            ShowKeyConfig.Enabled = Directory.Exists(Properties.Settings.Default.DocumentRoot);
             string csvPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
             if (!File.Exists(csvPath)) { return -1; }
 
