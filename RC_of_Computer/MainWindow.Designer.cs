@@ -42,6 +42,7 @@
             this.AppName = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ShowQRWindow = new System.Windows.Forms.ToolStripMenuItem();
+            this.AppVersion = new System.Windows.Forms.Label();
             this.SetupGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KeyConfigStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHPStatus)).BeginInit();
@@ -145,16 +146,16 @@
             this.AppName.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.AppName.Location = new System.Drawing.Point(13, 262);
             this.AppName.Name = "AppName";
-            this.AppName.Size = new System.Drawing.Size(82, 15);
+            this.AppName.Size = new System.Drawing.Size(49, 15);
             this.AppName.TabIndex = 62;
-            this.AppName.Text = "Version 1.0.0";
+            this.AppName.Text = "Version";
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ShowQRWindow});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 26);
             // 
             // ShowQRWindow
             // 
@@ -163,11 +164,23 @@
             this.ShowQRWindow.Text = "リモコンのURLを再表示";
             this.ShowQRWindow.Click += new System.EventHandler(this.ShowQRWindow_Click);
             // 
+            // AppVersion
+            // 
+            this.AppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AppVersion.AutoSize = true;
+            this.AppVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.AppVersion.Location = new System.Drawing.Point(61, 262);
+            this.AppVersion.Name = "AppVersion";
+            this.AppVersion.Size = new System.Drawing.Size(36, 15);
+            this.AppVersion.TabIndex = 63;
+            this.AppVersion.Text = "1.0.0";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(314, 291);
+            this.Controls.Add(this.AppVersion);
             this.Controls.Add(this.AppName);
             this.Controls.Add(this.VersionInfoLink);
             this.Controls.Add(this.SetupGroup);
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Label AppName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ShowQRWindow;
+        private System.Windows.Forms.Label AppVersion;
     }
 }

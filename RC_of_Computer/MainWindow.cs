@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Management;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -25,6 +26,8 @@ namespace RC_of_Computer
         public MainWindow()
         {
             InitializeComponent();
+
+            AppVersion.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
             processMonitoring_Tick();
             // php.exeが動いているかを毎秒確認し、ボタンを切り替える
