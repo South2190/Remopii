@@ -43,6 +43,7 @@ namespace RC_of_Computer
         {
             InitializeComponent();
             LoadSettingsFromCSV(csvFileFullPath);
+            this.ContextMenuStrip = this.contextMenuStrip1;
         }
 
         /// <summary>
@@ -449,6 +450,24 @@ namespace RC_of_Computer
                     }
                 }
             }
+        }
+
+        private void import_Click(object sender, EventArgs e)
+        {
+            using OpenFileDialog openFileDialog = new()
+            {
+                Filter = "Csv files (*.csv)|*.csv|All files (*.*)|*.*"
+            };
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string importFileFullPath = openFileDialog.FileName;
+                LoadSettingsFromCSV(importFileFullPath);
+            }
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

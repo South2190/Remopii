@@ -110,6 +110,9 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOk = new System.Windows.Forms.Button();
             this.keyScan = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.import = new System.Windows.Forms.ToolStripMenuItem();
+            this.export = new System.Windows.Forms.ToolStripMenuItem();
             this.panelRemocon.SuspendLayout();
             this.sub9.SuspendLayout();
             this.sub6.SuspendLayout();
@@ -122,6 +125,7 @@
             this.sub4.SuspendLayout();
             this.main1.SuspendLayout();
             this.sub1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelRemocon
@@ -1121,6 +1125,28 @@
             this.keyScan.Interval = 1000;
             this.keyScan.Tick += new System.EventHandler(this.keyScan_Tick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.import,
+            this.export});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 48);
+            // 
+            // import
+            // 
+            this.import.Name = "import";
+            this.import.Size = new System.Drawing.Size(127, 22);
+            this.import.Text = "インポート";
+            this.import.Click += new System.EventHandler(this.import_Click);
+            // 
+            // export
+            // 
+            this.export.Name = "export";
+            this.export.Size = new System.Drawing.Size(127, 22);
+            this.export.Text = "エクスポート";
+            this.export.Click += new System.EventHandler(this.export_Click);
+            // 
             // KeyConfigWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1160,6 +1186,7 @@
             this.main1.PerformLayout();
             this.sub1.ResumeLayout(false);
             this.sub1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1245,5 +1272,8 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Timer keyScan;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem import;
+        private System.Windows.Forms.ToolStripMenuItem export;
     }
 }
