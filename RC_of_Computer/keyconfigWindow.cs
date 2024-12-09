@@ -338,12 +338,18 @@ namespace RC_of_Computer
         private void SaveSettingsToCSV()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
+            string localAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RC_of_Computer");
             string seigyoExeFilePath = Path.Combine(currentDirectory, "seigyo.exe");
+            int x = 0;
 
             List<ProcessStartInfo> pInfo = new();
             List<string> xmlFilesPath = new();
+            List<string> buttonnamelist = new();
 
-            Directory.CreateDirectory("xml");
+            string path = Path.Combine(localAppDataPath,"xml");
+            Directory.CreateDirectory(path);
+            Console.WriteLine(path);
+            //Directory.CreateDirectory("xml");
 
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
@@ -371,8 +377,9 @@ namespace RC_of_Computer
                         {
                             string buttonname = "MainButton" + control.Name.Substring(7);
                             xmlFiles = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonname}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k {control.Text}</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
-                            File.WriteAllText($"xml\\{buttonname}.xml", xmlFiles);
-                            xmlFilesPath.Add($"xml\\TaskScheduler{buttonname}");
+                            File.WriteAllText($"{path}\\TaskScheduler{buttonname}.xml", xmlFiles);
+                            xmlFilesPath.Add($"{path}\\TaskScheduler{buttonname}");
+                            buttonnamelist.Add(buttonname);
                         }
                     }
                     else if (Regex.IsMatch(control.Name, @"^subKey"))
@@ -382,8 +389,9 @@ namespace RC_of_Computer
                         {
                             string buttonname = "SubButton" + control.Name.Substring(6);
                             xmlFiles = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonname}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k {control.Text}</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
-                            File.WriteAllText($"xml\\{buttonname}.xml", xmlFiles);
-                            xmlFilesPath.Add($"xml\\TaskScheduler{buttonname}");
+                            File.WriteAllText($"{path}\\TaskScheduler{buttonname}.xml", xmlFiles);
+                            xmlFilesPath.Add($"{path}\\TaskScheduler{buttonname}");
+                            buttonnamelist.Add(buttonname);
                         }
                     }
                 }
@@ -393,10 +401,13 @@ namespace RC_of_Computer
             {
                 pInfo.Add(new ProcessStartInfo("schtasks")
                 {
-                    Arguments = $"/create /XML {i}.xml /TN RC_of_Computer\\{i.Substring(17)} /F",
+                    Arguments = $"/create /XML {i}.xml /TN RC_of_Computer\\{buttonnamelist[x]} /F",
                     UseShellExecute = false,
                     CreateNoWindow = true
                 });
+                Console.WriteLine(i);
+                Console.WriteLine(buttonnamelist[x]);
+                x ++;
             }
             bool exitCode = true;
             foreach (ProcessStartInfo pInfoItem in pInfo)
