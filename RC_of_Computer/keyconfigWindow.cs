@@ -42,8 +42,7 @@ namespace RC_of_Computer
         public KeyConfigWindow()
         {
             InitializeComponent();
-            CSVIO.LoadCSV(csvFileFullPath, ref buttonCSV);
-            LoadSettingsFromCSV();
+            LoadSettingsFromCSV(csvFileFullPath);
         }
 
         /// <summary>
@@ -417,8 +416,10 @@ namespace RC_of_Computer
             }
         }
 
-        private void LoadSettingsFromCSV()
+        private void LoadSettingsFromCSV(string path)
         {
+            CSVIO.LoadCSV(path, ref buttonCSV);
+
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
             {
