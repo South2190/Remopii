@@ -1153,6 +1153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(534, 441);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);

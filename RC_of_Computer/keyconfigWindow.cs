@@ -1,14 +1,13 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
-using System.Net;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using RC_of_Computer.Classes;
-using System.Text;
 
 namespace RC_of_Computer
 {
@@ -20,22 +19,6 @@ namespace RC_of_Computer
         private List<string> keys;
         private int keycount = 0;
         private string key;
-        private string xmlFiles;
-
-        private List<string[]> buttonCSV = new()
-        {
-            new string[3] { "", "", "" },
-            new string[3] { "", "", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" },
-            new string[3] { "", "False", "" }
-        };
 
         private static readonly string csvFileFullPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
 
@@ -43,7 +26,6 @@ namespace RC_of_Computer
         {
             InitializeComponent();
             LoadSettingsFromCSV(csvFileFullPath);
-            this.ContextMenuStrip = this.contextMenuStrip1;
         }
 
         /// <summary>
@@ -324,29 +306,25 @@ namespace RC_of_Computer
 
         private void OK_Click(object sender, EventArgs e)
         {
-            SaveSettingsToCSV();
+            SaveSettingsToCSV(csvFileFullPath, true);
             Close();
         }
 
         private void Apply_Click(object sender, EventArgs e)
         {
-            SaveSettingsToCSV();
+            SaveSettingsToCSV(csvFileFullPath, true);
         }
 
-        private void SaveSettingsToCSV()
+        /// <summary>
+        /// フォームの内容を読み込んでCSVファイルに保存します
+        /// 同時にタスクスケジューラの登録を行います
+        /// </summary>
+        /// <param name="path">保存先のCSVファイルのパス</param>
+        /// <param name="submitSchtasks">タスクスケジューラへの登録を行うか</param>
+        private void SaveSettingsToCSV(string path, bool submitSchtasks = false)
         {
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string localAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RC_of_Computer");
-            string seigyoExeFilePath = Path.Combine(currentDirectory, "seigyo.exe");
-            int x = 0;
-            Encoding enc = Encoding.GetEncoding("shift_jis");
-
-            List<ProcessStartInfo> pInfo = new();
-            List<string> xmlFilesPath = new();
-            List<string> buttonnamelist = new();
-
-            string path = Path.Combine(localAppDataPath,"xml");
-            Directory.CreateDirectory(path);
+            List<string[]> buttonList = new();
+            for (int i = 0; i < 11; i++) { buttonList.Add(new string[] { string.Empty, string.Empty, string.Empty }); }
 
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
@@ -354,72 +332,89 @@ namespace RC_of_Computer
                 // グループボックス内のチェックボックス全取得
                 foreach (CheckBox control in groupbox.Controls.OfType<CheckBox>())
                 {
-                    buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1] = control.Checked.ToString();
+                    buttonList[int.Parse(control.Name.Substring(9)) + 1][1] = control.Checked.ToString();
                 }
                 // グループボックス内のテキストボックス全取得
                 foreach (TextBox control in groupbox.Controls.OfType<TextBox>())
                 {
                     if (Regex.IsMatch(control.Name, @"^mainValue"))
                     {
-                        buttonCSV[int.Parse(control.Name.Substring(9)) - 1][0] = control.Text;
+                        buttonList[int.Parse(control.Name.Substring(9)) - 1][0] = control.Text;
                     }
                     else if (Regex.IsMatch(control.Name, @"^subValue"))
                     {
-                        buttonCSV[int.Parse(control.Name.Substring(8)) + 1][0] = control.Text;
+                        buttonList[int.Parse(control.Name.Substring(8)) + 1][0] = control.Text;
                     }
                     else if (Regex.IsMatch(control.Name, @"^mainKey"))
                     {
-                        buttonCSV[int.Parse(control.Name.Substring(7)) - 1][2] = control.Text;
-                        if (control.Text != string.Empty)
-                        {
-                            string buttonname = "MainButton" + control.Name.Substring(7);
-                            xmlFiles = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonname}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k {control.Text}</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
-                            File.WriteAllText($"{path}\\TaskScheduler{buttonname}.xml", xmlFiles, enc);
-                            xmlFilesPath.Add($"{path}\\TaskScheduler{buttonname}");
-                            buttonnamelist.Add(buttonname);
-                        }
+                        buttonList[int.Parse(control.Name.Substring(7)) - 1][2] = control.Text;
                     }
                     else if (Regex.IsMatch(control.Name, @"^subKey"))
                     {
-                        buttonCSV[int.Parse(control.Name.Substring(6)) + 1][2] = control.Text;
-                        if (control.Text != string.Empty)
-                        {
-                            string buttonname = "SubButton" + control.Name.Substring(6);
-                            xmlFiles = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonname}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k {control.Text}</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
-                            File.WriteAllText($"{path}\\TaskScheduler{buttonname}.xml", xmlFiles, enc);
-                            xmlFilesPath.Add($"{path}\\TaskScheduler{buttonname}");
-                            buttonnamelist.Add(buttonname);
-                        }
+                        buttonList[int.Parse(control.Name.Substring(6)) + 1][2] = control.Text;
                     }
                 }
             }
-            CSVIO.WriteCSV(csvFileFullPath, buttonCSV);
-            foreach (string i in xmlFilesPath)
+            CSVIO.WriteCSV(path, buttonList);
+            // タスクスケジューラへの登録
+            if (submitSchtasks)
             {
-                pInfo.Add(new ProcessStartInfo("schtasks")
+                string localAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RC_of_Computer");
+                string seigyoExeFilePath = Path.Combine(Directory.GetCurrentDirectory(), "seigyo.exe");
+
+                string xmlPath = Path.Combine(localAppDataPath, "TaskSchedulerXml");
+                Directory.CreateDirectory(xmlPath);
+
+                for (int i = 0; i < 11; i++)
                 {
-                    Arguments = $"/create /XML {i}.xml /TN RC_of_Computer\\{buttonnamelist[x]} /F",
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                });
-                x ++;
-            }
-            bool exitCode = true;
-            foreach (ProcessStartInfo pInfoItem in pInfo)
-            {
-                using Process p = Process.Start(pInfoItem);
-                p.WaitForExit(1000);
-                if (p.ExitCode != 0) { exitCode = false; }
-            }
-            if (!exitCode)
-            {
-                MessageBox.Show("タスクスケジューラへの登録に失敗しました", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string sendKeyArg = buttonList[i][2];
+                    // 入力するキーの指定がされていないボタンは無視
+                    if (sendKeyArg == string.Empty) { continue; }
+
+                    string buttonName = i < 2 ? $"MainButton{i + 1}" : $"SubButton{i - 1}";
+                    string xmlFile = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonName}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k \"{sendKeyArg}\"</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
+                    File.WriteAllText($"{xmlPath}\\TaskScheduler{buttonName}.xml", xmlFile, Encoding.GetEncoding("shift_jis"));
+
+                    ProcessStartInfo processStartInfo = new("schtasks")
+                    {
+                        Arguments = $"/create /XML {xmlPath}\\TaskScheduler{buttonName}.xml /TN RC_of_Computer\\{buttonName} /F",
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    };
+                    using Process p = Process.Start(processStartInfo);
+                    p.WaitForExit(1000);
+
+                    if (p.ExitCode != 0)
+                    {
+                        MessageBox.Show("タスクスケジューラへの登録に失敗しました", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                }
             }
         }
 
+        /// <summary>
+        /// CSVファイルから設定を読み込んでフォームに反映します
+        /// </summary>
+        /// <param name="path">CSVファイルのパス</param>
         private void LoadSettingsFromCSV(string path)
         {
-            CSVIO.LoadCSV(path, ref buttonCSV);
+            List<string[]> buttonList = new()
+            {
+                new string[3] { "", "", "" },
+                new string[3] { "", "", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" },
+                new string[3] { "", "False", "" }
+            };
+
+            CSVIO.LoadCSV(path, ref buttonList);
 
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
@@ -427,26 +422,26 @@ namespace RC_of_Computer
                 // グループボックス内のチェックボックス全取得
                 foreach (CheckBox control in groupbox.Controls.OfType<CheckBox>())
                 {
-                    control.Checked = Convert.ToBoolean(buttonCSV[int.Parse(control.Name.Substring(9)) + 1][1]);
+                    control.Checked = Convert.ToBoolean(buttonList[int.Parse(control.Name.Substring(9)) + 1][1]);
                 }
                 // グループボックス内のテキストボックス全取得
                 foreach (TextBox control in groupbox.Controls.OfType<TextBox>())
                 {
                     if (Regex.IsMatch(control.Name, @"^mainValue"))
                     {
-                        control.Text = buttonCSV[int.Parse(control.Name.Substring(9)) - 1][0];
+                        control.Text = buttonList[int.Parse(control.Name.Substring(9)) - 1][0];
                     }
                     else if (Regex.IsMatch(control.Name, @"^subValue"))
                     {
-                        control.Text = buttonCSV[int.Parse(control.Name.Substring(8)) + 1][0];
+                        control.Text = buttonList[int.Parse(control.Name.Substring(8)) + 1][0];
                     }
                     else if (Regex.IsMatch(control.Name, @"^mainKey"))
                     {
-                        control.Text = buttonCSV[int.Parse(control.Name.Substring(7)) - 1][2];
+                        control.Text = buttonList[int.Parse(control.Name.Substring(7)) - 1][2];
                     }
                     else if (Regex.IsMatch(control.Name, @"^subKey"))
                     {
-                        control.Text = buttonCSV[int.Parse(control.Name.Substring(6)) + 1][2];
+                        control.Text = buttonList[int.Parse(control.Name.Substring(6)) + 1][2];
                     }
                 }
             }
