@@ -462,7 +462,15 @@ namespace RC_of_Computer
 
         private void export_Click(object sender, EventArgs e)
         {
-
+            using SaveFileDialog saveFileDialog = new()
+            {
+                Filter = "Csv files (*.csv)|*.csv|All files (*.*)|*.*"
+            };
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string exportFileFullPath = saveFileDialog.FileName;
+                SaveSettingsToCSV(exportFileFullPath);
+            }
         }
     }
 }

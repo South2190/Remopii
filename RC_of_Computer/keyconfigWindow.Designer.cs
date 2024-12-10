@@ -1131,19 +1131,19 @@
             this.import,
             this.export});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // import
             // 
             this.import.Name = "import";
-            this.import.Size = new System.Drawing.Size(127, 22);
+            this.import.Size = new System.Drawing.Size(180, 22);
             this.import.Text = "インポート";
             this.import.Click += new System.EventHandler(this.import_Click);
             // 
             // export
             // 
             this.export.Name = "export";
-            this.export.Size = new System.Drawing.Size(127, 22);
+            this.export.Size = new System.Drawing.Size(180, 22);
             this.export.Text = "エクスポート";
             this.export.Click += new System.EventHandler(this.export_Click);
             // 
