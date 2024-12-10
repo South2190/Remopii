@@ -79,59 +79,46 @@
                 max-width: 480px;
                 margin: auto;
             }
-            .btn{
-                height: 100%;
-                text-align: center;
+            input{
+                aspect-ratio: 1;
+                border-radius: 7px;
             }
-
             .mainbtn1 {
                 margin: 2.5%;
-                display: inline-block;
                 width: 45%;
-                aspect-ratio: 1;
-                text-decoration: none;
-                text-align: center;
-                font-size: 400%;
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+                font-size: min(9vw,300%);
                 color: #000;
                 background-color: #63bbde;
-                border-radius: 7px;
                 box-shadow: 2px 2px #777777;
             }
             .mainbtn1:active{
                 background: #325f70;
                 color: #FFF;
             }
-
             .mainbtn2 {
                 margin: 2.5%;
-                display: inline-block;
                 width: 45%;
-                aspect-ratio: 1;
-                text-decoration: none;
-                text-align: center;
-                font-size: 400%;
-        
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+                font-size: min(9vw,300%);
                 color: #000;
                 background-color: #6cc786;
-                border-radius: 7px;
                 box-shadow: 2px 2px #777777;
             }
             .mainbtn2:active{
                 background: #335e3f;
                 color: #FFF;
             }
-
             .subbtn{
                 margin: 2.25%;
-                display: inline-block;
                 width: 28.5%;
-                aspect-ratio: 1;
-                text-decoration: none;
-                text-align: center;
-                font-size: 200%;
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+                font-size: min(6.25vw,200%);
                 color: #000;
                 background-color: #bfcec3;
-                border-radius: 7px;
                 box-shadow: 2px 2px #777777;
             }
             .subbtn:active{
@@ -140,41 +127,35 @@
             }
 	        .disabledbtn{
                 margin: 2.25%;
-                display: inline-block;
                 width: 28.5%;
                 aspect-ratio: 1;
-                text-decoration: none;
-                text-align: center;
-                font-size: 200%;
+                font-size: min(6.25vw,200%);
                 border-radius: 7px;
 	        }
         </style>
     </head>
-  
     <body>
         <form method="post">
-            <div class="btn">
-                <?php
-                    $fp = fopen("Button.csv", "r");
-
-                    for($i = 1; $i <= 11; $i++){
-                        $data = fgetcsv($fp);
-                        //メインボタンの表示
-                        if($i<=2){
-                            echo '<input type="submit" value="' . $data[0] . '" name="mainBtn' . $i . '"  class="mainbtn' . $i . '"/>';
-                        }
-                        //サブボタン（有効）の表示
-                        elseif($data[1] == "True"){
-                            echo '<input type="submit" value=' . $data[0] . ' name="subBtn' . $i-2 . '" class="subbtn" />';
-                        }
-                        //サブボタン（無効）の表示
-                        else{
-                            echo '<input type="submit" value="無効" name="subBtn' . $i-2 . '" disabled class="disabledbtn" />';
-                        }
+            <?php
+                $fp = fopen("Button.csv", "r");
+                for($i = 1; $i <= 11; $i++){
+                    $data = fgetcsv($fp);
+                    //メインボタンの表示
+                    if($i<=2){
+                        echo '<input type="submit" value="' . $data[0] . '" name="mainBtn' . $i . '"  class="mainbtn' . $i . '"/>';
                     }
-                    fclose($fp);
-                ?>
-            </div>
+                    //サブボタン（有効）の表示
+                    elseif($data[1] == "True"){
+                        echo '<input type="submit" value=' . $data[0] . ' name="subBtn' . $i-2 . '" class="subbtn" />';
+                    }
+                    //サブボタン（無効）の表示
+                    else{
+                        echo '<input type="submit" value="無効" name="subBtn' . $i-2 . '" disabled class="disabledbtn" />';
+                    }
+                }
+                fclose($fp);
+            ?>
         </fofm>
     </body>
 </html>
+
