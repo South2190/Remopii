@@ -71,9 +71,15 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta charset="utf-8">
-        <title>リモコン</title>
+        <title>リモピー</title>
 
         <style>
+            /*ダークモード対応*/
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #000;
+                }
+            }
             /*ボタンのサイズ等の設定*/
             body{
                 max-width: 480px;
@@ -82,16 +88,19 @@
             input{
                 aspect-ratio: 1;
                 border-radius: 7px;
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+                vertical-align: top;
             }
             .mainbtn1 {
                 margin: 2.5%;
                 width: 45%;
-                text-wrap: wrap;
-                overflow-wrap: break-word;
+                max-height: min(45vw,216px);
                 font-size: min(9vw,300%);
                 color: #000;
                 background-color: #63bbde;
                 box-shadow: 2px 2px #777777;
+                line-height: normal;
             }
             .mainbtn1:active{
                 background: #325f70;
@@ -100,8 +109,7 @@
             .mainbtn2 {
                 margin: 2.5%;
                 width: 45%;
-                text-wrap: wrap;
-                overflow-wrap: break-word;
+                max-height: min(45vw,216px);
                 font-size: min(9vw,300%);
                 color: #000;
                 background-color: #6cc786;
@@ -114,8 +122,7 @@
             .subbtn{
                 margin: 2.25%;
                 width: 28.5%;
-                text-wrap: wrap;
-                overflow-wrap: break-word;
+                max-height: min(28.5vw,136.8px);
                 font-size: min(6.25vw,200%);
                 color: #000;
                 background-color: #bfcec3;
@@ -128,7 +135,6 @@
 	        .disabledbtn{
                 margin: 2.25%;
                 width: 28.5%;
-                aspect-ratio: 1;
                 font-size: min(6.25vw,200%);
                 border-radius: 7px;
 	        }
@@ -158,4 +164,3 @@
         </fofm>
     </body>
 </html>
-
