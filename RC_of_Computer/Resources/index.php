@@ -71,15 +71,16 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta charset="utf-8">
-        <title>リモコン</title>
+        <title>リモピー</title>
 
         <style>
-            /*ボタンのサイズ等の設定*/
+            /*ダークモード対応*/
             @media (prefers-color-scheme: dark) {
                 body {
                     background-color: #000;
                 }
             }
+            /*ボタンのサイズ等の設定*/
             body{
                 max-width: 480px;
                 margin: auto;
@@ -94,6 +95,7 @@
             .mainbtn1 {
                 margin: 2.5%;
                 width: 45%;
+                max-height: min(45vw,216px);
                 font-size: min(9vw,300%);
                 color: #000;
                 background-color: #63bbde;
@@ -107,6 +109,7 @@
             .mainbtn2 {
                 margin: 2.5%;
                 width: 45%;
+                max-height: min(45vw,216px);
                 font-size: min(9vw,300%);
                 color: #000;
                 background-color: #6cc786;
@@ -119,6 +122,7 @@
             .subbtn{
                 margin: 2.25%;
                 width: 28.5%;
+                max-height: min(28.5vw,136.8px);
                 font-size: min(6.25vw,200%);
                 color: #000;
                 background-color: #bfcec3;
@@ -131,7 +135,6 @@
 	        .disabledbtn{
                 margin: 2.25%;
                 width: 28.5%;
-                aspect-ratio: 1;
                 font-size: min(6.25vw,200%);
                 border-radius: 7px;
 	        }
