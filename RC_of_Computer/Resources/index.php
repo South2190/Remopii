@@ -82,16 +82,18 @@
             input{
                 aspect-ratio: 1;
                 border-radius: 7px;
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+                vertical-align: top;
             }
             .mainbtn1 {
                 margin: 2.5%;
                 width: 45%;
-                text-wrap: wrap;
-                overflow-wrap: break-word;
                 font-size: min(9vw,300%);
                 color: #000;
                 background-color: #63bbde;
                 box-shadow: 2px 2px #777777;
+                line-height: normal;
             }
             .mainbtn1:active{
                 background: #325f70;
@@ -100,8 +102,6 @@
             .mainbtn2 {
                 margin: 2.5%;
                 width: 45%;
-                text-wrap: wrap;
-                overflow-wrap: break-word;
                 font-size: min(9vw,300%);
                 color: #000;
                 background-color: #6cc786;
@@ -114,8 +114,6 @@
             .subbtn{
                 margin: 2.25%;
                 width: 28.5%;
-                text-wrap: wrap;
-                overflow-wrap: break-word;
                 font-size: min(6.25vw,200%);
                 color: #000;
                 background-color: #bfcec3;
@@ -158,4 +156,3 @@
         </fofm>
     </body>
 </html>
-
