@@ -47,7 +47,7 @@ namespace RC_of_Computer
                 buttonCount = (Button)sender;
                 duration = 10;
                 keyScan.Start();
-                buttonCount.Text = "変更...10";
+                buttonCount.Text = "10";
                 ChangeKeyText(buttonCount.Name, string.Empty);
             }
         }
@@ -57,8 +57,7 @@ namespace RC_of_Computer
         /// </summary>
         private void keyScan_Tick(object sender, EventArgs e)
         {
-            duration--;
-            buttonCount.Text = $"変更...{duration}";
+            buttonCount.Text = (--duration).ToString();
             if (duration <= 0)
             {
                 TimerStop();
@@ -324,7 +323,7 @@ namespace RC_of_Computer
         private void SaveSettingsToCSV(string path, bool submitSchtasks = false)
         {
             List<string[]> buttonList = new();
-            for (int i = 0; i < 11; i++) { buttonList.Add(new string[] { string.Empty, string.Empty, string.Empty }); }
+            for (int i = 0; i < 11; i++) { buttonList.Add(new string[] { string.Empty, string.Empty, string.Empty, string.Empty }); }
 
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
@@ -353,6 +352,14 @@ namespace RC_of_Computer
                     {
                         buttonList[int.Parse(control.Name.Substring(6)) + 1][2] = control.Text;
                     }
+                    else if (Regex.IsMatch(control.Name, @"^mainProcess"))
+                    {
+                        buttonList[int.Parse(control.Name.Substring(11)) - 1][3] = control.Text;
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^subProcess"))
+                    {
+                        buttonList[int.Parse(control.Name.Substring(10)) + 1][3] = control.Text;
+                    }
                 }
             }
             CSVIO.WriteCSV(path, buttonList);
@@ -367,13 +374,12 @@ namespace RC_of_Computer
 
                 for (int i = 0; i < 11; i++)
                 {
-                    string sendKeyArg = buttonList[i][2];
                     // 入力するキーの指定がされていないボタンと無効にされているボタンは無視
-                    if (sendKeyArg == string.Empty || buttonList[i][1] == "False") { continue; }
+                    if (buttonList[i][2] == string.Empty || buttonList[i][1] == "False") { continue; }
+                    string processArg = buttonList[i][3] == string.Empty ? string.Empty : $"-p \"{buttonList[i][3]}\" ";
 
                     string buttonName = i < 2 ? $"MainButton{i + 1}" : $"SubButton{i - 1}";
-                    //string xmlFile = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonName}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k \"{sendKeyArg}\"</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
-                    string xmlFile = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonName}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-p \"POWERPNT\" -k \"{sendKeyArg}\"</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
+                    string xmlFile = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonName}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>{processArg}-k \"{buttonList[i][2]}\"</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";
                     File.WriteAllText($"{xmlPath}\\TaskScheduler{buttonName}.xml", xmlFile, Encoding.GetEncoding("shift_jis"));
 
                     ProcessStartInfo processStartInfo = new("schtasks")
@@ -402,18 +408,10 @@ namespace RC_of_Computer
         {
             List<string[]> buttonList = new()
             {
-                new string[3] { "", "", "" },
-                new string[3] { "", "", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" },
-                new string[3] { "", "False", "" }
+                new string[] { string.Empty, string.Empty, string.Empty, string.Empty },
+                new string[] { string.Empty, string.Empty, string.Empty, string.Empty }
             };
+            for (int i = 0; i < 9; i++) { buttonList.Add(new string[] { string.Empty, "False", string.Empty, string.Empty }); }
 
             CSVIO.LoadCSV(path, ref buttonList);
 
@@ -443,6 +441,14 @@ namespace RC_of_Computer
                     else if (Regex.IsMatch(control.Name, @"^subKey"))
                     {
                         control.Text = buttonList[int.Parse(control.Name.Substring(6)) + 1][2];
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^mainProcess"))
+                    {
+                        control.Text = buttonList[int.Parse(control.Name.Substring(11)) - 1][3];
+                    }
+                    else if (Regex.IsMatch(control.Name, @"^subProcess"))
+                    {
+                        control.Text = buttonList[int.Parse(control.Name.Substring(10)) + 1][3];
                     }
                 }
             }

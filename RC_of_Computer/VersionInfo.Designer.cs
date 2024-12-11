@@ -66,13 +66,13 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Meiryo UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.title.Font = new System.Drawing.Font("メイリオ", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.title.Location = new System.Drawing.Point(160, 5);
             this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(192, 35);
+            this.title.Size = new System.Drawing.Size(126, 41);
             this.title.TabIndex = 2;
-            this.title.Text = "リモコンプログラム";
+            this.title.Text = "リモピー";
             // 
             // Version
             // 

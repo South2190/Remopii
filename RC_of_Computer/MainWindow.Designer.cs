@@ -192,7 +192,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "プレゼン用リモコン(仮)";
+            this.Text = "リモピー";
             this.SetupGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KeyConfigStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHPStatus)).EndInit();

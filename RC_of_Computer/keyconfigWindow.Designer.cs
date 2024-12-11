@@ -216,7 +216,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label41.Location = new System.Drawing.Point(7, 65);
+            this.label41.Location = new System.Drawing.Point(7, 20);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(68, 15);
@@ -228,7 +228,7 @@
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label42.Location = new System.Drawing.Point(108, 42);
+            this.label42.Location = new System.Drawing.Point(108, 87);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(32, 15);
@@ -240,7 +240,7 @@
             this.subValue9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue9.Location = new System.Drawing.Point(8, 82);
+            this.subValue9.Location = new System.Drawing.Point(8, 37);
             this.subValue9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue9.Name = "subValue9";
             this.subValue9.Size = new System.Drawing.Size(135, 23);
@@ -250,7 +250,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label43.Location = new System.Drawing.Point(7, 20);
+            this.label43.Location = new System.Drawing.Point(7, 65);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(44, 15);
@@ -262,7 +262,7 @@
             this.subProcess9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess9.Location = new System.Drawing.Point(8, 37);
+            this.subProcess9.Location = new System.Drawing.Point(8, 82);
             this.subProcess9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess9.Name = "subProcess9";
             this.subProcess9.Size = new System.Drawing.Size(100, 23);
@@ -340,7 +340,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label28.Location = new System.Drawing.Point(7, 65);
+            this.label28.Location = new System.Drawing.Point(7, 20);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(68, 15);
@@ -352,7 +352,7 @@
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label29.Location = new System.Drawing.Point(108, 42);
+            this.label29.Location = new System.Drawing.Point(108, 87);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(32, 15);
@@ -364,7 +364,7 @@
             this.subValue6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue6.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue6.Location = new System.Drawing.Point(8, 82);
+            this.subValue6.Location = new System.Drawing.Point(8, 37);
             this.subValue6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue6.Name = "subValue6";
             this.subValue6.Size = new System.Drawing.Size(135, 23);
@@ -374,7 +374,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label30.Location = new System.Drawing.Point(7, 20);
+            this.label30.Location = new System.Drawing.Point(7, 65);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(44, 15);
@@ -386,7 +386,7 @@
             this.subProcess6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess6.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess6.Location = new System.Drawing.Point(8, 37);
+            this.subProcess6.Location = new System.Drawing.Point(8, 82);
             this.subProcess6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess6.Name = "subProcess6";
             this.subProcess6.Size = new System.Drawing.Size(100, 23);
@@ -464,7 +464,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label37.Location = new System.Drawing.Point(7, 65);
+            this.label37.Location = new System.Drawing.Point(7, 20);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(68, 15);
@@ -476,7 +476,7 @@
             this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label38.Location = new System.Drawing.Point(108, 42);
+            this.label38.Location = new System.Drawing.Point(108, 87);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(32, 15);
@@ -488,7 +488,7 @@
             this.subValue8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue8.Location = new System.Drawing.Point(8, 82);
+            this.subValue8.Location = new System.Drawing.Point(8, 37);
             this.subValue8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue8.Name = "subValue8";
             this.subValue8.Size = new System.Drawing.Size(135, 23);
@@ -498,7 +498,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label39.Location = new System.Drawing.Point(7, 20);
+            this.label39.Location = new System.Drawing.Point(7, 65);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(44, 15);
@@ -510,7 +510,7 @@
             this.subProcess8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess8.Location = new System.Drawing.Point(8, 37);
+            this.subProcess8.Location = new System.Drawing.Point(8, 82);
             this.subProcess8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess8.Name = "subProcess8";
             this.subProcess8.Size = new System.Drawing.Size(100, 23);
@@ -588,7 +588,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label23.Location = new System.Drawing.Point(7, 65);
+            this.label23.Location = new System.Drawing.Point(7, 20);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(68, 15);
@@ -600,7 +600,7 @@
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label25.Location = new System.Drawing.Point(108, 42);
+            this.label25.Location = new System.Drawing.Point(108, 87);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(32, 15);
@@ -612,7 +612,7 @@
             this.subValue5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue5.Location = new System.Drawing.Point(8, 82);
+            this.subValue5.Location = new System.Drawing.Point(8, 37);
             this.subValue5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue5.Name = "subValue5";
             this.subValue5.Size = new System.Drawing.Size(135, 23);
@@ -622,7 +622,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label26.Location = new System.Drawing.Point(7, 20);
+            this.label26.Location = new System.Drawing.Point(7, 65);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(44, 15);
@@ -634,7 +634,7 @@
             this.subProcess5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess5.Location = new System.Drawing.Point(8, 37);
+            this.subProcess5.Location = new System.Drawing.Point(8, 82);
             this.subProcess5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess5.Name = "subProcess5";
             this.subProcess5.Size = new System.Drawing.Size(100, 23);
@@ -712,7 +712,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label11.Location = new System.Drawing.Point(7, 65);
+            this.label11.Location = new System.Drawing.Point(7, 20);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 15);
@@ -724,7 +724,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label12.Location = new System.Drawing.Point(108, 42);
+            this.label12.Location = new System.Drawing.Point(108, 87);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(32, 15);
@@ -736,7 +736,7 @@
             this.subValue3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue3.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue3.Location = new System.Drawing.Point(8, 82);
+            this.subValue3.Location = new System.Drawing.Point(8, 37);
             this.subValue3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue3.Name = "subValue3";
             this.subValue3.Size = new System.Drawing.Size(135, 23);
@@ -746,7 +746,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label13.Location = new System.Drawing.Point(7, 20);
+            this.label13.Location = new System.Drawing.Point(7, 65);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 15);
@@ -758,7 +758,7 @@
             this.subProcess3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess3.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess3.Location = new System.Drawing.Point(8, 37);
+            this.subProcess3.Location = new System.Drawing.Point(8, 82);
             this.subProcess3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess3.Name = "subProcess3";
             this.subProcess3.Size = new System.Drawing.Size(100, 23);
@@ -836,7 +836,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label7.Location = new System.Drawing.Point(7, 65);
+            this.label7.Location = new System.Drawing.Point(7, 20);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 15);
@@ -848,7 +848,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label8.Location = new System.Drawing.Point(108, 42);
+            this.label8.Location = new System.Drawing.Point(108, 87);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 15);
@@ -860,7 +860,7 @@
             this.subValue2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue2.Location = new System.Drawing.Point(8, 82);
+            this.subValue2.Location = new System.Drawing.Point(8, 37);
             this.subValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue2.Name = "subValue2";
             this.subValue2.Size = new System.Drawing.Size(135, 23);
@@ -870,7 +870,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label9.Location = new System.Drawing.Point(7, 20);
+            this.label9.Location = new System.Drawing.Point(7, 65);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 15);
@@ -882,7 +882,7 @@
             this.subProcess2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess2.Location = new System.Drawing.Point(8, 37);
+            this.subProcess2.Location = new System.Drawing.Point(8, 82);
             this.subProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess2.Name = "subProcess2";
             this.subProcess2.Size = new System.Drawing.Size(100, 23);
@@ -960,7 +960,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label32.Location = new System.Drawing.Point(7, 65);
+            this.label32.Location = new System.Drawing.Point(7, 20);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(68, 15);
@@ -972,7 +972,7 @@
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label33.Location = new System.Drawing.Point(108, 42);
+            this.label33.Location = new System.Drawing.Point(108, 87);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(32, 15);
@@ -984,7 +984,7 @@
             this.subValue7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue7.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue7.Location = new System.Drawing.Point(8, 82);
+            this.subValue7.Location = new System.Drawing.Point(8, 37);
             this.subValue7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue7.Name = "subValue7";
             this.subValue7.Size = new System.Drawing.Size(135, 23);
@@ -994,7 +994,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label34.Location = new System.Drawing.Point(7, 20);
+            this.label34.Location = new System.Drawing.Point(7, 65);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(44, 15);
@@ -1006,7 +1006,7 @@
             this.subProcess7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess7.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess7.Location = new System.Drawing.Point(8, 37);
+            this.subProcess7.Location = new System.Drawing.Point(8, 82);
             this.subProcess7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess7.Name = "subProcess7";
             this.subProcess7.Size = new System.Drawing.Size(100, 23);
@@ -1061,7 +1061,7 @@
             this.mainGroup2.Controls.Add(this.label6);
             this.mainGroup2.Controls.Add(this.mainKey2);
             this.mainGroup2.Controls.Add(this.mainKeyChange2);
-            this.mainGroup2.Location = new System.Drawing.Point(274, 11);
+            this.mainGroup2.Location = new System.Drawing.Point(274, 10);
             this.mainGroup2.Margin = new System.Windows.Forms.Padding(2);
             this.mainGroup2.Name = "mainGroup2";
             this.mainGroup2.Padding = new System.Windows.Forms.Padding(2);
@@ -1074,7 +1074,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label3.Location = new System.Drawing.Point(7, 65);
+            this.label3.Location = new System.Drawing.Point(7, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 15);
@@ -1086,7 +1086,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label4.Location = new System.Drawing.Point(108, 42);
+            this.label4.Location = new System.Drawing.Point(108, 87);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 15);
@@ -1098,7 +1098,7 @@
             this.mainValue2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainValue2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainValue2.Location = new System.Drawing.Point(8, 82);
+            this.mainValue2.Location = new System.Drawing.Point(8, 37);
             this.mainValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue2.Name = "mainValue2";
             this.mainValue2.Size = new System.Drawing.Size(135, 23);
@@ -1108,7 +1108,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label5.Location = new System.Drawing.Point(7, 20);
+            this.label5.Location = new System.Drawing.Point(7, 65);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 15);
@@ -1120,7 +1120,7 @@
             this.mainProcess2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainProcess2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainProcess2.Location = new System.Drawing.Point(8, 37);
+            this.mainProcess2.Location = new System.Drawing.Point(8, 82);
             this.mainProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainProcess2.Name = "mainProcess2";
             this.mainProcess2.Size = new System.Drawing.Size(100, 23);
@@ -1198,7 +1198,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label15.Location = new System.Drawing.Point(7, 65);
+            this.label15.Location = new System.Drawing.Point(7, 20);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(68, 15);
@@ -1210,7 +1210,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label16.Location = new System.Drawing.Point(108, 42);
+            this.label16.Location = new System.Drawing.Point(108, 87);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(32, 15);
@@ -1222,7 +1222,7 @@
             this.subValue4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue4.Location = new System.Drawing.Point(8, 82);
+            this.subValue4.Location = new System.Drawing.Point(8, 37);
             this.subValue4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue4.Name = "subValue4";
             this.subValue4.Size = new System.Drawing.Size(135, 23);
@@ -1232,7 +1232,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label17.Location = new System.Drawing.Point(7, 20);
+            this.label17.Location = new System.Drawing.Point(7, 65);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(44, 15);
@@ -1244,7 +1244,7 @@
             this.subProcess4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess4.Location = new System.Drawing.Point(8, 37);
+            this.subProcess4.Location = new System.Drawing.Point(8, 82);
             this.subProcess4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess4.Name = "subProcess4";
             this.subProcess4.Size = new System.Drawing.Size(100, 23);
@@ -1299,7 +1299,7 @@
             this.mainGroup1.Controls.Add(this.label22);
             this.mainGroup1.Controls.Add(this.mainKey1);
             this.mainGroup1.Controls.Add(this.mainKeyChange1);
-            this.mainGroup1.Location = new System.Drawing.Point(99, 11);
+            this.mainGroup1.Location = new System.Drawing.Point(99, 10);
             this.mainGroup1.Margin = new System.Windows.Forms.Padding(2);
             this.mainGroup1.Name = "mainGroup1";
             this.mainGroup1.Padding = new System.Windows.Forms.Padding(2);
@@ -1312,7 +1312,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label19.Location = new System.Drawing.Point(7, 65);
+            this.label19.Location = new System.Drawing.Point(7, 20);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(68, 15);
@@ -1324,7 +1324,7 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label20.Location = new System.Drawing.Point(108, 42);
+            this.label20.Location = new System.Drawing.Point(108, 87);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(32, 15);
@@ -1336,7 +1336,7 @@
             this.mainValue1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainValue1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainValue1.Location = new System.Drawing.Point(8, 82);
+            this.mainValue1.Location = new System.Drawing.Point(8, 37);
             this.mainValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue1.Name = "mainValue1";
             this.mainValue1.Size = new System.Drawing.Size(135, 23);
@@ -1346,7 +1346,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label21.Location = new System.Drawing.Point(7, 20);
+            this.label21.Location = new System.Drawing.Point(7, 65);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 15);
@@ -1358,7 +1358,7 @@
             this.mainProcess1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainProcess1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainProcess1.Location = new System.Drawing.Point(8, 37);
+            this.mainProcess1.Location = new System.Drawing.Point(8, 82);
             this.mainProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainProcess1.Name = "mainProcess1";
             this.mainProcess1.Size = new System.Drawing.Size(100, 23);
@@ -1436,7 +1436,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label1.Location = new System.Drawing.Point(7, 65);
+            this.label1.Location = new System.Drawing.Point(7, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 15);
@@ -1448,7 +1448,7 @@
             this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label36.Location = new System.Drawing.Point(108, 42);
+            this.label36.Location = new System.Drawing.Point(108, 87);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(32, 15);
@@ -1460,7 +1460,7 @@
             this.subValue1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue1.Location = new System.Drawing.Point(8, 82);
+            this.subValue1.Location = new System.Drawing.Point(8, 37);
             this.subValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue1.Name = "subValue1";
             this.subValue1.Size = new System.Drawing.Size(135, 23);
@@ -1470,7 +1470,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label24.Location = new System.Drawing.Point(7, 20);
+            this.label24.Location = new System.Drawing.Point(7, 65);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(44, 15);
@@ -1482,7 +1482,7 @@
             this.subProcess1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess1.Location = new System.Drawing.Point(8, 37);
+            this.subProcess1.Location = new System.Drawing.Point(8, 82);
             this.subProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess1.Name = "subProcess1";
             this.subProcess1.Size = new System.Drawing.Size(100, 23);
