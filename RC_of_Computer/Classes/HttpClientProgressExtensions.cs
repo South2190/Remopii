@@ -13,27 +13,23 @@ namespace RC_of_Computer.Classes
         {
             try
             {
-                using (HttpResponseMessage response = await client.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead))
+                using HttpResponseMessage response = await client.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
+                if (!response.IsSuccessStatusCode)
                 {
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        MessageBox.Show("サーバーへのアクセスに失敗しました。\nHTTPステータスコード: " + (int)response.StatusCode + " " + response.StatusCode, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    long? contentLength = response.Content.Headers.ContentLength;
-                    using (Stream download = await response.Content.ReadAsStreamAsync())
-                    {
-                        // no progress... no contentLength... very sad
-                        if (progress is null || !contentLength.HasValue)
-                        {
-                            await download.CopyToAsync(destination);
-                            return;
-                        }
-                        // Such progress and contentLength much reporting Wow!
-                        Progress<long> progressWrapper = new(totalBytes => progress.Report(GetProgressPercentage(totalBytes, contentLength.Value)));
-                        await download.CopyToAsync(destination, 81920, progressWrapper, cancellationToken);
-                    }
+                    MessageBox.Show("サーバーへのアクセスに失敗しました。\nHTTPステータスコード: " + (int)response.StatusCode + " " + response.StatusCode, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                long? contentLength = response.Content.Headers.ContentLength;
+                using Stream download = await response.Content.ReadAsStreamAsync();
+                // no progress... no contentLength... very sad
+                if (progress is null || !contentLength.HasValue)
+                {
+                    await download.CopyToAsync(destination);
+                    return;
+                }
+                // Such progress and contentLength much reporting Wow!
+                Progress<long> progressWrapper = new(totalBytes => progress.Report(GetProgressPercentage(totalBytes, contentLength.Value)));
+                await download.CopyToAsync(destination, 81920, progressWrapper, cancellationToken);
             }
             catch (HttpRequestException ex)
             {
@@ -44,7 +40,7 @@ namespace RC_of_Computer.Classes
             float GetProgressPercentage(float totalBytes, float currentBytes) => (totalBytes / currentBytes) * 100f;
         }
 
-        static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress = null, CancellationToken cancellationToken = default)
+        private static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress = null, CancellationToken cancellationToken = default)
         {
             if (bufferSize < 0)
                 throw new ArgumentOutOfRangeException(nameof(bufferSize));
