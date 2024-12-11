@@ -171,9 +171,9 @@
             this.AppVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.AppVersion.Location = new System.Drawing.Point(61, 262);
             this.AppVersion.Name = "AppVersion";
-            this.AppVersion.Size = new System.Drawing.Size(36, 15);
+            this.AppVersion.Size = new System.Drawing.Size(39, 15);
             this.AppVersion.TabIndex = 63;
-            this.AppVersion.Text = "1.0.0";
+            this.AppVersion.Text = "X.X.X";
             // 
             // MainWindow
             // 

@@ -368,8 +368,8 @@ namespace RC_of_Computer
                 for (int i = 0; i < 11; i++)
                 {
                     string sendKeyArg = buttonList[i][2];
-                    // 入力するキーの指定がされていないボタンは無視
-                    if (sendKeyArg == string.Empty) { continue; }
+                    // 入力するキーの指定がされていないボタンと無効にされているボタンは無視
+                    if (sendKeyArg == string.Empty || buttonList[i][1] == "False") { continue; }
 
                     string buttonName = i < 2 ? $"MainButton{i + 1}" : $"SubButton{i - 1}";
                     //string xmlFile = $"<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\RC_of_Computer\\{buttonName}</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1999-01-01T10:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>false</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions>\r\n    <Exec>\r\n      <Command>{seigyoExeFilePath}</Command>\r\n      <Arguments>-k \"{sendKeyArg}\"</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>";

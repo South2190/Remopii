@@ -103,9 +103,9 @@
             this.VersionInformation.Location = new System.Drawing.Point(245, 50);
             this.VersionInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VersionInformation.Name = "VersionInformation";
-            this.VersionInformation.Size = new System.Drawing.Size(46, 17);
+            this.VersionInformation.Size = new System.Drawing.Size(45, 17);
             this.VersionInformation.TabIndex = 5;
-            this.VersionInformation.Text = " 1.0.0";
+            this.VersionInformation.Text = "X.X.X";
             // 
             // Names
             // 
