@@ -75,6 +75,11 @@
 
         <style>
             /*ボタンのサイズ等の設定*/
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #000;
+                }
+            }
             body{
                 max-width: 480px;
                 margin: auto;
