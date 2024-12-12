@@ -18,7 +18,7 @@ namespace RC_of_Computer
         public ShowQRCode()
         {
             InitializeComponent();
-            GetNetworkIF();
+            if (!GetNetworkIF()) { Close(); }
             networkIFComboBox.SelectedIndex = 0;
         }
 
@@ -51,7 +51,7 @@ namespace RC_of_Computer
         /// <summary>
         /// 現在稼働中のネットワークI/Fを取得します
         /// </summary>
-        private void GetNetworkIF()
+        private bool GetNetworkIF()
         {
             networkIFComboBox.Items.Clear();
             networkInterfaces = new();
@@ -83,6 +83,16 @@ namespace RC_of_Computer
                     GenQRCodes.Add(GenerateQRcode(GenURL));
                 }
             }
+            if (networkInterfaces.Count <= 0)
+            {
+                MessageBox.Show("有効なネットワークが検出できませんでした。\nリモコンとして使用する端末と同じネットワークに接続されているかを確認してください。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (networkInterfaces.Count >= 2)
+            {
+                MessageBox.Show("有効なネットワークが複数検出されました。\n\"接続先の選択\"にてリモコンとして使用する端末と同じネットワークに接続されているかを確認してください。", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            return true;
         }
 
         private void networkIFComboBox_SelectedIndexChanged(object sender, EventArgs e)
