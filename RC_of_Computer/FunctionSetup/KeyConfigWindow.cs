@@ -479,5 +479,31 @@ namespace RC_of_Computer
                 SaveSettingsToCSV(exportFileFullPath);
             }
         }
+
+        private void hiddenCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked == false)
+            {
+                foreach (TextBox control in ((CheckBox)sender).Parent.Controls.OfType<TextBox>())
+                {
+                    control.Enabled = false;
+                }
+                foreach (Button control in ((CheckBox)sender).Parent.Controls.OfType<Button>())
+                {
+                    control.Enabled = false;
+                }
+            }
+            else
+            {
+                foreach (TextBox control in ((CheckBox)sender).Parent.Controls.OfType<TextBox>())
+                {
+                    control.Enabled = true;
+                }
+                foreach (Button control in ((CheckBox)sender).Parent.Controls.OfType<Button>())
+                {
+                    control.Enabled = true;
+                }
+            }
+        }
     }
 }

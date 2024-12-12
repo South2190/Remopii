@@ -117,7 +117,7 @@
             this.Names.Name = "Names";
             this.Names.Size = new System.Drawing.Size(77, 102);
             this.Names.TabIndex = 6;
-            this.Names.Text = "石崎 海翔\r\n大津留 泰治\r\n河上 翼\r\n鶴見 和也\r\n中谷 樹音\r\n南 慧";
+            this.Names.Text = "石﨑 海翔\r\n大津留 泰治\r\n河上 翼\r\n靏見 和也\r\n中谷 樹音\r\n南 慧";
             // 
             // Github
             // 

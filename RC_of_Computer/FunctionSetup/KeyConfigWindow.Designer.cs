@@ -211,6 +211,7 @@
             this.subHidden9.TabIndex = 1;
             this.subHidden9.Text = "サブボタン9";
             this.subHidden9.UseVisualStyleBackColor = true;
+            this.subHidden9.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label41
             // 
@@ -239,6 +240,7 @@
             // 
             this.subValue9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue9.Enabled = false;
             this.subValue9.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue9.Location = new System.Drawing.Point(8, 37);
             this.subValue9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -261,13 +263,13 @@
             // 
             this.subProcess9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess9.Enabled = false;
             this.subProcess9.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess9.Location = new System.Drawing.Point(8, 82);
             this.subProcess9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess9.Name = "subProcess9";
             this.subProcess9.Size = new System.Drawing.Size(100, 23);
             this.subProcess9.TabIndex = 3;
-            this.subProcess9.TabStop = false;
             // 
             // label44
             // 
@@ -284,6 +286,7 @@
             // 
             this.subKey9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey9.Enabled = false;
             this.subKey9.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey9.Location = new System.Drawing.Point(8, 127);
             this.subKey9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -296,6 +299,7 @@
             // subKeyChange9
             // 
             this.subKeyChange9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange9.Enabled = false;
             this.subKeyChange9.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange9.Name = "subKeyChange9";
@@ -335,6 +339,7 @@
             this.subHidden6.TabIndex = 1;
             this.subHidden6.Text = "サブボタン6";
             this.subHidden6.UseVisualStyleBackColor = true;
+            this.subHidden6.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label28
             // 
@@ -363,6 +368,7 @@
             // 
             this.subValue6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue6.Enabled = false;
             this.subValue6.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue6.Location = new System.Drawing.Point(8, 37);
             this.subValue6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -385,13 +391,13 @@
             // 
             this.subProcess6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess6.Enabled = false;
             this.subProcess6.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess6.Location = new System.Drawing.Point(8, 82);
             this.subProcess6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess6.Name = "subProcess6";
             this.subProcess6.Size = new System.Drawing.Size(100, 23);
             this.subProcess6.TabIndex = 3;
-            this.subProcess6.TabStop = false;
             // 
             // label31
             // 
@@ -408,6 +414,7 @@
             // 
             this.subKey6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey6.Enabled = false;
             this.subKey6.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey6.Location = new System.Drawing.Point(8, 127);
             this.subKey6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -420,6 +427,7 @@
             // subKeyChange6
             // 
             this.subKeyChange6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange6.Enabled = false;
             this.subKeyChange6.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange6.Name = "subKeyChange6";
@@ -459,6 +467,7 @@
             this.subHidden8.TabIndex = 1;
             this.subHidden8.Text = "サブボタン8";
             this.subHidden8.UseVisualStyleBackColor = true;
+            this.subHidden8.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label37
             // 
@@ -487,6 +496,7 @@
             // 
             this.subValue8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue8.Enabled = false;
             this.subValue8.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue8.Location = new System.Drawing.Point(8, 37);
             this.subValue8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -509,13 +519,13 @@
             // 
             this.subProcess8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess8.Enabled = false;
             this.subProcess8.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess8.Location = new System.Drawing.Point(8, 82);
             this.subProcess8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess8.Name = "subProcess8";
             this.subProcess8.Size = new System.Drawing.Size(100, 23);
             this.subProcess8.TabIndex = 3;
-            this.subProcess8.TabStop = false;
             // 
             // label40
             // 
@@ -532,6 +542,7 @@
             // 
             this.subKey8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey8.Enabled = false;
             this.subKey8.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey8.Location = new System.Drawing.Point(8, 127);
             this.subKey8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -544,6 +555,7 @@
             // subKeyChange8
             // 
             this.subKeyChange8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange8.Enabled = false;
             this.subKeyChange8.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange8.Name = "subKeyChange8";
@@ -583,6 +595,7 @@
             this.subHidden5.TabIndex = 1;
             this.subHidden5.Text = "サブボタン5";
             this.subHidden5.UseVisualStyleBackColor = true;
+            this.subHidden5.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label23
             // 
@@ -611,6 +624,7 @@
             // 
             this.subValue5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue5.Enabled = false;
             this.subValue5.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue5.Location = new System.Drawing.Point(8, 37);
             this.subValue5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -633,13 +647,13 @@
             // 
             this.subProcess5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess5.Enabled = false;
             this.subProcess5.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess5.Location = new System.Drawing.Point(8, 82);
             this.subProcess5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess5.Name = "subProcess5";
             this.subProcess5.Size = new System.Drawing.Size(100, 23);
             this.subProcess5.TabIndex = 3;
-            this.subProcess5.TabStop = false;
             // 
             // label27
             // 
@@ -656,6 +670,7 @@
             // 
             this.subKey5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey5.Enabled = false;
             this.subKey5.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey5.Location = new System.Drawing.Point(8, 127);
             this.subKey5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -668,6 +683,7 @@
             // subKeyChange5
             // 
             this.subKeyChange5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange5.Enabled = false;
             this.subKeyChange5.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange5.Name = "subKeyChange5";
@@ -707,6 +723,7 @@
             this.subHidden3.TabIndex = 1;
             this.subHidden3.Text = "サブボタン3";
             this.subHidden3.UseVisualStyleBackColor = true;
+            this.subHidden3.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label11
             // 
@@ -735,6 +752,7 @@
             // 
             this.subValue3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue3.Enabled = false;
             this.subValue3.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue3.Location = new System.Drawing.Point(8, 37);
             this.subValue3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -757,13 +775,13 @@
             // 
             this.subProcess3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess3.Enabled = false;
             this.subProcess3.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess3.Location = new System.Drawing.Point(8, 82);
             this.subProcess3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess3.Name = "subProcess3";
             this.subProcess3.Size = new System.Drawing.Size(100, 23);
             this.subProcess3.TabIndex = 3;
-            this.subProcess3.TabStop = false;
             // 
             // label14
             // 
@@ -780,6 +798,7 @@
             // 
             this.subKey3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey3.Enabled = false;
             this.subKey3.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey3.Location = new System.Drawing.Point(8, 127);
             this.subKey3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -792,6 +811,7 @@
             // subKeyChange3
             // 
             this.subKeyChange3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange3.Enabled = false;
             this.subKeyChange3.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange3.Name = "subKeyChange3";
@@ -831,6 +851,7 @@
             this.subHidden2.TabIndex = 1;
             this.subHidden2.Text = "サブボタン2";
             this.subHidden2.UseVisualStyleBackColor = true;
+            this.subHidden2.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label7
             // 
@@ -859,6 +880,7 @@
             // 
             this.subValue2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue2.Enabled = false;
             this.subValue2.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue2.Location = new System.Drawing.Point(8, 37);
             this.subValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -881,13 +903,13 @@
             // 
             this.subProcess2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess2.Enabled = false;
             this.subProcess2.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess2.Location = new System.Drawing.Point(8, 82);
             this.subProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess2.Name = "subProcess2";
             this.subProcess2.Size = new System.Drawing.Size(100, 23);
             this.subProcess2.TabIndex = 3;
-            this.subProcess2.TabStop = false;
             // 
             // label10
             // 
@@ -904,6 +926,7 @@
             // 
             this.subKey2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey2.Enabled = false;
             this.subKey2.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey2.Location = new System.Drawing.Point(8, 127);
             this.subKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -916,6 +939,7 @@
             // subKeyChange2
             // 
             this.subKeyChange2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange2.Enabled = false;
             this.subKeyChange2.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange2.Name = "subKeyChange2";
@@ -955,6 +979,7 @@
             this.subHidden7.TabIndex = 1;
             this.subHidden7.Text = "サブボタン7";
             this.subHidden7.UseVisualStyleBackColor = true;
+            this.subHidden7.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label32
             // 
@@ -983,6 +1008,7 @@
             // 
             this.subValue7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue7.Enabled = false;
             this.subValue7.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue7.Location = new System.Drawing.Point(8, 37);
             this.subValue7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1005,13 +1031,13 @@
             // 
             this.subProcess7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess7.Enabled = false;
             this.subProcess7.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess7.Location = new System.Drawing.Point(8, 82);
             this.subProcess7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess7.Name = "subProcess7";
             this.subProcess7.Size = new System.Drawing.Size(100, 23);
             this.subProcess7.TabIndex = 3;
-            this.subProcess7.TabStop = false;
             // 
             // label35
             // 
@@ -1028,6 +1054,7 @@
             // 
             this.subKey7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey7.Enabled = false;
             this.subKey7.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey7.Location = new System.Drawing.Point(8, 127);
             this.subKey7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1040,6 +1067,7 @@
             // subKeyChange7
             // 
             this.subKeyChange7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange7.Enabled = false;
             this.subKeyChange7.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange7.Name = "subKeyChange7";
@@ -1125,7 +1153,6 @@
             this.mainProcess2.Name = "mainProcess2";
             this.mainProcess2.Size = new System.Drawing.Size(100, 23);
             this.mainProcess2.TabIndex = 2;
-            this.mainProcess2.TabStop = false;
             // 
             // label6
             // 
@@ -1193,6 +1220,7 @@
             this.subHidden4.TabIndex = 1;
             this.subHidden4.Text = "サブボタン4";
             this.subHidden4.UseVisualStyleBackColor = true;
+            this.subHidden4.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label15
             // 
@@ -1221,6 +1249,7 @@
             // 
             this.subValue4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue4.Enabled = false;
             this.subValue4.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue4.Location = new System.Drawing.Point(8, 37);
             this.subValue4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1243,13 +1272,13 @@
             // 
             this.subProcess4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess4.Enabled = false;
             this.subProcess4.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess4.Location = new System.Drawing.Point(8, 82);
             this.subProcess4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess4.Name = "subProcess4";
             this.subProcess4.Size = new System.Drawing.Size(100, 23);
             this.subProcess4.TabIndex = 3;
-            this.subProcess4.TabStop = false;
             // 
             // label18
             // 
@@ -1266,6 +1295,7 @@
             // 
             this.subKey4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey4.Enabled = false;
             this.subKey4.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey4.Location = new System.Drawing.Point(8, 127);
             this.subKey4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1278,6 +1308,7 @@
             // subKeyChange4
             // 
             this.subKeyChange4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange4.Enabled = false;
             this.subKeyChange4.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange4.Name = "subKeyChange4";
@@ -1363,7 +1394,6 @@
             this.mainProcess1.Name = "mainProcess1";
             this.mainProcess1.Size = new System.Drawing.Size(100, 23);
             this.mainProcess1.TabIndex = 2;
-            this.mainProcess1.TabStop = false;
             // 
             // label22
             // 
@@ -1431,6 +1461,7 @@
             this.subHidden1.TabIndex = 1;
             this.subHidden1.Text = "サブボタン1";
             this.subHidden1.UseVisualStyleBackColor = true;
+            this.subHidden1.CheckedChanged += new System.EventHandler(this.hiddenCheckBox_CheckedChanged);
             // 
             // label1
             // 
@@ -1459,6 +1490,7 @@
             // 
             this.subValue1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subValue1.Enabled = false;
             this.subValue1.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subValue1.Location = new System.Drawing.Point(8, 37);
             this.subValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1481,13 +1513,13 @@
             // 
             this.subProcess1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcess1.Enabled = false;
             this.subProcess1.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subProcess1.Location = new System.Drawing.Point(8, 82);
             this.subProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess1.Name = "subProcess1";
             this.subProcess1.Size = new System.Drawing.Size(100, 23);
             this.subProcess1.TabIndex = 3;
-            this.subProcess1.TabStop = false;
             // 
             // label2
             // 
@@ -1504,6 +1536,7 @@
             // 
             this.subKey1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKey1.Enabled = false;
             this.subKey1.Font = new System.Drawing.Font("Meiryo UI", 9F);
             this.subKey1.Location = new System.Drawing.Point(8, 127);
             this.subKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1516,6 +1549,7 @@
             // subKeyChange1
             // 
             this.subKeyChange1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subKeyChange1.Enabled = false;
             this.subKeyChange1.Location = new System.Drawing.Point(102, 126);
             this.subKeyChange1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange1.Name = "subKeyChange1";
