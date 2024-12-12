@@ -14,7 +14,7 @@ namespace seigyo
         {
             if (args.Length <= 0)
             {
-                Console.WriteLine("引数が正しく指定されていません");
+                //Console.WriteLine("引数が正しく指定されていません");
                 Environment.ExitCode = -1;   //終了コード
             }
             else
@@ -35,7 +35,7 @@ namespace seigyo
                             }
                             catch
                             {
-                                Console.WriteLine("エラーが発生しました");
+                                //Console.WriteLine("エラーが発生しました");
                                 Environment.ExitCode = -2;   //終了コード
                             }
                             break;
@@ -47,12 +47,12 @@ namespace seigyo
                             }
                             catch
                             {
-                                Console.WriteLine("エラーが発生しました");
+                                //Console.WriteLine("エラーが発生しました");
                                 Environment.ExitCode = -2;   //終了コード
                             }
                             break;
                         default:
-                            Console.WriteLine("引数が正しく指定されていません");
+                            //Console.WriteLine("引数が正しく指定されていません");
                             Environment.ExitCode = -1;   //終了コード
                             break;
                     }
