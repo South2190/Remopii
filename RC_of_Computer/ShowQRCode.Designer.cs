@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.networkIFDescription = new System.Windows.Forms.Label();
+            this.reloadNetwarkIF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.QRPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +119,16 @@
             this.networkIFDescription.TabIndex = 8;
             this.networkIFDescription.Text = "ネットワークの説明";
             // 
+            // reloadNetwarkIF
+            // 
+            this.reloadNetwarkIF.Location = new System.Drawing.Point(430, 6);
+            this.reloadNetwarkIF.Name = "reloadNetwarkIF";
+            this.reloadNetwarkIF.Size = new System.Drawing.Size(88, 25);
+            this.reloadNetwarkIF.TabIndex = 9;
+            this.reloadNetwarkIF.Text = "再読み込み";
+            this.reloadNetwarkIF.UseVisualStyleBackColor = true;
+            this.reloadNetwarkIF.Click += new System.EventHandler(this.reloadNetwarkIF_Click);
+            // 
             // ShowQRCode
             // 
             this.AcceptButton = this.OKButton;
@@ -125,6 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.OKButton;
             this.ClientSize = new System.Drawing.Size(664, 269);
+            this.Controls.Add(this.reloadNetwarkIF);
             this.Controls.Add(this.networkIFDescription);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label networkIFDescription;
+        private System.Windows.Forms.Button reloadNetwarkIF;
     }
 }

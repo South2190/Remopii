@@ -91,5 +91,10 @@ namespace RC_of_Computer
             URLTextBox.Text = ipAddresses[networkIFComboBox.SelectedIndex];
             networkIFDescription.Text = networkInterfaces[networkIFComboBox.SelectedIndex].Description;
         }
+
+        private void reloadNetwarkIF_Click(object sender, EventArgs e)
+        {
+            GetNetworkIF();
+        }
     }
 }
