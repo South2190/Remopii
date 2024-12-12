@@ -199,7 +199,7 @@
             this.subGroup9.Name = "subGroup9";
             this.subGroup9.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup9.Size = new System.Drawing.Size(150, 160);
-            this.subGroup9.TabIndex = 2;
+            this.subGroup9.TabIndex = 11;
             this.subGroup9.TabStop = false;
             // 
             // subHidden9
@@ -208,7 +208,7 @@
             this.subHidden9.Location = new System.Drawing.Point(8, 0);
             this.subHidden9.Name = "subHidden9";
             this.subHidden9.Size = new System.Drawing.Size(79, 19);
-            this.subHidden9.TabIndex = 0;
+            this.subHidden9.TabIndex = 1;
             this.subHidden9.Text = "サブボタン9";
             this.subHidden9.UseVisualStyleBackColor = true;
             // 
@@ -266,7 +266,7 @@
             this.subProcess9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess9.Name = "subProcess9";
             this.subProcess9.Size = new System.Drawing.Size(100, 23);
-            this.subProcess9.TabIndex = 4;
+            this.subProcess9.TabIndex = 3;
             this.subProcess9.TabStop = false;
             // 
             // label44
@@ -323,7 +323,7 @@
             this.subGroup6.Name = "subGroup6";
             this.subGroup6.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup6.Size = new System.Drawing.Size(150, 160);
-            this.subGroup6.TabIndex = 2;
+            this.subGroup6.TabIndex = 8;
             this.subGroup6.TabStop = false;
             // 
             // subHidden6
@@ -332,7 +332,7 @@
             this.subHidden6.Location = new System.Drawing.Point(8, 0);
             this.subHidden6.Name = "subHidden6";
             this.subHidden6.Size = new System.Drawing.Size(79, 19);
-            this.subHidden6.TabIndex = 0;
+            this.subHidden6.TabIndex = 1;
             this.subHidden6.Text = "サブボタン6";
             this.subHidden6.UseVisualStyleBackColor = true;
             // 
@@ -390,7 +390,7 @@
             this.subProcess6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess6.Name = "subProcess6";
             this.subProcess6.Size = new System.Drawing.Size(100, 23);
-            this.subProcess6.TabIndex = 4;
+            this.subProcess6.TabIndex = 3;
             this.subProcess6.TabStop = false;
             // 
             // label31
@@ -447,7 +447,7 @@
             this.subGroup8.Name = "subGroup8";
             this.subGroup8.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup8.Size = new System.Drawing.Size(150, 160);
-            this.subGroup8.TabIndex = 2;
+            this.subGroup8.TabIndex = 10;
             this.subGroup8.TabStop = false;
             // 
             // subHidden8
@@ -456,7 +456,7 @@
             this.subHidden8.Location = new System.Drawing.Point(8, 0);
             this.subHidden8.Name = "subHidden8";
             this.subHidden8.Size = new System.Drawing.Size(79, 19);
-            this.subHidden8.TabIndex = 0;
+            this.subHidden8.TabIndex = 1;
             this.subHidden8.Text = "サブボタン8";
             this.subHidden8.UseVisualStyleBackColor = true;
             // 
@@ -514,7 +514,7 @@
             this.subProcess8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess8.Name = "subProcess8";
             this.subProcess8.Size = new System.Drawing.Size(100, 23);
-            this.subProcess8.TabIndex = 4;
+            this.subProcess8.TabIndex = 3;
             this.subProcess8.TabStop = false;
             // 
             // label40
@@ -571,7 +571,7 @@
             this.subGroup5.Name = "subGroup5";
             this.subGroup5.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup5.Size = new System.Drawing.Size(150, 160);
-            this.subGroup5.TabIndex = 2;
+            this.subGroup5.TabIndex = 7;
             this.subGroup5.TabStop = false;
             // 
             // subHidden5
@@ -580,7 +580,7 @@
             this.subHidden5.Location = new System.Drawing.Point(8, 0);
             this.subHidden5.Name = "subHidden5";
             this.subHidden5.Size = new System.Drawing.Size(79, 19);
-            this.subHidden5.TabIndex = 0;
+            this.subHidden5.TabIndex = 1;
             this.subHidden5.Text = "サブボタン5";
             this.subHidden5.UseVisualStyleBackColor = true;
             // 
@@ -638,7 +638,7 @@
             this.subProcess5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess5.Name = "subProcess5";
             this.subProcess5.Size = new System.Drawing.Size(100, 23);
-            this.subProcess5.TabIndex = 4;
+            this.subProcess5.TabIndex = 3;
             this.subProcess5.TabStop = false;
             // 
             // label27
@@ -695,7 +695,7 @@
             this.subGroup3.Name = "subGroup3";
             this.subGroup3.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup3.Size = new System.Drawing.Size(150, 160);
-            this.subGroup3.TabIndex = 2;
+            this.subGroup3.TabIndex = 5;
             this.subGroup3.TabStop = false;
             // 
             // subHidden3
@@ -704,7 +704,7 @@
             this.subHidden3.Location = new System.Drawing.Point(8, 0);
             this.subHidden3.Name = "subHidden3";
             this.subHidden3.Size = new System.Drawing.Size(79, 19);
-            this.subHidden3.TabIndex = 0;
+            this.subHidden3.TabIndex = 1;
             this.subHidden3.Text = "サブボタン3";
             this.subHidden3.UseVisualStyleBackColor = true;
             // 
@@ -762,7 +762,7 @@
             this.subProcess3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess3.Name = "subProcess3";
             this.subProcess3.Size = new System.Drawing.Size(100, 23);
-            this.subProcess3.TabIndex = 4;
+            this.subProcess3.TabIndex = 3;
             this.subProcess3.TabStop = false;
             // 
             // label14
@@ -819,7 +819,7 @@
             this.subGroup2.Name = "subGroup2";
             this.subGroup2.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup2.Size = new System.Drawing.Size(150, 160);
-            this.subGroup2.TabIndex = 2;
+            this.subGroup2.TabIndex = 4;
             this.subGroup2.TabStop = false;
             // 
             // subHidden2
@@ -828,7 +828,7 @@
             this.subHidden2.Location = new System.Drawing.Point(8, 0);
             this.subHidden2.Name = "subHidden2";
             this.subHidden2.Size = new System.Drawing.Size(79, 19);
-            this.subHidden2.TabIndex = 0;
+            this.subHidden2.TabIndex = 1;
             this.subHidden2.Text = "サブボタン2";
             this.subHidden2.UseVisualStyleBackColor = true;
             // 
@@ -886,7 +886,7 @@
             this.subProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess2.Name = "subProcess2";
             this.subProcess2.Size = new System.Drawing.Size(100, 23);
-            this.subProcess2.TabIndex = 4;
+            this.subProcess2.TabIndex = 3;
             this.subProcess2.TabStop = false;
             // 
             // label10
@@ -943,7 +943,7 @@
             this.subGroup7.Name = "subGroup7";
             this.subGroup7.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup7.Size = new System.Drawing.Size(150, 160);
-            this.subGroup7.TabIndex = 2;
+            this.subGroup7.TabIndex = 9;
             this.subGroup7.TabStop = false;
             // 
             // subHidden7
@@ -952,7 +952,7 @@
             this.subHidden7.Location = new System.Drawing.Point(8, 0);
             this.subHidden7.Name = "subHidden7";
             this.subHidden7.Size = new System.Drawing.Size(79, 19);
-            this.subHidden7.TabIndex = 0;
+            this.subHidden7.TabIndex = 1;
             this.subHidden7.Text = "サブボタン7";
             this.subHidden7.UseVisualStyleBackColor = true;
             // 
@@ -1010,7 +1010,7 @@
             this.subProcess7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess7.Name = "subProcess7";
             this.subProcess7.Size = new System.Drawing.Size(100, 23);
-            this.subProcess7.TabIndex = 4;
+            this.subProcess7.TabIndex = 3;
             this.subProcess7.TabStop = false;
             // 
             // label35
@@ -1102,7 +1102,7 @@
             this.mainValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue2.Name = "mainValue2";
             this.mainValue2.Size = new System.Drawing.Size(135, 23);
-            this.mainValue2.TabIndex = 2;
+            this.mainValue2.TabIndex = 1;
             // 
             // label5
             // 
@@ -1124,7 +1124,7 @@
             this.mainProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainProcess2.Name = "mainProcess2";
             this.mainProcess2.Size = new System.Drawing.Size(100, 23);
-            this.mainProcess2.TabIndex = 4;
+            this.mainProcess2.TabIndex = 2;
             this.mainProcess2.TabStop = false;
             // 
             // label6
@@ -1148,7 +1148,7 @@
             this.mainKey2.Name = "mainKey2";
             this.mainKey2.ReadOnly = true;
             this.mainKey2.Size = new System.Drawing.Size(90, 23);
-            this.mainKey2.TabIndex = 4;
+            this.mainKey2.TabIndex = 3;
             this.mainKey2.TabStop = false;
             // 
             // mainKeyChange2
@@ -1158,7 +1158,7 @@
             this.mainKeyChange2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKeyChange2.Name = "mainKeyChange2";
             this.mainKeyChange2.Size = new System.Drawing.Size(40, 25);
-            this.mainKeyChange2.TabIndex = 5;
+            this.mainKeyChange2.TabIndex = 4;
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
             this.mainKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
@@ -1181,7 +1181,7 @@
             this.subGroup4.Name = "subGroup4";
             this.subGroup4.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup4.Size = new System.Drawing.Size(150, 160);
-            this.subGroup4.TabIndex = 2;
+            this.subGroup4.TabIndex = 6;
             this.subGroup4.TabStop = false;
             // 
             // subHidden4
@@ -1190,7 +1190,7 @@
             this.subHidden4.Location = new System.Drawing.Point(8, 0);
             this.subHidden4.Name = "subHidden4";
             this.subHidden4.Size = new System.Drawing.Size(79, 19);
-            this.subHidden4.TabIndex = 0;
+            this.subHidden4.TabIndex = 1;
             this.subHidden4.Text = "サブボタン4";
             this.subHidden4.UseVisualStyleBackColor = true;
             // 
@@ -1248,7 +1248,7 @@
             this.subProcess4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess4.Name = "subProcess4";
             this.subProcess4.Size = new System.Drawing.Size(100, 23);
-            this.subProcess4.TabIndex = 4;
+            this.subProcess4.TabIndex = 3;
             this.subProcess4.TabStop = false;
             // 
             // label18
@@ -1304,7 +1304,7 @@
             this.mainGroup1.Name = "mainGroup1";
             this.mainGroup1.Padding = new System.Windows.Forms.Padding(2);
             this.mainGroup1.Size = new System.Drawing.Size(150, 160);
-            this.mainGroup1.TabIndex = 2;
+            this.mainGroup1.TabIndex = 1;
             this.mainGroup1.TabStop = false;
             this.mainGroup1.Text = "メインボタン1";
             // 
@@ -1340,7 +1340,7 @@
             this.mainValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue1.Name = "mainValue1";
             this.mainValue1.Size = new System.Drawing.Size(135, 23);
-            this.mainValue1.TabIndex = 2;
+            this.mainValue1.TabIndex = 1;
             // 
             // label21
             // 
@@ -1362,7 +1362,7 @@
             this.mainProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainProcess1.Name = "mainProcess1";
             this.mainProcess1.Size = new System.Drawing.Size(100, 23);
-            this.mainProcess1.TabIndex = 4;
+            this.mainProcess1.TabIndex = 2;
             this.mainProcess1.TabStop = false;
             // 
             // label22
@@ -1386,7 +1386,7 @@
             this.mainKey1.Name = "mainKey1";
             this.mainKey1.ReadOnly = true;
             this.mainKey1.Size = new System.Drawing.Size(90, 23);
-            this.mainKey1.TabIndex = 4;
+            this.mainKey1.TabIndex = 3;
             this.mainKey1.TabStop = false;
             // 
             // mainKeyChange1
@@ -1396,7 +1396,7 @@
             this.mainKeyChange1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKeyChange1.Name = "mainKeyChange1";
             this.mainKeyChange1.Size = new System.Drawing.Size(40, 25);
-            this.mainKeyChange1.TabIndex = 5;
+            this.mainKeyChange1.TabIndex = 4;
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
             this.mainKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
@@ -1419,7 +1419,7 @@
             this.subGroup1.Name = "subGroup1";
             this.subGroup1.Padding = new System.Windows.Forms.Padding(2);
             this.subGroup1.Size = new System.Drawing.Size(150, 160);
-            this.subGroup1.TabIndex = 2;
+            this.subGroup1.TabIndex = 3;
             this.subGroup1.TabStop = false;
             // 
             // subHidden1
@@ -1428,7 +1428,7 @@
             this.subHidden1.Location = new System.Drawing.Point(8, 0);
             this.subHidden1.Name = "subHidden1";
             this.subHidden1.Size = new System.Drawing.Size(79, 19);
-            this.subHidden1.TabIndex = 0;
+            this.subHidden1.TabIndex = 1;
             this.subHidden1.Text = "サブボタン1";
             this.subHidden1.UseVisualStyleBackColor = true;
             // 
@@ -1486,7 +1486,7 @@
             this.subProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess1.Name = "subProcess1";
             this.subProcess1.Size = new System.Drawing.Size(100, 23);
-            this.subProcess1.TabIndex = 4;
+            this.subProcess1.TabIndex = 3;
             this.subProcess1.TabStop = false;
             // 
             // label2
@@ -1533,7 +1533,7 @@
             this.buttonApply.Location = new System.Drawing.Point(442, 405);
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(80, 25);
-            this.buttonApply.TabIndex = 3;
+            this.buttonApply.TabIndex = 14;
             this.buttonApply.Text = "適用";
             this.buttonApply.UseVisualStyleBackColor = true;
             this.buttonApply.Click += new System.EventHandler(this.Apply_Click);
@@ -1545,7 +1545,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(357, 405);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(80, 25);
-            this.buttonCancel.TabIndex = 2;
+            this.buttonCancel.TabIndex = 13;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
@@ -1555,7 +1555,7 @@
             this.buttonOk.Location = new System.Drawing.Point(272, 405);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(80, 25);
-            this.buttonOk.TabIndex = 1;
+            this.buttonOk.TabIndex = 12;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.OK_Click);
