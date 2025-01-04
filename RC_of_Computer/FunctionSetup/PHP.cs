@@ -14,12 +14,10 @@ namespace RC_of_Computer.FunctionSetup
             InitializeComponent();
 
             const string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
-            //const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
             Bitmap DirIcon = GetIcon.GetBitmapFromEXEDLL(SHELL32DLL, 3, false);
             PHPExeFileRef.Image = DirIcon;
             DocumentRootRef.Image = DirIcon;
-            //RunPHPSetup.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 73, false);
 
             LoadSettings();
         }
@@ -43,13 +41,9 @@ namespace RC_of_Computer.FunctionSetup
         /// </summary>
         private void PHPExeFileRef_Click(object sender, EventArgs e)
         {
-            using OpenFileDialog openFileDialog = new()
+            if (openExeFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Filter = "Exe files (*.exe)|*.exe|All files (*.*)|*.*"
-            };
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                PHPExeFilePath.Text = openFileDialog.FileName;
+                PHPExeFilePath.Text = openExeFileDialog.FileName;
             }
         }
 
@@ -59,11 +53,19 @@ namespace RC_of_Computer.FunctionSetup
         /// </summary>
         private void DocumentRootRef_Click(object sender, EventArgs e)
         {
-            using FolderBrowserDialog folderBrowserDialog = new();
-            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            if (docFolderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                DocumentRootPath.Text = folderBrowserDialog.SelectedPath;
+                DocumentRootPath.Text = docFolderBrowserDialog.SelectedPath;
             }
+        }
+
+        /// <summary>
+        /// "環境変数の値を使用する" チェックボックスのCheckedが切り替わった際の処理
+        /// </summary>
+        private void UsePATHValue_CheckedChanged(object sender, EventArgs e)
+        {
+            PHPExeFilePath.Enabled = !UsePATHValue.Checked;
+            PHPExeFileRef.Enabled = !UsePATHValue.Checked;
         }
 
         /// <summary>
@@ -172,20 +174,6 @@ namespace RC_of_Computer.FunctionSetup
 
             Properties.Settings.Default.Save();
             return true;
-        }
-
-        private void UsePATHValue_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UsePATHValue.Checked == true) 
-            {
-                PHPExeFilePath.Enabled = false;
-                PHPExeFileRef.Enabled = false;
-            }
-            else
-            {
-                PHPExeFilePath.Enabled = true;
-                PHPExeFileRef.Enabled = true;
-            }
         }
     }
 }

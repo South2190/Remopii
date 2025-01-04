@@ -146,6 +146,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.import = new System.Windows.Forms.ToolStripMenuItem();
             this.export = new System.Windows.Forms.ToolStripMenuItem();
+            this.openCsvFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveCsvFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panelRemocon.SuspendLayout();
             this.subGroup9.SuspendLayout();
             this.subGroup6.SuspendLayout();
@@ -308,8 +310,6 @@
             this.subKeyChange9.Text = "変更";
             this.subKeyChange9.UseVisualStyleBackColor = true;
             this.subKeyChange9.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange9.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup6
             // 
@@ -436,8 +436,6 @@
             this.subKeyChange6.Text = "変更";
             this.subKeyChange6.UseVisualStyleBackColor = true;
             this.subKeyChange6.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup8
             // 
@@ -564,8 +562,6 @@
             this.subKeyChange8.Text = "変更";
             this.subKeyChange8.UseVisualStyleBackColor = true;
             this.subKeyChange8.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange8.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup5
             // 
@@ -692,8 +688,6 @@
             this.subKeyChange5.Text = "変更";
             this.subKeyChange5.UseVisualStyleBackColor = true;
             this.subKeyChange5.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange5.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup3
             // 
@@ -820,8 +814,6 @@
             this.subKeyChange3.Text = "変更";
             this.subKeyChange3.UseVisualStyleBackColor = true;
             this.subKeyChange3.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup2
             // 
@@ -948,8 +940,6 @@
             this.subKeyChange2.Text = "変更";
             this.subKeyChange2.UseVisualStyleBackColor = true;
             this.subKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup7
             // 
@@ -1076,8 +1066,6 @@
             this.subKeyChange7.Text = "変更";
             this.subKeyChange7.UseVisualStyleBackColor = true;
             this.subKeyChange7.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange7.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // mainGroup2
             // 
@@ -1189,8 +1177,6 @@
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
             this.mainKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
-            this.mainKeyChange2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.mainKeyChange2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup4
             // 
@@ -1317,8 +1303,6 @@
             this.subKeyChange4.Text = "変更";
             this.subKeyChange4.UseVisualStyleBackColor = true;
             this.subKeyChange4.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // mainGroup1
             // 
@@ -1430,8 +1414,6 @@
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
             this.mainKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
-            this.mainKeyChange1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.mainKeyChange1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup1
             // 
@@ -1558,8 +1540,6 @@
             this.subKeyChange1.Text = "変更";
             this.subKeyChange1.UseVisualStyleBackColor = true;
             this.subKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
-            this.subKeyChange1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.subKeyChange1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // buttonApply
             // 
@@ -1621,6 +1601,14 @@
             this.export.Text = "エクスポート";
             this.export.Click += new System.EventHandler(this.export_Click);
             // 
+            // openCsvFileDialog
+            // 
+            this.openCsvFileDialog.Filter = "CSV ファイル (*.csv)|*.csv|すべてのファイル (*.*)|*.*";
+            // 
+            // saveCsvFileDialog
+            // 
+            this.saveCsvFileDialog.Filter = "CSV ファイル (*.csv)|*.csv|すべてのファイル (*.*)|*.*";
+            // 
             // KeyConfigWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1634,10 +1622,13 @@
             this.Controls.Add(this.panelRemocon);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MinimizeBox = false;
             this.Name = "KeyConfigWindow";
             this.Text = "キーの割り当て";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             this.panelRemocon.ResumeLayout(false);
             this.subGroup9.ResumeLayout(false);
             this.subGroup9.PerformLayout();
@@ -1783,5 +1774,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox mainKey1;
         private System.Windows.Forms.Button mainKeyChange1;
+        private System.Windows.Forms.OpenFileDialog openCsvFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveCsvFileDialog;
     }
 }

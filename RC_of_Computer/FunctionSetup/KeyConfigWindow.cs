@@ -28,6 +28,18 @@ namespace RC_of_Computer
             LoadSettingsFromCSV(csvFileFullPath);
         }
 
+        private void hiddenCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (TextBox control in ((CheckBox)sender).Parent.Controls.OfType<TextBox>())
+            {
+                control.Enabled = ((CheckBox)sender).Checked;
+            }
+            foreach (Button control in ((CheckBox)sender).Parent.Controls.OfType<Button>())
+            {
+                control.Enabled = ((CheckBox)sender).Checked;
+            }
+        }
+
         /// <summary>
         /// すべての"変更"ボタンから呼び出されるイベント
         /// </summary>
@@ -57,11 +69,12 @@ namespace RC_of_Computer
         /// </summary>
         private void keyScan_Tick(object sender, EventArgs e)
         {
-            buttonCount.Text = (--duration).ToString();
-            if (duration <= 0)
+            if (--duration <= 0)
             {
                 TimerStop();
+                return;
             }
+            buttonCount.Text = duration.ToString();
         }
 
         /// <summary>
@@ -73,51 +86,6 @@ namespace RC_of_Computer
             duration = 0;
             buttonCount.Text = "変更";
             buttonCount = null;
-        }
-
-        /// <summary>
-        /// 最適なテキストボックスにテキストを代入します
-        /// </summary>
-        /// <param name="ButtonName">"変更"ボタンの名前</param>
-        /// <param name="Text">代入したいテキスト</param>
-        private void ChangeKeyText(string ButtonName, string Text)
-        {
-            switch (ButtonName)
-            {
-                case "mainKeyChange1":
-                    mainKey1.Text = Text;
-                    break;
-                case "mainKeyChange2":
-                    mainKey2.Text = Text;
-                    break;
-                case "subKeyChange1":
-                    subKey1.Text = Text;
-                    break;
-                case "subKeyChange2":
-                    subKey2.Text = Text;
-                    break;
-                case "subKeyChange3":
-                    subKey3.Text = Text;
-                    break;
-                case "subKeyChange4":
-                    subKey4.Text = Text;
-                    break;
-                case "subKeyChange5":
-                    subKey5.Text = Text;
-                    break;
-                case "subKeyChange6":
-                    subKey6.Text = Text;
-                    break;
-                case "subKeyChange7":
-                    subKey7.Text = Text;
-                    break;
-                case "subKeyChange8":
-                    subKey8.Text = Text;
-                    break;
-                case "subKeyChange9":
-                    subKey9.Text = Text;
-                    break;
-            }
         }
 
         /// <summary>
@@ -177,6 +145,51 @@ namespace RC_of_Computer
             if (buttonCount != null)
             {
                 e.IsInputKey = true;
+            }
+        }
+
+        /// <summary>
+        /// 最適なテキストボックスにテキストを代入します
+        /// </summary>
+        /// <param name="ButtonName">"変更"ボタンの名前</param>
+        /// <param name="Text">代入したいテキスト</param>
+        private void ChangeKeyText(string ButtonName, string Text)
+        {
+            switch (ButtonName)
+            {
+                case "mainKeyChange1":
+                    mainKey1.Text = Text;
+                    break;
+                case "mainKeyChange2":
+                    mainKey2.Text = Text;
+                    break;
+                case "subKeyChange1":
+                    subKey1.Text = Text;
+                    break;
+                case "subKeyChange2":
+                    subKey2.Text = Text;
+                    break;
+                case "subKeyChange3":
+                    subKey3.Text = Text;
+                    break;
+                case "subKeyChange4":
+                    subKey4.Text = Text;
+                    break;
+                case "subKeyChange5":
+                    subKey5.Text = Text;
+                    break;
+                case "subKeyChange6":
+                    subKey6.Text = Text;
+                    break;
+                case "subKeyChange7":
+                    subKey7.Text = Text;
+                    break;
+                case "subKeyChange8":
+                    subKey8.Text = Text;
+                    break;
+                case "subKeyChange9":
+                    subKey9.Text = Text;
+                    break;
             }
         }
 
@@ -457,53 +470,19 @@ namespace RC_of_Computer
 
         private void import_Click(object sender, EventArgs e)
         {
-            using OpenFileDialog openFileDialog = new()
+            if (openCsvFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Filter = "Csv files (*.csv)|*.csv|All files (*.*)|*.*"
-            };
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string importFileFullPath = openFileDialog.FileName;
+                string importFileFullPath = openCsvFileDialog.FileName;
                 LoadSettingsFromCSV(importFileFullPath);
             }
         }
 
         private void export_Click(object sender, EventArgs e)
         {
-            using SaveFileDialog saveFileDialog = new()
+            if (saveCsvFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Filter = "Csv files (*.csv)|*.csv|All files (*.*)|*.*"
-            };
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string exportFileFullPath = saveFileDialog.FileName;
+                string exportFileFullPath = saveCsvFileDialog.FileName;
                 SaveSettingsToCSV(exportFileFullPath);
-            }
-        }
-
-        private void hiddenCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (((CheckBox)sender).Checked == false)
-            {
-                foreach (TextBox control in ((CheckBox)sender).Parent.Controls.OfType<TextBox>())
-                {
-                    control.Enabled = false;
-                }
-                foreach (Button control in ((CheckBox)sender).Parent.Controls.OfType<Button>())
-                {
-                    control.Enabled = false;
-                }
-            }
-            else
-            {
-                foreach (TextBox control in ((CheckBox)sender).Parent.Controls.OfType<TextBox>())
-                {
-                    control.Enabled = true;
-                }
-                foreach (Button control in ((CheckBox)sender).Parent.Controls.OfType<Button>())
-                {
-                    control.Enabled = true;
-                }
             }
         }
     }
