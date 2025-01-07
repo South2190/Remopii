@@ -58,7 +58,7 @@
             this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(88, 25);
-            this.OKButton.TabIndex = 3;
+            this.OKButton.TabIndex = 20;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -70,7 +70,7 @@
             this.URLTextBox.Name = "URLTextBox";
             this.URLTextBox.ReadOnly = true;
             this.URLTextBox.Size = new System.Drawing.Size(223, 23);
-            this.URLTextBox.TabIndex = 4;
+            this.URLTextBox.TabIndex = 15;
             this.URLTextBox.Text = "http://x.x.x.x:8000";
             // 
             // QRPictureBox
@@ -124,7 +124,7 @@
             this.reloadNetwarkIF.Location = new System.Drawing.Point(430, 6);
             this.reloadNetwarkIF.Name = "reloadNetwarkIF";
             this.reloadNetwarkIF.Size = new System.Drawing.Size(88, 25);
-            this.reloadNetwarkIF.TabIndex = 9;
+            this.reloadNetwarkIF.TabIndex = 10;
             this.reloadNetwarkIF.Text = "再読み込み";
             this.reloadNetwarkIF.UseVisualStyleBackColor = true;
             this.reloadNetwarkIF.Click += new System.EventHandler(this.reloadNetwarkIF_Click);
