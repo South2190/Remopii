@@ -25,17 +25,6 @@
 - Wi-Fi環境
 [^2]: HTML Living Standardに対応したブラウザを利用することを推奨します。
 
-## 動作要件
-### PC
-- Windows10 (x64)
-- Windows11
-いずれも .NET Framework 4.8 以上必須
-## 使用言語
-- C#
-- PHP/HTML/CSS
-## 開発環境
-- Visual Studio Community 2022
-- Visual Studio Code
 # 使用方法
 ## セットアップ方法
 1. <ins>【PHPの設定】</ins>をクリックする
