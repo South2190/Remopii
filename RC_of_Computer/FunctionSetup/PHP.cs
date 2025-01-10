@@ -9,6 +9,8 @@ namespace RC_of_Computer.FunctionSetup
 {
     public partial class PHP : Form
     {
+        private readonly int AppsUseLightTheme;
+
         public PHP(int Theme)
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace RC_of_Computer.FunctionSetup
             DocumentRootRef.Image = DirIcon;
 
             LoadSettings();
+            AppsUseLightTheme = Theme;
             ChangeTheme(Theme);
         }
 
@@ -74,7 +77,7 @@ namespace RC_of_Computer.FunctionSetup
 
         private void RunPHPSetup_Click(object sender, EventArgs e)
         {
-            PHPAutoSetup setupWindow = new()
+            PHPAutoSetup setupWindow = new(AppsUseLightTheme)
             {
                 Owner = this
             };

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -144,17 +145,28 @@ namespace RC_of_Computer
 
         private void ShowKeyConfig_Click(object sender, EventArgs e)
         {
-            KeyConfigWindow keyConfigWindow = new(AppsUseLightTheme)
+            if (ConfigurationManager.AppSettings["KeyConfigWindowLarge"] == "True")
             {
-                Owner = this
-            };
-            keyConfigWindow.ShowDialog();
+                KeyConfigWindowLarge keyConfigWindowLarge = new(AppsUseLightTheme)
+                {
+                    Owner = this
+                };
+                keyConfigWindowLarge.ShowDialog();
+            }
+            else
+            {
+                KeyConfigWindow keyConfigWindow = new(AppsUseLightTheme)
+                {
+                    Owner = this
+                };
+                keyConfigWindow.ShowDialog();
+            }
             CheckStatus();
         }
 
         private void ShowVersionInfo_Click(object sender, EventArgs e)
         {
-            VersionInfo versionInfo = new()
+            VersionInfo versionInfo = new(AppsUseLightTheme)
             {
                 Owner = this
             };

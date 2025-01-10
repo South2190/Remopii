@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
@@ -19,10 +20,32 @@ namespace RC_of_Computer.FunctionSetup
 
         private int PHPSetupStatus = 0;
 
-        public PHPAutoSetup()
+        public PHPAutoSetup(int Theme)
         {
             InitializeComponent();
             SetupDetail.Text = string.Empty;
+            ChangeTheme(Theme);
+        }
+
+        /// <summary>
+        /// ウインドウのテーマを設定します
+        /// </summary>
+        /// <param name="themeNumber">設定したいテーマの番号</param>
+        private void ChangeTheme(int themeNumber)
+        {
+            switch (themeNumber)
+            {
+                // ダーク
+                case 0:
+                    BackColor = Color.FromArgb(32, 32, 32);
+                    ForeColor = Color.FromArgb(255, 255, 255);
+                    StartSetup.BackColor = Color.FromArgb(56, 56, 56);
+                    break;
+                // デフォルト
+                case 1:
+                default:
+                    return;
+            }
         }
 
         private void StartSetup_Click(object sender, EventArgs e)

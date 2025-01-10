@@ -111,7 +111,6 @@
             // 
             this.Names.AutoSize = true;
             this.Names.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Names.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Names.Location = new System.Drawing.Point(245, 75);
             this.Names.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Names.Name = "Names";
