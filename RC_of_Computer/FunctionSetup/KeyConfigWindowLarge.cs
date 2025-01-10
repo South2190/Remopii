@@ -12,7 +12,7 @@ using RC_of_Computer.Classes;
 
 namespace RC_of_Computer
 {
-    public partial class KeyConfigWindow : Form
+    public partial class KeyConfigWindowLarge : Form
     {
         private Button buttonCount = null;
         private int duration = 0;
@@ -23,7 +23,7 @@ namespace RC_of_Computer
 
         private static readonly string csvFileFullPath = Path.Combine(Properties.Settings.Default.DocumentRoot, Program.csvFileName);
 
-        public KeyConfigWindow(int Theme)
+        public KeyConfigWindowLarge(int Theme)
         {
             InitializeComponent();
             LoadSettingsFromCSV(csvFileFullPath);

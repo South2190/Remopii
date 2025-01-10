@@ -121,7 +121,7 @@
             // 
             // reloadNetwarkIF
             // 
-            this.reloadNetwarkIF.Location = new System.Drawing.Point(430, 6);
+            this.reloadNetwarkIF.Location = new System.Drawing.Point(419, 5);
             this.reloadNetwarkIF.Name = "reloadNetwarkIF";
             this.reloadNetwarkIF.Size = new System.Drawing.Size(88, 25);
             this.reloadNetwarkIF.TabIndex = 10;

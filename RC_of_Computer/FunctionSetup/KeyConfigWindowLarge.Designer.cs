@@ -1,6 +1,6 @@
 ﻿namespace RC_of_Computer
 {
-    partial class KeyConfigWindow
+    partial class KeyConfigWindowLarge
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyConfigWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyConfigWindowLarge));
             this.panelRemocon = new System.Windows.Forms.Panel();
             this.subGroup9 = new System.Windows.Forms.GroupBox();
             this.subHidden9 = new System.Windows.Forms.CheckBox();
@@ -196,11 +196,11 @@
             this.subGroup9.Controls.Add(this.label44);
             this.subGroup9.Controls.Add(this.subKey9);
             this.subGroup9.Controls.Add(this.subKeyChange9);
-            this.subGroup9.Location = new System.Drawing.Point(351, 509);
+            this.subGroup9.Location = new System.Drawing.Point(351, 569);
             this.subGroup9.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup9.Name = "subGroup9";
             this.subGroup9.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup9.Size = new System.Drawing.Size(150, 160);
+            this.subGroup9.Size = new System.Drawing.Size(150, 173);
             this.subGroup9.TabIndex = 11;
             this.subGroup9.TabStop = false;
             // 
@@ -218,11 +218,11 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label41.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label41.Location = new System.Drawing.Point(7, 20);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(68, 15);
+            this.label41.Size = new System.Drawing.Size(90, 20);
             this.label41.TabIndex = 1;
             this.label41.Text = "ボタンの名前";
             // 
@@ -230,11 +230,11 @@
             // 
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label42.Location = new System.Drawing.Point(108, 87);
+            this.label42.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label42.Location = new System.Drawing.Point(108, 94);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 15);
+            this.label42.Size = new System.Drawing.Size(42, 20);
             this.label42.TabIndex = 2;
             this.label42.Text = ".exe";
             // 
@@ -244,7 +244,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue9.Enabled = false;
             this.subValue9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue9.Location = new System.Drawing.Point(8, 37);
+            this.subValue9.Location = new System.Drawing.Point(8, 43);
             this.subValue9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue9.Name = "subValue9";
             this.subValue9.Size = new System.Drawing.Size(135, 23);
@@ -253,11 +253,11 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label43.Location = new System.Drawing.Point(7, 65);
+            this.label43.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label43.Location = new System.Drawing.Point(7, 71);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(44, 15);
+            this.label43.Size = new System.Drawing.Size(58, 20);
             this.label43.TabIndex = 3;
             this.label43.Text = "プロセス";
             // 
@@ -267,7 +267,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess9.Enabled = false;
             this.subProcess9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess9.Location = new System.Drawing.Point(8, 82);
+            this.subProcess9.Location = new System.Drawing.Point(8, 93);
             this.subProcess9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess9.Name = "subProcess9";
             this.subProcess9.Size = new System.Drawing.Size(100, 23);
@@ -276,11 +276,11 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label44.Location = new System.Drawing.Point(7, 110);
+            this.label44.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label44.Location = new System.Drawing.Point(7, 119);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(78, 15);
+            this.label44.Size = new System.Drawing.Size(103, 20);
             this.label44.TabIndex = 3;
             this.label44.Text = "キーの割り当て";
             // 
@@ -290,7 +290,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey9.Enabled = false;
             this.subKey9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey9.Location = new System.Drawing.Point(8, 127);
+            this.subKey9.Location = new System.Drawing.Point(8, 141);
             this.subKey9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey9.Name = "subKey9";
             this.subKey9.ReadOnly = true;
@@ -302,7 +302,7 @@
             // 
             this.subKeyChange9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange9.Enabled = false;
-            this.subKeyChange9.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange9.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange9.Name = "subKeyChange9";
             this.subKeyChange9.Size = new System.Drawing.Size(40, 25);
@@ -322,11 +322,11 @@
             this.subGroup6.Controls.Add(this.label31);
             this.subGroup6.Controls.Add(this.subKey6);
             this.subGroup6.Controls.Add(this.subKeyChange6);
-            this.subGroup6.Location = new System.Drawing.Point(351, 345);
+            this.subGroup6.Location = new System.Drawing.Point(351, 390);
             this.subGroup6.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup6.Name = "subGroup6";
             this.subGroup6.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup6.Size = new System.Drawing.Size(150, 160);
+            this.subGroup6.Size = new System.Drawing.Size(150, 173);
             this.subGroup6.TabIndex = 8;
             this.subGroup6.TabStop = false;
             // 
@@ -344,11 +344,11 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label28.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label28.Location = new System.Drawing.Point(7, 20);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 15);
+            this.label28.Size = new System.Drawing.Size(90, 20);
             this.label28.TabIndex = 1;
             this.label28.Text = "ボタンの名前";
             // 
@@ -356,11 +356,11 @@
             // 
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label29.Location = new System.Drawing.Point(108, 87);
+            this.label29.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label29.Location = new System.Drawing.Point(108, 94);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(32, 15);
+            this.label29.Size = new System.Drawing.Size(42, 20);
             this.label29.TabIndex = 2;
             this.label29.Text = ".exe";
             // 
@@ -370,7 +370,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue6.Enabled = false;
             this.subValue6.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue6.Location = new System.Drawing.Point(8, 37);
+            this.subValue6.Location = new System.Drawing.Point(8, 43);
             this.subValue6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue6.Name = "subValue6";
             this.subValue6.Size = new System.Drawing.Size(135, 23);
@@ -379,11 +379,11 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label30.Location = new System.Drawing.Point(7, 65);
+            this.label30.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label30.Location = new System.Drawing.Point(7, 71);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(44, 15);
+            this.label30.Size = new System.Drawing.Size(58, 20);
             this.label30.TabIndex = 3;
             this.label30.Text = "プロセス";
             // 
@@ -393,7 +393,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess6.Enabled = false;
             this.subProcess6.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess6.Location = new System.Drawing.Point(8, 82);
+            this.subProcess6.Location = new System.Drawing.Point(8, 93);
             this.subProcess6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess6.Name = "subProcess6";
             this.subProcess6.Size = new System.Drawing.Size(100, 23);
@@ -402,11 +402,11 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label31.Location = new System.Drawing.Point(7, 110);
+            this.label31.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label31.Location = new System.Drawing.Point(7, 119);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(78, 15);
+            this.label31.Size = new System.Drawing.Size(103, 20);
             this.label31.TabIndex = 3;
             this.label31.Text = "キーの割り当て";
             // 
@@ -416,7 +416,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey6.Enabled = false;
             this.subKey6.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey6.Location = new System.Drawing.Point(8, 127);
+            this.subKey6.Location = new System.Drawing.Point(8, 141);
             this.subKey6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey6.Name = "subKey6";
             this.subKey6.ReadOnly = true;
@@ -428,7 +428,7 @@
             // 
             this.subKeyChange6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange6.Enabled = false;
-            this.subKeyChange6.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange6.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange6.Name = "subKeyChange6";
             this.subKeyChange6.Size = new System.Drawing.Size(40, 25);
@@ -448,11 +448,11 @@
             this.subGroup8.Controls.Add(this.label40);
             this.subGroup8.Controls.Add(this.subKey8);
             this.subGroup8.Controls.Add(this.subKeyChange8);
-            this.subGroup8.Location = new System.Drawing.Point(182, 509);
+            this.subGroup8.Location = new System.Drawing.Point(182, 569);
             this.subGroup8.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup8.Name = "subGroup8";
             this.subGroup8.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup8.Size = new System.Drawing.Size(150, 160);
+            this.subGroup8.Size = new System.Drawing.Size(150, 173);
             this.subGroup8.TabIndex = 10;
             this.subGroup8.TabStop = false;
             // 
@@ -470,11 +470,11 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label37.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label37.Location = new System.Drawing.Point(7, 20);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(68, 15);
+            this.label37.Size = new System.Drawing.Size(90, 20);
             this.label37.TabIndex = 1;
             this.label37.Text = "ボタンの名前";
             // 
@@ -482,11 +482,11 @@
             // 
             this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label38.Location = new System.Drawing.Point(108, 87);
+            this.label38.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label38.Location = new System.Drawing.Point(108, 94);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(32, 15);
+            this.label38.Size = new System.Drawing.Size(42, 20);
             this.label38.TabIndex = 2;
             this.label38.Text = ".exe";
             // 
@@ -496,7 +496,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue8.Enabled = false;
             this.subValue8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue8.Location = new System.Drawing.Point(8, 37);
+            this.subValue8.Location = new System.Drawing.Point(8, 43);
             this.subValue8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue8.Name = "subValue8";
             this.subValue8.Size = new System.Drawing.Size(135, 23);
@@ -505,11 +505,11 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label39.Location = new System.Drawing.Point(7, 65);
+            this.label39.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label39.Location = new System.Drawing.Point(7, 71);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(44, 15);
+            this.label39.Size = new System.Drawing.Size(58, 20);
             this.label39.TabIndex = 3;
             this.label39.Text = "プロセス";
             // 
@@ -519,7 +519,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess8.Enabled = false;
             this.subProcess8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess8.Location = new System.Drawing.Point(8, 82);
+            this.subProcess8.Location = new System.Drawing.Point(8, 93);
             this.subProcess8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess8.Name = "subProcess8";
             this.subProcess8.Size = new System.Drawing.Size(100, 23);
@@ -528,11 +528,11 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label40.Location = new System.Drawing.Point(7, 110);
+            this.label40.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label40.Location = new System.Drawing.Point(7, 119);
             this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(78, 15);
+            this.label40.Size = new System.Drawing.Size(103, 20);
             this.label40.TabIndex = 3;
             this.label40.Text = "キーの割り当て";
             // 
@@ -542,7 +542,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey8.Enabled = false;
             this.subKey8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey8.Location = new System.Drawing.Point(8, 127);
+            this.subKey8.Location = new System.Drawing.Point(8, 141);
             this.subKey8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey8.Name = "subKey8";
             this.subKey8.ReadOnly = true;
@@ -554,7 +554,7 @@
             // 
             this.subKeyChange8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange8.Enabled = false;
-            this.subKeyChange8.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange8.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange8.Name = "subKeyChange8";
             this.subKeyChange8.Size = new System.Drawing.Size(40, 25);
@@ -574,11 +574,11 @@
             this.subGroup5.Controls.Add(this.label27);
             this.subGroup5.Controls.Add(this.subKey5);
             this.subGroup5.Controls.Add(this.subKeyChange5);
-            this.subGroup5.Location = new System.Drawing.Point(182, 345);
+            this.subGroup5.Location = new System.Drawing.Point(182, 390);
             this.subGroup5.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup5.Name = "subGroup5";
             this.subGroup5.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup5.Size = new System.Drawing.Size(150, 160);
+            this.subGroup5.Size = new System.Drawing.Size(150, 173);
             this.subGroup5.TabIndex = 7;
             this.subGroup5.TabStop = false;
             // 
@@ -596,11 +596,11 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label23.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label23.Location = new System.Drawing.Point(7, 20);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(68, 15);
+            this.label23.Size = new System.Drawing.Size(90, 20);
             this.label23.TabIndex = 1;
             this.label23.Text = "ボタンの名前";
             // 
@@ -608,11 +608,11 @@
             // 
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label25.Location = new System.Drawing.Point(108, 87);
+            this.label25.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label25.Location = new System.Drawing.Point(108, 94);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(32, 15);
+            this.label25.Size = new System.Drawing.Size(42, 20);
             this.label25.TabIndex = 2;
             this.label25.Text = ".exe";
             // 
@@ -622,7 +622,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue5.Enabled = false;
             this.subValue5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue5.Location = new System.Drawing.Point(8, 37);
+            this.subValue5.Location = new System.Drawing.Point(8, 43);
             this.subValue5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue5.Name = "subValue5";
             this.subValue5.Size = new System.Drawing.Size(135, 23);
@@ -631,11 +631,11 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label26.Location = new System.Drawing.Point(7, 65);
+            this.label26.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label26.Location = new System.Drawing.Point(7, 71);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(44, 15);
+            this.label26.Size = new System.Drawing.Size(58, 20);
             this.label26.TabIndex = 3;
             this.label26.Text = "プロセス";
             // 
@@ -645,7 +645,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess5.Enabled = false;
             this.subProcess5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess5.Location = new System.Drawing.Point(8, 82);
+            this.subProcess5.Location = new System.Drawing.Point(8, 93);
             this.subProcess5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess5.Name = "subProcess5";
             this.subProcess5.Size = new System.Drawing.Size(100, 23);
@@ -654,11 +654,11 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label27.Location = new System.Drawing.Point(7, 110);
+            this.label27.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label27.Location = new System.Drawing.Point(7, 119);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(78, 15);
+            this.label27.Size = new System.Drawing.Size(103, 20);
             this.label27.TabIndex = 3;
             this.label27.Text = "キーの割り当て";
             // 
@@ -668,7 +668,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey5.Enabled = false;
             this.subKey5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey5.Location = new System.Drawing.Point(8, 127);
+            this.subKey5.Location = new System.Drawing.Point(8, 141);
             this.subKey5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey5.Name = "subKey5";
             this.subKey5.ReadOnly = true;
@@ -680,7 +680,7 @@
             // 
             this.subKeyChange5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange5.Enabled = false;
-            this.subKeyChange5.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange5.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange5.Name = "subKeyChange5";
             this.subKeyChange5.Size = new System.Drawing.Size(40, 25);
@@ -700,11 +700,11 @@
             this.subGroup3.Controls.Add(this.label14);
             this.subGroup3.Controls.Add(this.subKey3);
             this.subGroup3.Controls.Add(this.subKeyChange3);
-            this.subGroup3.Location = new System.Drawing.Point(351, 181);
+            this.subGroup3.Location = new System.Drawing.Point(351, 209);
             this.subGroup3.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup3.Name = "subGroup3";
             this.subGroup3.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup3.Size = new System.Drawing.Size(150, 160);
+            this.subGroup3.Size = new System.Drawing.Size(150, 173);
             this.subGroup3.TabIndex = 5;
             this.subGroup3.TabStop = false;
             // 
@@ -722,11 +722,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label11.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label11.Location = new System.Drawing.Point(7, 20);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 15);
+            this.label11.Size = new System.Drawing.Size(90, 20);
             this.label11.TabIndex = 1;
             this.label11.Text = "ボタンの名前";
             // 
@@ -734,11 +734,11 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label12.Location = new System.Drawing.Point(108, 87);
+            this.label12.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label12.Location = new System.Drawing.Point(108, 94);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 15);
+            this.label12.Size = new System.Drawing.Size(42, 20);
             this.label12.TabIndex = 2;
             this.label12.Text = ".exe";
             // 
@@ -748,7 +748,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue3.Enabled = false;
             this.subValue3.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue3.Location = new System.Drawing.Point(8, 37);
+            this.subValue3.Location = new System.Drawing.Point(8, 43);
             this.subValue3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue3.Name = "subValue3";
             this.subValue3.Size = new System.Drawing.Size(135, 23);
@@ -757,11 +757,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label13.Location = new System.Drawing.Point(7, 65);
+            this.label13.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.Location = new System.Drawing.Point(7, 71);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 15);
+            this.label13.Size = new System.Drawing.Size(58, 20);
             this.label13.TabIndex = 3;
             this.label13.Text = "プロセス";
             // 
@@ -771,7 +771,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess3.Enabled = false;
             this.subProcess3.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess3.Location = new System.Drawing.Point(8, 82);
+            this.subProcess3.Location = new System.Drawing.Point(8, 93);
             this.subProcess3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess3.Name = "subProcess3";
             this.subProcess3.Size = new System.Drawing.Size(100, 23);
@@ -780,11 +780,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label14.Location = new System.Drawing.Point(7, 110);
+            this.label14.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label14.Location = new System.Drawing.Point(7, 119);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 15);
+            this.label14.Size = new System.Drawing.Size(103, 20);
             this.label14.TabIndex = 3;
             this.label14.Text = "キーの割り当て";
             // 
@@ -794,7 +794,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey3.Enabled = false;
             this.subKey3.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey3.Location = new System.Drawing.Point(8, 127);
+            this.subKey3.Location = new System.Drawing.Point(8, 141);
             this.subKey3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey3.Name = "subKey3";
             this.subKey3.ReadOnly = true;
@@ -806,7 +806,7 @@
             // 
             this.subKeyChange3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange3.Enabled = false;
-            this.subKeyChange3.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange3.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange3.Name = "subKeyChange3";
             this.subKeyChange3.Size = new System.Drawing.Size(40, 25);
@@ -826,11 +826,11 @@
             this.subGroup2.Controls.Add(this.label10);
             this.subGroup2.Controls.Add(this.subKey2);
             this.subGroup2.Controls.Add(this.subKeyChange2);
-            this.subGroup2.Location = new System.Drawing.Point(182, 181);
+            this.subGroup2.Location = new System.Drawing.Point(182, 209);
             this.subGroup2.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup2.Name = "subGroup2";
             this.subGroup2.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup2.Size = new System.Drawing.Size(150, 160);
+            this.subGroup2.Size = new System.Drawing.Size(150, 173);
             this.subGroup2.TabIndex = 4;
             this.subGroup2.TabStop = false;
             // 
@@ -848,11 +848,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label7.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.Location = new System.Drawing.Point(7, 20);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 15);
+            this.label7.Size = new System.Drawing.Size(90, 20);
             this.label7.TabIndex = 1;
             this.label7.Text = "ボタンの名前";
             // 
@@ -860,11 +860,11 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label8.Location = new System.Drawing.Point(108, 87);
+            this.label8.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label8.Location = new System.Drawing.Point(108, 94);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 15);
+            this.label8.Size = new System.Drawing.Size(42, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = ".exe";
             // 
@@ -874,7 +874,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue2.Enabled = false;
             this.subValue2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue2.Location = new System.Drawing.Point(8, 37);
+            this.subValue2.Location = new System.Drawing.Point(8, 43);
             this.subValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue2.Name = "subValue2";
             this.subValue2.Size = new System.Drawing.Size(135, 23);
@@ -883,11 +883,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label9.Location = new System.Drawing.Point(7, 65);
+            this.label9.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label9.Location = new System.Drawing.Point(7, 71);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 15);
+            this.label9.Size = new System.Drawing.Size(58, 20);
             this.label9.TabIndex = 3;
             this.label9.Text = "プロセス";
             // 
@@ -897,7 +897,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess2.Enabled = false;
             this.subProcess2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess2.Location = new System.Drawing.Point(8, 82);
+            this.subProcess2.Location = new System.Drawing.Point(8, 93);
             this.subProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess2.Name = "subProcess2";
             this.subProcess2.Size = new System.Drawing.Size(100, 23);
@@ -906,11 +906,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label10.Location = new System.Drawing.Point(7, 110);
+            this.label10.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label10.Location = new System.Drawing.Point(7, 119);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 15);
+            this.label10.Size = new System.Drawing.Size(103, 20);
             this.label10.TabIndex = 3;
             this.label10.Text = "キーの割り当て";
             // 
@@ -920,7 +920,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey2.Enabled = false;
             this.subKey2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey2.Location = new System.Drawing.Point(8, 127);
+            this.subKey2.Location = new System.Drawing.Point(8, 141);
             this.subKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey2.Name = "subKey2";
             this.subKey2.ReadOnly = true;
@@ -932,7 +932,7 @@
             // 
             this.subKeyChange2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange2.Enabled = false;
-            this.subKeyChange2.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange2.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange2.Name = "subKeyChange2";
             this.subKeyChange2.Size = new System.Drawing.Size(40, 25);
@@ -952,11 +952,11 @@
             this.subGroup7.Controls.Add(this.label35);
             this.subGroup7.Controls.Add(this.subKey7);
             this.subGroup7.Controls.Add(this.subKeyChange7);
-            this.subGroup7.Location = new System.Drawing.Point(11, 509);
+            this.subGroup7.Location = new System.Drawing.Point(11, 569);
             this.subGroup7.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup7.Name = "subGroup7";
             this.subGroup7.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup7.Size = new System.Drawing.Size(150, 160);
+            this.subGroup7.Size = new System.Drawing.Size(150, 173);
             this.subGroup7.TabIndex = 9;
             this.subGroup7.TabStop = false;
             // 
@@ -974,11 +974,11 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label32.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label32.Location = new System.Drawing.Point(7, 20);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(68, 15);
+            this.label32.Size = new System.Drawing.Size(90, 20);
             this.label32.TabIndex = 1;
             this.label32.Text = "ボタンの名前";
             // 
@@ -986,11 +986,11 @@
             // 
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label33.Location = new System.Drawing.Point(108, 87);
+            this.label33.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label33.Location = new System.Drawing.Point(108, 94);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 15);
+            this.label33.Size = new System.Drawing.Size(42, 20);
             this.label33.TabIndex = 2;
             this.label33.Text = ".exe";
             // 
@@ -1000,7 +1000,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue7.Enabled = false;
             this.subValue7.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue7.Location = new System.Drawing.Point(8, 37);
+            this.subValue7.Location = new System.Drawing.Point(8, 43);
             this.subValue7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue7.Name = "subValue7";
             this.subValue7.Size = new System.Drawing.Size(135, 23);
@@ -1009,11 +1009,11 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label34.Location = new System.Drawing.Point(7, 65);
+            this.label34.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label34.Location = new System.Drawing.Point(7, 71);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(44, 15);
+            this.label34.Size = new System.Drawing.Size(58, 20);
             this.label34.TabIndex = 3;
             this.label34.Text = "プロセス";
             // 
@@ -1023,7 +1023,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess7.Enabled = false;
             this.subProcess7.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess7.Location = new System.Drawing.Point(8, 82);
+            this.subProcess7.Location = new System.Drawing.Point(8, 93);
             this.subProcess7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess7.Name = "subProcess7";
             this.subProcess7.Size = new System.Drawing.Size(100, 23);
@@ -1032,11 +1032,11 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label35.Location = new System.Drawing.Point(7, 110);
+            this.label35.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label35.Location = new System.Drawing.Point(7, 119);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(78, 15);
+            this.label35.Size = new System.Drawing.Size(103, 20);
             this.label35.TabIndex = 3;
             this.label35.Text = "キーの割り当て";
             // 
@@ -1046,7 +1046,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey7.Enabled = false;
             this.subKey7.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey7.Location = new System.Drawing.Point(8, 127);
+            this.subKey7.Location = new System.Drawing.Point(8, 141);
             this.subKey7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey7.Name = "subKey7";
             this.subKey7.ReadOnly = true;
@@ -1058,7 +1058,7 @@
             // 
             this.subKeyChange7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange7.Enabled = false;
-            this.subKeyChange7.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange7.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange7.Name = "subKeyChange7";
             this.subKeyChange7.Size = new System.Drawing.Size(40, 25);
@@ -1081,7 +1081,7 @@
             this.mainGroup2.Margin = new System.Windows.Forms.Padding(2);
             this.mainGroup2.Name = "mainGroup2";
             this.mainGroup2.Padding = new System.Windows.Forms.Padding(2);
-            this.mainGroup2.Size = new System.Drawing.Size(150, 160);
+            this.mainGroup2.Size = new System.Drawing.Size(150, 179);
             this.mainGroup2.TabIndex = 2;
             this.mainGroup2.TabStop = false;
             this.mainGroup2.Text = "メインボタン2";
@@ -1089,11 +1089,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label3.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(7, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "ボタンの名前";
             // 
@@ -1101,11 +1101,11 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label4.Location = new System.Drawing.Point(108, 87);
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(108, 93);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 15);
+            this.label4.Size = new System.Drawing.Size(42, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = ".exe";
             // 
@@ -1114,7 +1114,7 @@
             this.mainValue2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainValue2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainValue2.Location = new System.Drawing.Point(8, 37);
+            this.mainValue2.Location = new System.Drawing.Point(8, 43);
             this.mainValue2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue2.Name = "mainValue2";
             this.mainValue2.Size = new System.Drawing.Size(135, 23);
@@ -1123,11 +1123,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label5.Location = new System.Drawing.Point(7, 65);
+            this.label5.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Location = new System.Drawing.Point(7, 69);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 15);
+            this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "プロセス";
             // 
@@ -1136,7 +1136,7 @@
             this.mainProcess2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainProcess2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainProcess2.Location = new System.Drawing.Point(8, 82);
+            this.mainProcess2.Location = new System.Drawing.Point(8, 92);
             this.mainProcess2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainProcess2.Name = "mainProcess2";
             this.mainProcess2.Size = new System.Drawing.Size(100, 23);
@@ -1145,11 +1145,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label6.Location = new System.Drawing.Point(7, 110);
+            this.label6.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Location = new System.Drawing.Point(7, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 15);
+            this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 3;
             this.label6.Text = "キーの割り当て";
             // 
@@ -1158,7 +1158,7 @@
             this.mainKey2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainKey2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainKey2.Location = new System.Drawing.Point(8, 127);
+            this.mainKey2.Location = new System.Drawing.Point(8, 144);
             this.mainKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKey2.Name = "mainKey2";
             this.mainKey2.ReadOnly = true;
@@ -1169,7 +1169,7 @@
             // mainKeyChange2
             // 
             this.mainKeyChange2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainKeyChange2.Location = new System.Drawing.Point(102, 126);
+            this.mainKeyChange2.Location = new System.Drawing.Point(102, 143);
             this.mainKeyChange2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKeyChange2.Name = "mainKeyChange2";
             this.mainKeyChange2.Size = new System.Drawing.Size(40, 25);
@@ -1189,11 +1189,11 @@
             this.subGroup4.Controls.Add(this.label18);
             this.subGroup4.Controls.Add(this.subKey4);
             this.subGroup4.Controls.Add(this.subKeyChange4);
-            this.subGroup4.Location = new System.Drawing.Point(11, 345);
+            this.subGroup4.Location = new System.Drawing.Point(11, 390);
             this.subGroup4.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup4.Name = "subGroup4";
             this.subGroup4.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup4.Size = new System.Drawing.Size(150, 160);
+            this.subGroup4.Size = new System.Drawing.Size(150, 173);
             this.subGroup4.TabIndex = 6;
             this.subGroup4.TabStop = false;
             // 
@@ -1211,11 +1211,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label15.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label15.Location = new System.Drawing.Point(7, 20);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 15);
+            this.label15.Size = new System.Drawing.Size(90, 20);
             this.label15.TabIndex = 1;
             this.label15.Text = "ボタンの名前";
             // 
@@ -1223,11 +1223,11 @@
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label16.Location = new System.Drawing.Point(108, 87);
+            this.label16.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label16.Location = new System.Drawing.Point(108, 94);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(32, 15);
+            this.label16.Size = new System.Drawing.Size(42, 20);
             this.label16.TabIndex = 2;
             this.label16.Text = ".exe";
             // 
@@ -1237,7 +1237,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue4.Enabled = false;
             this.subValue4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue4.Location = new System.Drawing.Point(8, 37);
+            this.subValue4.Location = new System.Drawing.Point(8, 43);
             this.subValue4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue4.Name = "subValue4";
             this.subValue4.Size = new System.Drawing.Size(135, 23);
@@ -1246,11 +1246,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label17.Location = new System.Drawing.Point(7, 65);
+            this.label17.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label17.Location = new System.Drawing.Point(7, 71);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 15);
+            this.label17.Size = new System.Drawing.Size(58, 20);
             this.label17.TabIndex = 3;
             this.label17.Text = "プロセス";
             // 
@@ -1260,7 +1260,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess4.Enabled = false;
             this.subProcess4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess4.Location = new System.Drawing.Point(8, 82);
+            this.subProcess4.Location = new System.Drawing.Point(8, 93);
             this.subProcess4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess4.Name = "subProcess4";
             this.subProcess4.Size = new System.Drawing.Size(100, 23);
@@ -1269,11 +1269,11 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label18.Location = new System.Drawing.Point(7, 110);
+            this.label18.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label18.Location = new System.Drawing.Point(7, 119);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 15);
+            this.label18.Size = new System.Drawing.Size(103, 20);
             this.label18.TabIndex = 3;
             this.label18.Text = "キーの割り当て";
             // 
@@ -1283,7 +1283,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey4.Enabled = false;
             this.subKey4.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey4.Location = new System.Drawing.Point(8, 127);
+            this.subKey4.Location = new System.Drawing.Point(8, 141);
             this.subKey4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey4.Name = "subKey4";
             this.subKey4.ReadOnly = true;
@@ -1295,7 +1295,7 @@
             // 
             this.subKeyChange4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange4.Enabled = false;
-            this.subKeyChange4.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange4.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange4.Name = "subKeyChange4";
             this.subKeyChange4.Size = new System.Drawing.Size(40, 25);
@@ -1318,7 +1318,7 @@
             this.mainGroup1.Margin = new System.Windows.Forms.Padding(2);
             this.mainGroup1.Name = "mainGroup1";
             this.mainGroup1.Padding = new System.Windows.Forms.Padding(2);
-            this.mainGroup1.Size = new System.Drawing.Size(150, 160);
+            this.mainGroup1.Size = new System.Drawing.Size(150, 179);
             this.mainGroup1.TabIndex = 1;
             this.mainGroup1.TabStop = false;
             this.mainGroup1.Text = "メインボタン1";
@@ -1326,11 +1326,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label19.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label19.Location = new System.Drawing.Point(7, 20);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 15);
+            this.label19.Size = new System.Drawing.Size(90, 20);
             this.label19.TabIndex = 1;
             this.label19.Text = "ボタンの名前";
             // 
@@ -1338,11 +1338,11 @@
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label20.Location = new System.Drawing.Point(108, 87);
+            this.label20.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label20.Location = new System.Drawing.Point(108, 93);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(32, 15);
+            this.label20.Size = new System.Drawing.Size(42, 20);
             this.label20.TabIndex = 2;
             this.label20.Text = ".exe";
             // 
@@ -1351,7 +1351,7 @@
             this.mainValue1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainValue1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainValue1.Location = new System.Drawing.Point(8, 37);
+            this.mainValue1.Location = new System.Drawing.Point(8, 43);
             this.mainValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainValue1.Name = "mainValue1";
             this.mainValue1.Size = new System.Drawing.Size(135, 23);
@@ -1360,11 +1360,11 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label21.Location = new System.Drawing.Point(7, 65);
+            this.label21.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label21.Location = new System.Drawing.Point(7, 69);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 15);
+            this.label21.Size = new System.Drawing.Size(58, 20);
             this.label21.TabIndex = 3;
             this.label21.Text = "プロセス";
             // 
@@ -1373,7 +1373,7 @@
             this.mainProcess1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainProcess1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainProcess1.Location = new System.Drawing.Point(8, 82);
+            this.mainProcess1.Location = new System.Drawing.Point(8, 92);
             this.mainProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainProcess1.Name = "mainProcess1";
             this.mainProcess1.Size = new System.Drawing.Size(100, 23);
@@ -1382,11 +1382,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label22.Location = new System.Drawing.Point(7, 110);
+            this.label22.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label22.Location = new System.Drawing.Point(7, 122);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(78, 15);
+            this.label22.Size = new System.Drawing.Size(103, 20);
             this.label22.TabIndex = 3;
             this.label22.Text = "キーの割り当て";
             // 
@@ -1395,7 +1395,7 @@
             this.mainKey1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainKey1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.mainKey1.Location = new System.Drawing.Point(8, 127);
+            this.mainKey1.Location = new System.Drawing.Point(8, 144);
             this.mainKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKey1.Name = "mainKey1";
             this.mainKey1.ReadOnly = true;
@@ -1406,7 +1406,7 @@
             // mainKeyChange1
             // 
             this.mainKeyChange1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainKeyChange1.Location = new System.Drawing.Point(102, 126);
+            this.mainKeyChange1.Location = new System.Drawing.Point(102, 143);
             this.mainKeyChange1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKeyChange1.Name = "mainKeyChange1";
             this.mainKeyChange1.Size = new System.Drawing.Size(40, 25);
@@ -1426,11 +1426,11 @@
             this.subGroup1.Controls.Add(this.label2);
             this.subGroup1.Controls.Add(this.subKey1);
             this.subGroup1.Controls.Add(this.subKeyChange1);
-            this.subGroup1.Location = new System.Drawing.Point(11, 181);
+            this.subGroup1.Location = new System.Drawing.Point(11, 209);
             this.subGroup1.Margin = new System.Windows.Forms.Padding(2);
             this.subGroup1.Name = "subGroup1";
             this.subGroup1.Padding = new System.Windows.Forms.Padding(2);
-            this.subGroup1.Size = new System.Drawing.Size(150, 160);
+            this.subGroup1.Size = new System.Drawing.Size(150, 173);
             this.subGroup1.TabIndex = 3;
             this.subGroup1.TabStop = false;
             // 
@@ -1448,11 +1448,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(7, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 15);
+            this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "ボタンの名前";
             // 
@@ -1460,11 +1460,11 @@
             // 
             this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label36.Location = new System.Drawing.Point(108, 87);
+            this.label36.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label36.Location = new System.Drawing.Point(108, 94);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(32, 15);
+            this.label36.Size = new System.Drawing.Size(42, 20);
             this.label36.TabIndex = 2;
             this.label36.Text = ".exe";
             // 
@@ -1474,7 +1474,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subValue1.Enabled = false;
             this.subValue1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subValue1.Location = new System.Drawing.Point(8, 37);
+            this.subValue1.Location = new System.Drawing.Point(8, 43);
             this.subValue1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subValue1.Name = "subValue1";
             this.subValue1.Size = new System.Drawing.Size(135, 23);
@@ -1483,11 +1483,11 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label24.Location = new System.Drawing.Point(7, 65);
+            this.label24.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label24.Location = new System.Drawing.Point(7, 71);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(44, 15);
+            this.label24.Size = new System.Drawing.Size(58, 20);
             this.label24.TabIndex = 3;
             this.label24.Text = "プロセス";
             // 
@@ -1497,7 +1497,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subProcess1.Enabled = false;
             this.subProcess1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subProcess1.Location = new System.Drawing.Point(8, 82);
+            this.subProcess1.Location = new System.Drawing.Point(8, 93);
             this.subProcess1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subProcess1.Name = "subProcess1";
             this.subProcess1.Size = new System.Drawing.Size(100, 23);
@@ -1506,11 +1506,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.label2.Location = new System.Drawing.Point(7, 110);
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(7, 119);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 15);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "キーの割り当て";
             // 
@@ -1520,7 +1520,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subKey1.Enabled = false;
             this.subKey1.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            this.subKey1.Location = new System.Drawing.Point(8, 127);
+            this.subKey1.Location = new System.Drawing.Point(8, 141);
             this.subKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey1.Name = "subKey1";
             this.subKey1.ReadOnly = true;
@@ -1532,7 +1532,7 @@
             // 
             this.subKeyChange1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subKeyChange1.Enabled = false;
-            this.subKeyChange1.Location = new System.Drawing.Point(102, 126);
+            this.subKeyChange1.Location = new System.Drawing.Point(102, 140);
             this.subKeyChange1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKeyChange1.Name = "subKeyChange1";
             this.subKeyChange1.Size = new System.Drawing.Size(40, 25);
@@ -1609,7 +1609,7 @@
             // 
             this.saveCsvFileDialog.Filter = "CSV ファイル (*.csv)|*.csv|すべてのファイル (*.*)|*.*";
             // 
-            // KeyConfigWindow
+            // KeyConfigWindowLarge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -1625,7 +1625,7 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MinimizeBox = false;
-            this.Name = "KeyConfigWindow";
+            this.Name = "KeyConfigWindowLarge";
             this.Text = "キーの割り当て";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);

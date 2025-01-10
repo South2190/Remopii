@@ -49,6 +49,8 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonApply = new System.Windows.Forms.Button();
+            this.openExeFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.docFolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.AdvancedSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -262,6 +264,10 @@
             this.buttonApply.UseVisualStyleBackColor = true;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
+            // openExeFileDialog
+            // 
+            this.openExeFileDialog.Filter = "CSV ファイル (*.csv)|*.csv|すべてのファイル (*.*)|*.*";
+            // 
             // PHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -309,5 +315,7 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.Button defaultValue;
+        private System.Windows.Forms.OpenFileDialog openExeFileDialog;
+        private System.Windows.Forms.FolderBrowserDialog docFolderBrowserDialog;
     }
 }

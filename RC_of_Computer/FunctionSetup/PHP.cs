@@ -9,19 +9,67 @@ namespace RC_of_Computer.FunctionSetup
 {
     public partial class PHP : Form
     {
-        public PHP()
+        public PHP(int Theme)
         {
             InitializeComponent();
 
             const string SHELL32DLL = @"C:\Windows\System32\Shell32.dll";
-            //const string IMAGERESDLL = @"C:\Windows\System32\imageres.dll";
 
             Bitmap DirIcon = GetIcon.GetBitmapFromEXEDLL(SHELL32DLL, 3, false);
             PHPExeFileRef.Image = DirIcon;
             DocumentRootRef.Image = DirIcon;
-            //RunPHPSetup.Image = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, 73, false);
 
             LoadSettings();
+            ChangeTheme(Theme);
+        }
+
+        /// <summary>
+        /// ウインドウのテーマを設定します
+        /// </summary>
+        /// <param name="themeNumber">設定したいテーマの番号</param>
+        private void ChangeTheme(int themeNumber)
+        {
+            Color foreCol;
+            Color winCol;
+            Color btnCol;
+
+            switch (themeNumber)
+            {
+                // ダーク
+                case 0:
+                    BackColor = Color.FromArgb(32, 32, 32);
+                    ForeColor = Color.FromArgb(255, 255, 255);
+                    RunPHPSetup.BackColor = Color.FromArgb(56, 56, 56);
+                    AdvancedSettings.ForeColor = Color.FromArgb(255, 255, 255);
+                    buttonOk.BackColor = Color.FromArgb(56, 56, 56);
+                    buttonCancel.BackColor = Color.FromArgb(56, 56, 56);
+                    buttonApply.BackColor = Color.FromArgb(56, 56, 56);
+                    foreCol = Color.FromArgb(255, 255, 255);
+                    winCol = Color.FromArgb(56, 56, 56);
+                    btnCol = Color.FromArgb(56, 56, 56);
+                    break;
+                // デフォルト
+                case 1:
+                default:
+                    return;
+            }
+
+            foreach (Control c in AdvancedSettings.Controls)
+            {
+                switch (c.GetType())
+                {
+                    case Type t when t == typeof(TextBox):
+                    case Type t2 when t2 == typeof(ComboBox):
+                        c.BackColor = winCol;
+                        c.ForeColor = foreCol;
+                        break;
+                    case Type t when t == typeof(Button):
+                        c.BackColor = btnCol;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void RunPHPSetup_Click(object sender, EventArgs e)
@@ -43,13 +91,9 @@ namespace RC_of_Computer.FunctionSetup
         /// </summary>
         private void PHPExeFileRef_Click(object sender, EventArgs e)
         {
-            using OpenFileDialog openFileDialog = new()
+            if (openExeFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Filter = "Exe files (*.exe)|*.exe|All files (*.*)|*.*"
-            };
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                PHPExeFilePath.Text = openFileDialog.FileName;
+                PHPExeFilePath.Text = openExeFileDialog.FileName;
             }
         }
 
@@ -59,11 +103,19 @@ namespace RC_of_Computer.FunctionSetup
         /// </summary>
         private void DocumentRootRef_Click(object sender, EventArgs e)
         {
-            using FolderBrowserDialog folderBrowserDialog = new();
-            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            if (docFolderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                DocumentRootPath.Text = folderBrowserDialog.SelectedPath;
+                DocumentRootPath.Text = docFolderBrowserDialog.SelectedPath;
             }
+        }
+
+        /// <summary>
+        /// "環境変数の値を使用する" チェックボックスのCheckedが切り替わった際の処理
+        /// </summary>
+        private void UsePATHValue_CheckedChanged(object sender, EventArgs e)
+        {
+            PHPExeFilePath.Enabled = !UsePATHValue.Checked;
+            PHPExeFileRef.Enabled = !UsePATHValue.Checked;
         }
 
         /// <summary>
@@ -172,20 +224,6 @@ namespace RC_of_Computer.FunctionSetup
 
             Properties.Settings.Default.Save();
             return true;
-        }
-
-        private void UsePATHValue_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UsePATHValue.Checked == true) 
-            {
-                PHPExeFilePath.Enabled = false;
-                PHPExeFileRef.Enabled = false;
-            }
-            else
-            {
-                PHPExeFilePath.Enabled = true;
-                PHPExeFileRef.Enabled = true;
-            }
         }
     }
 }
