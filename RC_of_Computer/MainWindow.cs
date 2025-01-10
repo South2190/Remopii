@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -14,6 +15,8 @@ namespace RC_of_Computer
 {
     public partial class MainWindow : Form
     {
+        private readonly int AppsUseLightTheme;
+
         private readonly Bitmap IconOk;
         private readonly Bitmap IconWarning;
         private readonly Bitmap IconError;
@@ -75,6 +78,38 @@ namespace RC_of_Computer
             IconError = GetIcon.GetBitmapFromEXEDLL(IMAGERESDLL, indexError, true);
 
             CheckStatus();
+
+            RegistryKey registry = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize");
+            AppsUseLightTheme = (int)registry.GetValue("AppsUseLightTheme");
+            //AppsUseLightTheme = 1;
+            registry.Close();
+
+            ChangeTheme(AppsUseLightTheme);
+        }
+
+        /// <summary>
+        /// ウインドウのテーマを設定します
+        /// </summary>
+        /// <param name="themeNumber">設定したいテーマの番号</param>
+        private void ChangeTheme(int themeNumber)
+        {
+            switch (themeNumber)
+            {
+                // ダーク
+                case 0:
+                    BackColor = Color.FromArgb(32, 32, 32);
+                    ForeColor = Color.FromArgb(255, 255, 255);
+                    SetupGroup.ForeColor = Color.FromArgb(255, 255, 255);
+                    ShowPHP.BackColor = Color.FromArgb(56, 56, 56);
+                    ShowKeyConfig.BackColor = Color.FromArgb(56, 56, 56);
+                    ServerIO.BackColor = Color.FromArgb(56, 56, 56);
+                    VersionInfoLink.LinkColor = Color.FromArgb(126, 170, 255);
+                    break;
+                // デフォルト
+                case 1:
+                default:
+                    return;
+            }
         }
 
         /// <summary>
@@ -99,7 +134,7 @@ namespace RC_of_Computer
 
         private void ShowPHP_Click(object sender, EventArgs e)
         {
-            PHP php = new()
+            PHP php = new(AppsUseLightTheme)
             {
                 Owner = this
             };
@@ -109,7 +144,7 @@ namespace RC_of_Computer
 
         private void ShowKeyConfig_Click(object sender, EventArgs e)
         {
-            KeyConfigWindow keyConfigWindow = new()
+            KeyConfigWindow keyConfigWindow = new(AppsUseLightTheme)
             {
                 Owner = this
             };
@@ -138,7 +173,7 @@ namespace RC_of_Computer
                     WindowStyle = ProcessWindowStyle.Minimized
                 };
                 Process.Start(pInfo);
-                ShowQRCode showQRCode = new()
+                ShowQRCode showQRCode = new(AppsUseLightTheme)
                 {
                     Owner = this
                 };
@@ -237,7 +272,7 @@ namespace RC_of_Computer
 
         private void ShowQRWindow_Click(object sender, EventArgs e)
         {
-            ShowQRCode showQRCode = new()
+            ShowQRCode showQRCode = new(AppsUseLightTheme)
             {
                 Owner = this
             };

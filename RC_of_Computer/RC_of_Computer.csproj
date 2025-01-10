@@ -64,6 +64,12 @@
   <ItemGroup>
     <Compile Include="Classes\CSVIO.cs" />
     <Compile Include="Classes\GetIcon.cs" />
+    <Compile Include="FunctionSetup\KeyConfigWindowLarge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionSetup\KeyConfigWindowLarge.Designer.cs">
+      <DependentUpon>KeyConfigWindowLarge.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunctionSetup\KeyConfigWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="VersionInfo.Designer.cs">
       <DependentUpon>VersionInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FunctionSetup\KeyConfigWindowLarge.resx">
+      <DependentUpon>KeyConfigWindowLarge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FunctionSetup\KeyConfigWindow.resx">
       <DependentUpon>KeyConfigWindow.cs</DependentUpon>
     </EmbeddedResource>

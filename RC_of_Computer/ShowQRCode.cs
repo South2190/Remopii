@@ -15,11 +15,39 @@ namespace RC_of_Computer
         private List<string> ipAddresses;
         private List<Bitmap> GenQRCodes;
 
-        public ShowQRCode()
+        public ShowQRCode(int Theme)
         {
             InitializeComponent();
             if (!GetNetworkIF()) { Close(); }
             networkIFComboBox.SelectedIndex = 0;
+
+            ChangeTheme(Theme);
+        }
+
+        /// <summary>
+        /// ウインドウのテーマを設定します
+        /// </summary>
+        /// <param name="themeNumber">設定したいテーマの番号</param>
+        private void ChangeTheme(int themeNumber)
+        {
+            switch (themeNumber)
+            {
+                // ダーク
+                case 0:
+                    BackColor = Color.FromArgb(32, 32, 32);
+                    ForeColor = Color.FromArgb(255, 255, 255);
+                    reloadNetwarkIF.BackColor = Color.FromArgb(56, 56, 56);
+                    OKButton.BackColor = Color.FromArgb(56, 56, 56);
+                    networkIFComboBox.BackColor = Color.FromArgb(32, 32, 32);
+                    networkIFComboBox.ForeColor = Color.FromArgb(255, 255, 255);
+                    URLTextBox.BackColor = Color.FromArgb(32, 32, 32);
+                    URLTextBox.ForeColor = Color.FromArgb(255, 255, 255);
+                    break;
+                // デフォルト
+                case 1:
+                default:
+                    return;
+            }
         }
 
         private void OKButton_Click(object sender, EventArgs e)

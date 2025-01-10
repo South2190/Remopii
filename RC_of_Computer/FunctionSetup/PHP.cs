@@ -9,7 +9,7 @@ namespace RC_of_Computer.FunctionSetup
 {
     public partial class PHP : Form
     {
-        public PHP()
+        public PHP(int Theme)
         {
             InitializeComponent();
 
@@ -20,6 +20,56 @@ namespace RC_of_Computer.FunctionSetup
             DocumentRootRef.Image = DirIcon;
 
             LoadSettings();
+            ChangeTheme(Theme);
+        }
+
+        /// <summary>
+        /// ウインドウのテーマを設定します
+        /// </summary>
+        /// <param name="themeNumber">設定したいテーマの番号</param>
+        private void ChangeTheme(int themeNumber)
+        {
+            Color foreCol;
+            Color winCol;
+            Color btnCol;
+
+            switch (themeNumber)
+            {
+                // ダーク
+                case 0:
+                    BackColor = Color.FromArgb(32, 32, 32);
+                    ForeColor = Color.FromArgb(255, 255, 255);
+                    RunPHPSetup.BackColor = Color.FromArgb(56, 56, 56);
+                    AdvancedSettings.ForeColor = Color.FromArgb(255, 255, 255);
+                    buttonOk.BackColor = Color.FromArgb(56, 56, 56);
+                    buttonCancel.BackColor = Color.FromArgb(56, 56, 56);
+                    buttonApply.BackColor = Color.FromArgb(56, 56, 56);
+                    foreCol = Color.FromArgb(255, 255, 255);
+                    winCol = Color.FromArgb(56, 56, 56);
+                    btnCol = Color.FromArgb(56, 56, 56);
+                    break;
+                // デフォルト
+                case 1:
+                default:
+                    return;
+            }
+
+            foreach (Control c in AdvancedSettings.Controls)
+            {
+                switch (c.GetType())
+                {
+                    case Type t when t == typeof(TextBox):
+                    case Type t2 when t2 == typeof(ComboBox):
+                        c.BackColor = winCol;
+                        c.ForeColor = foreCol;
+                        break;
+                    case Type t when t == typeof(Button):
+                        c.BackColor = btnCol;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void RunPHPSetup_Click(object sender, EventArgs e)
