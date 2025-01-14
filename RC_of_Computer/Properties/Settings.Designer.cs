@@ -106,5 +106,17 @@ namespace RC_of_Computer.Properties {
                 this["PortNumber"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SystemSettings")]
+        public string UseTheme {
+            get {
+                return ((string)(this["UseTheme"]));
+            }
+            set {
+                this["UseTheme"] = value;
+            }
+        }
     }
 }

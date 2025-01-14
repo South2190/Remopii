@@ -41,6 +41,10 @@
             this.processMonitoring = new System.Windows.Forms.Timer(this.components);
             this.AppName = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ThemesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThemesItemSystemSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThemesItemLight = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThemesItemDark = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowQRWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.AppVersion = new System.Windows.Forms.Label();
             this.SetupGroup.SuspendLayout();
@@ -127,12 +131,12 @@
             this.VersionInfoLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.VersionInfoLink.AutoSize = true;
             this.VersionInfoLink.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.VersionInfoLink.Location = new System.Drawing.Point(168, 262);
+            this.VersionInfoLink.Location = new System.Drawing.Point(223, 262);
             this.VersionInfoLink.Name = "VersionInfoLink";
-            this.VersionInfoLink.Size = new System.Drawing.Size(131, 15);
+            this.VersionInfoLink.Size = new System.Drawing.Size(76, 15);
             this.VersionInfoLink.TabIndex = 61;
             this.VersionInfoLink.TabStop = true;
-            this.VersionInfoLink.Text = "このアプリケーションについて";
+            this.VersionInfoLink.Text = "バージョン情報";
             this.VersionInfoLink.Click += new System.EventHandler(this.ShowVersionInfo_Click);
             // 
             // processMonitoring
@@ -153,9 +157,41 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ThemesToolStripMenuItem,
             this.ShowQRWindow});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 48);
+            // 
+            // ThemesToolStripMenuItem
+            // 
+            this.ThemesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ThemesItemSystemSettings,
+            this.ThemesItemDark,
+            this.ThemesItemLight});
+            this.ThemesToolStripMenuItem.Name = "ThemesToolStripMenuItem";
+            this.ThemesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.ThemesToolStripMenuItem.Text = "テーマ";
+            // 
+            // ThemesItemSystemSettings
+            // 
+            this.ThemesItemSystemSettings.Name = "ThemesItemSystemSettings";
+            this.ThemesItemSystemSettings.Size = new System.Drawing.Size(180, 22);
+            this.ThemesItemSystemSettings.Text = "システムの設定に従う";
+            this.ThemesItemSystemSettings.Click += new System.EventHandler(this.ThemesItem_Click);
+            // 
+            // ThemesItemLight
+            // 
+            this.ThemesItemLight.Name = "ThemesItemLight";
+            this.ThemesItemLight.Size = new System.Drawing.Size(180, 22);
+            this.ThemesItemLight.Text = "ライト";
+            this.ThemesItemLight.Click += new System.EventHandler(this.ThemesItem_Click);
+            // 
+            // ThemesItemDark
+            // 
+            this.ThemesItemDark.Name = "ThemesItemDark";
+            this.ThemesItemDark.Size = new System.Drawing.Size(180, 22);
+            this.ThemesItemDark.Text = "ダーク";
+            this.ThemesItemDark.Click += new System.EventHandler(this.ThemesItem_Click);
             // 
             // ShowQRWindow
             // 
@@ -216,5 +252,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ShowQRWindow;
         private System.Windows.Forms.Label AppVersion;
+        private System.Windows.Forms.ToolStripMenuItem ThemesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ThemesItemSystemSettings;
+        private System.Windows.Forms.ToolStripMenuItem ThemesItemLight;
+        private System.Windows.Forms.ToolStripMenuItem ThemesItemDark;
     }
 }

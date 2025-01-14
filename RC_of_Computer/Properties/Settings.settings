@@ -23,5 +23,8 @@
     <Setting Name="PortNumber" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">8000</Value>
     </Setting>
+    <Setting Name="UseTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SystemSettings</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

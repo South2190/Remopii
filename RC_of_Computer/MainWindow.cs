@@ -16,7 +16,7 @@ namespace RC_of_Computer
 {
     public partial class MainWindow : Form
     {
-        private readonly int AppsUseLightTheme;
+        private readonly int UseThemeNumber;
 
         private readonly Bitmap IconOk;
         private readonly Bitmap IconWarning;
@@ -80,12 +80,28 @@ namespace RC_of_Computer
 
             CheckStatus();
 
-            RegistryKey registry = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize");
-            AppsUseLightTheme = (int)registry.GetValue("AppsUseLightTheme");
-            //AppsUseLightTheme = 1;
-            registry.Close();
-
-            ChangeTheme(AppsUseLightTheme);
+            // テーマの設定
+            switch (Properties.Settings.Default.UseTheme)
+            {
+                case "Dark":
+                    UseThemeNumber = 0;
+                    ThemesItemDark.CheckState = CheckState.Indeterminate;
+                    break;
+                case "Light":
+                    UseThemeNumber = 1;
+                    ThemesItemLight.CheckState = CheckState.Indeterminate;
+                    break;
+                case "SystemSettings":
+                default:
+                    // レジストリから現在のシステムのテーマ設定を取得
+                    using (RegistryKey k = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"))
+                    {
+                        UseThemeNumber = (int)k.GetValue("AppsUseLightTheme");
+                    }
+                    ThemesItemSystemSettings.CheckState = CheckState.Indeterminate;
+                    break;
+            }
+            ChangeTheme(UseThemeNumber);
         }
 
         /// <summary>
@@ -133,9 +149,10 @@ namespace RC_of_Computer
             }
         }
 
+        #region *** 各フォームを呼び出す処理 ***
         private void ShowPHP_Click(object sender, EventArgs e)
         {
-            PHP php = new(AppsUseLightTheme)
+            PHP php = new(UseThemeNumber)
             {
                 Owner = this
             };
@@ -145,17 +162,19 @@ namespace RC_of_Computer
 
         private void ShowKeyConfig_Click(object sender, EventArgs e)
         {
+            // 卒業研究発表用に用意したフォームを表示する場合
             if (ConfigurationManager.AppSettings["KeyConfigWindowLarge"] == "True")
             {
-                KeyConfigWindowLarge keyConfigWindowLarge = new(AppsUseLightTheme)
+                KeyConfigWindowLarge keyConfigWindowLarge = new(UseThemeNumber)
                 {
                     Owner = this
                 };
                 keyConfigWindowLarge.ShowDialog();
             }
+            // 通常のフォームを表示する場合
             else
             {
-                KeyConfigWindow keyConfigWindow = new(AppsUseLightTheme)
+                KeyConfigWindow keyConfigWindow = new(UseThemeNumber)
                 {
                     Owner = this
                 };
@@ -166,12 +185,22 @@ namespace RC_of_Computer
 
         private void ShowVersionInfo_Click(object sender, EventArgs e)
         {
-            VersionInfo versionInfo = new(AppsUseLightTheme)
+            VersionInfo versionInfo = new(UseThemeNumber)
             {
                 Owner = this
             };
             versionInfo.ShowDialog();
         }
+
+        private void ShowQRWindow_Click(object sender, EventArgs e)
+        {
+            ShowQRCode showQRCode = new(UseThemeNumber)
+            {
+                Owner = this
+            };
+            showQRCode.ShowDialog();
+        }
+        #endregion
 
         private void ServerIO_Click(object sender, EventArgs e)
         {
@@ -185,7 +214,7 @@ namespace RC_of_Computer
                     WindowStyle = ProcessWindowStyle.Minimized
                 };
                 Process.Start(pInfo);
-                ShowQRCode showQRCode = new(AppsUseLightTheme)
+                ShowQRCode showQRCode = new(UseThemeNumber)
                 {
                     Owner = this
                 };
@@ -282,13 +311,31 @@ namespace RC_of_Computer
             return 0;
         }
 
-        private void ShowQRWindow_Click(object sender, EventArgs e)
+        /// <summary>
+        /// テーマ設定のラジオボタンの制御と設定の保存を行います
+        /// </summary>
+        private void ThemesItem_Click(object sender, EventArgs e)
         {
-            ShowQRCode showQRCode = new(AppsUseLightTheme)
+            ThemesItemSystemSettings.CheckState = CheckState.Unchecked;
+            ThemesItemLight.CheckState = CheckState.Unchecked;
+            ThemesItemDark.CheckState = CheckState.Unchecked;
+            ((ToolStripMenuItem)sender).CheckState = CheckState.Indeterminate;
+
+            switch (((ToolStripMenuItem)sender).Name)
             {
-                Owner = this
-            };
-            showQRCode.ShowDialog();
+                case "ThemesItemSystemSettings":
+                default:
+                    Properties.Settings.Default.UseTheme = "SystemSettings";
+                    break;
+                case "ThemesItemLight":
+                    Properties.Settings.Default.UseTheme = "Light";
+                    break;
+                case "ThemesItemDark":
+                    Properties.Settings.Default.UseTheme = "Dark";
+                    break;
+            }
+            Properties.Settings.Default.Save();
+            MessageBox.Show("テーマの変更はソフトウェアの再起動後に有効となります。", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
