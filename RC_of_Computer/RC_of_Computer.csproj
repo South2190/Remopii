@@ -163,13 +163,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "$(SolutionDir)seigyo\bin\Release\seigyo.exe" (
-  copy /b "$(SolutionDir)seigyo\bin\Release\seigyo.exe" "$(TargetDir)"
+    <PostBuildEvent>if exist "$(SolutionDir)seigyo\bin\$(ConfigurationName)\seigyo.exe" (
+  copy /b "$(SolutionDir)seigyo\bin\$(ConfigurationName)\seigyo.exe" "$(TargetDir)"
 ) else if "$(ConfigurationName)" == "Release" (
   mshta vbscript:execute("msgbox""seigyo.exeが見つかりませんでした。seigyoをビルドしてください。"",16,""Error"":close"^)
 )
-if exist "$(SolutionDir)seigyo\bin\Release\seigyo.exe.config" (
-  copy "$(SolutionDir)seigyo\bin\Release\seigyo.exe.config" "$(TargetDir)"
+if exist "$(SolutionDir)seigyo\bin\$(ConfigurationName)\seigyo.exe.config" (
+  copy "$(SolutionDir)seigyo\bin\$(ConfigurationName)\seigyo.exe.config" "$(TargetDir)"
 ) else if "$(ConfigurationName)" == "Release" (
   mshta vbscript:execute("msgbox""seigyo.exe.configが見つかりませんでした。seigyoをビルドしてください。"",16,""Error"":close"^)
 )</PostBuildEvent>
