@@ -69,7 +69,7 @@
             this.RunPHPSetup.Name = "RunPHPSetup";
             this.RunPHPSetup.Size = new System.Drawing.Size(170, 25);
             this.RunPHPSetup.TabIndex = 1;
-            this.RunPHPSetup.Text = "PHPの自動セットアップ";
+            this.RunPHPSetup.Text = "PHPの自動セットアップ(&S)";
             this.RunPHPSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RunPHPSetup.UseVisualStyleBackColor = true;
             this.RunPHPSetup.Click += new System.EventHandler(this.RunPHPSetup_Click);
@@ -113,11 +113,11 @@
             // defaultValue
             // 
             this.defaultValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.defaultValue.Location = new System.Drawing.Point(490, 195);
+            this.defaultValue.Location = new System.Drawing.Point(480, 195);
             this.defaultValue.Name = "defaultValue";
-            this.defaultValue.Size = new System.Drawing.Size(80, 25);
+            this.defaultValue.Size = new System.Drawing.Size(90, 25);
             this.defaultValue.TabIndex = 50;
-            this.defaultValue.Text = "既定値";
+            this.defaultValue.Text = "既定値(&D)";
             this.defaultValue.UseVisualStyleBackColor = true;
             this.defaultValue.Click += new System.EventHandler(this.DefaultValue_Click);
             // 
@@ -238,7 +238,7 @@
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(80, 25);
             this.buttonOk.TabIndex = 55;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "OK(&O)";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
@@ -260,7 +260,7 @@
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(80, 25);
             this.buttonApply.TabIndex = 65;
-            this.buttonApply.Text = "適用";
+            this.buttonApply.Text = "適用(&A)";
             this.buttonApply.UseVisualStyleBackColor = true;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 

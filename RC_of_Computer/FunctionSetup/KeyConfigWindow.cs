@@ -483,10 +483,15 @@ namespace RC_of_Computer
         {
             List<string[]> buttonList = new()
             {
-                new string[] { string.Empty, string.Empty, string.Empty, string.Empty },
-                new string[] { string.Empty, string.Empty, string.Empty, string.Empty }
+                new string[] { "←", string.Empty, "{LEFT}", "POWERPNT" },
+                new string[] { "→", string.Empty, "{RIGHT}", "POWERPNT" },
+                new string[] { "スライド(最初から)", "True", "{F5}", "POWERPNT" },
+                new string[] { "スライド(現在から)", "True", "+({F5})", "POWERPNT" },
+                new string[] { "スライドの終了", "True", "{ESC}", "POWERPNT" },
+                new string[] { "黒い画面", "False", "B", "POWERPNT" },
+                new string[] { "白い画面", "False", "W", "POWERPNT" }
             };
-            for (int i = 0; i < 9; i++) { buttonList.Add(new string[] { string.Empty, "False", string.Empty, string.Empty }); }
+            for (int i = 0; i < 4; i++) { buttonList.Add(new string[] { string.Empty, "False", string.Empty, string.Empty }); }
 
             CSVIO.LoadCSV(path, ref buttonList);
 

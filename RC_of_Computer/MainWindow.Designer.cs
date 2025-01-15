@@ -43,8 +43,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ThemesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThemesItemSystemSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThemesItemLight = new System.Windows.Forms.ToolStripMenuItem();
             this.ThemesItemDark = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThemesItemLight = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowQRWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.AppVersion = new System.Windows.Forms.Label();
             this.SetupGroup.SuspendLayout();
@@ -71,7 +71,7 @@
             this.ShowPHP.Name = "ShowPHP";
             this.ShowPHP.Size = new System.Drawing.Size(230, 40);
             this.ShowPHP.TabIndex = 50;
-            this.ShowPHP.Text = "PHPの設定";
+            this.ShowPHP.Text = "PHPの設定(&P)";
             this.ShowPHP.UseVisualStyleBackColor = true;
             this.ShowPHP.Click += new System.EventHandler(this.ShowPHP_Click);
             // 
@@ -82,7 +82,7 @@
             this.ShowKeyConfig.Name = "ShowKeyConfig";
             this.ShowKeyConfig.Size = new System.Drawing.Size(230, 40);
             this.ShowKeyConfig.TabIndex = 55;
-            this.ShowKeyConfig.Text = "キーの割り当て";
+            this.ShowKeyConfig.Text = "キーの割り当て(&K)";
             this.ShowKeyConfig.UseVisualStyleBackColor = true;
             this.ShowKeyConfig.Click += new System.EventHandler(this.ShowKeyConfig_Click);
             // 
@@ -175,23 +175,23 @@
             // ThemesItemSystemSettings
             // 
             this.ThemesItemSystemSettings.Name = "ThemesItemSystemSettings";
-            this.ThemesItemSystemSettings.Size = new System.Drawing.Size(180, 22);
+            this.ThemesItemSystemSettings.Size = new System.Drawing.Size(174, 22);
             this.ThemesItemSystemSettings.Text = "システムの設定に従う";
             this.ThemesItemSystemSettings.Click += new System.EventHandler(this.ThemesItem_Click);
-            // 
-            // ThemesItemLight
-            // 
-            this.ThemesItemLight.Name = "ThemesItemLight";
-            this.ThemesItemLight.Size = new System.Drawing.Size(180, 22);
-            this.ThemesItemLight.Text = "ライト";
-            this.ThemesItemLight.Click += new System.EventHandler(this.ThemesItem_Click);
             // 
             // ThemesItemDark
             // 
             this.ThemesItemDark.Name = "ThemesItemDark";
-            this.ThemesItemDark.Size = new System.Drawing.Size(180, 22);
+            this.ThemesItemDark.Size = new System.Drawing.Size(174, 22);
             this.ThemesItemDark.Text = "ダーク";
             this.ThemesItemDark.Click += new System.EventHandler(this.ThemesItem_Click);
+            // 
+            // ThemesItemLight
+            // 
+            this.ThemesItemLight.Name = "ThemesItemLight";
+            this.ThemesItemLight.Size = new System.Drawing.Size(174, 22);
+            this.ThemesItemLight.Text = "ライト";
+            this.ThemesItemLight.Click += new System.EventHandler(this.ThemesItem_Click);
             // 
             // ShowQRWindow
             // 

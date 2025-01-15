@@ -1548,7 +1548,7 @@
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(80, 25);
             this.buttonApply.TabIndex = 14;
-            this.buttonApply.Text = "適用";
+            this.buttonApply.Text = "適用(&A)";
             this.buttonApply.UseVisualStyleBackColor = true;
             this.buttonApply.Click += new System.EventHandler(this.Apply_Click);
             // 
@@ -1570,7 +1570,7 @@
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(80, 25);
             this.buttonOk.TabIndex = 12;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "OK(&O)";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.OK_Click);
             // 
