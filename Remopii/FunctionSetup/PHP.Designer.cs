@@ -1,4 +1,4 @@
-﻿namespace RC_of_Computer.FunctionSetup
+﻿namespace Remopii.FunctionSetup
 {
     partial class PHP
     {
@@ -266,7 +266,7 @@
             // 
             // openExeFileDialog
             // 
-            this.openExeFileDialog.Filter = "CSV ファイル (*.csv)|*.csv|すべてのファイル (*.*)|*.*";
+            this.openExeFileDialog.Filter = "Windows 実行ファイル (*.exe)|*.exe|すべてのファイル (*.*)|*.*";
             // 
             // PHP
             // 

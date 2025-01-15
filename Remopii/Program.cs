@@ -2,7 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace RC_of_Computer
+namespace Remopii
 {
     internal static class Program
     {

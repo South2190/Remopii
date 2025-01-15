@@ -1,4 +1,4 @@
-﻿namespace RC_of_Computer
+﻿namespace Remopii
 {
     partial class VersionInfo
     {
@@ -42,7 +42,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RC_of_Computer.Properties.Resources.LargeIcon;
+            this.pictureBox1.Image = global::Remopii.Properties.Resources.LargeIcon;
             this.pictureBox1.Location = new System.Drawing.Point(5, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

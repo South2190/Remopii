@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RC_of_Computer.Classes
+namespace Remopii.Classes
 {
     public static class HttpClientProgressExtensions
     {

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace RC_of_Computer.Classes
+namespace Remopii.Classes
 {
     public static class CSVIO
     {

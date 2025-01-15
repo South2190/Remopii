@@ -3,9 +3,9 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using RC_of_Computer.Classes;
+using Remopii.Classes;
 
-namespace RC_of_Computer.FunctionSetup
+namespace Remopii.FunctionSetup
 {
     public partial class PHP : Form
     {
@@ -169,7 +169,7 @@ namespace RC_of_Computer.FunctionSetup
                 }
             }
             Assembly assembly = Assembly.GetExecutingAssembly();
-            Stream stream = assembly.GetManifestResourceStream("RC_of_Computer.Resources.index.php");
+            Stream stream = assembly.GetManifestResourceStream("Remopii.Resources.index.php");
             StreamReader streamReader = new(stream);
             string pf = streamReader.ReadToEnd();
             try

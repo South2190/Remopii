@@ -1,4 +1,4 @@
-﻿namespace RC_of_Computer
+﻿namespace Remopii
 {
     partial class ShowQRCode
     {

@@ -1,67 +1,67 @@
 <?php
     //ボタン押したときの処理
     if(array_key_exists('mainBtn1', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\MainButton1');
+        exec('schtasks /run /tn Remopii\MainButton1');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
         
     if(array_key_exists('mainBtn2', $_POST)) {  
-        exec('schtasks /run /tn RC_of_Computer\MainButton2'); 
+        exec('schtasks /run /tn Remopii\MainButton2'); 
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
     
     if(array_key_exists('subBtn1', $_POST)) {  
-        exec('schtasks /run /tn RC_of_Computer\SubButton1');
+        exec('schtasks /run /tn Remopii\SubButton1');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn2', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton2');
+        exec('schtasks /run /tn Remopii\SubButton2');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn3', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton3');
+        exec('schtasks /run /tn Remopii\SubButton3');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn4', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton4');
+        exec('schtasks /run /tn Remopii\SubButton4');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn5', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton5');
+        exec('schtasks /run /tn Remopii\SubButton5');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn6', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton6');
+        exec('schtasks /run /tn Remopii\SubButton6');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn7', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton7');
+        exec('schtasks /run /tn Remopii\SubButton7');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn8', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton8');
+        exec('schtasks /run /tn Remopii\SubButton8');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
       
     if(array_key_exists('subBtn9', $_POST)) { 
-        exec('schtasks /run /tn RC_of_Computer\SubButton9');
+        exec('schtasks /run /tn Remopii\SubButton9');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }

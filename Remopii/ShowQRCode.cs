@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using ZXing;
 using ZXing.QrCode;
 
-namespace RC_of_Computer
+namespace Remopii
 {
     public partial class ShowQRCode : Form
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般的な情報は、次の方法で制御されます
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更します。
-[assembly: AssemblyTitle("RC_of_Computer")]
+[assembly: AssemblyTitle("Remopii")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("RC_of_Computer")]
-[assembly: AssemblyProduct("RC_of_Computer")]
+[assembly: AssemblyCompany("Remopii")]
+[assembly: AssemblyProduct("Remopii")]
 [assembly: AssemblyCopyright("Copyright © Ishizaki, Otsuru, Kawakami, Tsurumi, Nakatani, Minami 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

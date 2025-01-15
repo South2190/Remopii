@@ -1,4 +1,4 @@
-﻿namespace RC_of_Computer.FunctionSetup
+﻿namespace Remopii.FunctionSetup
 {
     partial class PHPAutoSetup
     {

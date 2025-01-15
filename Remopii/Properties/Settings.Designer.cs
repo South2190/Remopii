@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RC_of_Computer.Properties {
+namespace Remopii.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

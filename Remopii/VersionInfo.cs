@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace RC_of_Computer
+namespace Remopii
 {
     public partial class VersionInfo : Form
     {

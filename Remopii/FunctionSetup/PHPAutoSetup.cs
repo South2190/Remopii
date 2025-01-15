@@ -7,9 +7,9 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
-using RC_of_Computer.Classes;
+using Remopii.Classes;
 
-namespace RC_of_Computer.FunctionSetup
+namespace Remopii.FunctionSetup
 {
     public partial class PHPAutoSetup : Form
     {
@@ -71,7 +71,7 @@ namespace RC_of_Computer.FunctionSetup
             SetupDetail.Text = "ダウンロードを開始中...";
             StartSetup.Text = "キャンセル";
 
-            string localAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RC_of_Computer");
+            string localAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Remopii");
             string TempFilePath = Path.Combine(localAppDataPath, destinationFileName);
 
             Progress<float> progress = new();

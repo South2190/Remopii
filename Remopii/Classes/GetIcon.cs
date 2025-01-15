@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace RC_of_Computer.Classes
+namespace Remopii.Classes
 {
     public static class GetIcon
     {

@@ -9,10 +9,10 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-using RC_of_Computer.Classes;
-using RC_of_Computer.FunctionSetup;
+using Remopii.Classes;
+using Remopii.FunctionSetup;
 
-namespace RC_of_Computer
+namespace Remopii
 {
     public partial class MainWindow : Form
     {

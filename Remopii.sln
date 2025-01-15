@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC_of_Computer", "RC_of_Computer\RC_of_Computer.csproj", "{C321A8D0-2539-49CD-B371-B55B44E101E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remopii", "Remopii\Remopii.csproj", "{C321A8D0-2539-49CD-B371-B55B44E101E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "seigyo", "seigyo\seigyo.csproj", "{007E7AE8-CE88-403C-B142-56BD6F05DA2A}"
 EndProject
