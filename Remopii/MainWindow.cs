@@ -162,24 +162,29 @@ namespace Remopii
 
         private void ShowKeyConfig_Click(object sender, EventArgs e)
         {
-            // 卒業研究発表用に用意したフォームを表示する場合
-            if (ConfigurationManager.AppSettings["KeyConfigWindowLarge"] == "True")
+            //// 卒業研究発表用に用意したフォームを表示する場合
+            //if (ConfigurationManager.AppSettings["KeyConfigWindowLarge"] == "True")
+            //{
+            //    KeyConfigWindowLarge keyConfigWindowLarge = new(UseThemeNumber)
+            //    {
+            //        Owner = this
+            //    };
+            //    keyConfigWindowLarge.ShowDialog();
+            //}
+            //// 通常のフォームを表示する場合
+            //else
+            //{
+            //    KeyConfigWindow keyConfigWindow = new(UseThemeNumber)
+            //    {
+            //        Owner = this
+            //    };
+            //    keyConfigWindow.ShowDialog();
+            //}
+            KeyConfigWindow keyConfigWindow = new(UseThemeNumber)
             {
-                KeyConfigWindowLarge keyConfigWindowLarge = new(UseThemeNumber)
-                {
-                    Owner = this
-                };
-                keyConfigWindowLarge.ShowDialog();
-            }
-            // 通常のフォームを表示する場合
-            else
-            {
-                KeyConfigWindow keyConfigWindow = new(UseThemeNumber)
-                {
-                    Owner = this
-                };
-                keyConfigWindow.ShowDialog();
-            }
+                Owner = this
+            };
+            keyConfigWindow.ShowDialog();
             CheckStatus();
         }
 

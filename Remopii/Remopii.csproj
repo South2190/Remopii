@@ -68,12 +68,6 @@
   <ItemGroup>
     <Compile Include="Classes\CSVIO.cs" />
     <Compile Include="Classes\GetIcon.cs" />
-    <Compile Include="FunctionSetup\KeyConfigWindowLarge.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FunctionSetup\KeyConfigWindowLarge.Designer.cs">
-      <DependentUpon>KeyConfigWindowLarge.cs</DependentUpon>
-    </Compile>
     <Compile Include="FunctionSetup\KeyConfigWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +86,12 @@
     </Compile>
     <Compile Include="FunctionSetup\PHPAutoSetup.Designer.cs">
       <DependentUpon>PHPAutoSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionSetup\ProcessSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionSetup\ProcessSearch.Designer.cs">
+      <DependentUpon>ProcessSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -113,9 +113,6 @@
     <Compile Include="VersionInfo.Designer.cs">
       <DependentUpon>VersionInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FunctionSetup\KeyConfigWindowLarge.resx">
-      <DependentUpon>KeyConfigWindowLarge.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FunctionSetup\KeyConfigWindow.resx">
       <DependentUpon>KeyConfigWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FunctionSetup\PHPAutoSetup.resx">
       <DependentUpon>PHPAutoSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionSetup\ProcessSearch.resx">
+      <DependentUpon>ProcessSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

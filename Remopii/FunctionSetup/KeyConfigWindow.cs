@@ -9,11 +9,14 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using Remopii.Classes;
+using Remopii.FunctionSetup;
 
 namespace Remopii
 {
     public partial class KeyConfigWindow : Form
     {
+        private readonly int AppsUseLightTheme;
+
         private Button buttonCount = null;
         private int duration = 0;
 
@@ -27,6 +30,7 @@ namespace Remopii
         {
             InitializeComponent();
             LoadSettingsFromCSV(csvFileFullPath);
+            AppsUseLightTheme = Theme;
             ChangeTheme(Theme);
         }
 
@@ -65,8 +69,6 @@ namespace Remopii
             // panel内のグループボックス全取得
             foreach (Control groupbox in panelRemocon.Controls)
             {
-                groupbox.ForeColor = foreCol;
-
                 // グループボックス内のテキストボックス全取得
                 foreach (TextBox control in groupbox.Controls.OfType<TextBox>())
                 {
@@ -209,6 +211,7 @@ namespace Remopii
             }
         }
 
+        #region *** 各種変換処理(長いswitch文) ***
         /// <summary>
         /// 最適なテキストボックスにテキストを代入します
         /// </summary>
@@ -374,6 +377,64 @@ namespace Remopii
                     return "{TAB}";
                 default:
                     return key.ToString();
+            }
+        }
+
+        /// <summary>
+        /// 最適なテキストボックスにテキストを代入します
+        /// </summary>
+        /// <param name="ButtonName">"変更"ボタンの名前</param>
+        /// <param name="Text">代入したいテキスト</param>
+        private void ChangeProcessText(string ButtonName, string Text)
+        {
+            switch (ButtonName)
+            {
+                case "mainProcessSearch1":
+                    mainProcess1.Text = Text;
+                    break;
+                case "mainProcessSearch2":
+                    mainProcess2.Text = Text;
+                    break;
+                case "subProcessSearch1":
+                    subProcess1.Text = Text;
+                    break;
+                case "subProcessSearch2":
+                    subProcess2.Text = Text;
+                    break;
+                case "subProcessSearch3":
+                    subProcess3.Text = Text;
+                    break;
+                case "subProcessSearch4":
+                    subProcess4.Text = Text;
+                    break;
+                case "subProcessSearch5":
+                    subProcess5.Text = Text;
+                    break;
+                case "subProcessSearch6":
+                    subProcess6.Text = Text;
+                    break;
+                case "subProcessSearch7":
+                    subProcess7.Text = Text;
+                    break;
+                case "subProcessSearch8":
+                    subProcess8.Text = Text;
+                    break;
+                case "subProcessSearch9":
+                    subProcess9.Text = Text;
+                    break;
+            }
+        }
+        #endregion
+
+        private void ProcessSearch_Click(object sender, EventArgs e)
+        {
+            ProcessSearch processSearch = new(AppsUseLightTheme)
+            {
+                Owner = this
+            };
+            if (processSearch.ShowDialog() == DialogResult.OK)
+            {
+                ChangeProcessText(((Button)sender).Name, processSearch.SelectProcessName);
             }
         }
 
