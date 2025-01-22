@@ -38,6 +38,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.subProcess9 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
+            this.subProcessSearch9 = new System.Windows.Forms.Button();
             this.subKey9 = new System.Windows.Forms.TextBox();
             this.subKeyChange9 = new System.Windows.Forms.Button();
             this.subGroup6 = new System.Windows.Forms.GroupBox();
@@ -47,6 +48,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.subProcess6 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.subProcessSearch6 = new System.Windows.Forms.Button();
             this.subKey6 = new System.Windows.Forms.TextBox();
             this.subKeyChange6 = new System.Windows.Forms.Button();
             this.subGroup8 = new System.Windows.Forms.GroupBox();
@@ -56,6 +58,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.subProcess8 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.subProcessSearch8 = new System.Windows.Forms.Button();
             this.subKey8 = new System.Windows.Forms.TextBox();
             this.subKeyChange8 = new System.Windows.Forms.Button();
             this.subGroup5 = new System.Windows.Forms.GroupBox();
@@ -65,6 +68,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.subProcess5 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.subProcessSearch5 = new System.Windows.Forms.Button();
             this.subKey5 = new System.Windows.Forms.TextBox();
             this.subKeyChange5 = new System.Windows.Forms.Button();
             this.subGroup3 = new System.Windows.Forms.GroupBox();
@@ -74,6 +78,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.subProcess3 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.subProcessSearch3 = new System.Windows.Forms.Button();
             this.subKey3 = new System.Windows.Forms.TextBox();
             this.subKeyChange3 = new System.Windows.Forms.Button();
             this.subGroup2 = new System.Windows.Forms.GroupBox();
@@ -83,6 +88,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.subProcess2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.subProcessSearch2 = new System.Windows.Forms.Button();
             this.subKey2 = new System.Windows.Forms.TextBox();
             this.subKeyChange2 = new System.Windows.Forms.Button();
             this.subGroup7 = new System.Windows.Forms.GroupBox();
@@ -92,6 +98,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.subProcess7 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
+            this.subProcessSearch7 = new System.Windows.Forms.Button();
             this.subKey7 = new System.Windows.Forms.TextBox();
             this.subKeyChange7 = new System.Windows.Forms.Button();
             this.mainGroup2 = new System.Windows.Forms.GroupBox();
@@ -101,6 +108,7 @@
             this.mainProcess2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.mainKey2 = new System.Windows.Forms.TextBox();
+            this.mainProcessSearch2 = new System.Windows.Forms.Button();
             this.mainKeyChange2 = new System.Windows.Forms.Button();
             this.subGroup4 = new System.Windows.Forms.GroupBox();
             this.subHidden4 = new System.Windows.Forms.CheckBox();
@@ -109,6 +117,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.subProcess4 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.subProcessSearch4 = new System.Windows.Forms.Button();
             this.subKey4 = new System.Windows.Forms.TextBox();
             this.subKeyChange4 = new System.Windows.Forms.Button();
             this.mainGroup1 = new System.Windows.Forms.GroupBox();
@@ -118,6 +127,7 @@
             this.mainProcess1 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.mainKey1 = new System.Windows.Forms.TextBox();
+            this.mainProcessSearch1 = new System.Windows.Forms.Button();
             this.mainKeyChange1 = new System.Windows.Forms.Button();
             this.subGroup1 = new System.Windows.Forms.GroupBox();
             this.subHidden1 = new System.Windows.Forms.CheckBox();
@@ -126,6 +136,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.subProcess1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.subProcessSearch1 = new System.Windows.Forms.Button();
             this.subKey1 = new System.Windows.Forms.TextBox();
             this.subKeyChange1 = new System.Windows.Forms.Button();
             this.buttonApply = new System.Windows.Forms.Button();
@@ -137,17 +148,6 @@
             this.export = new System.Windows.Forms.ToolStripMenuItem();
             this.openCsvFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveCsvFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.mainProcessSearch1 = new System.Windows.Forms.Button();
-            this.mainProcessSearch2 = new System.Windows.Forms.Button();
-            this.subProcessSearch1 = new System.Windows.Forms.Button();
-            this.subProcessSearch2 = new System.Windows.Forms.Button();
-            this.subProcessSearch3 = new System.Windows.Forms.Button();
-            this.subProcessSearch6 = new System.Windows.Forms.Button();
-            this.subProcessSearch5 = new System.Windows.Forms.Button();
-            this.subProcessSearch4 = new System.Windows.Forms.Button();
-            this.subProcessSearch7 = new System.Windows.Forms.Button();
-            this.subProcessSearch8 = new System.Windows.Forms.Button();
-            this.subProcessSearch9 = new System.Windows.Forms.Button();
             this.panelRemocon.SuspendLayout();
             this.subGroup9.SuspendLayout();
             this.subGroup6.SuspendLayout();
@@ -272,6 +272,19 @@
             this.label44.TabIndex = 6;
             this.label44.Text = "キーの割り当て";
             // 
+            // subProcessSearch9
+            // 
+            this.subProcessSearch9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch9.Enabled = false;
+            this.subProcessSearch9.Location = new System.Drawing.Point(102, 80);
+            this.subProcessSearch9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch9.Name = "subProcessSearch9";
+            this.subProcessSearch9.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch9.TabIndex = 5;
+            this.subProcessSearch9.Text = "変更";
+            this.subProcessSearch9.UseVisualStyleBackColor = true;
+            this.subProcessSearch9.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey9
             // 
             this.subKey9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -281,10 +294,8 @@
             this.subKey9.Location = new System.Drawing.Point(8, 127);
             this.subKey9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey9.Name = "subKey9";
-            this.subKey9.ReadOnly = true;
             this.subKey9.Size = new System.Drawing.Size(90, 23);
             this.subKey9.TabIndex = 7;
-            this.subKey9.TabStop = false;
             // 
             // subKeyChange9
             // 
@@ -298,6 +309,8 @@
             this.subKeyChange9.Text = "変更";
             this.subKeyChange9.UseVisualStyleBackColor = true;
             this.subKeyChange9.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange9.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup6
             // 
@@ -386,6 +399,19 @@
             this.label31.TabIndex = 6;
             this.label31.Text = "キーの割り当て";
             // 
+            // subProcessSearch6
+            // 
+            this.subProcessSearch6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch6.Enabled = false;
+            this.subProcessSearch6.Location = new System.Drawing.Point(103, 80);
+            this.subProcessSearch6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch6.Name = "subProcessSearch6";
+            this.subProcessSearch6.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch6.TabIndex = 5;
+            this.subProcessSearch6.Text = "変更";
+            this.subProcessSearch6.UseVisualStyleBackColor = true;
+            this.subProcessSearch6.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey6
             // 
             this.subKey6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -395,10 +421,8 @@
             this.subKey6.Location = new System.Drawing.Point(8, 127);
             this.subKey6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey6.Name = "subKey6";
-            this.subKey6.ReadOnly = true;
             this.subKey6.Size = new System.Drawing.Size(90, 23);
             this.subKey6.TabIndex = 7;
-            this.subKey6.TabStop = false;
             // 
             // subKeyChange6
             // 
@@ -412,6 +436,8 @@
             this.subKeyChange6.Text = "変更";
             this.subKeyChange6.UseVisualStyleBackColor = true;
             this.subKeyChange6.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup8
             // 
@@ -500,6 +526,19 @@
             this.label40.TabIndex = 6;
             this.label40.Text = "キーの割り当て";
             // 
+            // subProcessSearch8
+            // 
+            this.subProcessSearch8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch8.Enabled = false;
+            this.subProcessSearch8.Location = new System.Drawing.Point(103, 80);
+            this.subProcessSearch8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch8.Name = "subProcessSearch8";
+            this.subProcessSearch8.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch8.TabIndex = 5;
+            this.subProcessSearch8.Text = "変更";
+            this.subProcessSearch8.UseVisualStyleBackColor = true;
+            this.subProcessSearch8.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey8
             // 
             this.subKey8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -509,10 +548,8 @@
             this.subKey8.Location = new System.Drawing.Point(8, 127);
             this.subKey8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey8.Name = "subKey8";
-            this.subKey8.ReadOnly = true;
             this.subKey8.Size = new System.Drawing.Size(90, 23);
             this.subKey8.TabIndex = 7;
-            this.subKey8.TabStop = false;
             // 
             // subKeyChange8
             // 
@@ -526,6 +563,8 @@
             this.subKeyChange8.Text = "変更";
             this.subKeyChange8.UseVisualStyleBackColor = true;
             this.subKeyChange8.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange8.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup5
             // 
@@ -614,6 +653,19 @@
             this.label27.TabIndex = 6;
             this.label27.Text = "キーの割り当て";
             // 
+            // subProcessSearch5
+            // 
+            this.subProcessSearch5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch5.Enabled = false;
+            this.subProcessSearch5.Location = new System.Drawing.Point(102, 80);
+            this.subProcessSearch5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch5.Name = "subProcessSearch5";
+            this.subProcessSearch5.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch5.TabIndex = 5;
+            this.subProcessSearch5.Text = "変更";
+            this.subProcessSearch5.UseVisualStyleBackColor = true;
+            this.subProcessSearch5.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey5
             // 
             this.subKey5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -623,10 +675,8 @@
             this.subKey5.Location = new System.Drawing.Point(8, 127);
             this.subKey5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey5.Name = "subKey5";
-            this.subKey5.ReadOnly = true;
             this.subKey5.Size = new System.Drawing.Size(90, 23);
             this.subKey5.TabIndex = 7;
-            this.subKey5.TabStop = false;
             // 
             // subKeyChange5
             // 
@@ -640,6 +690,8 @@
             this.subKeyChange5.Text = "変更";
             this.subKeyChange5.UseVisualStyleBackColor = true;
             this.subKeyChange5.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange5.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup3
             // 
@@ -728,6 +780,19 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "キーの割り当て";
             // 
+            // subProcessSearch3
+            // 
+            this.subProcessSearch3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch3.Enabled = false;
+            this.subProcessSearch3.Location = new System.Drawing.Point(102, 80);
+            this.subProcessSearch3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch3.Name = "subProcessSearch3";
+            this.subProcessSearch3.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch3.TabIndex = 5;
+            this.subProcessSearch3.Text = "変更";
+            this.subProcessSearch3.UseVisualStyleBackColor = true;
+            this.subProcessSearch3.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey3
             // 
             this.subKey3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -737,10 +802,8 @@
             this.subKey3.Location = new System.Drawing.Point(8, 127);
             this.subKey3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey3.Name = "subKey3";
-            this.subKey3.ReadOnly = true;
             this.subKey3.Size = new System.Drawing.Size(90, 23);
             this.subKey3.TabIndex = 7;
-            this.subKey3.TabStop = false;
             // 
             // subKeyChange3
             // 
@@ -754,6 +817,8 @@
             this.subKeyChange3.Text = "変更";
             this.subKeyChange3.UseVisualStyleBackColor = true;
             this.subKeyChange3.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup2
             // 
@@ -842,6 +907,19 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "キーの割り当て";
             // 
+            // subProcessSearch2
+            // 
+            this.subProcessSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch2.Enabled = false;
+            this.subProcessSearch2.Location = new System.Drawing.Point(102, 80);
+            this.subProcessSearch2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch2.Name = "subProcessSearch2";
+            this.subProcessSearch2.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch2.TabIndex = 5;
+            this.subProcessSearch2.Text = "変更";
+            this.subProcessSearch2.UseVisualStyleBackColor = true;
+            this.subProcessSearch2.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey2
             // 
             this.subKey2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -851,10 +929,8 @@
             this.subKey2.Location = new System.Drawing.Point(8, 127);
             this.subKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey2.Name = "subKey2";
-            this.subKey2.ReadOnly = true;
             this.subKey2.Size = new System.Drawing.Size(90, 23);
             this.subKey2.TabIndex = 7;
-            this.subKey2.TabStop = false;
             // 
             // subKeyChange2
             // 
@@ -868,6 +944,8 @@
             this.subKeyChange2.Text = "変更";
             this.subKeyChange2.UseVisualStyleBackColor = true;
             this.subKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup7
             // 
@@ -956,6 +1034,19 @@
             this.label35.TabIndex = 6;
             this.label35.Text = "キーの割り当て";
             // 
+            // subProcessSearch7
+            // 
+            this.subProcessSearch7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch7.Enabled = false;
+            this.subProcessSearch7.Location = new System.Drawing.Point(103, 80);
+            this.subProcessSearch7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch7.Name = "subProcessSearch7";
+            this.subProcessSearch7.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch7.TabIndex = 5;
+            this.subProcessSearch7.Text = "変更";
+            this.subProcessSearch7.UseVisualStyleBackColor = true;
+            this.subProcessSearch7.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey7
             // 
             this.subKey7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -965,10 +1056,8 @@
             this.subKey7.Location = new System.Drawing.Point(8, 127);
             this.subKey7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey7.Name = "subKey7";
-            this.subKey7.ReadOnly = true;
             this.subKey7.Size = new System.Drawing.Size(90, 23);
             this.subKey7.TabIndex = 7;
-            this.subKey7.TabStop = false;
             // 
             // subKeyChange7
             // 
@@ -982,6 +1071,8 @@
             this.subKeyChange7.Text = "変更";
             this.subKeyChange7.UseVisualStyleBackColor = true;
             this.subKeyChange7.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange7.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // mainGroup2
             // 
@@ -1069,10 +1160,20 @@
             this.mainKey2.Location = new System.Drawing.Point(8, 127);
             this.mainKey2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKey2.Name = "mainKey2";
-            this.mainKey2.ReadOnly = true;
             this.mainKey2.Size = new System.Drawing.Size(90, 23);
             this.mainKey2.TabIndex = 6;
-            this.mainKey2.TabStop = false;
+            // 
+            // mainProcessSearch2
+            // 
+            this.mainProcessSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainProcessSearch2.Location = new System.Drawing.Point(102, 81);
+            this.mainProcessSearch2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.mainProcessSearch2.Name = "mainProcessSearch2";
+            this.mainProcessSearch2.Size = new System.Drawing.Size(40, 25);
+            this.mainProcessSearch2.TabIndex = 4;
+            this.mainProcessSearch2.Text = "変更";
+            this.mainProcessSearch2.UseVisualStyleBackColor = true;
+            this.mainProcessSearch2.Click += new System.EventHandler(this.ProcessSearch_Click);
             // 
             // mainKeyChange2
             // 
@@ -1085,6 +1186,8 @@
             this.mainKeyChange2.Text = "変更";
             this.mainKeyChange2.UseVisualStyleBackColor = true;
             this.mainKeyChange2.Click += new System.EventHandler(this.KeyChange_Click);
+            this.mainKeyChange2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.mainKeyChange2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup4
             // 
@@ -1173,6 +1276,19 @@
             this.label18.TabIndex = 6;
             this.label18.Text = "キーの割り当て";
             // 
+            // subProcessSearch4
+            // 
+            this.subProcessSearch4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch4.Enabled = false;
+            this.subProcessSearch4.Location = new System.Drawing.Point(103, 80);
+            this.subProcessSearch4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch4.Name = "subProcessSearch4";
+            this.subProcessSearch4.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch4.TabIndex = 5;
+            this.subProcessSearch4.Text = "変更";
+            this.subProcessSearch4.UseVisualStyleBackColor = true;
+            this.subProcessSearch4.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey4
             // 
             this.subKey4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1182,10 +1298,8 @@
             this.subKey4.Location = new System.Drawing.Point(8, 127);
             this.subKey4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey4.Name = "subKey4";
-            this.subKey4.ReadOnly = true;
             this.subKey4.Size = new System.Drawing.Size(90, 23);
             this.subKey4.TabIndex = 7;
-            this.subKey4.TabStop = false;
             // 
             // subKeyChange4
             // 
@@ -1199,6 +1313,8 @@
             this.subKeyChange4.Text = "変更";
             this.subKeyChange4.UseVisualStyleBackColor = true;
             this.subKeyChange4.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // mainGroup1
             // 
@@ -1286,10 +1402,20 @@
             this.mainKey1.Location = new System.Drawing.Point(8, 127);
             this.mainKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainKey1.Name = "mainKey1";
-            this.mainKey1.ReadOnly = true;
             this.mainKey1.Size = new System.Drawing.Size(90, 23);
             this.mainKey1.TabIndex = 6;
-            this.mainKey1.TabStop = false;
+            // 
+            // mainProcessSearch1
+            // 
+            this.mainProcessSearch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainProcessSearch1.Location = new System.Drawing.Point(102, 81);
+            this.mainProcessSearch1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.mainProcessSearch1.Name = "mainProcessSearch1";
+            this.mainProcessSearch1.Size = new System.Drawing.Size(40, 25);
+            this.mainProcessSearch1.TabIndex = 4;
+            this.mainProcessSearch1.Text = "変更";
+            this.mainProcessSearch1.UseVisualStyleBackColor = true;
+            this.mainProcessSearch1.Click += new System.EventHandler(this.ProcessSearch_Click);
             // 
             // mainKeyChange1
             // 
@@ -1302,6 +1428,8 @@
             this.mainKeyChange1.Text = "変更";
             this.mainKeyChange1.UseVisualStyleBackColor = true;
             this.mainKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
+            this.mainKeyChange1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.mainKeyChange1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // subGroup1
             // 
@@ -1390,6 +1518,19 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "キーの割り当て";
             // 
+            // subProcessSearch1
+            // 
+            this.subProcessSearch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subProcessSearch1.Enabled = false;
+            this.subProcessSearch1.Location = new System.Drawing.Point(103, 80);
+            this.subProcessSearch1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.subProcessSearch1.Name = "subProcessSearch1";
+            this.subProcessSearch1.Size = new System.Drawing.Size(40, 25);
+            this.subProcessSearch1.TabIndex = 5;
+            this.subProcessSearch1.Text = "変更";
+            this.subProcessSearch1.UseVisualStyleBackColor = true;
+            this.subProcessSearch1.Click += new System.EventHandler(this.ProcessSearch_Click);
+            // 
             // subKey1
             // 
             this.subKey1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1399,10 +1540,8 @@
             this.subKey1.Location = new System.Drawing.Point(8, 127);
             this.subKey1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subKey1.Name = "subKey1";
-            this.subKey1.ReadOnly = true;
             this.subKey1.Size = new System.Drawing.Size(90, 23);
             this.subKey1.TabIndex = 7;
-            this.subKey1.TabStop = false;
             // 
             // subKeyChange1
             // 
@@ -1416,6 +1555,8 @@
             this.subKeyChange1.Text = "変更";
             this.subKeyChange1.UseVisualStyleBackColor = true;
             this.subKeyChange1.Click += new System.EventHandler(this.KeyChange_Click);
+            this.subKeyChange1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
+            this.subKeyChange1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             // 
             // buttonApply
             // 
@@ -1485,147 +1626,6 @@
             // 
             this.saveCsvFileDialog.Filter = "CSV ファイル (*.csv)|*.csv|すべてのファイル (*.*)|*.*";
             // 
-            // mainProcessSearch1
-            // 
-            this.mainProcessSearch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainProcessSearch1.Location = new System.Drawing.Point(102, 81);
-            this.mainProcessSearch1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mainProcessSearch1.Name = "mainProcessSearch1";
-            this.mainProcessSearch1.Size = new System.Drawing.Size(40, 25);
-            this.mainProcessSearch1.TabIndex = 4;
-            this.mainProcessSearch1.Text = "変更";
-            this.mainProcessSearch1.UseVisualStyleBackColor = true;
-            this.mainProcessSearch1.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // mainProcessSearch2
-            // 
-            this.mainProcessSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainProcessSearch2.Location = new System.Drawing.Point(102, 81);
-            this.mainProcessSearch2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mainProcessSearch2.Name = "mainProcessSearch2";
-            this.mainProcessSearch2.Size = new System.Drawing.Size(40, 25);
-            this.mainProcessSearch2.TabIndex = 4;
-            this.mainProcessSearch2.Text = "変更";
-            this.mainProcessSearch2.UseVisualStyleBackColor = true;
-            this.mainProcessSearch2.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch1
-            // 
-            this.subProcessSearch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch1.Enabled = false;
-            this.subProcessSearch1.Location = new System.Drawing.Point(103, 80);
-            this.subProcessSearch1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch1.Name = "subProcessSearch1";
-            this.subProcessSearch1.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch1.TabIndex = 5;
-            this.subProcessSearch1.Text = "変更";
-            this.subProcessSearch1.UseVisualStyleBackColor = true;
-            this.subProcessSearch1.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch2
-            // 
-            this.subProcessSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch2.Enabled = false;
-            this.subProcessSearch2.Location = new System.Drawing.Point(102, 80);
-            this.subProcessSearch2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch2.Name = "subProcessSearch2";
-            this.subProcessSearch2.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch2.TabIndex = 5;
-            this.subProcessSearch2.Text = "変更";
-            this.subProcessSearch2.UseVisualStyleBackColor = true;
-            this.subProcessSearch2.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch3
-            // 
-            this.subProcessSearch3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch3.Enabled = false;
-            this.subProcessSearch3.Location = new System.Drawing.Point(102, 80);
-            this.subProcessSearch3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch3.Name = "subProcessSearch3";
-            this.subProcessSearch3.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch3.TabIndex = 5;
-            this.subProcessSearch3.Text = "変更";
-            this.subProcessSearch3.UseVisualStyleBackColor = true;
-            this.subProcessSearch3.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch6
-            // 
-            this.subProcessSearch6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch6.Enabled = false;
-            this.subProcessSearch6.Location = new System.Drawing.Point(103, 80);
-            this.subProcessSearch6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch6.Name = "subProcessSearch6";
-            this.subProcessSearch6.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch6.TabIndex = 5;
-            this.subProcessSearch6.Text = "変更";
-            this.subProcessSearch6.UseVisualStyleBackColor = true;
-            this.subProcessSearch6.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch5
-            // 
-            this.subProcessSearch5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch5.Enabled = false;
-            this.subProcessSearch5.Location = new System.Drawing.Point(102, 80);
-            this.subProcessSearch5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch5.Name = "subProcessSearch5";
-            this.subProcessSearch5.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch5.TabIndex = 5;
-            this.subProcessSearch5.Text = "変更";
-            this.subProcessSearch5.UseVisualStyleBackColor = true;
-            this.subProcessSearch5.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch4
-            // 
-            this.subProcessSearch4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch4.Enabled = false;
-            this.subProcessSearch4.Location = new System.Drawing.Point(103, 80);
-            this.subProcessSearch4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch4.Name = "subProcessSearch4";
-            this.subProcessSearch4.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch4.TabIndex = 5;
-            this.subProcessSearch4.Text = "変更";
-            this.subProcessSearch4.UseVisualStyleBackColor = true;
-            this.subProcessSearch4.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch7
-            // 
-            this.subProcessSearch7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch7.Enabled = false;
-            this.subProcessSearch7.Location = new System.Drawing.Point(103, 80);
-            this.subProcessSearch7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch7.Name = "subProcessSearch7";
-            this.subProcessSearch7.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch7.TabIndex = 5;
-            this.subProcessSearch7.Text = "変更";
-            this.subProcessSearch7.UseVisualStyleBackColor = true;
-            this.subProcessSearch7.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch8
-            // 
-            this.subProcessSearch8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch8.Enabled = false;
-            this.subProcessSearch8.Location = new System.Drawing.Point(103, 80);
-            this.subProcessSearch8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch8.Name = "subProcessSearch8";
-            this.subProcessSearch8.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch8.TabIndex = 5;
-            this.subProcessSearch8.Text = "変更";
-            this.subProcessSearch8.UseVisualStyleBackColor = true;
-            this.subProcessSearch8.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
-            // subProcessSearch9
-            // 
-            this.subProcessSearch9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subProcessSearch9.Enabled = false;
-            this.subProcessSearch9.Location = new System.Drawing.Point(102, 80);
-            this.subProcessSearch9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.subProcessSearch9.Name = "subProcessSearch9";
-            this.subProcessSearch9.Size = new System.Drawing.Size(40, 25);
-            this.subProcessSearch9.TabIndex = 5;
-            this.subProcessSearch9.Text = "変更";
-            this.subProcessSearch9.UseVisualStyleBackColor = true;
-            this.subProcessSearch9.Click += new System.EventHandler(this.ProcessSearch_Click);
-            // 
             // KeyConfigWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1644,8 +1644,6 @@
             this.MinimizeBox = false;
             this.Name = "KeyConfigWindow";
             this.Text = "キーの割り当て";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyChange_KeyDown);
-            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.KeyChange_PreviewKeyDown);
             this.panelRemocon.ResumeLayout(false);
             this.subGroup9.ResumeLayout(false);
             this.subGroup9.PerformLayout();
