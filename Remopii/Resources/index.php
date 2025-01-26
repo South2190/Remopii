@@ -5,61 +5,51 @@
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-        
     if(array_key_exists('mainBtn2', $_POST)) {  
         exec('schtasks /run /tn Remopii\MainButton2'); 
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-    
     if(array_key_exists('subBtn1', $_POST)) {  
         exec('schtasks /run /tn Remopii\SubButton1');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn2', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton2');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn3', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton3');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn4', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton4');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn5', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton5');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn6', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton6');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn7', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton7');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn8', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton8');
         header("Location:{$_SERVER['PHP_SELF']}");
         exit;
     }
-      
     if(array_key_exists('subBtn9', $_POST)) { 
         exec('schtasks /run /tn Remopii\SubButton9');
         header("Location:{$_SERVER['PHP_SELF']}");
@@ -72,7 +62,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta charset="utf-8">
         <title>リモピー</title>
-
         <style>
             /*ダークモード対応*/
             @media (prefers-color-scheme: dark) {
@@ -87,6 +76,7 @@
             }
             input{
                 aspect-ratio: 1;
+                min-height: 80px;
                 border-radius: 7px;
                 text-wrap: wrap;
                 overflow-wrap: break-word;
@@ -161,6 +151,6 @@
                 }
                 fclose($fp);
             ?>
-        </fofm>
+        </form>
     </body>
 </html>
